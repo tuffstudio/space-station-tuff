@@ -1,15 +1,4 @@
-# [Sage](https://roots.io/sage/)
-[![Build Status](https://travis-ci.org/roots/sage.svg)](https://travis-ci.org/roots/sage)
-[![devDependency Status](https://david-dm.org/roots/sage/dev-status.svg)](https://david-dm.org/roots/sage#info=devDependencies)
-
-Sage is a WordPress starter theme based on HTML5 Boilerplate, gulp, Bower, and Bootstrap Sass, that will help you make better themes.
-
-* Source: [https://github.com/roots/sage](https://github.com/roots/sage)
-* Homepage: [https://roots.io/sage/](https://roots.io/sage/)
-* Documentation: [https://roots.io/sage/docs/](https://roots.io/sage/docs/)
-* Twitter: [@rootswp](https://twitter.com/rootswp)
-* Newsletter: [Subscribe](http://roots.io/subscribe/)
-* Forum: [https://discourse.roots.io/](https://discourse.roots.io/)
+# Wordpress basic theme
 
 ## Requirements
 
@@ -28,22 +17,11 @@ For more installation notes, refer to the [Install gulp and Bower](#install-gulp
 * [BrowserSync](http://www.browsersync.io/) for keeping multiple browsers and devices synchronized while testing, along with injecting updated CSS and JS into your browser while you're developing
 * [Bower](http://bower.io/) for front-end package management
 * [asset-builder](https://github.com/austinpray/asset-builder) for the JSON file based asset pipeline
-* [Bootstrap](http://getbootstrap.com/)
 * [Theme wrapper](https://roots.io/sage/docs/theme-wrapper/)
 * ARIA roles and microformats
 * Posts use the [hNews](http://microformats.org/wiki/hnews) microformat
 * [Multilingual ready](https://roots.io/wpml/) and over 30 available [community translations](https://github.com/roots/sage-translations)
 
-Install the [Soil](https://github.com/roots/soil) plugin to enable additional features:
-
-* Cleaner output of `wp_head` and enqueued assets
-* Cleaner HTML output of navigation menus
-* Root relative URLs
-* Nice search (`/search/query/`)
-* Google CDN jQuery snippet from [HTML5 Boilerplate](http://html5boilerplate.com/)
-* Google Analytics snippet from [HTML5 Boilerplate](http://html5boilerplate.com/)
-
-See a complete working example in the [roots-example-project.com repo](https://github.com/roots/roots-example-project.com).
 
 ## Theme installation
 
@@ -119,20 +97,3 @@ If your local development URL looks like `http://localhost:8888/project-name/` y
   }
 ...
 ```
-
-## Documentation
-
-Sage documentation is available at [https://roots.io/sage/docs/](https://roots.io/sage/docs/).
-
-## Contributing
-
-Contributions are welcome from everyone. We have [contributing guidelines](CONTRIBUTING.md) to help you get started.
-
-## Community
-
-Keep track of development and community news.
-
-* Participate on the [Roots Discourse](https://discourse.roots.io/)
-* Follow [@rootswp on Twitter](https://twitter.com/rootswp)
-* Read and subscribe to the [Roots Blog](https://roots.io/blog/)
-* Subscribe to the [Roots Newsletter](https://roots.io/subscribe/)
