@@ -1,0 +1,22 @@
+// Reset browser styles
+@import '../../node_modules/normalize-scss/fork-versions/default/_normalize.scss';
+
+// Media queries
+@import '_media-queries.scss';
+
+// Theme settings
+@import 'settings/mixins';
+@import 'settings/units';
+@import 'settings/vars';
+@import 'settings/settings';
+
+// Global styles
+@import 'common/global';
+@import 'common/utilities';
+
+// Components
+@import 'components/buttons';
+
+// Layouts
+@import 'layouts/header';
+@import 'layouts/footer';
