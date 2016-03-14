@@ -13,7 +13,7 @@
       "main": true
     },
     "vendor.js": {
-      "bower": ["jquery", "jquery-throttle-debounce", "masonry", "imagesloaded", "selection-sharer", "skrollr"]
+      "bower": ["jquery"]
     }
   },
   "config": {

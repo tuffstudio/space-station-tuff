@@ -1,8 +1,11 @@
 // Reset browser styles
-@import '../../node_modules/normalize-scss/fork-versions/default/_normalize.scss';
+@import '../../node_modules/normalize-scss/fork-versions/default/normalize';
 
 // Media queries
-@import '_media-queries.scss';
+@import 'media-queries';
+
+// Grid
+@import 'csswizardry-grids';
 
 // Theme settings
 @import 'settings/mixins';
