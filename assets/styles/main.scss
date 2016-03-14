@@ -4,14 +4,14 @@
 // Media queries
 @import 'media-queries';
 
-// Grid
-@import 'csswizardry-grids';
-
 // Theme settings
 @import 'settings/mixins';
 @import 'settings/units';
 @import 'settings/vars';
 @import 'settings/settings';
+
+// Grid
+@import 'csswizardry-grids';
 
 // Global styles
 @import 'common/global';

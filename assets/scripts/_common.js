@@ -1,6 +1,34 @@
 window.SS = window.SS || {};
 
 window.SS.common = function($) {
+    var $navTrigger = $('.js-nav-trigger');
+    var $mobileNavigation = $('.js-primary-nav');
+
+    function toggleMobileNavigation() {
+        $navTrigger.on('click', function(event) {
+            $navTrigger.toggleClass('open');
+            $mobileNavigation.slideToggle();
+        });
+    }
+
+    function toggleSubMenu() {
+        var $menuItem = $('.navigation-menu > .Nav-item');
+
+        $menuItem.each(function() {
+            var $this = $(this);
+
+            if ($this.children('ul').length > 0) {
+                var $subMenu = $this.find('.sub-menu');
+
+                $this.addClass('has-menu');
+                $this.on('click', function(event) {
+                    event.preventDefault();
+                    $subMenu.slideToggle();
+                });
+            }
+        });
+    }
+
     function goToTopButton() {
         var $button = $('.js-to-top');
 
@@ -70,4 +98,9 @@ window.SS.common = function($) {
             }
         });
     }
+
+    $(document).ready(function() {
+        toggleMobileNavigation();
+        toggleSubMenu();
+    });
 };
