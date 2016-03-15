@@ -1,6 +1,43 @@
 window.SS = window.SS || {};
 
 window.SS.common = function($) {
+    var $navTrigger = $('.js-nav-trigger');
+    var $mobileNavigation = $('.js-primary-nav');
+
+    function toggleMobileNavigation() {
+        $navTrigger.on('click', function(event) {
+            $navTrigger.toggleClass('is-opened');
+            $mobileNavigation.toggleClass('is-opened');
+        });
+    }
+
+    function toggleSubMenu() {
+        var $menuItem = $('.navigation-menu > .Nav-item');
+
+        $menuItem.each(function() {
+            var $this = $(this);
+
+            if ($this.children('ul').length > 0) {
+                var $subMenu = $this.find('.sub-menu');
+                var toggled = false;
+
+                $this.addClass('has-menu');
+                $this.on('click', function(event) {
+                    event.preventDefault();
+
+                    var toggled = !$subMenu.hasClass('is-opened');
+
+                    if(toggled) {
+                        $('.sub-menu').removeClass('is-opened');
+                        $subMenu.addClass('is-opened');
+                    } else {
+                        $subMenu.removeClass('is-opened');
+                    }
+                });
+            }
+        });
+    }
+
     function goToTopButton() {
         var $button = $('.js-to-top');
 
@@ -70,4 +107,9 @@ window.SS.common = function($) {
             }
         });
     }
+
+    $(document).ready(function() {
+        toggleMobileNavigation();
+        toggleSubMenu();
+    });
 };

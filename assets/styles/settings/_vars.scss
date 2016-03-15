@@ -1,6 +1,36 @@
 $global-font-size: 100% !default;
+$base-font-family: 'FuturaBook';
+
 
 // Colors
 // ----------
 $white: #ffffff;
 $black: #000000;
+$gray: #e5e5e5;
+$dark-gray: #999999;
+
+$color-primary: #a17f30;
+
+// Globals
+// ----------
+$body-bg-color: $gray;
+
+
+// Navigation
+// -----------
+$nav-height: 50px;
+$nav-bg-color: $black;
+$brand-link-color: #d0d0d0;
+$brand-link-size: rem-calc(12);
+$menu-link-color: $dark-gray;
+$menu-link-color-hover: $white;
+$submenu-link-color: $dark-gray;
+$submenu-link-color-hover: $black;
+
+// Animations
+// ----------
+$standard-animation-time: 300ms;
+$mobile-menu-up-animation: 500ms;
+$mobile-menu-down-animation: 2s;
+$sub-menu-up-animation: 300ms;
+$sub-menu-down-animation: 1s;
