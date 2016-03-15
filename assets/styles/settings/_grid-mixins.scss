@@ -1,0 +1,19 @@
+/**
+* It allows to hide grid elements if they aren't necessary in given viewport
+* usage: add class palm-hide, lap-hide...
+*/
+@each $breakpoint in $breakpoints {
+    $name: nth($breakpoint, 1);
+
+    @include grid-media-query($name) {
+        .#{$name}--hide { display: none; }
+    }
+}
+
+@each $breakpoint in $breakpoints {
+    $name: nth($breakpoint, 1);
+
+    @include grid-media-query($name) {
+        .#{$name}--show { display: inline-block; }
+    }
+}

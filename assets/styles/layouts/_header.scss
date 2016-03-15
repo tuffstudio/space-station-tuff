@@ -1,0 +1,212 @@
+// Header
+// -------
+.navigation {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: $nav-height;
+    padding: 5px 0 3px;
+    background-color: $nav-bg-color;
+
+    @include min-screen($desktop) {
+        padding-bottom: 0;
+    }
+}
+
+.navigation__brand-link {
+    display: inline-block;
+    margin-left: 10px;
+    padding: 13px 0 13px 70px;
+    background-image: url('../images/footer_logo.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    color: $brand-link-color;
+    font-size: $brand-link-size;
+    letter-spacing: 2px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.navigation-primary {
+    max-height: 0;
+    transition: max-height $mobile-menu-up-animation ease;
+    background-color: $nav-bg-color;
+    overflow: hidden;
+
+    @include min-screen($desktop) {
+        max-height: 100%;
+        transition: none;
+    }
+
+    &.is-opened {
+        max-height: 100vh;
+        transition-duration: $mobile-menu-down-animation;
+    }
+}
+
+.navigation-menu {
+    margin: 0;
+    list-style-type: none;
+
+    @include min-screen($desktop) {
+        padding: 0 20px 0 0;
+        text-align: right;
+    }
+
+    li {
+        position: relative;
+        margin: 10px 0;
+
+        @include min-screen($desktop) {
+            display: inline-block;
+            position: static;
+            margin: 0 10px;
+            transition: border-bottom-color $standard-animation-time ease;
+            border-bottom: 4px solid transparent;
+
+            &:hover {
+                border-bottom-color: $color-primary;
+            }
+        }
+
+        &.has-menu {
+            &::after {
+                @include css-triangle(5px, $menu-link-color, down);
+                content: '';
+                position: absolute;
+                top: 5px;
+                right: 20px;
+
+                @include min-screen($desktop) {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    > li:nth-last-child(2) a {
+        color: $color-primary;
+    }
+
+    > li:last-child a {
+        color: $white;
+    }
+
+    a {
+        transition: color $standard-animation-time ease;
+        color: $menu-link-color;
+        font-size: 10px;
+        line-height: 1;
+        text-decoration: none;
+        text-transform: uppercase;
+
+        @include min-screen($desktop) {
+            display: block;
+            padding: 16px 5px 15px;
+        }
+
+        &:hover {
+            color: $menu-link-color-hover;
+        }
+    }
+
+    .sub-menu {
+        list-style-type: none;
+        max-height: 0;
+        transition: max-height $sub-menu-up-animation ease;
+        overflow: hidden;
+
+        @include min-screen($desktop) {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100vw;
+            padding: 0;
+            background-color: rgba($white, .7);
+            text-align: center;
+        }
+
+        &.is-opened {
+            max-height: 100px;
+            transition-duration: $sub-menu-down-animation;
+        }
+
+        li {
+            a {
+                @include min-screen($desktop) {
+                    padding: 13px 0 10px;
+                    color: $submenu-link-color;
+
+                    &:hover {
+                        color: $submenu-link-color-hover;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Nav trigger
+// ------------
+.navigation__trigger {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 35px;
+    height: 30px;
+    transform: rotate(0deg);
+    transition: .5s ease-in-out;
+    cursor: pointer;
+
+    @include min-screen($desktop) {
+        display: none;
+    }
+
+    span {
+        display: block;
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 4px;
+        transform: rotate(0deg);
+        transition: .25s ease-in-out;
+        border-radius: 2px;
+        background-color: $color-primary;
+        opacity: 1;
+    }
+
+    span:nth-child(1) {
+        top: 0;
+        transform-origin: left center;
+    }
+
+    span:nth-child(2) {
+        top: 10px;
+        transform-origin: left center;
+    }
+
+    span:nth-child(3) {
+        top: 20px;
+        transform-origin: left center;
+    }
+
+    &.is-opened {
+        span:nth-child(1) {
+            top: 0;
+            left: 6px;
+            transform: rotate(45deg);
+        }
+
+        span:nth-child(2) {
+            width: 0%;
+            opacity: 0;
+        }
+
+        span:nth-child(3) {
+            top: 25px;
+            left: 6px;
+            transform: rotate(-45deg);
+        }
+    }
+}

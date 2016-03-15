@@ -1,1 +1,18 @@
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
 
+html {
+    height: 100%;
+    box-sizing: border-box;
+}
+
+body {
+    position: relative;
+    padding-top: $nav-height;
+    overflow-x: hidden;
+    background-color: $body-bg-color;
+    font-family: $base-font-family;
+}
