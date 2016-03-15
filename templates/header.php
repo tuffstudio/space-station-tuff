@@ -5,7 +5,7 @@
                 <a class="navigation__brand-link" href="<?= esc_url(home_url('/')); ?>"><?php bloginfo('name'); ?></a>
             </div><!--
             --><div class="grid__item desktop--three-quarters navigation-primary js-primary-nav">
-                <nav class="">
+                <nav>
                     <?php
                     if (has_nav_menu('primary_navigation')) :
                         wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => 'navigation-menu']);

@@ -5,6 +5,7 @@
     top: 0;
     right: 0;
     left: 0;
+    height: 50px;
     padding: 5px 0 3px;
     background-color: $nav-bg-color;
     color: $white;
@@ -27,21 +28,31 @@
 }
 
 .navigation-primary {
-    display: none;
+    max-height: 0;
+    transition: max-height 1s ease;
+    background-color: $nav-bg-color;
+    overflow: hidden;
 
     @include min-screen($desktop) {
-        display: inline-block;
+        max-height: 100%;
+        transition: none;
     }
 
-    &.open {
-        display: block;
+    &.opened {
+        max-height: 100vh;
+        transition-duration: 3s;
     }
 }
 
 .navigation-menu {
-    margin-top: 20px;
+    margin-top: 10px;
     margin-bottom: 0;
     list-style-type: none;
+
+    @include min-screen($desktop) {
+        padding: 0 20px 0 0;
+        text-align: right;
+    }
 
     li {
         position: relative;
@@ -51,8 +62,7 @@
             display: inline-block;
             position: static;
             margin: 0 10px;
-            padding: 0 5px 20px;
-            transition: border-bottom-color 200ms ease;
+            transition: border-bottom-color $standard-animation-time ease;
             border-bottom: 4px solid transparent;
 
             &:hover {
@@ -62,7 +72,7 @@
 
         &.has-menu {
             &::after {
-                @include css-triangle(5px, $white, down);
+                @include css-triangle(5px, $menu-link-color, down);
                 content: '';
                 position: absolute;
                 top: 5px;
@@ -75,20 +85,41 @@
         }
     }
 
-    a {
+    > li:nth-last-child(2) a {
+        color: $color-primary;
+    }
+
+    > li:last-child a {
         color: $white;
+    }
+
+    a {
+        transition: color $standard-animation-time ease;
+        color: $menu-link-color;
         font-size: 10px;
+        line-height: 1;
         text-decoration: none;
         text-transform: uppercase;
+
+        @include min-screen($desktop) {
+            display: block;
+            padding: 0 5px 15px;
+        }
+
+        &:hover {
+            color: $menu-link-color-hover;
+        }
     }
 
     .sub-menu {
         list-style-type: none;
-        display: none;
+        max-height: 0;
+        transition: max-height 300ms ease;
+        overflow: hidden;
 
         @include min-screen($desktop) {
             position: absolute;
-            top: 66px;
+            top: 100%;
             left: 0;
             width: 100vw;
             padding: 0;
@@ -96,14 +127,24 @@
             text-align: center;
         }
 
+        &.opened {
+            max-height: 100px;
+            transition: max-height 1300ms ease;
+        }
+
         li {
             @include min-screen($desktop) {
-                padding: 13px 0 10px;
+                // padding: 13px 0 10px;
             }
 
             a {
                 @include min-screen($desktop) {
-                    color: $black;
+                    padding: 13px 0 10px;
+                    color: $submenu-link-color;
+
+                    &:hover {
+                        color: $submenu-link-color-hover;
+                    }
                 }
             }
         }

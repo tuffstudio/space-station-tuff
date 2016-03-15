@@ -7,7 +7,7 @@ window.SS.common = function($) {
     function toggleMobileNavigation() {
         $navTrigger.on('click', function(event) {
             $navTrigger.toggleClass('open');
-            $mobileNavigation.slideToggle();
+            $mobileNavigation.toggleClass('opened');
         });
     }
 
@@ -19,11 +19,20 @@ window.SS.common = function($) {
 
             if ($this.children('ul').length > 0) {
                 var $subMenu = $this.find('.sub-menu');
+                var toggled = false;
 
                 $this.addClass('has-menu');
                 $this.on('click', function(event) {
                     event.preventDefault();
-                    $subMenu.slideToggle();
+
+                    var toggled = !$subMenu.hasClass('opened');
+
+                    if(toggled) {
+                        $('.sub-menu').removeClass('opened');
+                        $subMenu.addClass('opened');
+                    } else {
+                        $subMenu.removeClass('opened');
+                    }
                 });
             }
         });

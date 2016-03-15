@@ -7,6 +7,7 @@ $base-font-family: 'FuturaBook';
 $white: #ffffff;
 $black: #000000;
 $gray: #e5e5e5;
+$dark-gray: #999999;
 
 $color-primary: #a17f30;
 
@@ -19,3 +20,11 @@ $body-bg-color: $gray;
 // -----------
 $nav-bg-color: $black;
 $brand-link-color: $white;
+$menu-link-color: $dark-gray;
+$menu-link-color-hover: $white;
+$submenu-link-color: $dark-gray;
+$submenu-link-color-hover: $black;
+
+// Animations
+// ----------
+$standard-animation-time: 300ms;
