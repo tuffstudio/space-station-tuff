@@ -75,3 +75,8 @@
     background-repeat: repeat-x;
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#{ie-hex-str($start-color)}', endColorstr='#{ie-hex-str($end-color)}', GradientType=1);
 }
+
+@mixin square($size) {
+    width: $size;
+    height: $size;
+}

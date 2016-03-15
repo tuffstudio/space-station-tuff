@@ -8,6 +8,7 @@
     height: $nav-height;
     padding: 5px 0 3px;
     background-color: $nav-bg-color;
+    z-index: 100;
 
     @include min-screen($desktop) {
         padding-bottom: 0;
@@ -123,7 +124,7 @@
             left: 0;
             width: 100vw;
             padding: 0;
-            background-color: rgba($white, .7);
+            background-color: $white-transparent;
             text-align: center;
         }
 
@@ -151,7 +152,7 @@
 // ------------
 .navigation__trigger {
     position: absolute;
-    top: 10px;
+    top: 12px;
     right: 10px;
     width: 35px;
     height: 30px;
