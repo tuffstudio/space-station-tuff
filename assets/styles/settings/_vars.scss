@@ -18,8 +18,10 @@ $body-bg-color: $gray;
 
 // Navigation
 // -----------
+$nav-height: 50px;
 $nav-bg-color: $black;
-$brand-link-color: $white;
+$brand-link-color: #d0d0d0;
+$brand-link-size: rem-calc(12);
 $menu-link-color: $dark-gray;
 $menu-link-color-hover: $white;
 $submenu-link-color: $dark-gray;
