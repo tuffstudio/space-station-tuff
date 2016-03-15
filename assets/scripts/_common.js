@@ -6,8 +6,8 @@ window.SS.common = function($) {
 
     function toggleMobileNavigation() {
         $navTrigger.on('click', function(event) {
-            $navTrigger.toggleClass('open');
-            $mobileNavigation.toggleClass('opened');
+            $navTrigger.toggleClass('is-opened');
+            $mobileNavigation.toggleClass('is-opened');
         });
     }
 
@@ -25,13 +25,13 @@ window.SS.common = function($) {
                 $this.on('click', function(event) {
                     event.preventDefault();
 
-                    var toggled = !$subMenu.hasClass('opened');
+                    var toggled = !$subMenu.hasClass('is-opened');
 
                     if(toggled) {
-                        $('.sub-menu').removeClass('opened');
-                        $subMenu.addClass('opened');
+                        $('.sub-menu').removeClass('is-opened');
+                        $subMenu.addClass('is-opened');
                     } else {
-                        $subMenu.removeClass('opened');
+                        $subMenu.removeClass('is-opened');
                     }
                 });
             }
