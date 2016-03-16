@@ -26,4 +26,8 @@
     color: $btn-primary-font-color;
     font-family: $btn-primary-font;
     text-transform: uppercase;
+
+    &:hover {
+        border-color: $btn-primary-border-hover;
+    }
 }
