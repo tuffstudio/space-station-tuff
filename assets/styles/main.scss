@@ -4,6 +4,10 @@
 // Media queries
 @import 'media-queries';
 
+// Vendors
+@import 'owl.carousel';
+@import 'owl.theme.default';
+
 // Theme settings
 @import 'settings/mixins';
 @import 'settings/units';

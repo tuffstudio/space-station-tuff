@@ -72,7 +72,8 @@ var sassPaths = [
     'node_modules/normalize-scss/node_modules/support-for/sass',
     'node_modules/normalize-scss/sass',
     'node_modules/sass-mediaqueries',
-    'bower_components/csswizardry-grids'
+    'bower_components/csswizardry-grids',
+    'bower_components/owl.carousel/dist/assets'
 ];
 
 // ## Reusable Pipelines
