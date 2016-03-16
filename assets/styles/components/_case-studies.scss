@@ -28,12 +28,12 @@
 
 .case-study__description {
     margin-bottom: 35px;
-    font-family: 'FuturaLight';
-    font-size: 12px;
+    font-family: $font-light;
+    font-size: $case-study-description-size;
     line-height: 1.8;
 
     strong {
-        font-family: 'FuturaMedium';
+        font-family: $font-heavy;
     }
 
     p {

@@ -2,6 +2,12 @@ $global-font-size: 100% !default;
 $base-font-family: 'FuturaBook';
 $secondary-font-family: 'FuturaLight';
 
+// Fonts
+// ----------
+$font-light: 'FuturaLight';
+$font-book: 'FuturaBook';
+$font-medium: 'FuturaMedium';
+$font-heavy: 'FuturaHeavy';
 
 // Colors
 // ----------
@@ -23,9 +29,9 @@ $container-padding: 0 15px;
 // ----------
 
 // Primary
-$btn-font-size: 9px;
+$btn-font-size: rem-calc(9px);
 $btn-primary-padding: 12px 8px 10px;
-$btn-primary-font: 'FuturaLight';
+$btn-primary-font: $font-light;
 $btn-primary-font-color: #545454;
 $btn-primary-border-color: #c3c3c3;
 $btn-primary-border-hover: #a37a09;
@@ -66,7 +72,8 @@ $moving-box-text-font: $secondary-font-family;
 
 // Homepage case studies
 // ---------------------
-$case-study-category-size: 12px;
+$case-study-category-size: rem-calc(12px);
 $case-study-category-color: $color-primary;
-$case-study-title-size: 30px;
-$case-study-title-font: 'FuturaHeavy';
+$case-study-title-size: rem-calc(30px);
+$case-study-title-font: $font-heavy;
+$case-study-description-size: rem-calc(12px);
