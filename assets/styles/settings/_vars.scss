@@ -16,6 +16,8 @@ $color-primary: #a17f30;
 // Globals
 // ----------
 $body-bg-color: $gray;
+$container-width: 1024px;
+$container-padding: 0 15px;
 
 // Buttons
 // ----------
@@ -61,3 +63,10 @@ $moving-box-title-size: rem-calc(22);
 $moving-box-title-letterspacing: 2px;
 $moving-box-text-size: rem-calc(11);
 $moving-box-text-font: $secondary-font-family;
+
+// Homepage case studies
+// ---------------------
+$case-study-category-size: 12px;
+$case-study-category-color: $color-primary;
+$case-study-title-size: 30px;
+$case-study-title-font: 'FuturaHeavy';

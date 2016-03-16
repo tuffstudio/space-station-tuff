@@ -1,0 +1,53 @@
+// Case studies styles
+// --------------------
+.case-study__info {
+    padding: 10px 30px 10px 20px;
+}
+
+.case-study__category {
+    font-size: $case-study-category-size;
+    font-style: italic;
+
+    span {
+        color: $case-study-category-color;
+    }
+}
+
+.case-study__title {
+    margin-top: 16px;
+    font-family: $case-study-title-font;
+    font-size: $case-study-title-size;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+
+    a {
+        color: $black;
+        text-decoration: none;
+    }
+}
+
+.case-study__description {
+    margin-bottom: 35px;
+    font-family: 'FuturaLight';
+    font-size: 12px;
+    line-height: 1.8;
+
+    strong {
+        font-family: 'FuturaMedium';
+    }
+
+    p {
+        margin: 0;
+    }
+}
+
+.case-study__thumbnail--video {
+    position: relative;
+
+    &::after {
+        @include center-align();
+        content: url('../images/play_icon.png');
+        display: block;
+        cursor: pointer;
+    }
+}

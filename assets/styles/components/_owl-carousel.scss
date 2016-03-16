@@ -1,0 +1,24 @@
+// Owl carousel custom styling
+// ---------------------------
+.owl-dots {
+    margin-top: 33px;
+    text-align: center;
+}
+
+.owl-dot {
+    display: inline-block;
+    margin: 0 5px;
+
+    span {
+        @include square(10px);
+        display: block;
+        border-radius: 50%;
+        background-color: $white;
+    }
+
+    &.active {
+        span {
+            background-color: $color-primary;
+        }
+    }
+}

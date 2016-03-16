@@ -3,7 +3,7 @@
 .main-banner {
     position: relative;
     height: calc(100vh - #{$nav-height});
-    margin-bottom: 100%; // TODO: Remove when more content will appear
+    margin-bottom: 120px;
     background-image: url('../images/banner-placeholder.jpg');
     background-repeat: no-repeat;
     background-position: center;

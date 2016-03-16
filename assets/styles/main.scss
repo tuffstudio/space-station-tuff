@@ -6,7 +6,7 @@
 
 // Vendors
 @import 'owl.carousel';
-@import 'owl.theme.default';
+@import 'owl.theme.green';
 
 // Theme settings
 @import 'settings/mixins';
@@ -25,8 +25,11 @@
 
 // Components
 @import 'components/buttons';
+@import 'components/sections';
 @import 'components/main-banner';
 @import 'components/moving-box';
+@import 'components/case-studies';
+@import 'components/owl-carousel';
 
 // Layouts
 @import 'layouts/header';

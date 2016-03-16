@@ -33,7 +33,7 @@ function custom_post_types_init() {
         'has_archive'        => true,
         'hierarchical'       => false,
         'menu_position'      => 2,
-        'supports'           => array('title', 'editor', 'thumbnail', 'excerpt'),
+        'supports'           => array('title', 'editor'),
         'taxonomies'         => array('category'),
         'menu_icon'          => 'dashicons-chart-line'
     );

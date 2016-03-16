@@ -8,9 +8,18 @@ window.SS.home = function($) {
         });
     }
 
+    function caseStudiesCarousel() {
+        var $carousel = $('.js-case-studies-carousel');
 
+        $carousel.owlCarousel({
+            items: 1,
+            mouseDrag: false,
+            autoplay: true
+        });
+    }
 
     $(document).ready(function() {
         revealBox();
+        caseStudiesCarousel();
     });
 };

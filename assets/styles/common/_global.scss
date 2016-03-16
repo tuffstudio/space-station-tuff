@@ -16,3 +16,9 @@ body {
     background-color: $body-bg-color;
     font-family: $base-font-family;
 }
+
+.container {
+    max-width: $container-width;
+    margin: 0 auto;
+    padding: $container-padding;
+}
