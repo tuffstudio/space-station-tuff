@@ -14,7 +14,7 @@
                     <div class="grid__item one-half">
                         <a href="#" class="masonry__link">
                             <div class="masonry__item masonry__item--square">
-                                <div class="masonry__tile masonry__tile--info">
+                                <div class="masonry__tile masonry__tile--info masonry__tile-arrow masonry__tile-arrow--right">
                                     <p class="masonry__tile-category">Commercial: <span>Rent</span></p>
                                     <h3 class="masonry__tile-title">Stratford High Street, e15</h3>
                                     <p class="masonry__tile-price">£114,905 pa</p>
@@ -84,7 +84,7 @@
                     --><div class="grid__item one-half">
                         <a href="#" class="masonry__link">
                             <div class="masonry__item masonry__item--square">
-                                <div class="masonry__tile masonry__tile--info">
+                                <div class="masonry__tile masonry__tile--info masonry__tile-arrow masonry__tile-arrow--left">
                                     <p class="masonry__tile-category">Residental: <span>Rent</span></p>
                                     <h3 class="masonry__tile-title">Metropolitan Wharf, e1</h3>
                                     <p class="masonry__tile-price">£2,700pw</p>

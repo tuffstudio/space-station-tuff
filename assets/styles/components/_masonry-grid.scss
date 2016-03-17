@@ -40,6 +40,35 @@
     text-align: center;
 }
 
+.masonry__tile-arrow {
+    &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 35px;
+        width: 0;
+        height: 0;
+        border-style: solid;
+    }
+}
+
+.masonry__tile-arrow--right {
+    &::after {
+        right: (-$masonry-arrow-height);
+        border-width: $masonry-arrow-height $masonry-arrow-width 0 0;
+        border-color: $masonry-arrow-color transparent transparent;
+    }
+}
+
+
+.masonry__tile-arrow--left {
+    &::after {
+        left: (-$masonry-arrow-height);
+        border-width: 0 0 $masonry-arrow-height $masonry-arrow-width;
+        border-color: transparent transparent $masonry-arrow-color;
+    }
+}
+
 .masonry__tile-category {
     font-family: $font-caslon;
     font-size: $case-study-category-size;
