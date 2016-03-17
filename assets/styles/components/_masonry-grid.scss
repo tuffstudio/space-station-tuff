@@ -93,6 +93,10 @@
     margin-bottom: 0;
     font-family: $masonry-price-font;
     font-size: $masonry-price-size;
+
+    &::before {
+        content: '£';
+    }
 }
 
 .masonry__tile-desc--big {
