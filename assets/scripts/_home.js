@@ -14,7 +14,10 @@ window.SS.home = function($) {
         $carousel.owlCarousel({
             items: 1,
             mouseDrag: false,
-            autoplay: true
+            autoplay: true,
+            loop: true,
+            autoplaySpeed: 2000,
+            autoplayHoverPause: true
         });
     }
 
