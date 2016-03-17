@@ -1,7 +1,15 @@
 // Sections
 // -----------
 .section {
-    margin: 50px 0;
+    margin: 150px 0;
+    transform: translateY(175px);
+    transition: transform 650ms ease-out, opacity 1000ms ease;
+    opacity: 0;
+
+    &.is-revealed {
+        transform: translateY(0);
+        opacity: 1;
+    }
 
     &.stay-in-touch {
         min-height: 250px;
@@ -28,4 +36,9 @@
     font-size: $section-title-size;
     letter-spacing: 3.5px;
     text-transform: uppercase;
+}
+
+.section__subtitle {
+    font-family: $section-subtitle-font;
+    font-size: $section-subtitle-size;
 }

@@ -8,6 +8,13 @@ window.SS.home = function($) {
         });
     }
 
+    function revealSections() {
+        $('.js-section-reveal').viewportChecker({
+            classToAdd: 'is-revealed',
+            offset: 100
+        });
+    }
+
     function caseStudiesCarousel() {
         var $carousel = $('.js-case-studies-carousel');
 
@@ -23,6 +30,7 @@ window.SS.home = function($) {
 
     $(document).ready(function() {
         revealBox();
+        revealSections();
         caseStudiesCarousel();
     });
 };

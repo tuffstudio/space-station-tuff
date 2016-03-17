@@ -83,6 +83,8 @@ $case-study-description-size: rem-calc(12px);
 // ------------
 $section-title-size: rem-calc(30);
 $section-title-font: $font-heavy;
+$section-subtitle-size: rem-calc(14);
+$section-subtitle-font: $font-book;
 
 // Masonry grid
 // ---------------
@@ -93,8 +95,9 @@ $masonry-title-size: rem-calc(18);
 $masonry-title-font: $font-heavy;
 $masonry-price-size: rem-calc(14);
 $masonry-price-font: $font-heavy;
+$masonry-desc-small-size: rem-calc(12);
 $masonry-desc-big-size: $masonry-price-size;
 $masonry-desc-big-font: $font-light;
-$masonry-arrow-width: 55px;
+$masonry-arrow-width: 60px;
 $masonry-arrow-height: 35px;
 $masonry-arrow-color: $white;

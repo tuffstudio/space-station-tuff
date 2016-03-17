@@ -1,4 +1,4 @@
-<section class="section property-base">
+<section class="section property-base js-section-reveal">
     <div class="container">
         <div class="grid grid--rev">
             <div class="grid__item tablet--one-half">
@@ -74,7 +74,7 @@
                     <a href="#" class="masonry__link">
                         <div class="grid__item one-half">
                             <div class="masonry__item masonry__item--square masonry__image">
-                                <img src="<?= get_template_directory_uri(); ?>/dist/images/masonry_small_placeholder.jpg" alt="">
+                                <img src="<?= get_template_directory_uri(); ?>/dist/images/rent_small.jpg" alt="">
                             </div>
                         </div><!--
                         --><div class="grid__item one-half">

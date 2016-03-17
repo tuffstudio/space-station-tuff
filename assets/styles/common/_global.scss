@@ -20,8 +20,9 @@ body {
 .container {
     max-width: $container-width;
     margin: 0 auto;
+    overflow: hidden;
 
     @include min-screen($desktop) {
-        padding: $container-padding;        
+        padding: $container-padding;
     }
 }
