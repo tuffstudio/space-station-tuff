@@ -1,4 +1,4 @@
-<section class="section magazine js-section-reveal">
+<section class="section magazine is-hidden js-section-reveal">
     <div class="container">
         <div class="grid">
             <div class="grid__item desktop--one-half">

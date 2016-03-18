@@ -2,9 +2,12 @@
 // -----------
 .section {
     margin: 150px 0;
-    transform: translateY(175px);
-    transition: transform 650ms ease-out, opacity 1000ms ease;
-    opacity: 0;
+
+    &.is-hidden {
+        transform: $section-animation-transform;
+        transition: $section-animation-transition;
+        opacity: 0;
+    }
 
     &.is-revealed {
         transform: translateY(0);
@@ -14,10 +17,19 @@
     &.stay-in-touch {
         min-height: 250px;
         margin-bottom: 0;
+        padding: 50px 15px;
         background-image: url('../images/stay-in-touch-background.png');
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
+        color: $white;
+        text-align: center;
+
+        // TODO: temporary solution
+        p {
+            font-family: $font-caslon;
+            font-style: italic;
+        }
     }
 }
 

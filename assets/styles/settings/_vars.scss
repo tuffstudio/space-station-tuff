@@ -85,6 +85,8 @@ $section-title-size: rem-calc(30);
 $section-title-font: $font-heavy;
 $section-subtitle-size: rem-calc(14);
 $section-subtitle-font: $font-book;
+$section-animation-transition: transform 650ms ease-out, opacity 1000ms ease;
+$section-animation-transform: translateY(175px);
 
 // Masonry grid
 // ---------------
@@ -101,3 +103,7 @@ $masonry-desc-big-font: $font-light;
 $masonry-arrow-width: 60px;
 $masonry-arrow-height: 35px;
 $masonry-arrow-color: $white;
+
+// Footer
+// ------
+$footer-bg-color: $black;

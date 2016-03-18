@@ -2,7 +2,7 @@
     use Roots\Sage\ExcerptText;
 ?>
 
-<section class="section case-studies js-section-reveal">
+<section class="section case-studies is-hidden js-section-reveal">
     <div class="container">
         <div class="owl-carousel js-case-studies-carousel">
             <?php

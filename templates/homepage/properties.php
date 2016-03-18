@@ -1,4 +1,4 @@
-<section class="section property-base js-section-reveal">
+<section class="section property-base is-hidden js-section-reveal">
     <div class="container">
         <div class="grid grid--rev">
             <div class="grid__item tablet--one-half">
