@@ -1,0 +1,53 @@
+// Moving box
+// ------------
+.moving-box {
+    position: absolute;
+    bottom: calc(-(#{$moving-box-size} / 3));
+    left: 50%;
+    transform: translateX(-50%);
+
+    &.is-moved {
+        .moving-box__element {
+            transform: translate(0);
+            opacity: 1;
+        }
+    }
+}
+
+.moving-box__element {
+    transition: transform $moving-box-move-time ease $moving-box-move-delay, opacity $moving-box-show-time ease;
+    opacity: 0;
+}
+
+.moving-box__border {
+    @include square($moving-box-size);
+    transform: translate(#{$moving-box-ratio}, -#{$moving-box-ratio});
+    border: $moving-box-border-width solid $color-primary;
+    pointer-events: none;
+
+}
+
+.moving-box__content {
+    @include square($moving-box-size - $moving-box-border-width * 2);
+    position: absolute;
+    top: $moving-box-border-width;
+    left: $moving-box-border-width;
+    padding: $moving-box-border-width;
+    transform: translate(-#{$moving-box-ratio + $moving-box-border-width}, #{$moving-box-ratio + $moving-box-border-width});
+    background-color: $moving-box-bg-color;
+    text-align: center;
+}
+
+.moving-box__title {
+    font-size: $moving-box-title-size;
+    letter-spacing: $moving-box-title-letterspacing;
+    text-transform: uppercase;
+}
+
+.moving-box__text {
+    width: 70%;
+    margin: 0 auto 30px;
+    color: $black;
+    font-family: $moving-box-text-font;
+    font-size: $moving-box-text-size;
+}

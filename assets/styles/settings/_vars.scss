@@ -1,6 +1,14 @@
 $global-font-size: 100% !default;
 $base-font-family: 'FuturaBook';
+$secondary-font-family: 'FuturaLight';
 
+// Fonts
+// ----------
+$font-light: 'FuturaLight';
+$font-book: 'FuturaBook';
+$font-medium: 'FuturaMedium';
+$font-heavy: 'FuturaHeavy';
+$font-caslon: 'Caslon';
 
 // Colors
 // ----------
@@ -8,13 +16,26 @@ $white: #ffffff;
 $black: #000000;
 $gray: #e5e5e5;
 $dark-gray: #999999;
+$white-transparent: rgba($white, .7);
 
 $color-primary: #a17f30;
 
 // Globals
 // ----------
 $body-bg-color: $gray;
+$container-width: 1024px;
+$container-padding: 0 15px;
 
+// Buttons
+// ----------
+
+// Primary
+$btn-font-size: rem-calc(9px);
+$btn-primary-padding: 12px 8px 10px;
+$btn-primary-font: $font-light;
+$btn-primary-font-color: #545454;
+$btn-primary-border-color: #c3c3c3;
+$btn-primary-border-hover: #a37a09;
 
 // Navigation
 // -----------
@@ -34,3 +55,55 @@ $mobile-menu-up-animation: 500ms;
 $mobile-menu-down-animation: 2s;
 $sub-menu-up-animation: 300ms;
 $sub-menu-down-animation: 1s;
+
+// Homepage moving box
+// -------------------
+$moving-box-size: 246px;
+$moving-box-border-width: 11px;
+$moving-box-border-color: $color-primary;
+$moving-box-bg-color: $white-transparent;
+$moving-box-ratio: 30px;
+$moving-box-show-time: 1000ms;
+$moving-box-move-time: 700ms;
+$moving-box-move-delay: 100ms;
+$moving-box-title-size: rem-calc(22);
+$moving-box-title-letterspacing: 2px;
+$moving-box-text-size: rem-calc(11);
+$moving-box-text-font: $secondary-font-family;
+
+// Homepage case studies
+// ---------------------
+$case-study-category-size: rem-calc(12px);
+$case-study-category-color: $color-primary;
+$case-study-title-size: rem-calc(30px);
+$case-study-title-font: $font-heavy;
+$case-study-description-size: rem-calc(12px);
+
+// Sections
+// ------------
+$section-title-size: rem-calc(30);
+$section-title-font: $font-heavy;
+$section-subtitle-size: rem-calc(14);
+$section-subtitle-font: $font-book;
+$section-animation-transition: transform 650ms ease-out, opacity 1000ms ease;
+$section-animation-transform: translateY(175px);
+
+// Masonry grid
+// ---------------
+$masonry-tile-link-bg: #86754d;
+$masonry-animation-transition: transform 2s cubic-bezier(.23, 1, .32, 1);
+$masonry-animation-transform: scale(1.05);
+$masonry-title-size: rem-calc(18);
+$masonry-title-font: $font-heavy;
+$masonry-price-size: rem-calc(14);
+$masonry-price-font: $font-heavy;
+$masonry-desc-small-size: rem-calc(12);
+$masonry-desc-big-size: $masonry-price-size;
+$masonry-desc-big-font: $font-light;
+$masonry-arrow-width: 60px;
+$masonry-arrow-height: 35px;
+$masonry-arrow-color: $white;
+
+// Footer
+// ------
+$footer-bg-color: $black;

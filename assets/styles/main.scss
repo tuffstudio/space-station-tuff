@@ -4,6 +4,10 @@
 // Media queries
 @import 'media-queries';
 
+// Vendors
+@import 'owl.carousel';
+@import 'owl.theme.green';
+
 // Theme settings
 @import 'settings/mixins';
 @import 'settings/units';
@@ -21,6 +25,12 @@
 
 // Components
 @import 'components/buttons';
+@import 'components/masonry-grid';
+@import 'components/sections';
+@import 'components/main-banner';
+@import 'components/moving-box';
+@import 'components/case-studies';
+@import 'components/owl-carousel';
 
 // Layouts
 @import 'layouts/header';

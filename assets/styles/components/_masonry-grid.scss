@@ -1,0 +1,154 @@
+// Masonry grid styles. Basically on homepage
+// ------------------------------------------
+.masonry__item {
+    position: relative;
+    height: 0;
+}
+
+.masonry__item--rectangular {
+    padding-bottom: 50%;
+}
+
+.masonry__item--square {
+    padding-bottom: 100%;
+}
+
+.masonry__tile--center {
+    padding: 15% 0 15% 30px;
+}
+
+.masonry__tile {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 10px 0;
+    z-index: 10;
+
+    @include min-screen($desktop) {
+        padding: 30px 10px;
+    }
+}
+
+.masonry__link {
+    color: $black;
+}
+
+.masonry__tile--info {
+    background-color: $white;
+    text-align: center;
+}
+
+.masonry__tile-arrow {
+    &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 35px;
+        width: 0;
+        height: 0;
+        border-style: solid;
+    }
+}
+
+.masonry__tile-arrow--right {
+    &::after {
+        right: (-$masonry-arrow-height);
+        border-width: $masonry-arrow-height $masonry-arrow-width 0 0;
+        border-color: $masonry-arrow-color transparent transparent;
+    }
+}
+
+
+.masonry__tile-arrow--left {
+    &::after {
+        left: (-$masonry-arrow-height);
+        border-width: 0 0 $masonry-arrow-height $masonry-arrow-width;
+        border-color: transparent transparent $masonry-arrow-color;
+    }
+}
+
+.masonry__tile-category {
+    font-family: $font-caslon;
+    font-size: $case-study-category-size;
+    font-style: italic;
+
+    span {
+        color: $color-primary;
+    }
+}
+
+.masonry__tile-title {
+    width: 80%;
+    margin: 0 auto;
+    font-family: $masonry-title-font;
+    font-size: $masonry-title-size;
+    letter-spacing: 2px;
+    line-height: 1.5;
+    text-transform: uppercase;
+}
+
+.masonry__tile-price {
+    margin-bottom: 0;
+    font-family: $masonry-price-font;
+    font-size: $masonry-price-size;
+
+    &::before {
+        content: '£';
+    }
+}
+
+.masonry__tile-desc--small {
+    margin-top: 20px;
+    font-size: $masonry-desc-small-size;
+    line-height: 1.65;
+}
+
+.masonry__tile-desc--big {
+    width: 80%;
+    margin: 5px auto 0;
+    font-family: $masonry-desc-big-font;
+    font-size: $masonry-desc-big-size;
+    line-height: 1.5;
+    text-transform: uppercase;
+}
+
+.masonry__tile--link {
+    background-color: $masonry-tile-link-bg;
+    color: $white;
+
+    span {
+        @include center-align();
+        display: block;
+        width: 80%;
+        font-family: $font-book;
+        font-size: 22px;
+        letter-spacing: 2px;
+        text-align: center;
+        text-transform: uppercase;
+    }
+}
+
+.masonry__image {
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+
+    img {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        transition: $masonry-animation-transition;
+    }
+
+    &:hover {
+        img {
+            transform: $masonry-animation-transform;
+        }
+    }
+}

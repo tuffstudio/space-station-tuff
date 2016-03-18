@@ -1,0 +1,33 @@
+// Buttons
+// -------
+.btn {
+    display: inline-block;
+    padding: rem-calc(14);
+    transition: all $standard-animation-time ease-in-out;
+    outline: 0;
+    font-family: $base-font-family;
+    font-size: rem-calc($btn-font-size);
+    line-height: 1;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+
+    &:hover {
+        transition: all $standard-animation-time ease-in-out;
+        text-decoration: none;
+    }
+}
+
+.btn--primary {
+    padding: $btn-primary-padding;
+    border: 1px solid $btn-primary-border-color;
+    color: $btn-primary-font-color;
+    font-family: $btn-primary-font;
+    text-transform: uppercase;
+
+    &:hover {
+        border-color: $btn-primary-border-hover;
+    }
+}
