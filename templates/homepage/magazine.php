@@ -1,7 +1,7 @@
 <section class="section magazine is-hidden js-section-reveal">
     <div class="container">
         <div class="grid">
-            <div class="grid__item desktop--one-half">
+            <div class="grid__item tablet--one-half">
                 <div class="grid__item">
                     <div class="masonry__item masonry__item--rectangular">
                         <div class="masonry__tile--center">
@@ -58,7 +58,7 @@
                     </div>
                 </div>
             </div><!--
-            --><div class="grid__item desktop--one-half">
+            --><div class="grid__item tablet--one-half">
                 <div class="grid__item">
                     <a href="#" class="masonry__link">
                         <div class="grid__item one-half">

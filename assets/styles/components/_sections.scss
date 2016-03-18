@@ -3,6 +3,10 @@
 .section {
     margin: 50px 0;
 
+    @include min-screen($tablet) {
+        margin: 120px 0;
+    }
+
     @include min-screen($desktop) {
         margin: 150px 0;
     }
