@@ -1,12 +1,20 @@
 // Sections
 // -----------
 .section {
-    margin: 150px 0;
+    margin: 70px 0;
+
+    @include min-screen($desktop) {
+        margin: 150px 0;
+    }
 
     &.is-hidden {
-        transform: $section-animation-transform;
+        transform: translateY(125px);
         transition: $section-animation-transition;
         opacity: 0;
+
+        @include min-screen($desktop) {
+            transform: translateY(175px);
+        }
     }
 
     &.is-revealed {
@@ -15,13 +23,10 @@
     }
 
     &.stay-in-touch {
+        @include background-cover(url('../images/stay-in-touch-background.png'));
         min-height: 250px;
         margin-bottom: 0;
         padding: 50px 15px;
-        background-image: url('../images/stay-in-touch-background.png');
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: cover;
         color: $white;
         text-align: center;
 
