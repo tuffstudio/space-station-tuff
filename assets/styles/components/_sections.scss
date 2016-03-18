@@ -1,7 +1,7 @@
 // Sections
 // -----------
 .section {
-    margin: 70px 0;
+    margin: 50px 0;
 
     @include min-screen($desktop) {
         margin: 150px 0;
@@ -50,9 +50,13 @@
 
 .section__title {
     font-family: $section-title-font;
-    font-size: $section-title-size;
+    font-size: $section-title-size-mobile;
     letter-spacing: 3.5px;
     text-transform: uppercase;
+
+    @include min-screen($desktop) {
+        font-size: $section-title-size-desktop;
+    }
 }
 
 .section__subtitle {

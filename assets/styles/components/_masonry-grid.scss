@@ -14,7 +14,11 @@
 }
 
 .masonry__tile--center {
-    padding: 15% 0 15% 30px;
+    padding: 10px 0 10px 20px;
+
+    @include min-screen($desktop) {
+        padding: 15% 0 15% 30px;
+    }
 }
 
 .masonry__tile {
@@ -23,19 +27,20 @@
     right: 0;
     bottom: 0;
     left: 0;
-    padding: 10px 0;
     z-index: 10;
+}
 
-    @include min-screen($desktop) {
-        padding: 30px 10px;
-    }
+.masonry__tile-info {
+    @include center-align();
+    width: 100%;
 }
 
 .masonry__link {
+    display: block;
     color: $black;
 }
 
-.masonry__tile--info {
+.masonry__tile--white {
     background-color: $white;
     text-align: center;
 }
@@ -54,18 +59,26 @@
 
 .masonry__tile-arrow--right {
     &::after {
-        right: (-$masonry-arrow-height);
+        left: 100%;
         border-width: $masonry-arrow-height $masonry-arrow-width 0 0;
         border-color: $masonry-arrow-color transparent transparent;
+
+        @include min-screen($desktop) {
+            border-width: ($masonry-arrow-height * $masonry-arrow-desk-ratio) ($masonry-arrow-width * $masonry-arrow-desk-ratio) 0 0;
+        }
     }
 }
 
 
 .masonry__tile-arrow--left {
     &::after {
-        left: (-$masonry-arrow-height);
+        right: 100%;
         border-width: 0 0 $masonry-arrow-height $masonry-arrow-width;
         border-color: transparent transparent $masonry-arrow-color;
+
+        @include min-screen($desktop) {
+            border-width: 0 0 ($masonry-arrow-height * $masonry-arrow-desk-ratio) ($masonry-arrow-width * $masonry-arrow-desk-ratio);
+        }
     }
 }
 
@@ -80,41 +93,68 @@
 }
 
 .masonry__tile-title {
-    width: 80%;
+    width: 95%;
     margin: 0 auto;
     font-family: $masonry-title-font;
-    font-size: $masonry-title-size;
+    font-size: rem-calc(14);
     letter-spacing: 2px;
     line-height: 1.5;
     text-transform: uppercase;
+
+    @include min-screen($desktop) {
+        width: 80%;
+        font-size: $masonry-title-size;
+    }
 }
 
 .masonry__tile-price {
+    margin-top: 10px;
     margin-bottom: 0;
     font-family: $masonry-price-font;
-    font-size: $masonry-price-size;
+    font-size: rem-calc(12);
+
+    @include min-screen($desktop) {
+        margin-top: 1em;
+        font-size: $masonry-price-size;
+    }
 
     &::before {
         content: '£';
     }
 }
 
+.masonry__tile-desc {
+    margin: 0 auto;
+
+    @include min-screen($desktop) {
+        width: 90%;
+    }
+}
+
 .masonry__tile-desc--small {
-    margin-top: 20px;
+    margin-top: 12px;
     font-size: $masonry-desc-small-size;
     line-height: 1.65;
+
+    @include min-screen($desktop) {
+        margin-top: 20px;
+    }
 }
 
 .masonry__tile-desc--big {
     width: 80%;
-    margin: 5px auto 0;
+    margin-top: 5px;
     font-family: $masonry-desc-big-font;
-    font-size: $masonry-desc-big-size;
+    font-size: rem-calc(12);
     line-height: 1.5;
     text-transform: uppercase;
+
+    @include min-screen($desktop) {
+        font-size: $masonry-desc-big-size;
+    }
 }
 
-.masonry__tile--link {
+.masonry__tile-link {
     background-color: $masonry-tile-link-bg;
     color: $white;
 
@@ -123,10 +163,14 @@
         display: block;
         width: 80%;
         font-family: $font-book;
-        font-size: 22px;
+        font-size: rem-calc(18);
         letter-spacing: 2px;
         text-align: center;
         text-transform: uppercase;
+
+        @include min-screen($desktop) {
+            font-size: rem-calc(22);
+        }
     }
 }
 

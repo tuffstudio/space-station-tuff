@@ -4,5 +4,5 @@
     @include background-cover(url('../images/banner-placeholder.jpg')); // TODO: temporary solution. here will be video
     position: relative;
     height: calc(100vh - #{$nav-height});
-    margin-bottom: 120px;
+    margin-bottom: 150px;
 }
