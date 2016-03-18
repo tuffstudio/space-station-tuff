@@ -111,5 +111,6 @@ window.SS.common = function($) {
     $(document).ready(function() {
         toggleMobileNavigation();
         toggleSubMenu();
+        goToTopButton();
     });
 };
