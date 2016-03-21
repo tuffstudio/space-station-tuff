@@ -27,7 +27,7 @@
                     $case_study_video = $case_study_fields['case_study_video_link'];
             ?>
                 <div class="grid grid--middle">
-                    <div class="grid__item desktop--one-half">
+                    <div class="grid__item tablet--one-half">
                         <div class="case-study__info">
                             <p class="section__category">Case studies <span><?= $case_study_category; ?></span></p>
                             <h2 class="case-study__title case-study__title--homepage">
@@ -46,7 +46,7 @@
                             <a href="<?= $case_study_link; ?>" class="btn btn--primary">View case study</a>
                         </div>
                     </div><!--
-                    --><div class="grid__item desktop--one-half phone--hide desktop--show">
+                    --><div class="grid__item tablet--one-half phone--hide tablet--show">
                         <div class="case-study__thumbnail case-study__thumbnail--<?= strlen($case_study_video) != 0 ? 'video' : ''?>">
                             <?= $case_study_img_url; ?>
                         </div>

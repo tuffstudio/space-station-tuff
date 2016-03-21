@@ -1,0 +1,48 @@
+// Footer styling
+// ---------------
+.footer {
+    min-height: 300px;
+    background-color: $footer-bg-color;
+}
+
+// Go to top button
+// ----------------
+.btn-to-top {
+    display: inline-block;
+    position: fixed;
+    right: 0;
+    bottom: 40px;
+    width: 40px;
+    min-height: 40px;
+    padding: 5px 0;
+    transition: opacity 350ms  ease;
+    background-color: $color-primary;
+    box-sizing: border-box;
+    color: $color-primary;
+    text-align: center;
+    cursor: pointer;
+    opacity: 0;
+    z-index: 130;
+
+    @include min-screen($desktop) {
+        &:hover {
+            background-color: $color-primary;
+        }
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: 15px;
+        left: 11px;
+        width: 0;
+        height: 0;
+        border-right: 10px solid transparent;
+        border-bottom: 10px solid $white;
+        border-left: 10px solid transparent;
+    }
+
+    &.is-visible {
+        opacity: 1;
+    }
+}

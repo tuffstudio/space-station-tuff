@@ -1,5 +1,6 @@
-<footer class="content-info">
-  <div class="container">
-    <?php dynamic_sidebar('sidebar-footer'); ?>
-  </div>
+<footer class="footer">
+    <div class="container">
+
+    </div>
 </footer>
+<div class="btn-to-top js-to-top"></div>

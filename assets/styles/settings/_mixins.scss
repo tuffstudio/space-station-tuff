@@ -39,17 +39,8 @@
     }
 }
 
-@mixin keyframes($animationName) {
-    @-webkit-keyframes #{$animationName} {
-        @content;
-    }
-    @-moz-keyframes #{$animationName} {
-        @content;
-    }
-    @-o-keyframes #{$animationName} {
-        @content;
-    }
-    @keyframes #{$animationName} {
+@mixin keyframes($animation-name) {
+    @keyframes #{$animation-name} {
         @content;
     }
 }
@@ -60,13 +51,13 @@
     transform: translateY(-50%);
 }
 
-@mixin gradient-vertical($start-color: #555, $end-color: #333, $start-percent: 0%, $end-percent: 100%) {
+@mixin gradient-vertical($start-color, $end-color, $start-percent: 0%, $end-percent: 100%) {
     background-image: linear-gradient(to bottom, $start-color $start-percent, $end-color $end-percent);
     background-repeat: repeat-x;
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#{ie-hex-str($start-color)}', endColorstr='#{ie-hex-str($end-color)}', GradientType=0);
 }
 
-@mixin gradient-horizontal($start-color: #555, $end-color: #333, $start-percent: 0%, $end-percent: 100%) {
+@mixin gradient-horizontal($start-color, $end-color, $start-percent: 0%, $end-percent: 100%) {
     background-image: linear-gradient(to right, $start-color $start-percent, $end-color $end-percent);
     background-repeat: repeat-x;
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#{ie-hex-str($start-color)}', endColorstr='#{ie-hex-str($end-color)}', GradientType=1);
@@ -82,4 +73,18 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+@mixin background-cover($filename, $position: center, $size: cover) {
+    background-position: $position;
+    background-repeat: no-repeat;
+    background-size: $size;
+    background-image: url('../images/#{$filename}');
+}
+
+@mixin placeholder {
+    &::-webkit-input-placeholder { @content }
+    &:-moz-placeholder           { @content }
+    &::-moz-placeholder          { @content }
+    &:-ms-input-placeholder      { @content }
 }

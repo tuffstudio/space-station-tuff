@@ -1,11 +1,8 @@
 // Main banner
 // ------------
 .main-banner {
+    @include background-cover('banner-placeholder.jpg'); // TODO: temporary solution. here will be video
     position: relative;
     height: calc(100vh - #{$nav-height});
-    margin-bottom: 120px;
-    background-image: url('../images/banner-placeholder.jpg');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+    margin-bottom: 150px;
 }
