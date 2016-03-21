@@ -22,6 +22,8 @@
     foreach ($magazine_featured_posts as $index => $id) {
         $magazine{$index} = new MagazinePost($id);
     }
+
+    wp_reset_postdata();
 ?>
 
 <section class="section magazine is-hidden js-section-reveal">
