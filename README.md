@@ -1,4 +1,4 @@
-# Wordpress basic theme
+# space-station
 
 ## Requirements
 
