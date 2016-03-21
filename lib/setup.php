@@ -105,3 +105,9 @@ function assets() {
     wp_enqueue_script('sage/js', Assets\asset_path('scripts/main.js'), [], null, true);
 }
 add_action('wp_enqueue_scripts', __NAMESPACE__ . '\\assets', 100);
+
+/**
+ * Custom media uploader image sizes
+ */
+ add_image_size( 'square_small', 250, 250, true );
+ add_image_size( 'square_big', 500, 500, true );
