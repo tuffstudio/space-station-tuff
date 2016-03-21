@@ -27,7 +27,7 @@
     }
 
     &.stay-in-touch {
-        @include background-cover(url('../images/stay-in-touch-background.png'));
+        @include background-cover('stay-in-touch-background.png');
         min-height: 250px;
         margin: 0;
         padding: 30px 15px;
@@ -73,10 +73,8 @@
 }
 
 .magazine {
-    @include background-cover(url('../images/splash_bg.png'));
+    @include background-cover('splash_bg.png', 80% 0, auto);
     margin-bottom: 0;
-    background-position: 80% 0 !important;
-    background-size: auto !important;
 
     @include min-screen($desktop) {
         padding: 100px 0 150px;

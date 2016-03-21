@@ -75,11 +75,11 @@
     transform: translate(-50%, -50%);
 }
 
-@mixin background-cover($url) {
-    background-position: center;
+@mixin background-cover($filename, $position: center, $size: cover) {
+    background-position: $position;
     background-repeat: no-repeat;
-    background-size: cover;
-    background-image: $url;
+    background-size: $size;
+    background-image: url('../images/#{$filename}');
 }
 
 @mixin placeholder {
