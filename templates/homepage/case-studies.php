@@ -9,7 +9,8 @@
             $args = array(
                 'post_type' => 'case-study',
                 'post_status' => 'publish',
-                'meta_key' => 'case_study_featured'
+                'meta_key' => 'case_study_featured',
+                'meta_value' => true,
             );
 
             $query = new WP_Query( $args );
