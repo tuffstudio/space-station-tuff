@@ -1,4 +1,5 @@
 <?php
+namespace Roots\Sage\MagazinePost;
 
 class MagazinePost {
     private $id;

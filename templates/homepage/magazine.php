@@ -1,4 +1,6 @@
 <?php
+    use Roots\Sage\MagazinePost;
+
     $args = array(
         'post_type' => 'post',
         'post_status' => 'publish',
@@ -20,7 +22,7 @@
     }
 
     foreach ($magazine_featured_posts as $index => $id) {
-        $magazine{$index} = new MagazinePost($id);
+        $magazine{$index} = new MagazinePost\MagazinePost($id);
     }
 
     wp_reset_postdata();
@@ -153,3 +155,5 @@
         </div>
     </div>
 </section>
+
+<?php wp_reset_postdata(); ?>
