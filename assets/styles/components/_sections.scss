@@ -29,10 +29,14 @@
     &.stay-in-touch {
         @include background-cover(url('../images/stay-in-touch-background.png'));
         min-height: 250px;
-        margin-bottom: 0;
-        padding: 50px 15px;
+        margin: 0;
+        padding: 30px 15px;
         color: $white;
         text-align: center;
+
+        @include min-screen($tablet) {
+            padding: 50px 15px;
+        }
 
         // TODO: temporary solution
         p {
@@ -66,4 +70,15 @@
 .section__subtitle {
     font-family: $section-subtitle-font;
     font-size: $section-subtitle-size;
+}
+
+.magazine {
+    @include background-cover(url('../images/splash_bg.png'));
+    margin-bottom: 0;
+    background-position: 80% 0 !important;
+    background-size: auto !important;
+
+    @include min-screen($desktop) {
+        padding: 100px 0 150px;
+    }
 }
