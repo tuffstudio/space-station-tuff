@@ -45,10 +45,10 @@
                             if(array_key_exists(0, $magazine_featured_posts)):
                                 $post = $magazine{0};
                         ?>
-                            <a href="<?= $post->link(); ?>" class="masonry__link">
+                            <a href="<?= $post->get_link(); ?>" class="masonry__link">
                                 <div class="grid__item one-half">
                                     <div class="masonry__item masonry__item--square masonry__image">
-                                        <?= $post->image('square_small'); ?>
+                                        <?= $post->get_image('square_small'); ?>
                                     </div>
                                 </div><!--
                                 --><div class="grid__item one-half">
@@ -56,7 +56,7 @@
                                         <div class="masonry__tile masonry__tile--white masonry__tile-arrow masonry__tile-arrow--left">
                                             <div class="masonry__tile-info">
                                                 <p class="masonry__tile-category">Art: <span>open house</span></p>
-                                                <h3 class="masonry__tile-title"><?= $post->title() ?></h3>
+                                                <h3 class="masonry__tile-title"><?= $post->get_title() ?></h3>
                                                 <p class="masonry__tile-desc masonry__tile-desc--small">Room Focus on one room of Space Station's properties</p>
                                             </div>
                                         </div>
@@ -70,13 +70,13 @@
                             if(array_key_exists(1, $magazine_featured_posts)):
                                 $post = $magazine{1};
                         ?>
-                            <a href="<?= $post->link(); ?>" class="masonry__link">
+                            <a href="<?= $post->get_link(); ?>" class="masonry__link">
                                 <div class="grid__item one-half">
                                     <div class="masonry__item masonry__item--square">
                                         <div class="masonry__tile masonry__tile--white masonry__tile-arrow masonry__tile-arrow--right">
                                             <div class="masonry__tile-info">
                                                 <p class="masonry__tile-category">Design: <span>Tools</span></p>
-                                                <h3 class="masonry__tile-title"><?= $post->title(); ?></h3>
+                                                <h3 class="masonry__tile-title"><?= $post->get_title(); ?></h3>
                                                 <p class="masonry__tile-desc masonry__tile-desc--small">
                                                     Design classics and new instant classics: Cool stationery/cutlery/inspirational
                                                 </p>
@@ -86,7 +86,7 @@
                                 </div><!--
                                 --><div class="grid__item one-half">
                                     <div class="masonry__item masonry__item--square masonry__image">
-                                        <?= $post->image('square_small'); ?>
+                                        <?= $post->get_image('square_small'); ?>
                                     </div>
                                 </div>
                             </a>
@@ -100,13 +100,13 @@
                         if(array_key_exists(2, $magazine_featured_posts)):
                             $post = $magazine{2};
                     ?>
-                        <a href="<?= $post->link(); ?>" class="masonry__link">
+                        <a href="<?= $post->get_link(); ?>" class="masonry__link">
                             <div class="grid__item one-half">
                                 <div class="masonry__item masonry__item--square">
                                     <div class="masonry__tile masonry__tile--white masonry__tile-arrow masonry__tile-arrow--right">
                                         <div class="masonry__tile-info">
                                             <p class="masonry__tile-category">Architecture: <span>Architours</span></p>
-                                            <h3 class="masonry__tile-title"><?= $post->title(); ?></h3>
+                                            <h3 class="masonry__tile-title"><?= $post->get_title(); ?></h3>
                                             <p class="masonry__tile-desc masonry__tile-desc--small">The influence of World War II on East London's urban landscape</p>
                                         </div>
                                     </div>
@@ -114,7 +114,7 @@
                             </div><!--
                             --><div class="grid__item one-half">
                                 <div class="masonry__item masonry__item--square masonry__image">
-                                    <?= $post->image('square_small'); ?>
+                                    <?= $post->get_image('square_small'); ?>
                                 </div>
                             </div>
                         </a>
@@ -125,8 +125,8 @@
                         if(array_key_exists(3, $magazine_featured_posts)) :
                             $post = $magazine{3};
                     ?>
-                        <a href="<?= $post->link(); ?>" class="masonry__link">
-                            <?= $post->image('square_big'); ?>
+                        <a href="<?= $post->get_link(); ?>" class="masonry__link">
+                            <?= $post->get_image('square_big'); ?>
                             <div class="grid__item one-half">
                                 <div class="masonry__item masonry__item--square"></div>
                             </div><!--
@@ -135,7 +135,7 @@
                                     <div class="masonry__tile masonry__tile--white">
                                         <div class="masonry__tile-info">
                                             <p class="masonry__tile-category"><span>Spotlight</span></p>
-                                            <h3 class="masonry__tile-title"><?= $post->title(); ?></h3>
+                                            <h3 class="masonry__tile-title"><?= $post->get_title(); ?></h3>
                                             <p class="masonry__tile-desc masonry__tile-desc--small">Design classics and new instant classics: Cool stationery/cutlery/inspirational</p>
                                         </div>
                                     </div>

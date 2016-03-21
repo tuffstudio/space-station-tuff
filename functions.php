@@ -19,7 +19,7 @@ $sage_includes = [
   'lib/cleaning.php',        // Cleanings
   'lib/post-types.php',      // Custom post types
   'lib/excerpt-text.php',    // Custom text length
-  'lib/MagazinePosts.php'    // Magazie Posts class
+  'lib/magazine-posts.php'    // Magazie Posts class
 ];
 
 foreach ($sage_includes as $file) {

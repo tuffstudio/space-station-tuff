@@ -1,5 +1,4 @@
 <?php
-// namespace Roots\Sage\MagazinePosts;
 
 class MagazinePost {
     private $id;
@@ -8,15 +7,15 @@ class MagazinePost {
         $this->id = $id;
     }
 
-    function title() {
+    function get_title() {
         return get_the_title($this->id);
     }
 
-    function image($size) {
+    function get_image($size) {
         return get_the_post_thumbnail($this->id, $size);
     }
 
-    function link() {
+    function get_link() {
         return get_permalink($this->id);
     }
 }
