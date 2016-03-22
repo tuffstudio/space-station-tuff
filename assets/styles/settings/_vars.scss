@@ -33,7 +33,7 @@ $container-padding: 0 15px;
 $btn-font-size: rem-calc(9px);
 $btn-primary-padding: 12px 8px 10px;
 $btn-primary-font: $font-light;
-$btn-primary-font-color: #545454;
+$btn-primary-font-color: $black;
 $btn-primary-border-color: #c3c3c3;
 $btn-primary-border-hover: #a37a09;
 
@@ -105,6 +105,7 @@ $masonry-arrow-width: 35px;
 $masonry-arrow-height: 20px;
 $masonry-arrow-color: $white;
 $masonry-arrow-desk-ratio: 1.3;
+$masonry-border-ratio: 25px;
 
 // Footer
 // ------

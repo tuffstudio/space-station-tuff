@@ -40,6 +40,19 @@
 .masonry__link {
     display: block;
     color: $black;
+    overflow: hidden;
+
+    &:hover {
+        @include min-screen($desktop) {
+            .masonry__tile-border {
+                opacity: 1;
+            }
+
+            img {
+                transform: $masonry-animation-transform;
+            }
+        }
+    }
 }
 
 .masonry__tile--white {
@@ -48,7 +61,8 @@
 }
 
 .masonry__tile-arrow {
-    &::after {
+    &::after,
+    &::before {
         content: '';
         display: block;
         position: absolute;
@@ -57,9 +71,7 @@
         height: 0;
         border-style: solid;
     }
-}
 
-.masonry__tile-arrow--right {
     &::after {
         left: 100%;
         border-width: $masonry-arrow-height $masonry-arrow-width 0 0;
@@ -69,11 +81,8 @@
             border-width: ($masonry-arrow-height * $masonry-arrow-desk-ratio) ($masonry-arrow-width * $masonry-arrow-desk-ratio) 0 0;
         }
     }
-}
 
-
-.masonry__tile-arrow--left {
-    &::after {
+    &::before {
         right: 100%;
         border-width: 0 0 $masonry-arrow-height $masonry-arrow-width;
         border-color: transparent transparent $masonry-arrow-color;
@@ -157,8 +166,13 @@
 }
 
 .masonry__tile-link {
+    transition: background-color $standard-animation-time ease;
     background-color: $masonry-tile-link-bg;
     color: $white;
+
+    &:hover {
+        background-color: $color-primary;
+    }
 
     span {
         @include center-align();
@@ -191,10 +205,15 @@
         height: 100%;
         transition: $masonry-animation-transition;
     }
+}
 
-    &:hover {
-        img {
-            transform: $masonry-animation-transform;
-        }
-    }
+.masonry__tile-border {
+    @include square(calc(100% - #{$masonry-border-ratio}));
+    position: absolute;
+    top: ($masonry-border-ratio / 2);
+    left: ($masonry-border-ratio / 2);
+    transition: opacity 1s ease;
+    border: 1px solid $black;
+    opacity: 0;
+    pointer-events: all;
 }
