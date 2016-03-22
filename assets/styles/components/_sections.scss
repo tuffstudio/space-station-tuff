@@ -25,25 +25,6 @@
         transform: translateY(0);
         opacity: 1;
     }
-
-    &.stay-in-touch {
-        @include background-cover('stay-in-touch-background.png');
-        min-height: 250px;
-        margin: 0;
-        padding: 30px 15px;
-        color: $white;
-        text-align: center;
-
-        @include min-screen($tablet) {
-            padding: 50px 15px;
-        }
-
-        // TODO: temporary solution
-        p {
-            font-family: $font-caslon;
-            font-style: italic;
-        }
-    }
 }
 
 .section__category {
@@ -72,11 +53,36 @@
     font-size: $section-subtitle-size;
 }
 
+// Each homepage sections
+// ----------------------
 .magazine {
     @include background-cover('splash_bg.png', 80% 0, auto);
     margin-bottom: 0;
 
     @include min-screen($desktop) {
         padding: 100px 0 150px;
+    }
+}
+
+.stay-in-touch {
+    @include background-cover('stay-in-touch-background.png');
+    min-height: 250px;
+    margin: 0;
+    padding: 30px 15px;
+    color: $white;
+    text-align: center;
+
+    @include min-screen($tablet) {
+        padding: 50px 15px;
+    }
+
+    // TODO: temporary solution
+    h3 {
+        letter-spacing: .2em;
+    }
+
+    p {
+        font-family: $font-caslon;
+        font-style: italic;
     }
 }
