@@ -48,3 +48,22 @@
         background-color: $color-primary;
     }
 }
+
+.btn--switcher {
+    min-width: 130px;
+    padding: 8px 20px 6px;
+    transition: all $standard-animation-time ease;
+    border: 1px solid transparent;
+    background-color: transparent;
+    font-family: $font-light;
+    font-size: rem-calc(9);
+    letter-spacing: .2em;
+    text-transform: uppercase;
+
+    &:hover,
+    &.active {
+        border-color: $color-primary;
+        color: $color-primary;
+        font-weight: bold;
+    }
+}

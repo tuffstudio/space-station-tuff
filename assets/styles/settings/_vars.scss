@@ -8,6 +8,7 @@ $font-light: 'FuturaLight';
 $font-book: 'FuturaBook';
 $font-medium: 'FuturaMedium';
 $font-heavy: 'FuturaHeavy';
+$font-bold: 'FuturaBold';
 $font-caslon: 'Caslon';
 
 // Colors
@@ -107,6 +108,24 @@ $masonry-arrow-color: $white;
 $masonry-arrow-desk-ratio: 1.3;
 $masonry-border-ratio: 25px;
 
+// Search page
+// --------------
+$tab-head-font: $font-bold;
+$tab-head-font-size: rem-calc(12);
+$tab-head-bg: $black;
+$tab-head-color: #b2b2b2;
+$tab-head-bg-active: $white;
+$tab-head-bg-color-active: $black;
+$single-result-space-ratio: 21px;
+
+// View navigation
+// ----------------
+$view-item-color: #adaba5;
+
 // Footer
 // ------
 $footer-bg-color: $black;
+
+// Inputs
+// --------
+$input-bg-color: #c9cacc;

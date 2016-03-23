@@ -1,0 +1,163 @@
+// Search page styles
+// ------------------
+.search-tab__head a {
+    display: block;
+    margin: 0 2px;
+    padding: 14px 0 12px;
+    border: 2px solid transparent;
+    background-color: $tab-head-bg;
+    color: $tab-head-color;
+    font-family: $tab-head-font;
+    font-size: $tab-head-font-size;
+    letter-spacing: .1em;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    cursor: pointer;
+
+    &.active {
+        border-top-color: $color-primary;
+        background-color: $tab-head-bg-active;
+        color: $tab-head-bg-color-active;
+    }
+}
+
+.search-tab__body {
+    position: relative;
+    padding-top: 40px;
+}
+
+
+.search-tab__side-menu__item {
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.search-results__nav {
+    border-bottom: 1px solid $dark-gray;
+}
+
+.search-results__title {
+    font-family: $font-bold;
+    font-size: rem-calc(18);
+    text-transform: uppercase;
+}
+
+// FIXME: Merge that to lists. Code duplication
+// View navigation
+.view-nav {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.view-nav__item {
+    display: inline-block;
+    padding: 3px 0 3px 6px;
+
+    & + & {
+        border-left: 1px solid $view-item-color;
+    }
+
+    a {
+        color: $view-item-color;
+        font-family: $font-book;
+        font-size: rem-calc(10);
+        text-decoration: none;
+        text-transform: uppercase;
+
+        &.active {
+            color: $black;
+        }
+    }
+}
+
+// Sort nav
+.sort-nav {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.sort-nav__item {
+    display: inline-block;
+    color: $black;
+    font-family: $font-book;
+    font-size: rem-calc(10);
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+// Results
+.search-results__block {
+    display: none;
+
+    &.visible {
+        display: block;
+    }
+}
+
+.search-results__body {
+    position: relative;
+}
+
+.search-results--grid {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    padding-top: 60px;
+}
+
+.single-result {
+    margin-bottom: $single-result-space-ratio;
+    flex-basis: 100%;
+
+    @include min-screen($tablet) {
+        flex-basis: 50%;
+
+        // &:nth-child
+    }
+
+    @include min-screen($desktop) {
+        flex-basis: 33.3333%;
+
+        &:nth-child(3n + 1) {
+            padding-right: ($single-result-space-ratio * 2) / 3;
+        }
+
+        &:nth-child(3n + 2) {
+            padding-right: ($single-result-space-ratio / 3);
+            padding-left: ($single-result-space-ratio / 3);
+        }
+
+        &:nth-child(3n + 3) {
+            padding-left: ($single-result-space-ratio * 2) / 3;
+        }
+    }
+}
+
+.single-result__link {
+    display: block;
+    color: $black;
+    text-decoration: none;
+    overflow: hidden;
+}
+
+.single-result__image {
+    margin-bottom: -4px;
+
+    img {
+        width: 100%;
+        height: auto;
+        transition: $masonry-animation-transition;
+    }
+}
+
+.single-result__info {
+    position: relative;
+    padding: 20px 0;
+    background-color: $white;
+    text-align: center;
+}
