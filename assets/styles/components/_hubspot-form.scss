@@ -2,6 +2,10 @@
 // --------------------------------------
 .hbspt-form {
     margin-top: 10px;
+
+    fieldset {
+        max-width: 600px !important;
+    }
 }
 
 .form-columns-2 {
@@ -70,4 +74,8 @@
 .hs-error-msgs {
     padding: 0;
     list-style-type: none;
+
+    label {
+        font-size: rem-calc(12);
+    }
 }
