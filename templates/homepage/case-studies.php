@@ -30,7 +30,7 @@
                 <div class="grid grid--middle">
                     <div class="grid__item tablet--one-half">
                         <div class="case-study__info">
-                            <p class="section__category">Case studies <span><?= $case_study_category; ?></span></p>
+                            <p class="section__category">Case studies: <span><?= $case_study_category; ?></span></p>
                             <h2 class="case-study__title case-study__title--homepage">
                                 <a href="<?= $case_study_link; ?>">
                                     <?= the_title(); ?>
