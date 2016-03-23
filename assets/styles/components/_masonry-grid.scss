@@ -168,12 +168,7 @@
 
 .masonry__tile-link {
     transition: background-color $standard-animation-time ease;
-    background-color: $masonry-tile-link-bg;
     color: $white;
-
-    &:hover {
-        background-color: $color-primary;
-    }
 
     span {
         @include center-align();
@@ -188,6 +183,23 @@
         @include min-screen($desktop) {
             font-size: rem-calc(22);
         }
+    }
+}
+
+.masonry__tile-link--brown {
+    background-color: $masonry-tile-link-bg;
+
+    &:hover {
+        background-color: $color-primary;
+    }
+}
+
+.masonry__tile-link--purple {
+    // TODO: Check proper color and put it into variable. Waiting for PSD file.
+    background-color: #503350;
+
+    &:hover {
+        background-color: darken(#503350, 5%);
     }
 }
 

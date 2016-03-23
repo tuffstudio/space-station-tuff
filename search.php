@@ -1,11 +1,15 @@
+<div class="container">
+    <div class="grid grid--full">
+        <div class="grid__item tablet--one-half">
+            Find a property
+        </div><!--
+        --><div class="grid__item tablet--one-half u--align-right">
+        Sign up now for new property alerts
+    </div>
+</div>
+</div>
 
 <?php get_template_part('templates/searchpage/tabs'); ?>
-
-<?php if (!have_posts()) : ?>
-  <div class="alert alert-warning">
-    <?php _e('Sorry, no results were found.', 'sage'); ?>
-  </div>
-<?php endif; ?>
 
 <section class="section search-results">
     <div class="container">
@@ -42,15 +46,26 @@
                 <div class="search-results--dynamic">
                     <?php if (have_posts()) : the_post(); ?>
                         <?php get_template_part('templates/searchpage/dynamic', 'view'); ?>
+                    <?php else : ?>
+                        <?php // FIXME: Code duplication!!! ?>
+                        <div class="alert alert-warning">
+                          <?php _e('Sorry, no results were found.', 'sage'); ?>
+                        </div>
                     <?php endif; ?>
                 </div>
             </div>
 
             <div id="grid-view" class="search-results__block js-results-block visible">
                 <div class="search-results--grid">
-                    <?php while (have_posts()) : the_post(); ?>
-                        <?php get_template_part('templates/searchpage/grid', 'view'); ?>
-                    <?php endwhile; ?>
+                    <?php if(have_posts()): ?>
+                        <?php while (have_posts()) : the_post(); ?>
+                            <?php get_template_part('templates/searchpage/grid', 'view'); ?>
+                        <?php endwhile; ?>
+                    <?php else : ?>
+                        <div class="alert alert-warning">
+                          <?php _e('Sorry, no results were found.', 'sage'); ?>
+                        </div>
+                    <?php endif; ?>
                 </div>
             </div>
 
@@ -58,6 +73,10 @@
                 <div class="search-results--map">
                     <?php if (have_posts()) : the_post(); ?>
                         <?php get_template_part('templates/searchpage/map', 'view'); ?>
+                    <?php else : ?>
+                        <div class="alert alert-warning">
+                          <?php _e('Sorry, no results were found.', 'sage'); ?>
+                        </div>
                     <?php endif; ?>
                 </div>
             </div>
