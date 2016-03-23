@@ -1,20 +1,14 @@
 <section class="search-form">
     <div class="container">
         <div class="grid grid--full">
-            <div class="grid__item desktop--one-third">
-                <div class="search-tab__head">
-                    <a href="#residential" class="js-tab-switcher active">Residental</a>
-                </div>
+            <div class="grid__item tablet--one-third">
+                <a href="#residential" class="search-tab__head js-tab-switcher active">Residental</a>
             </div><!--
-            --><div class="grid__item desktop--one-third">
-                <div class="search-tab__head">
-                    <a href="#commercial" class="js-tab-switcher">Commercial</a>
-                </div>
+            --><div class="grid__item tablet--one-third">
+                <a href="#commercial" class="search-tab__head js-tab-switcher">Commercial</a>
             </div><!--
-            --><div class="grid__item desktop--one-third">
-            <div class="search-tab__head">
-                    <a href="#holidays" class="js-tab-switcher">Holidays</a>
-                </div>
+            --><div class="grid__item tablet--one-third">
+                <a href="#holidays" class="search-tab__head js-tab-switcher">Holidays</a>
             </div>
         </div>
         <div class="search-tab__body">

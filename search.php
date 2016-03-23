@@ -15,9 +15,13 @@
                     <h3 class="search-results__title">Properties for sale</h3>
                 </div><!--
                 --><div class="grid__item u--align-right desktop--one-half">
-                    <ul class="sort-nav">
-                        <li class="sort-nav__item">per page v</li>
-                        <li class="sort-nav__item">sort by v</li>
+                    <ul class="view-nav sort-nav">
+                        <li class="view-nav__item sort-nav__item">
+                            <a href="#">per page v</a>
+                        </li>
+                        <li class="view-nav__item sort-nav__item">
+                            <a href="#">sort by v</a>
+                        </li>
                     </ul>
                     <ul class="view-nav">
                         <li class="view-nav__item">

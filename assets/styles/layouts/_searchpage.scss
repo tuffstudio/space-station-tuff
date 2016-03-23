@@ -1,6 +1,6 @@
 // Search page styles
 // ------------------
-.search-tab__head a {
+.search-tab__head {
     display: block;
     margin: 0 2px;
     padding: 14px 0 12px;
@@ -27,7 +27,6 @@
     padding-top: 40px;
 }
 
-
 .search-tab__side-menu__item {
     margin-bottom: 15px;
     text-align: center;
@@ -43,7 +42,7 @@
     text-transform: uppercase;
 }
 
-// FIXME: Merge that to lists. Code duplication
+
 // View navigation
 .view-nav {
     display: inline-block;
@@ -75,19 +74,18 @@
 
 // Sort nav
 .sort-nav {
-    display: inline-block;
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
+    margin-right: 30px;
 }
 
 .sort-nav__item {
-    display: inline-block;
-    color: $black;
-    font-family: $font-book;
-    font-size: rem-calc(10);
-    text-transform: uppercase;
-    cursor: pointer;
+    a {
+        color: $black;
+        text-transform: uppercase;
+    }
+
+    & + & {
+        border-left: 0;
+    }
 }
 
 // Results
@@ -112,28 +110,34 @@
 
 .single-result {
     margin-bottom: $single-result-space-ratio;
+    padding: 0 $single-result-space-ratio;
     flex-basis: 100%;
 
     @include min-screen($tablet) {
         flex-basis: 50%;
 
-        // &:nth-child
+        &:nth-child(2n + 1) {
+            padding: 0 ($single-result-space-ratio / 2) 0 $single-result-space-ratio;
+        }
+
+        &:nth-child(2n + 2) {
+            padding: 0 $single-result-space-ratio 0 ($single-result-space-ratio / 2);
+        }
     }
 
     @include min-screen($desktop) {
         flex-basis: 33.3333%;
 
         &:nth-child(3n + 1) {
-            padding-right: ($single-result-space-ratio * 2) / 3;
+            padding: 0 (($single-result-space-ratio * 2) / 3) 0 0;
         }
 
         &:nth-child(3n + 2) {
-            padding-right: ($single-result-space-ratio / 3);
-            padding-left: ($single-result-space-ratio / 3);
+            padding: 0 ($single-result-space-ratio / 3);
         }
 
         &:nth-child(3n + 3) {
-            padding-left: ($single-result-space-ratio * 2) / 3;
+            padding: 0 0 0 ($single-result-space-ratio * 2) / 3;
         }
     }
 }
