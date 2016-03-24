@@ -23,3 +23,30 @@
 .select2-selection.select2-selection--single {
     outline: 0;
 }
+
+.select2-container--default .select2-selection--single .select2-selection__arrow b {
+    @include center-align();
+    border-color: transparent;
+
+    &::after {
+        @include center-align();
+        content: '\e902';
+        color: #9fa0a2;
+        font-family: 'spacestation';
+    }
+}
+
+.select2-container--default.select2-container--open .select2-selection--single .select2-selection__arrow b {
+    @include center-align();
+    border-color: transparent;
+
+    &::after {
+        content: '\e901';
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translate(-50%, -10%);
+        color: #9fa0a2;
+        font-family: 'spacestation';
+    }
+}
