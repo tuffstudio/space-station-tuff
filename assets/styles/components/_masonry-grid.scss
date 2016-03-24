@@ -195,11 +195,10 @@
 }
 
 .masonry__tile-link--purple {
-    // TODO: Check proper color and put it into variable. Waiting for PSD file.
-    background-color: #503350;
+    background-color: $masonry-tile-link-cta;
 
     &:hover {
-        background-color: darken(#503350, 5%);
+        background-color: lighten($masonry-tile-link-cta, 5%);
     }
 }
 
@@ -228,5 +227,5 @@
     transition: opacity 1s ease;
     border: 1px solid $black;
     opacity: 0;
-    pointer-events: all;
+    pointer-events: none;
 }

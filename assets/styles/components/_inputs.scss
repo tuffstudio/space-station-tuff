@@ -3,15 +3,16 @@
 .input-search {
     display: block;
     width: 100%;
-    margin-bottom: 15px;
-    padding: 3px 10px;
+    margin-bottom: $search-form-space-ratio;
+    padding: 8px 10px 4px;
     border: 0;
     outline: 0;
     background-color: $input-bg-color;
+    font-family: $font-light;
+    font-size: $search-form-font-size;
     box-sizing: border-box;
 
     @include placeholder() {
-        font-size: rem-calc(9);
         text-transform: uppercase;
     };
 }
@@ -20,14 +21,50 @@ input[type=search] {
     box-sizing: border-box;
 }
 
+.input-container {
+    @include min-screen($desktop) {
+        padding-right: $search-form-space-ratio;
+    }
+}
+
+.input-container--right {
+    @include min-screen($desktop) {
+        padding-right: $search-form-space-ratio / 2;
+    }
+}
+
+.input-container--left {
+    @include min-screen($desktop) {
+        padding-left: $search-form-space-ratio / 2;
+    }
+}
+
+.search-form__labels {
+    font-family: $font-book;
+    font-size: $search-form-font-size;
+    text-transform: uppercase;
+}
+
 .select2-container {
     width: 100% !important;
-    margin-bottom: 15px;
+    margin-bottom: $search-form-space-ratio;
     outline: 0;
+    color: $black;
+    font-family: $font-light;
+    font-size: $search-form-font-size;
+    text-transform: uppercase;
+
+    .select2-selection--single .select2-selection__rendered {
+        padding-left: 10px;
+    }
 }
 
 .select2-container--default .select2-selection--single {
     border: 0;
     border-radius: 0;
     background-color: $input-bg-color;
+}
+
+.select2-selection.select2-selection--single {
+    outline: 0;
 }

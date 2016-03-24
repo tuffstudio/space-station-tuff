@@ -18,6 +18,7 @@ $black: #000000;
 $gray: #e5e5e5;
 $dark-gray: #999999;
 $white-transparent: rgba($white, .7);
+$purple: #4a0036;
 
 $color-primary: #a37a09;
 
@@ -92,6 +93,7 @@ $section-animation-transform: translateY(175px);
 
 // Masonry grid
 // ---------------
+$masonry-tile-link-cta: $purple;
 $masonry-tile-link-bg: #86754d;
 $masonry-animation-transition: transform 2s cubic-bezier(.23, 1, .32, 1);
 $masonry-animation-transform: scale(1.05);
@@ -117,6 +119,8 @@ $tab-head-color: #b2b2b2;
 $tab-head-bg-active: $white;
 $tab-head-bg-color-active: $black;
 $single-result-space-ratio: 21px;
+$search-form-space-ratio: 14px;
+$search-form-font-size: rem-calc(13);
 
 // View navigation
 // ----------------
