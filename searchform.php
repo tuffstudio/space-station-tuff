@@ -49,18 +49,20 @@
         </div>
     </div>
 
-    <div class="grid">
-        <div class="grid__item desktop--one-half">
-            <div class="search-form__labels">
-                <span>Include:</span>
-                <label for="offer">Under offer</label>
-                <input id="offer" name="under-offer" type="checkbox" />
-                <label for="sold">Sold</label>
-                <input id="sold" name="sold" type="checkbox" />
+    <div class="search-form__submit">
+        <div class="grid">
+            <div class="grid__item desktop--one-half">
+                <div class="search-form__labels">
+                    <span>Include:</span>
+                    <label for="offer">Under offer</label>
+                    <input id="offer" name="under-offer" type="checkbox" class="input-checkbox" />
+                    <label for="sold">Sold</label>
+                    <input id="sold" name="sold" type="checkbox" class="input-checkbox" />
+                </div>
+            </div><!--
+            --><div class="grid__item desktop--one-half u--align-right input-container">
+                <button type="submit" class="btn btn--submit">Search</button>
             </div>
-        </div><!--
-        --><div class="grid__item desktop--one-half u--align-right input-container">
-            <button type="submit" class="btn btn--submit">Search</button>
         </div>
     </div>
 </form>

@@ -21,6 +21,8 @@ input[type=search] {
     box-sizing: border-box;
 }
 
+// Input container
+// FIXME: Change class name
 .input-container {
     @include min-screen($desktop) {
         padding-right: $search-form-space-ratio;
@@ -39,32 +41,43 @@ input[type=search] {
     }
 }
 
-.search-form__labels {
-    font-family: $font-book;
-    font-size: $search-form-font-size;
-    text-transform: uppercase;
+
+// Submit section
+.search-form__submit {
+    margin-top: 15px;
 }
 
-.select2-container {
-    width: 100% !important;
-    margin-bottom: $search-form-space-ratio;
-    outline: 0;
-    color: $black;
-    font-family: $font-light;
+
+// Label & checboxes
+.search-form__labels {
+    padding-top: 5px;
+    font-family: $font-book;
     font-size: $search-form-font-size;
+    font-weight: bold;
     text-transform: uppercase;
 
-    .select2-selection--single .select2-selection__rendered {
-        padding-left: 10px;
+    label {
+        margin-left: 15px;
+        cursor: pointer;
     }
 }
 
-.select2-container--default .select2-selection--single {
-    border: 0;
-    border-radius: 0;
-    background-color: $input-bg-color;
+.input-checkbox {
+    @include square(12px);
+    display: inline-block;
+    position: relative;
+    border: 2px solid $black;
+    border-radius: 50%;
+    outline: 0;
+    background-color: $white;
+    cursor: pointer;
+    vertical-align: text-top;
+    -webkit-appearance: none;
+
 }
 
-.select2-selection.select2-selection--single {
-    outline: 0;
+.input-checkbox:active,
+.input-checkbox:checked:active,
+.input-checkbox:checked {
+    background-color: $color-primary;
 }

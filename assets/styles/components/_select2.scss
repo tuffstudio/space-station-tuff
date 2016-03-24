@@ -1,0 +1,25 @@
+// Select2 custom styles
+// ----------------------
+.select2-container {
+    width: 100% !important;
+    margin-bottom: $search-form-space-ratio;
+    outline: 0;
+    color: $black;
+    font-family: $font-light;
+    font-size: $search-form-font-size;
+    text-transform: uppercase;
+
+    .select2-selection--single .select2-selection__rendered {
+        padding-left: 10px;
+    }
+}
+
+.select2-container--default .select2-selection--single {
+    border: 0;
+    border-radius: 0;
+    background-color: $input-bg-color;
+}
+
+.select2-selection.select2-selection--single {
+    outline: 0;
+}
