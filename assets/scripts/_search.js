@@ -35,9 +35,24 @@ window.SS.search = function($) {
         });
     }
 
+    function goToNewsletter() {
+        var $link = $('.js-newsletter-jump');
+        var $target = $('.js-newsletter');
+        var SCROLL_SPEED = 1000;
+
+        $link.on('click', function(event) {
+            var offsetTop = $target.offset().top;
+
+            $('html, body').animate({ scrollTop: offsetTop }, SCROLL_SPEED);
+
+            return false;
+        })
+    }
+
     $(document).ready(function() {
         switchGrids('.js-grid-switcher', '.js-results-block');
         switchGrids('.js-tab-switcher', '.js-tab-panel');
         initSelect2();
+        goToNewsletter();
     });
 };

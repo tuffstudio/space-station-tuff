@@ -1,5 +1,11 @@
 // Search page styles
 // ------------------
+.search-page__header {
+    @include min-screen($desktop) {
+        margin-top: 50px;
+    }
+}
+
 .search-tab__head {
     display: block;
     margin: 0 2px;
@@ -36,11 +42,30 @@
     border-bottom: 1px solid $dark-gray;
 }
 
+.search-page__title {
+    margin: 0;
+    color: $color-primary;
+    font-family: $font-caslon;
+    font-size: rem-calc(14);
+    font-style: italic;
+}
+
+.search-page__title-link {
+    color: $black;
+    font-family: $font-caslon;
+    font-size: rem-calc(14);
+    font-style: italic;
+    text-decoration: none;
+}
+
 .search-results__title {
+    display: inline-block;
     font-family: $font-bold;
     font-size: rem-calc(18);
     text-transform: uppercase;
 }
+
+
 
 
 // View navigation

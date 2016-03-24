@@ -1,12 +1,16 @@
-<div class="container">
-    <div class="grid grid--full">
-        <div class="grid__item tablet--one-half">
-            Find a property
-        </div><!--
-        --><div class="grid__item tablet--one-half u--align-right">
-        Sign up now for new property alerts
+<div class="search-page__header">
+    <div class="container">
+        <div class="grid grid--full">
+            <div class="grid__item tablet--one-half">
+                <h2 class="search-page__title">Find a Property</h2>
+            </div><!--
+            --><div class="grid__item tablet--one-half u--align-right">
+                <a href="#" class="search-page__title-link js-newsletter-jump">
+                    <span class="icon icon-notice"></span> Sign up now for new property alerts
+                </a>
+            </div>
+        </div>
     </div>
-</div>
 </div>
 
 <?php get_template_part('templates/searchpage/tabs'); ?>
@@ -17,6 +21,7 @@
             <div class="grid grid--full grid--middle">
                 <div class="grid__item desktop--one-half">
                     <h3 class="search-results__title">Properties for sale</h3>
+                    <a href="#">Switch to Rent</a>
                 </div><!--
                 --><div class="grid__item u--align-right desktop--one-half">
                     <ul class="view-nav sort-nav">

@@ -25,6 +25,10 @@
         transform: translateY(0);
         opacity: 1;
     }
+
+    &.search-results {
+        margin: 50px 0 70px;
+    }
 }
 
 .section__category {
@@ -90,7 +94,7 @@
 // Search page
 // ------------
 .search-form {
-    margin-top: 70px;
+    margin-top: 30px;
     padding-bottom: 50px;
     background-color: $white;
 }
