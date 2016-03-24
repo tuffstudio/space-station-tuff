@@ -27,3 +27,14 @@
     font-family: 'Caslon';
     src: url('../fonts/CaslonPro.ttf') format('truetype');
 }
+
+@font-face {
+    font-family: 'spacestation';
+    src: url('../fonts/spacestation.eot?ow93db');
+    src: url('../fonts/spacestation.eot?ow93db#iefix') format('embedded-opentype'),
+        url('../fonts/spacestation.ttf?ow93db') format('truetype'),
+        url('../fonts/spacestation.woff?ow93db') format('woff'),
+        url('../fonts/spacestation.svg?ow93db#spacestation') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
