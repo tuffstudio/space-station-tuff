@@ -31,7 +31,7 @@
     &::after {
         @include center-align();
         content: '\e902';
-        color: #9fa0a2;
+        color: $input-font-color;
         font-family: 'spacestation';
     }
 }
@@ -46,7 +46,7 @@
         top: 100%;
         left: 50%;
         transform: translate(-50%, -10%);
-        color: #9fa0a2;
+        color: $input-font-color;
         font-family: 'spacestation';
     }
 }

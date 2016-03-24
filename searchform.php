@@ -1,7 +1,7 @@
 <form action="" id="searchform" method="get">
     <div class="grid grid--full">
-        <div class="grid__item input-container">
-            <input type="search" id="s" class="input-search" name="location" placeholder="Location or postcode" />
+        <div class="grid__item input-container input-icon">
+            <input type="search" id="s" class="input-search" name="s" placeholder="Location or postcode" />
         </div><!--
         --><div class="grid__item">
             <div class="grid__item desktop--one-half input-container">
@@ -55,9 +55,9 @@
                 <div class="search-form__labels">
                     <span>Include:</span>
                     <label for="offer">Under offer</label>
-                    <input id="offer" name="under-offer" type="checkbox" class="input-checkbox" />
+                    <input id="offer" name="under-offer" type="checkbox" value="true" class="input-checkbox" />
                     <label for="sold">Sold</label>
-                    <input id="sold" name="sold" type="checkbox" class="input-checkbox" />
+                    <input id="sold" name="sold" type="checkbox" value="true" class="input-checkbox" />
                 </div>
             </div><!--
             --><div class="grid__item desktop--one-half u--align-right input-container">

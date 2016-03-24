@@ -41,6 +41,19 @@ input[type=search] {
     }
 }
 
+.input-icon {
+    position: relative;
+
+    &::after {
+        content: '\e900';
+        position: absolute;
+        top: 6px;
+        right: 22px;
+        color: $input-font-color;
+        font-family: 'spacestation';
+    }
+}
+
 
 // Submit section
 .search-form__submit {
