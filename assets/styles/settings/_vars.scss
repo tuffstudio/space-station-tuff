@@ -10,6 +10,7 @@ $font-medium: 'FuturaMedium';
 $font-heavy: 'FuturaHeavy';
 $font-bold: 'FuturaBold';
 $font-caslon: 'Caslon';
+$font-icons: 'spacestation';
 
 // Colors
 // ----------
@@ -57,6 +58,7 @@ $mobile-menu-up-animation: 500ms;
 $mobile-menu-down-animation: 2s;
 $sub-menu-up-animation: 300ms;
 $sub-menu-down-animation: 1s;
+$dropdown-animation: 750ms;
 
 // Homepage moving box
 // -------------------
@@ -121,6 +123,10 @@ $tab-head-bg-color-active: $black;
 $single-result-space-ratio: 21px;
 $search-form-space-ratio: 14px;
 $search-form-font-size: rem-calc(13);
+
+// View navigation
+// ----------------
+$dropdown-bg: $white-transparent;
 
 // View navigation
 // ----------------

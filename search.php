@@ -25,11 +25,30 @@
                 </div><!--
                 --><div class="grid__item u--align-right desktop--one-half">
                     <ul class="view-nav sort-nav">
-                        <li class="view-nav__item sort-nav__item">
-                            <a href="#">per page v</a>
+                        <li class="view-nav__item sort-nav__item dropdown">
+                            <a href="#">per page</a>
+                            <ul class="dropdown__container">
+                                <li class="dropdown__item">
+                                    <a href="#">Ascending</a>
+                                </li>
+                                <li class="dropdown__item">
+                                    <a href="#">Descending</a>
+                                </li>
+                            </ul>
                         </li>
-                        <li class="view-nav__item sort-nav__item">
-                            <a href="#">sort by v</a>
+                        <li class="view-nav__item sort-nav__item dropdown">
+                            <a href="#">sort by</a>
+                            <ul class="dropdown__container">
+                                <li class="dropdown__item">
+                                    <a href="#">Name</a>
+                                </li>
+                                <li class="dropdown__item">
+                                    <a href="#">City</a>
+                                </li>
+                                <li class="dropdown__item">
+                                    <a href="#">Price</a>
+                                </li>
+                            </ul>
                         </li>
                     </ul>
                     <ul class="view-nav">
