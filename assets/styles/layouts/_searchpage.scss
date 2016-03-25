@@ -50,14 +50,6 @@
     font-style: italic;
 }
 
-.search-page__title-link {
-    color: $black;
-    font-family: $font-caslon;
-    font-size: rem-calc(14);
-    font-style: italic;
-    text-decoration: none;
-}
-
 .search-results__title {
     display: inline-block;
     font-family: $font-bold;
@@ -124,17 +116,17 @@
 
 .search-results__body {
     position: relative;
+    padding-top: 40px;
 }
 
 .search-results--grid {
     display: flex;
     flex-wrap: wrap;
     width: 100%;
-    padding-top: 60px;
 }
 
-.search-results--dynamic {
-    padding-top: 30px;
+.search-results__map {
+    min-height: 600px;
 }
 
 .single-result {

@@ -46,13 +46,35 @@ window.SS.search = function($) {
             $('html, body').animate({ scrollTop: offsetTop }, SCROLL_SPEED);
 
             return false;
-        })
+        });
     }
+
+    // Google map integration. Revealing module pattern
+    var PropertyMap = (function() {
+        // private
+        var containerId = 'map';
+        var latitude = 50.2945;
+        var longitude = 18.6714;
+        var mapOptions = {
+            zoom: 10,
+            center: new google.maps.LatLng(latitude, longitude)
+        };
+
+        function initMap() {
+            map = new google.maps.Map(document.getElementById(containerId), mapOptions);
+        }
+
+        // public
+        return {
+            init: initMap
+        };
+    })();
 
     $(document).ready(function() {
         switchGrids('.js-grid-switcher', '.js-results-block');
         switchGrids('.js-tab-switcher', '.js-tab-panel');
         initSelect2();
         goToNewsletter();
+        PropertyMap.init();
     });
 };
