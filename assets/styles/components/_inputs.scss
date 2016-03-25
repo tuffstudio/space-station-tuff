@@ -1,0 +1,96 @@
+// Inputs
+// -------
+.input-search {
+    display: block;
+    width: 100%;
+    margin-bottom: $search-form-space-ratio;
+    padding: 8px 10px 4px;
+    border: 0;
+    outline: 0;
+    background-color: $input-bg-color;
+    font-family: $font-light;
+    font-size: $search-form-font-size;
+    box-sizing: border-box;
+
+    @include placeholder() {
+        text-transform: uppercase;
+    };
+}
+
+input[type=search] {
+    box-sizing: border-box;
+}
+
+// Input container
+// FIXME: Change class name
+.input-container {
+    @include min-screen($desktop) {
+        padding-right: $search-form-space-ratio;
+    }
+}
+
+.input-container--right {
+    @include min-screen($desktop) {
+        padding-right: $search-form-space-ratio / 2;
+    }
+}
+
+.input-container--left {
+    @include min-screen($desktop) {
+        padding-left: $search-form-space-ratio / 2;
+    }
+}
+
+.input-icon {
+    position: relative;
+
+    &::after {
+        content: '\e900';
+        position: absolute;
+        top: 6px;
+        right: 22px;
+        color: $input-font-color;
+        font-family: 'spacestation';
+    }
+}
+
+
+// Submit section
+.search-form__submit {
+    margin-top: 15px;
+}
+
+
+// Label & checboxes
+.search-form__labels {
+    padding-top: 5px;
+    font-family: $font-book;
+    font-size: $search-form-font-size;
+    font-weight: bold;
+    text-transform: uppercase;
+
+    label {
+        margin-left: 15px;
+        cursor: pointer;
+    }
+}
+
+.input-checkbox {
+    @include square(12px);
+    display: inline-block;
+    position: relative;
+    border: 2px solid $black;
+    border-radius: 50%;
+    outline: 0;
+    background-color: $white;
+    cursor: pointer;
+    vertical-align: text-top;
+    -webkit-appearance: none;
+
+}
+
+.input-checkbox:active,
+.input-checkbox:checked:active,
+.input-checkbox:checked {
+    background-color: $color-primary;
+}

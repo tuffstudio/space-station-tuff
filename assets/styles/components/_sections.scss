@@ -25,6 +25,10 @@
         transform: translateY(0);
         opacity: 1;
     }
+
+    &.search-results {
+        margin: 50px 0 70px;
+    }
 }
 
 .section__category {
@@ -85,4 +89,12 @@
         font-family: $font-caslon;
         font-style: italic;
     }
+}
+
+// Search page
+// ------------
+.search-form {
+    margin-top: 30px;
+    padding-bottom: 50px;
+    background-color: $white;
 }
