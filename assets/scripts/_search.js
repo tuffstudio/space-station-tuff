@@ -52,16 +52,69 @@ window.SS.search = function($) {
     // Google map integration. Revealing module pattern
     var PropertyMap = (function() {
         // private
+        var map;
         var containerId = 'map';
-        var latitude = 50.2945;
-        var longitude = 18.6714;
+        var containerObject = document.getElementById(containerId);
+        var initCoords = {
+            latitude: 50.2945,
+            longitude: 18.6714
+        };
         var mapOptions = {
             zoom: 10,
-            center: new google.maps.LatLng(latitude, longitude)
+            center: new google.maps.LatLng(initCoords.latitude, initCoords.longitude)
         };
+        var json = JSON.parse(containerObject.getAttribute('data-json'));
+
+        function createMarker(LatLng, title) {
+            var marker = new google.maps.Marker({
+                position: LatLng,
+                map: map,
+                title: title
+            });
+
+            marker.changeIcon = function(state) {
+                if (typeof state !== 'undefined') {
+                    // set new icon
+                    console.log('icon active');
+                } else {
+                    // reset
+                    console.log('icon reseted');
+                }
+            };
+
+            return marker;
+        }
+
+        function createPopup(property) {
+            var template = '<div class="property__popup">'+
+                '<h2 id="firstHeading" class="firstHeading">' + property.title + '</h2>'+
+                '</div>';
+
+            return new google.maps.InfoWindow({
+                content: template
+            });
+        }
+
+        function setupMarkers(json) {
+            json.forEach(function(property) {
+                var marker = createMarker(property.coordinates, property.title);
+                var popup = createPopup(property);
+
+                marker.addListener('mouseover', function() {
+                    popup.open(map, marker);
+                    marker.changeIcon('active');
+                });
+
+                marker.addListener('mouseout', function() {
+                    popup.close();
+                    marker.changeIcon();
+                });
+            });
+        }
 
         function initMap() {
-            map = new google.maps.Map(document.getElementById(containerId), mapOptions);
+            map = new google.maps.Map(containerObject, mapOptions);
+            setupMarkers(json);
         }
 
         // public
