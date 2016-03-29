@@ -2,7 +2,7 @@
     <div class="container">
         <div class="grid grid--full">
             <div class="grid__item tablet--one-half">
-                <h2 class="search-page__title">Find a Property</h2>
+                <h2 class="title--main">Find a Property</h2>
             </div><!--
             --><div class="grid__item tablet--one-half u--align-right">
                 <a href="#" class="link--italic js-newsletter-jump">
@@ -20,7 +20,7 @@
         <div class="search-results__nav">
             <div class="grid grid--full grid--middle">
                 <div class="grid__item desktop--one-half">
-                    <h3 class="search-results__title">Properties for sale</h3>
+                    <h3 class="title--default">Properties for sale</h3>
                     <a href="#" class="link--italic">Switch to Rent</a>
                 </div><!--
                 --><div class="grid__item u--align-right desktop--one-half">

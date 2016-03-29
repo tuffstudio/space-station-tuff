@@ -1,0 +1,30 @@
+// Text/Paragraph styles
+// --------------------
+.text--description {
+    column-gap: 40px;
+    columns: 2 300px;
+    line-height: 1.8em;
+    font-family: $font-light;
+    font-size: rem-calc(14);
+
+    @include min-screen($tablet) {
+        font-size: rem-calc(15);
+    }
+
+    @include min-screen($desktop) {
+        font-size: rem-calc(16);
+    }
+
+    &::first-letter {
+        float: left;
+        padding-right: 20px;
+        line-height: 1em;
+        font-size: 84px;
+    }
+
+    p {
+        &:first-of-type {
+            margin-top: 0;
+        }
+    }
+}

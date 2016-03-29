@@ -27,13 +27,13 @@ $color-primary: #a37a09;
 // ----------
 $body-bg-color: $gray;
 $container-width: 1024px;
-$container-padding: 0 15px;
+$container-padding: 0 20px;
 
 // Buttons
 // ----------
 
 // Primary
-$btn-font-size: rem-calc(9px);
+$btn-font-size: rem-calc(9);
 $btn-primary-padding: 12px 8px 10px;
 $btn-primary-font: $font-light;
 $btn-primary-font-color: $black;
@@ -77,11 +77,11 @@ $moving-box-text-font: $secondary-font-family;
 
 // Homepage case studies
 // ---------------------
-$case-study-category-size: rem-calc(12px);
+$case-study-category-size: rem-calc(14);
 $case-study-category-color: $color-primary;
-$case-study-title-size: rem-calc(30px);
+$case-study-title-size: 30;
 $case-study-title-font: $font-heavy;
-$case-study-description-size: rem-calc(12px);
+$case-study-description-size: rem-calc(12);
 
 // Sections
 // ------------
@@ -91,7 +91,7 @@ $section-title-font: $font-heavy;
 $section-subtitle-size: rem-calc(14);
 $section-subtitle-font: $font-book;
 $section-animation-transition: transform 650ms ease-out, opacity 1000ms ease;
-$section-animation-transform: translateY(175px);
+$section-animation-transform: translateY(175);
 
 // Masonry grid
 // ---------------

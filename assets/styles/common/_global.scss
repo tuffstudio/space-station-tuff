@@ -20,9 +20,61 @@ body {
 .container {
     max-width: $container-width;
     margin: 0 auto;
-    overflow: hidden;
+    padding: $container-padding;
 
     @include min-screen($desktop) {
         padding: $container-padding;
+    }
+}
+
+.container--space {
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+.container--full {
+    padding: 0;
+}
+
+.container--wider {
+    @include min-screen($desktop-medium) {
+        margin: 0 -50px;
+    }
+}
+
+.bg--slant {
+    position: relative;
+
+    &:after {
+        content: '';
+        position: absolute;
+        bottom: 25%;
+        left: 0;
+        right: 0;
+        top: -1000px;
+        background-color: $white;
+        z-index: -1;
+
+        @include min-screen($tablet) {
+            bottom: 50%;
+        }
+    }
+
+    &:before {
+        content: '';
+        position: absolute;
+        top: 25%;
+        left: 0;
+        right: 0;
+        width: 0;
+    	height: 0;
+    	border-top: 220px solid $white;
+    	border-right: 1920px solid transparent;
+        z-index: -1;
+
+        @include min-screen($tablet) {
+            border-top: 200px solid $white;
+            top: 50%;
+        }
     }
 }

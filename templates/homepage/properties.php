@@ -1,5 +1,5 @@
 <section class="section property-base is-hidden js-section-reveal">
-    <div class="container">
+    <div class="container container--full">
         <div class="grid grid--full grid--rev">
             <div class="grid__item tablet--one-half">
                 <div class="grid__item">
