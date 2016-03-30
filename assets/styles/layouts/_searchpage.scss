@@ -20,11 +20,16 @@
     text-decoration: none;
     text-transform: uppercase;
     cursor: pointer;
+    transition: color $standard-animation-time ease;
 
     &.active {
         border-top-color: $color-primary;
         background-color: $tab-head-bg-active;
         color: $tab-head-bg-color-active;
+    }
+
+    &:not(.active):hover {
+        color: $white;
     }
 }
 

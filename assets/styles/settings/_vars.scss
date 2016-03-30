@@ -31,6 +31,8 @@ $container-padding: 0 20px;
 
 // Buttons
 // ----------
+$btn-play-bg: $color-primary;
+$btn-play-bg-hover: lighten($btn-play-bg, 5%);
 
 // Primary
 $btn-font-size: rem-calc(9);
@@ -50,6 +52,7 @@ $menu-link-color: $dark-gray;
 $menu-link-color-hover: $white;
 $submenu-link-color: $dark-gray;
 $submenu-link-color-hover: $black;
+$submenu-bg-color: rgba($white, .9);
 
 // Animations
 // ----------

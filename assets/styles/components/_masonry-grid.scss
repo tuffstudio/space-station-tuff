@@ -80,7 +80,7 @@
     &:hover {
         @include min-screen($desktop) {
             .masonry__tile-border {
-                opacity: 1;
+                box-shadow: 0 0 0 1px $black;
             }
 
             img {
@@ -149,7 +149,7 @@
     text-transform: uppercase;
 
     @include min-screen($desktop) {
-        width: 80%;
+        width: 85%;
         font-size: $masonry-title-size;
     }
 }
@@ -170,6 +170,8 @@
 
 .masonry__tile-desc {
     margin: 0 auto;
+    overflow: hidden;
+    text-overflow: ellipsis;
 
     @include min-screen($desktop) {
         width: 90%;
@@ -257,8 +259,7 @@
     position: absolute;
     top: ($masonry-border-ratio / 2);
     left: ($masonry-border-ratio / 2);
-    transition: opacity 1s ease;
-    border: 1px solid $black;
-    opacity: 0;
+    transition: all 1s ease;
+    box-shadow: 0 0 0 1px $white;
     pointer-events: none;
 }

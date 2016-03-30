@@ -19,7 +19,11 @@
         float: left;
         padding-right: 20px;
         line-height: 1em;
-        font-size: 84px;
+        font-size: 74px;
+
+        @include min-screen($desktop) {
+            font-size: 84px;
+        }
     }
 
     p {

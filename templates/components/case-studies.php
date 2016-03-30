@@ -42,8 +42,9 @@
                         </div>
                     </div><!--
                     --><div class="grid__item tablet--one-half phone--hide tablet--show">
-                        <div class="case-study__thumbnail case-study__thumbnail--<?= strlen($case_study_video) != 0 ? 'video' : ''?>">
+                        <div class="case-study__thumbnail <?= strlen($case_study_video) != 0 ? 'is-video' : ''?>">
                             <?= $case_study_img_url; ?>
+                            <button class="btn btn--play">play</button>
                         </div>
                     </div>
                 </div>

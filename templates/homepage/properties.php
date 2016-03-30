@@ -107,7 +107,7 @@
                     --><div class="grid__item one-half">
                         <a href="#" class="masonry__link">
                             <div class="masonry__item masonry__item--square">
-                                <div class="masonry__tile masonry__tile-link">
+                                <div class="masonry__tile masonry__tile-link masonry__tile-link--brown">
                                     <span>View more properties</span>
                                 </div>
                             </div>

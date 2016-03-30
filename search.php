@@ -80,11 +80,13 @@
             </div>
 
             <div id="grid-view" class="search-results__block js-results-block">
-                <div class="search-results--grid">
+                <div class="grid">
                     <?php if(have_posts()): ?>
-                        <?php while (have_posts()) : the_post(); ?>
-                            <?php get_template_part('templates/searchpage/grid', 'view'); ?>
-                        <?php endwhile; ?>
+                        <?php while (have_posts()) : the_post(); ?><!--
+                            --><div class="grid__item tablet-small--one-half desktop--one-third masonry__box">
+                                <?php get_template_part('templates/components/property', 'box'); ?>
+                            </div><!--
+                        --><?php endwhile; ?>
                     <?php else : ?>
                         <div class="alert alert-warning">
                           <?php _e('Sorry, no results were found.', 'sage'); ?>

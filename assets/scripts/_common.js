@@ -4,6 +4,41 @@ window.SS.common = function($) {
     var $navTrigger = $('.js-nav-trigger');
     var $mobileNavigation = $('.js-primary-nav');
 
+    function subMenuAlignment() {
+        var siteWidth = $(window).width();
+        var $itemsWithSubMenu = $('.has-menu');
+
+        function calculatePosition($parentItem){
+            var parentPosition = $parentItem.position().left;
+            var itemWidth = $parentItem.width();
+            var centerPosition = itemWidth/2 + parentPosition;
+            var $subMenu = $parentItem.find('.sub-menu');
+            var $subMenuItems = $subMenu.find('li');
+            var subMenuWidth = 0;
+            var padding = 12;
+
+            $subMenuItems.each(function() {
+                subMenuWidth += $(this).outerWidth();
+                subMenuWidth += padding;
+            });
+
+            if(siteWidth > 1024) {
+                $subMenu.css({
+                    'padding-left' : centerPosition - subMenuWidth/2
+                });
+            }
+            else {
+                $subMenu.css({
+                    'padding-left' : ''
+                });
+            }
+        }
+
+        $itemsWithSubMenu.each(function() {
+            calculatePosition($(this));
+        });
+    }
+
     function toggleMobileNavigation() {
         $navTrigger.on('click', function(event) {
             $navTrigger.toggleClass('is-opened');
@@ -134,5 +169,12 @@ window.SS.common = function($) {
         goToTopButton();
         revealSections();
         caseStudiesCarousel();
+        subMenuAlignment();
     });
+
+    $(window).resize(function() {
+        subMenuAlignment();
+    });
+
+
 };
