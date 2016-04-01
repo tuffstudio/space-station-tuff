@@ -50,7 +50,8 @@ input[type=search] {
         top: 6px;
         right: 22px;
         color: $input-font-color;
-        font-family: 'spacestation';
+        font-family: $font-icons;
+        pointer-events: none;
     }
 }
 
@@ -86,7 +87,11 @@ input[type=search] {
     cursor: pointer;
     vertical-align: text-top;
     -webkit-appearance: none;
+    transition: background $standard-animation-time ease;
 
+    &:hover {
+        background-color: rgba($black, .2);
+    }
 }
 
 .input-checkbox:active,

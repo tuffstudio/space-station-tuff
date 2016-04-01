@@ -32,7 +32,7 @@
         @include center-align();
         content: '\e902';
         color: $input-font-color;
-        font-family: 'spacestation';
+        font-family: $font-icons;
     }
 }
 
@@ -47,6 +47,6 @@
         left: 50%;
         transform: translate(-50%, -10%);
         color: $input-font-color;
-        font-family: 'spacestation';
+        font-family: $font-icons;
     }
 }
