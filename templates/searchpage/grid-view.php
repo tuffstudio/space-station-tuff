@@ -4,7 +4,6 @@
 <div class="single-result">
     <a href="#" class="masonry__link">
         <div class="single-result__image">
-            <!-- <img src="<?= get_template_directory_uri() ?>/dist/images/property_img.jpg" alt="" /> -->
             <img src="http://lorempicsum.com/up/350/200/<?php echo(rand(1,6)); ?>" alt="">
         </div>
         <div class="single-result__info">
