@@ -67,7 +67,8 @@
             transition: border-bottom-color $standard-animation-time ease;
             border-bottom: 4px solid transparent;
 
-            &:hover {
+            &:hover,
+            &.is-current {
                 border-bottom-color: $color-primary;
             }
         }
@@ -87,8 +88,14 @@
         }
     }
 
-    > li:nth-last-child(2) a {
-        color: $color-primary;
+    > li.is-current {
+         a {
+            color: $color-primary;
+
+            &:hover {
+                color: $menu-link-color-hover;
+            }
+        }
     }
 
     > li:last-child a {
@@ -126,13 +133,14 @@
             left: 0;
             width: 100vw;
             padding: 0;
-            background-color: $white-transparent;
-            text-align: center;
+            background-color: $submenu-bg-color;
+            text-align: left;
         }
 
         &.is-opened {
             max-height: 100px;
             transition-duration: $sub-menu-down-animation;
+            box-shadow: 5px 0 5px rgba($black, 0.2);
         }
 
         li {

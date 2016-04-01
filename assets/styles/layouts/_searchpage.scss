@@ -20,11 +20,16 @@
     text-decoration: none;
     text-transform: uppercase;
     cursor: pointer;
+    transition: color $standard-animation-time ease;
 
     &.active {
         border-top-color: $color-primary;
         background-color: $tab-head-bg-active;
         color: $tab-head-bg-color-active;
+    }
+
+    &:not(.active):hover {
+        color: $white;
     }
 }
 
@@ -41,22 +46,6 @@
 .search-results__nav {
     border-bottom: 1px solid $dark-gray;
 }
-
-.search-page__title {
-    margin: 0;
-    color: $color-primary;
-    font-family: $font-caslon;
-    font-size: rem-calc(14);
-    font-style: italic;
-}
-
-.search-results__title {
-    display: inline-block;
-    font-family: $font-bold;
-    font-size: rem-calc(18);
-    text-transform: uppercase;
-}
-
 
 
 
@@ -95,13 +84,70 @@
 }
 
 .sort-nav__item {
-    a {
+    > a {
         color: $black;
         text-transform: uppercase;
     }
 
     & + & {
         border-left: 0;
+    }
+}
+
+.dropdown {
+    > a {
+        position: relative;
+        display: block;
+        padding: 8px 0;
+
+        &::after {
+            content: '\e902';
+            display: inline-block;
+            padding: 0 8px;
+            font-family: $font-icons;
+            transition: transform $standard-animation-time ease-in-out;
+            transform: rotate(0deg);
+        }
+    }
+
+    &:hover {
+        > a::after {
+            transform: rotate(180deg);
+        }
+    }
+}
+
+.dropdown__container {
+    position: absolute;
+    max-width: 250px;
+    max-height: 0;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    list-style: none;
+    background: $dropdown-bg;
+    transition: max-height $dropdown-animation/2 ease-in-out;
+    pointer-events: none;
+    z-index: 5;
+
+    .dropdown.active &,
+    .dropdown:hover & {
+        max-height: 400px;
+        pointer-events: auto;
+        transition: max-height $dropdown-animation ease-in-out;
+    }
+
+    > .dropdown__item {
+        a {
+            display: block;
+            padding: 8px 22px 8px 10px;
+
+            &:hover {
+                background: $white;
+                color: $black;
+            }
+        }
     }
 }
 
@@ -182,7 +228,7 @@
 
 .single-result__info {
     position: relative;
-    padding: 20px 0;
+    padding: 25px 0;
     background-color: $white;
     text-align: center;
 }

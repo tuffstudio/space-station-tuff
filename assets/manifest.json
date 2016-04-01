@@ -17,6 +17,6 @@
     }
   },
   "config": {
-    "devUrl": "http://local.wordpress.dev/"
+    "devUrl": "http://192.168.99.100:8000/"
   }
 }

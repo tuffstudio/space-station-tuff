@@ -31,6 +31,42 @@
     }
 }
 
+.section--small-space {
+    margin: 30px 0;
+
+    @include min-screen($tablet) {
+        margin: 35px 0;
+    }
+
+    @include min-screen($desktop) {
+        margin: 50px 0;
+    }
+}
+
+.section--bottom-space {
+    margin-bottom: 50px;
+
+    @include min-screen($tablet) {
+        margin-bottom: 120px;
+    }
+
+    @include min-screen($desktop) {
+        margin-bottom: 150px;
+    }
+}
+
+.section--top-small-space {
+    margin-top: 40px;
+
+    @include min-screen($tablet) {
+        margin-top: 50px;
+    }
+
+    @include min-screen($desktop) {
+        margin-top: 70px;
+    }
+}
+
 .section__category {
     font-family: $font-caslon;
     font-size: $case-study-category-size;

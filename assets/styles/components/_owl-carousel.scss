@@ -1,13 +1,21 @@
 // Owl carousel custom styling
 // ---------------------------
 .owl-dots {
-    margin-top: 33px;
+    margin-top: 5px;
     text-align: center;
+
+    @include min-screen($tablet) {
+        margin-top: 15px;
+    }
+
+    @include min-screen($desktop) {
+        margin-top: 25px;
+    }
 }
 
 .owl-dot {
     display: inline-block;
-    margin: 0 5px;
+    padding: 10px;
 
     span {
         @include square(10px);
