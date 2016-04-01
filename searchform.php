@@ -8,9 +8,15 @@
                 <?php // TODO: Input names, values etc are just temporary. Waiting for integration with SalesForce. ?>
                 <select name="radius" placeholder="Search radius">
                     <option></option>
-                    <option value="10-15">10-15</option>
-                    <option value="16-20">16-20</option>
-                    <option value="21-25">21-25</option>
+                    <option value="0.25">0.25 miles</option>
+                    <option value="0.50">0.50 miles</option>
+                    <option value="0.75">0.75 miles</option>
+                    <option value="1.00">1.00 miles</option>
+                    <option value="1.50">1.50 miles</option>
+                    <option value="2.00">2.00 miles</option>
+                    <option value="2.50">2.50 miles</option>
+                    <option value="3.00">3.00 miles</option>
+                    <option value="3.00+">3.00+ miles</option>
                 </select>
 
                 <select class="" name="type" placeholder="property type">
