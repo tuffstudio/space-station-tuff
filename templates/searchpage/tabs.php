@@ -5,10 +5,7 @@
                 <a href="#residential" class="search-tab__head js-tab-switcher active">Residental</a>
             </div><!--
             --><div class="grid__item tablet--one-third">
-                <a href="#commercial" class="search-tab__head js-tab-switcher">Commercial</a>
-            </div><!--
-            --><div class="grid__item tablet--one-third">
-                <a href="#holidays" class="search-tab__head js-tab-switcher">Holidays</a>
+                <a href="#" class="search-tab__head">Commercial</a>
             </div>
         </div>
         <div class="search-tab__body">
