@@ -66,19 +66,26 @@ window.SS.search = function($) {
         var json = JSON.parse(containerObject.getAttribute('data-json'));
 
         function createMarker(LatLng, title) {
+            var iconBase = '/wp-content/themes/spacestation/dist/images/';
+            var iconDefault = 'mapicon.png';
+            var iconActive = 'mapicongold.png';
+
             var marker = new google.maps.Marker({
                 position: LatLng,
                 map: map,
-                title: title
+                title: title,
+                animation: google.maps.Animation.DROP,
+                icon: iconBase + iconDefault
             });
 
             marker.changeIcon = function(state) {
                 if (typeof state !== 'undefined') {
                     // set new icon
-                    console.log('icon active');
+                    marker.setIcon(iconBase + iconActive);
                 } else {
                     // reset
-                    console.log('icon reseted');
+                    // console.log('icon reseted');
+                    marker.setIcon(iconBase + iconDefault);
                 }
             };
 
