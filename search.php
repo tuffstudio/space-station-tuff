@@ -29,10 +29,13 @@
                             <a href="#">per page</a>
                             <ul class="dropdown__container">
                                 <li class="dropdown__item">
-                                    <a href="#">Ascending</a>
+                                    <a href="#">10</a>
                                 </li>
                                 <li class="dropdown__item">
-                                    <a href="#">Descending</a>
+                                    <a href="#">20</a>
+                                </li>
+                                <li class="dropdown__item">
+                                    <a href="#">All</a>
                                 </li>
                             </ul>
                         </li>
