@@ -22,7 +22,6 @@ input[type=search] {
 }
 
 // Input container
-// FIXME: Change class name
 .input-container {
     @include min-screen($desktop) {
         padding-right: $search-form-space-ratio;
@@ -80,6 +79,7 @@ input[type=search] {
     @include square(12px);
     display: inline-block;
     position: relative;
+    transition: background $standard-animation-time ease;
     border: 2px solid $black;
     border-radius: 50%;
     outline: 0;
@@ -87,7 +87,6 @@ input[type=search] {
     cursor: pointer;
     vertical-align: text-top;
     -webkit-appearance: none;
-    transition: background $standard-animation-time ease;
 
     &:hover {
         background-color: rgba($black, .2);

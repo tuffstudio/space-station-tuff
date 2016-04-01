@@ -24,12 +24,12 @@ window.SS.common = function($) {
 
             if(siteWidth > 1024) {
                 $subMenu.css({
-                    'padding-left' : centerPosition - subMenuWidth/2
+                    'padding-left': centerPosition - subMenuWidth/2
                 });
             }
             else {
                 $subMenu.css({
-                    'padding-left' : ''
+                    'padding-left': ''
                 });
             }
         }

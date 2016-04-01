@@ -115,7 +115,7 @@ window.SS.search = function($) {
 
             var popup = new google.maps.InfoWindow({
                 content: template,
-                maxWidth: 350
+                maxWidth: 330
             });
 
             return popup;
@@ -132,10 +132,7 @@ window.SS.search = function($) {
 
                 var iwCloseBtn = iwOuter.next();
 
-                iwCloseBtn.css({
-                    top: '17px',
-                    right: '28px',
-                });
+                iwCloseBtn.addClass('gm-close-btn');
             });
         }
 
