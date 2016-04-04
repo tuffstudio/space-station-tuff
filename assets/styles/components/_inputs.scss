@@ -47,10 +47,14 @@ input[type=search] {
         content: '\e900';
         position: absolute;
         top: 6px;
-        right: 22px;
+        right: 7px;
         color: $input-font-color;
         font-family: $font-icons;
         pointer-events: none;
+
+        @include min-screen($desktop) {
+            right: 22px;
+        }
     }
 }
 

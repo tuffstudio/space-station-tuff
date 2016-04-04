@@ -49,13 +49,13 @@ main {
 .bg--slant {
     position: relative;
 
-    &:after {
+    &::after {
         content: '';
         position: absolute;
+        top: -1000px;
+        right: 0;
         bottom: 25%;
         left: 0;
-        right: 0;
-        top: -1000px;
         background-color: $white;
         z-index: -1;
 
@@ -64,21 +64,21 @@ main {
         }
     }
 
-    &:before {
+    &::before {
         content: '';
         position: absolute;
         top: 25%;
-        left: 0;
         right: 0;
+        left: 0;
         width: 0;
-    	height: 0;
-    	border-top: 220px solid $white;
-    	border-right: 1920px solid transparent;
+        height: 0;
+        border-top: 220px solid $white;
+        border-right: 1920px solid transparent;
         z-index: -1;
 
         @include min-screen($tablet) {
-            border-top: 200px solid $white;
             top: 50%;
+            border-top: 200px solid $white;
         }
     }
 }

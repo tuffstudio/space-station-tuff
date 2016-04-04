@@ -23,7 +23,7 @@
                     <h3 class="title--default">Properties for sale</h3>
                     <a href="#" class="link--italic">Switch to Rent</a>
                 </div><!--
-                --><div class="grid__item u--align-right desktop--one-half">
+                --><div class="grid__item view-nav__container desktop--one-half">
                     <ul class="view-nav sort-nav">
                         <li class="view-nav__item sort-nav__item dropdown">
                             <a href="#">per page</a>

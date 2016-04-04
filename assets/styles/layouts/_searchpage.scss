@@ -1,6 +1,12 @@
 // Search page styles
 // ------------------
 .search-page__header {
+    margin-top: 40px;
+
+    @include min-screen($tablet) {
+        margin-top: 40px;
+    }
+
     @include min-screen($desktop) {
         margin-top: 50px;
     }
@@ -10,6 +16,7 @@
     display: block;
     margin: 0 2px;
     padding: 14px 0 12px;
+    transition: color $standard-animation-time ease;
     border: 2px solid transparent;
     background-color: $tab-head-bg;
     color: $tab-head-color;
@@ -20,7 +27,6 @@
     text-decoration: none;
     text-transform: uppercase;
     cursor: pointer;
-    transition: color $standard-animation-time ease;
 
     &.active {
         border-top-color: $color-primary;
@@ -50,6 +56,12 @@
 
 
 // View navigation
+.view-nav__container {
+    @include min-screen($desktop) {
+        text-align: right;
+    }
+}
+
 .view-nav {
     display: inline-block;
     margin: 0;

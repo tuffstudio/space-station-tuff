@@ -124,13 +124,10 @@ window.SS.search = function($) {
         function popupStyling(infowindow) {
             google.maps.event.addListener(infowindow, 'domready', function() {
                 var iwOuter = $('.gm-style-iw');
-
                 var iwBackground = iwOuter.prev();
-
-                iwBackground.children(':nth-child(2)').css({'display': 'none', 'pointer-events': 'none'});
-                iwBackground.children(':nth-child(4)').css({'display': 'none', 'pointer-events': 'none'});
-
                 var iwCloseBtn = iwOuter.next();
+
+                iwBackground.children(':nth-child(2), :nth-child(4)').addClass('gm-wrapper');
 
                 iwCloseBtn.addClass('gm-close-btn');
             });
