@@ -1,5 +1,4 @@
 
-
 <section class="main-banner">
     <div class="moving-box js-moving-box">
         <div class="moving-box__element moving-box__content">
@@ -13,7 +12,16 @@
     </div>
 </section>
 
-<?php include('homepage/case-studies.php'); ?>
-<?php include('homepage/properties.php'); ?>
-<?php include('homepage/magazine.php'); ?>
-<?php include('homepage/stay-in-touch.php'); ?>
+<?php
+    $args_case_study = array(
+        'post_type' => 'case-study',
+        'post_status' => 'publish',
+        'meta_key' => 'case_study_featured',
+        'meta_value' => true,
+    );
+
+    include('components/case-studies.php');
+    include('homepage/properties.php');
+    include('homepage/magazine.php');
+    include('homepage/stay-in-touch.php');
+?>

@@ -34,12 +34,60 @@
 
 .masonry__tile-info {
     @include center-align();
-    width: 100%;
+    width: 95%;
+}
+
+.masonry__box {
+    $masonry-padding: 10px;
+    padding: $masonry-padding 0;
+
+    @include screen($tablet-small, $desktop) {
+        padding: $masonry-padding 0;
+
+        &:nth-child(2n) {
+            padding-left: $masonry-padding;
+        }
+
+        &:nth-child(2n + 1) {
+            padding-right: $masonry-padding;
+        }
+    }
+
+    @include min-screen($desktop) {
+        padding: $masonry-padding 0;
+
+        &:nth-child(3n + 1) {
+            padding-right: (4 * $masonry-padding)/3;
+        }
+
+        &:nth-child(3n + 2) {
+            padding-left: 2 * $masonry-padding/3;
+            padding-right: 2 * $masonry-padding/3;
+        }
+
+        &:nth-child(3n) {
+            padding-left: (4 * $masonry-padding)/3;
+        }
+    }
 }
 
 .masonry__link {
     display: block;
     color: $black;
+    text-decoration: none;
+    overflow: hidden;
+
+    &:hover {
+        @include min-screen($desktop) {
+            .masonry__tile-border {
+                box-shadow: 0 0 0 1px $black;
+            }
+
+            img {
+                transform: $masonry-animation-transform;
+            }
+        }
+    }
 }
 
 .masonry__tile--white {
@@ -48,7 +96,8 @@
 }
 
 .masonry__tile-arrow {
-    &::after {
+    &::after,
+    &::before {
         content: '';
         display: block;
         position: absolute;
@@ -57,9 +106,7 @@
         height: 0;
         border-style: solid;
     }
-}
 
-.masonry__tile-arrow--right {
     &::after {
         left: 100%;
         border-width: $masonry-arrow-height $masonry-arrow-width 0 0;
@@ -69,11 +116,8 @@
             border-width: ($masonry-arrow-height * $masonry-arrow-desk-ratio) ($masonry-arrow-width * $masonry-arrow-desk-ratio) 0 0;
         }
     }
-}
 
-
-.masonry__tile-arrow--left {
-    &::after {
+    &::before {
         right: 100%;
         border-width: 0 0 $masonry-arrow-height $masonry-arrow-width;
         border-color: transparent transparent $masonry-arrow-color;
@@ -85,6 +129,7 @@
 }
 
 .masonry__tile-category {
+    margin-top: 0;
     font-family: $font-caslon;
     font-size: $case-study-category-size;
     font-style: italic;
@@ -104,19 +149,17 @@
     text-transform: uppercase;
 
     @include min-screen($desktop) {
-        width: 80%;
+        width: 85%;
         font-size: $masonry-title-size;
     }
 }
 
 .masonry__tile-price {
-    margin-top: 10px;
-    margin-bottom: 0;
+    margin: 2px 0;
     font-family: $masonry-price-font;
     font-size: rem-calc(12);
 
     @include min-screen($desktop) {
-        margin-top: 1em;
         font-size: $masonry-price-size;
     }
 
@@ -127,6 +170,8 @@
 
 .masonry__tile-desc {
     margin: 0 auto;
+    overflow: hidden;
+    text-overflow: ellipsis;
 
     @include min-screen($desktop) {
         width: 90%;
@@ -157,7 +202,7 @@
 }
 
 .masonry__tile-link {
-    background-color: $masonry-tile-link-bg;
+    transition: background-color $standard-animation-time ease;
     color: $white;
 
     span {
@@ -176,6 +221,22 @@
     }
 }
 
+.masonry__tile-link--brown {
+    background-color: $masonry-tile-link-bg;
+
+    &:hover {
+        background-color: $color-primary;
+    }
+}
+
+.masonry__tile-link--purple {
+    background-color: $masonry-tile-link-cta;
+
+    &:hover {
+        background-color: lighten($masonry-tile-link-cta, 5%);
+    }
+}
+
 .masonry__image {
     position: relative;
     overflow: hidden;
@@ -191,10 +252,14 @@
         height: 100%;
         transition: $masonry-animation-transition;
     }
+}
 
-    &:hover {
-        img {
-            transform: $masonry-animation-transform;
-        }
-    }
+.masonry__tile-border {
+    @include square(calc(100% - #{$masonry-border-ratio}));
+    position: absolute;
+    top: ($masonry-border-ratio / 2);
+    left: ($masonry-border-ratio / 2);
+    transition: all 1s ease;
+    box-shadow: 0 0 0 1px $white;
+    pointer-events: none;
 }

@@ -7,6 +7,7 @@
 // Vendors
 @import 'owl.carousel';
 @import 'owl.theme.green';
+@import 'select2';
 
 // Theme settings
 @import 'settings/mixins';
@@ -24,6 +25,8 @@
 @import 'common/utilities';
 
 // Components
+@import 'components/headline';
+@import 'components/text';
 @import 'components/buttons';
 @import 'components/masonry-grid';
 @import 'components/sections';
@@ -32,7 +35,13 @@
 @import 'components/case-studies';
 @import 'components/owl-carousel';
 @import 'components/hubspot-form';
+@import 'components/inputs';
+@import 'components/icons';
+@import 'components/select2';
+@import 'components/links';
+@import 'components/map';
 
 // Layouts
 @import 'layouts/header';
 @import 'layouts/footer';
+@import 'layouts/searchpage';

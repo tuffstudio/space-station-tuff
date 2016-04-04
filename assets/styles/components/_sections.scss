@@ -26,23 +26,44 @@
         opacity: 1;
     }
 
-    &.stay-in-touch {
-        @include background-cover('stay-in-touch-background.png');
-        min-height: 250px;
-        margin: 0;
-        padding: 30px 15px;
-        color: $white;
-        text-align: center;
+    &.search-results {
+        margin: 50px 0 70px;
+    }
+}
 
-        @include min-screen($tablet) {
-            padding: 50px 15px;
-        }
+.section--small-space {
+    margin: 30px 0;
 
-        // TODO: temporary solution
-        p {
-            font-family: $font-caslon;
-            font-style: italic;
-        }
+    @include min-screen($tablet) {
+        margin: 35px 0;
+    }
+
+    @include min-screen($desktop) {
+        margin: 50px 0;
+    }
+}
+
+.section--bottom-space {
+    margin-bottom: 50px;
+
+    @include min-screen($tablet) {
+        margin-bottom: 120px;
+    }
+
+    @include min-screen($desktop) {
+        margin-bottom: 150px;
+    }
+}
+
+.section--top-small-space {
+    margin-top: 40px;
+
+    @include min-screen($tablet) {
+        margin-top: 50px;
+    }
+
+    @include min-screen($desktop) {
+        margin-top: 70px;
     }
 }
 
@@ -72,6 +93,8 @@
     font-size: $section-subtitle-size;
 }
 
+// Each homepage sections
+// ----------------------
 .magazine {
     @include background-cover('splash_bg.png', 80% 0, auto);
     margin-bottom: 0;
@@ -79,4 +102,35 @@
     @include min-screen($desktop) {
         padding: 100px 0 150px;
     }
+}
+
+.stay-in-touch {
+    @include background-cover('stay-in-touch-background.png');
+    min-height: 250px;
+    margin: 0;
+    padding: 30px 15px;
+    color: $white;
+    text-align: center;
+
+    @include min-screen($tablet) {
+        padding: 50px 15px;
+    }
+
+    // TODO: temporary solution
+    h3 {
+        letter-spacing: .2em;
+    }
+
+    p {
+        font-family: $font-caslon;
+        font-style: italic;
+    }
+}
+
+// Search page
+// ------------
+.search-form {
+    margin-top: 30px;
+    padding-bottom: 50px;
+    background-color: $white;
 }

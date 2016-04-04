@@ -41,9 +41,52 @@
     color: $white;
     font-family: $font-medium;
     font-size: rem-calc(12);
+    letter-spacing: 2px;
     text-transform: uppercase;
 
     &:hover {
         background-color: $color-primary;
+    }
+}
+
+.btn--switcher {
+    min-width: 130px;
+    padding: 8px 20px 6px;
+    transition: all $standard-animation-time ease;
+    border: 1px solid transparent;
+    background-color: transparent;
+    font-family: $font-light;
+    font-size: rem-calc(9);
+    letter-spacing: .2em;
+    text-transform: uppercase;
+
+    &:hover,
+    &.active {
+        border-color: $color-primary;
+        color: $color-primary;
+        font-weight: bold;
+    }
+}
+
+.btn--play {
+    position: absolute;
+    display: block;
+    width: 50px;
+    height: 50px;
+    border: none;
+    border-radius: 50%;
+    background-color: $btn-play-bg;
+    font-size: 0;
+    cursor: pointer;
+    @include center-align();
+
+    &:hover {
+        background-color: $btn-play-bg-hover;
+    }
+
+    &::after {
+        content: '';
+        @include css-triangle(10px, $white, right);
+        @include center-align();
     }
 }

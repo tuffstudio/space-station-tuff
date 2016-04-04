@@ -1,19 +1,10 @@
 // Case studies styles
 // --------------------
 .case-study__info {
-    padding: 10px 30px 10px 20px;
-}
+    padding: 10px 0;
 
-.case-study__title {
-    margin-top: 16px;
-    font-family: $case-study-title-font;
-    font-size: $case-study-title-size;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-
-    a {
-        color: $black;
-        text-decoration: none;
+    @include min-screen($desktop) {
+        padding: 10px 20px 10px 0;
     }
 }
 
@@ -32,13 +23,18 @@
     }
 }
 
-.case-study__thumbnail--video {
+.case-study__thumbnail {
     position: relative;
+    padding: 20px;
+    box-sizing: border-box;
 
-    &::after {
-        @include center-align();
-        content: url('../images/play_icon.png');
-        display: block;
-        cursor: pointer;
+    &.is-video {
+        .btn {
+            display: block;
+        }
+    }
+
+    .btn {
+        display: none;
     }
 }
