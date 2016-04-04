@@ -2,18 +2,12 @@
     use Roots\Sage\ExcerptText;
 ?>
 
-<section class="section case-studies is-hidden js-section-reveal">
+<section class="section case-studies is-hidden js-section-reveal <?= is_front_page() ? '' : 'section--small-space';?>">
     <div class="container">
         <div class="owl-carousel js-case-studies-carousel">
             <?php
-            $args = array(
-                'post_type' => 'case-study',
-                'post_status' => 'publish',
-                'meta_key' => 'case_study_featured',
-                'meta_value' => true,
-            );
 
-            $query = new WP_Query( $args );
+            $query = new WP_Query( $args_case_study );
 
             if ( $query->have_posts() ) :
                 while ( $query->have_posts() ) :
@@ -31,7 +25,7 @@
                     <div class="grid__item tablet--one-half">
                         <div class="case-study__info">
                             <p class="section__category">Case studies: <span><?= $case_study_category; ?></span></p>
-                            <h2 class="case-study__title case-study__title--homepage">
+                            <h2 class="headline--default">
                                 <a href="<?= $case_study_link; ?>">
                                     <?= the_title(); ?>
                                 </a>
@@ -48,8 +42,9 @@
                         </div>
                     </div><!--
                     --><div class="grid__item tablet--one-half phone--hide tablet--show">
-                        <div class="case-study__thumbnail case-study__thumbnail--<?= strlen($case_study_video) != 0 ? 'video' : ''?>">
+                        <div class="case-study__thumbnail <?= strlen($case_study_video) != 0 ? 'is-video' : ''?>">
                             <?= $case_study_img_url; ?>
+                            <button class="btn btn--play">play</button>
                         </div>
                     </div>
                 </div>

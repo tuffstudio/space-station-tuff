@@ -1,0 +1,33 @@
+// Icons
+// ------
+[class^="icon-"],
+[class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'spacestation';
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    line-height: 1;
+    text-transform: none;
+    speak: none;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-notice::before {
+    content: '\e903';
+}
+
+.icon-target::before {
+    content: '\e900';
+}
+
+.icon-arrow-up::before {
+    content: '\e901';
+}
+
+.icon-arrow-down::before {
+    content: '\e902';
+}

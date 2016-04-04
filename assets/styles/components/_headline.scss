@@ -1,0 +1,70 @@
+// Title styles
+// --------------------
+.title--main {
+    margin: 0;
+    color: $color-primary;
+    font-family: $font-caslon;
+    font-size: rem-calc(14);
+    font-style: italic;
+}
+
+.title--default {
+    display: inline-block;
+    font-family: $font-bold;
+    font-size: rem-calc(16);
+    text-transform: uppercase;
+
+    @include min-screen($tablet) {
+        font-size: rem-calc(17);
+    }
+
+    @include min-screen($desktop) {
+        font-size: rem-calc(18);
+    }
+}
+
+
+
+// Headline styles
+// --------------------
+.headline--main {
+    margin: 0.8em 0 1.2em;
+    letter-spacing: $moving-box-title-letterspacing;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-size: rem-calc($case-study-title-size * 0.7);
+
+    @include min-screen($tablet) {
+        font-size: rem-calc($case-study-title-size * 0.85);
+    }
+
+    @include min-screen($desktop) {
+        font-size: rem-calc($case-study-title-size);
+    }
+
+    strong {
+        display: block;
+        font-family: $case-study-title-font;
+    }
+}
+
+.headline--default {
+    margin-top: 16px;
+    font-family: $case-study-title-font;
+    font-size: rem-calc($case-study-title-size * 0.7);
+    letter-spacing: 3px;
+    text-transform: uppercase;
+
+    @include min-screen($tablet) {
+        font-size: rem-calc($case-study-title-size * 0.85);
+    }
+
+    @include min-screen($desktop) {
+        font-size: rem-calc($case-study-title-size);
+    }
+
+    a {
+        color: $black;
+        text-decoration: none;
+    }
+}

@@ -17,12 +17,14 @@ $desktop-wide: 1440px;
 
 $breakpoints: (
     'phone' '(min-width: #{$phone})',
+    'tablet-small' '(min-width: #{$tablet-small})',
     'tablet' '(min-width: #{$tablet})',
+    'tablet-wide' '(min-width: #{$tablet-wide})',
     'desktop' '(min-width: #{$desktop})',
     'desktop-medium' '(min-width: #{$desktop-medium})',
     'desktop-wide' '(min-width: #{$desktop-wide})'
 );
 
-$breakpoint-has-widths: ('phone', 'tablet', 'desktop', 'desktop-medium', 'desktop-wide');
-$breakpoint-has-push: ('phone', 'tablet', 'desktop', 'desktop-medium', 'desktop-wide');
-$breakpoint-has-pull: ('phone', 'tablet', 'desktop', 'desktop-medium', 'desktop-wide');
+$breakpoint-has-widths: ('phone', 'tablet-small', 'tablet', 'tablet-wide', 'desktop', 'desktop-medium', 'desktop-wide');
+$breakpoint-has-push: ('phone', 'tablet-small', 'tablet', 'tablet-wide', 'desktop', 'desktop-medium', 'desktop-wide');
+$breakpoint-has-pull: ('phone', 'tablet-small', 'tablet', 'tablet-wide', 'desktop', 'desktop-medium', 'desktop-wide');

@@ -29,7 +29,7 @@
 ?>
 
 <section class="section magazine is-hidden js-section-reveal">
-    <div class="container">
+    <div class="container container--full">
         <div class="grid grid--full">
             <div class="grid__item tablet--one-half">
                 <div class="grid__item">
