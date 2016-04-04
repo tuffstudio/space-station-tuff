@@ -1,0 +1,15 @@
+// Single property navigation styles
+// ---------------------------------
+.property__nav {
+    position: relative;
+    height: $property-nav-height;
+    margin-top: -$property-nav-height;
+    padding: 10px 50px 0;
+    background-color: $property-nav-bg;
+    z-index: 10;
+
+    .property__buttons {
+        @include vertical-align(absolute);
+        margin: 0;
+    }
+}

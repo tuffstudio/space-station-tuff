@@ -18,6 +18,7 @@ $white: #ffffff;
 $black: #000000;
 $gray: #e5e5e5;
 $dark-gray: #999999;
+$mid-gray: #d0d0d0;
 $white-transparent: rgba($white, .7);
 $purple: #4a0036;
 
@@ -42,11 +43,18 @@ $btn-primary-font-color: $black;
 $btn-primary-border-color: #c3c3c3;
 $btn-primary-border-hover: #a37a09;
 
+// Action
+$btn-action-color: $black;
+$btn-action-bg: $white;
+$btn-action-font: $font-book;
+$btn-action-font-size: rem-calc(12);
+$btn-action-border: 1px solid $black;
+
 // Navigation
 // -----------
 $nav-height: 50px;
 $nav-bg-color: $black;
-$brand-link-color: #d0d0d0;
+$brand-link-color: $mid-gray;
 $brand-link-size: rem-calc(12);
 $menu-link-color: $dark-gray;
 $menu-link-color-hover: $white;
@@ -143,3 +151,17 @@ $footer-bg-color: $black;
 // --------
 $input-bg-color: #c9cacc;
 $input-font-color: #9fa0a2;
+
+// Single property
+// ----------------
+$property-body-bg: #acacac;
+$property-nav-bg: $white-transparent;
+$property-nav-height: 50px;
+$property-title-font: $font-heavy;
+$property-title-font-size: rem-calc(22);
+$property-title-letterspacing: 2px;
+$property-price-font-size: rem-calc(16);
+$property-type-font: $font-light;
+$property-type-font-size: $property-price-font-size;
+$property-desc-font: $font-book;
+$property-desc-font-size: rem-calc(14);
