@@ -105,3 +105,13 @@
         background-color: darken($btn-action-bg, 15%);
     }
 }
+
+.btn--action--awarded {
+    border-color: transparent;
+    background-color: $color-primary;
+    color: $white;
+
+    &:hover {
+        background-color: darken($color-primary, 5%);
+    }
+}

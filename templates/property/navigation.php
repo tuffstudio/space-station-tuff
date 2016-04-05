@@ -9,7 +9,7 @@
             </ul>
         </div><!--
         --><div class="grid__item desktop--one-quarter u--align-center">
-            arrange a viewing
+            <a href="#form" class="btn btn--action btn--action--awarded">Arrange a viewing</a>
         </div>
     </div>
 </div>

@@ -20,5 +20,5 @@
         <a class="property__gallery-switcher down" href="#" id="next"></a>
     </div>
 
-    <img class="foo" src="<?php echo get_template_directory_uri(); ?>/dist/images/banner-placeholder.jpg" alt="">
+    <img class="property__gallery-big-image" src="<?php echo get_template_directory_uri(); ?>/dist/images/banner-placeholder.jpg" alt="">
 </section>

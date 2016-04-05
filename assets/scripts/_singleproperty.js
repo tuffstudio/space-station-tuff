@@ -6,7 +6,8 @@ window.SS.singleproperty = function($) {
     function initPoiCarousel() {
         $('.property__poi').owlCarousel({
             items: 3,
-            autoplaySpeed: 2000,
+            autoplay: true,
+            autoplaySpeed: 2500,
             autoplayHoverPause: true,
         });
     }
