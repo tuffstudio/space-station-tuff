@@ -1,6 +1,8 @@
 <section class="property__section">
     <div class="container container--wide container--full">
-        <p class="section__category"><span>Similar Properties</span></p>
+        <div class="property__section-header">
+            <p class="section__category"><span>Similar Properties</span></p>
+        </div>
         <div class="grid grid--full">
             <div class="grid__item tablet--one-half">
                 <a href="#" class="masonry__link">

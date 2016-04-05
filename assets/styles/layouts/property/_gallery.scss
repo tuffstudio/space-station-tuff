@@ -10,6 +10,7 @@
 }
 
 .property__gallery-slider {
+    display: none; // FIXME: find out what to do on mobile
     position: absolute;
     top: 12%;
     right: 0;
@@ -17,6 +18,10 @@
     padding: 10px 6px;
     background-color: transparentize($black, .3);
     text-align: center;
+
+    @include min-screen($desktop) {
+        display: block;
+    }
 
     img {
         width: 100%;

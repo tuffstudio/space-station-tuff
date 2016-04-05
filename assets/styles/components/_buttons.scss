@@ -101,8 +101,10 @@
     font-size: $btn-action-font-size;
     text-transform: uppercase;
 
-    &:hover {
-        background-color: darken($btn-action-bg, 15%);
+    @include min-screen($desktop) {
+        &:hover {
+            background-color: darken($btn-action-bg, 15%);
+        }
     }
 }
 

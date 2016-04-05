@@ -1,8 +1,10 @@
 <section class="property__section">
     <div class="container container--wide container--full">
-        <p class="section__category"><span>Recently Viewed</span></p>
+        <div class="property__section-header">
+            <p class="section__category"><span>Recently Viewed</span></p>
+        </div>
         <div class="grid grid--full">
-            <div class="grid__item desktop--one-third">
+            <div class="grid__item tablet--one-half desktop--one-third">
                 <a href="#" class="masonry__link">
                     <div class="grid__item one-half">
                         <div class="masonry__item masonry__item--square">
@@ -24,7 +26,7 @@
                     </div>
                 </a>
             </div><!--
-            --><div class="grid__item desktop--one-third">
+            --><div class="grid__item tablet--one-half desktop--one-third">
                 <a href="#" class="masonry__link">
                     <div class="grid__item one-half">
                         <div class="masonry__item masonry__item--square">
@@ -46,7 +48,7 @@
                     </div>
                 </a>
             </div><!--
-            --><div class="grid__item desktop--one-third">
+            --><div class="grid__item tablet--one-third desktop--one-third tablet--hide desktop--show">
                 <a href="#" class="masonry__link">
                     <div class="grid__item one-half">
                         <div class="masonry__item masonry__item--square">

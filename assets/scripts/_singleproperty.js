@@ -5,22 +5,25 @@ window.SS.singleproperty = function($) {
 
     function initPoiCarousel() {
         $('.property__poi').owlCarousel({
-            items: 3,
             autoplay: true,
             autoplaySpeed: 2500,
             autoplayHoverPause: true,
-        });
-    }
-
-    function initVerticalCarousel() {
-        $('.js-vertical-slideshow').cycle({
-            log: false
+            responsive: {
+                0: {
+                    items: 1
+                },
+                568: {
+                    items: 2,
+                },
+                1025: {
+                    items: 3
+                }
+            }
         });
     }
 
     $(document).ready(function() {
         initPoiCarousel();
-        initVerticalCarousel();
         SS.switchGrids('.js-panel-switcher', '.js-property-panel');
     });
 };
