@@ -1,4 +1,4 @@
-<section class="property__gallery">
+<section id="gallery" class="property__gallery property__panel js-property-panel visible">
     <div class="property__gallery-slider">
         <a class="property__gallery-switcher up" href="#" id="prev"></a>
         <div class="js-vertical-slideshow"

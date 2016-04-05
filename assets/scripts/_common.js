@@ -174,3 +174,23 @@ window.SS.common = function($) {
         subMenuAlignment();
     });
 };
+
+window.SS.switchGrids = function(switcher, panel) {
+    var $switchButton = $(switcher);
+    var $panel = $(panel);
+
+    $switchButton.on('click', function(event) {
+        var $this = $(this);
+        var targetId = $this.attr('href');
+        var $targetBlock = $(targetId);
+
+        $panel.removeClass('visible');
+        $switchButton.removeClass('active');
+
+        $targetBlock.addClass('visible');
+        $this.addClass('active');
+
+        event.preventDefault();
+        return false;
+    });
+};

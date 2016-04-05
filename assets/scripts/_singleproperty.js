@@ -20,5 +20,6 @@ window.SS.singleproperty = function($) {
     $(document).ready(function() {
         initPoiCarousel();
         initVerticalCarousel();
+        SS.switchGrids('.js-panel-switcher', '.js-property-panel');
     });
-}
+};
