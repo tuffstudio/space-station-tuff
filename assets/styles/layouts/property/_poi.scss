@@ -26,5 +26,7 @@
 }
 
 .property__poi-desc {
+    font-family: $font-book;
+    font-size: rem-calc(14);
     line-height: 1.5;
 }

@@ -1,12 +1,8 @@
 // Single property content styles
 // ------------------------------
 .property__panel {
-    display: none;
+    @include fluent-switch();
     min-height: 300px;
-
-    &.visible {
-        display: block;
-    }
 }
 
 .property__content {
