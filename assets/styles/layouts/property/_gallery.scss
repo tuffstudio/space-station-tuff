@@ -1,8 +1,52 @@
 // Single property gallery section
 // --------------------------------
-.gallery {
-    img {
+.property__gallery {
+    position: relative;
+
+    .foo {
         width: 100%;
         margin-bottom: -4px;
+    }
+}
+
+.property__gallery-slider {
+    position: absolute;
+    top: 12%;
+    right: 0;
+    width: 100px;
+    padding: 10px 6px;
+    background-color: transparentize($black, .3);
+    text-align: center;
+
+    img {
+        width: 100%;
+        transition: border-color $standard-animation-time ease;
+        border: 3px solid transparent;
+        cursor: pointer;
+
+        &:hover {
+            border-color: $color-primary;
+        }
+    }
+}
+
+.property__gallery-switcher {
+    position: relative;
+    margin: 0 auto;
+    transition: opacity $standard-animation-time ease;
+    opacity: .6;
+
+    &.up {
+        @include css-triangle(9px, $white, up);
+        margin-bottom: 5px;
+    }
+
+    &.down {
+        @include css-triangle(9px, $white, down);
+        margin-top: 5px;
+    }
+
+    &:hover {
+        opacity: 1;
     }
 }

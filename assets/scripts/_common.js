@@ -58,8 +58,6 @@ window.SS.common = function($) {
 
                 $this.addClass('has-menu');
                 $this.on('click', function(event) {
-                    event.preventDefault();
-
                     var toggled = !$subMenu.hasClass('is-opened');
 
                     if(toggled) {
@@ -175,6 +173,4 @@ window.SS.common = function($) {
     $(window).resize(function() {
         subMenuAlignment();
     });
-
-
 };

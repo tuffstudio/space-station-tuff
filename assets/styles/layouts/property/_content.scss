@@ -66,6 +66,7 @@
     font-family: $property-desc-font;
     font-size: $property-desc-font-size;
     font-weight: bold;
+    line-height: 1.4;
 
     @include min-screen($desktop) {
         margin-top: 30px;
@@ -99,5 +100,11 @@
         font-family: $font-light;
         font-size: rem-calc(15);
         font-weight: bold;
+    }
+}
+
+.property__section {
+    @include min-screen($desktop) {
+        margin: 50px 0;
     }
 }

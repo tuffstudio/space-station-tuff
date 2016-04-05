@@ -44,137 +44,213 @@
             </div>
         </div>
     </div>
+</div>
 
-    <section class="property__neighbourhood">
+<section class="property__section property__neighbourhood">
+    <div class="container">
         <div class="grid grid--full">
             <div class="grid__item desktop--one-quarter">
-                <h3 class="section__title">Explore the neighbourhood</h3>
+                <h3 class="section__title section__title--small">Explore the neighbourhood</h3>
             </div><!--
-            --><div class="grid__item desktop--three-quarters"></div>
-        </div>
-    </section>
-</div>
-
-<div class="container container--wide container--full">
-    <p class="section__category"><span>Similar Properties</span></p>
-    <div class="grid grid--full">
-        <div class="grid__item tablet--one-half">
-            <a href="#" class="masonry__link">
-                <div class="grid__item one-half">
-                    <div class="masonry__item masonry__item--square">
-                        <div class="masonry__tile masonry__tile--white">
-                            <div class="masonry__tile-border"></div>
-                            <div class="masonry__tile-info">
-                                <p class="masonry__tile-category">Commercial: <span>Rent</span></p>
-                                <h3 class="masonry__tile-title">Stratford High Street, e15</h3>
-                                <p class="masonry__tile-price">114,905 pa</p>
-                                <p class="masonry__tile-desc masonry__tile-desc--big">610sqm UNIT</p>
+            --><div class="grid__item desktop--three-quarters">
+                <div class="property__carousel">
+                    <div class="property__poi owl-carousel">
+                        <a href="#" class="property__poi-link">
+                            <div class="property__poi-image">
+                                <img src="http://lorempicsum.com/up/120/120/<?php echo(rand(1,6)); ?>" alt="">
                             </div>
-                        </div>
-                    </div>
-                </div><!--
-                --><div class="grid__item one-half">
-                    <div class="masonry__item masonry__item--square masonry__image">
-                        <img src="<?= get_template_directory_uri(); ?>/dist/images/masonry_small_placeholder.jpg" alt="">
+                            <div class="single-result__info single-result__info--transparent">
+                                <p class="masonry__tile-category">
+                                    Neighbourhood: <span>Fashion</span>
+                                </p>
+                                <h3 class="masonry__tile-title property__poi-title">
+                                    Product name
+                                </h3>
+                                <p class="masonry__tile-desc property__poi-desc">
+                                    Restaurant labor aut quam accatur rehent quam fuga. Oruntotae nienitatem ut magnimus
+                                </p>
+                            </div>
+                        </a>
+                        <a href="#" class="property__poi-link">
+                            <div class="property__poi-image">
+                                <img src="http://lorempicsum.com/up/120/120/<?php echo(rand(1,6)); ?>" alt="">
+                            </div>
+                            <div class="single-result__info single-result__info--transparent">
+                                <p class="masonry__tile-category">
+                                    Neighbourhood: <span>Fashion</span>
+                                </p>
+                                <h3 class="masonry__tile-title property__poi-title">
+                                    Product name
+                                </h3>
+                                <p class="masonry__tile-desc property__poi-desc">
+                                    Restaurant labor aut quam accatur rehent quam fuga. Oruntotae nienitatem ut magnimus
+                                </p>
+                            </div>
+                        </a>
+                        <a href="#" class="property__poi-link">
+                            <div class="property__poi-image">
+                                <img src="http://lorempicsum.com/up/120/120/<?php echo(rand(1,6)); ?>" alt="">
+                            </div>
+                            <div class="single-result__info single-result__info--transparent">
+                                <p class="masonry__tile-category">
+                                    Neighbourhood: <span>Fashion</span>
+                                </p>
+                                <h3 class="masonry__tile-title property__poi-title">
+                                    Restaurant name
+                                </h3>
+                                <p class="masonry__tile-desc property__poi-desc">
+                                    Restaurant labor aut quam accatur rehent quam fuga. Oruntotae nienitatem ut magnimus
+                                </p>
+                            </div>
+                        </a>
+                        <a href="#" class="property__poi-link">
+                            <div class="property__poi-image">
+                                <img src="http://lorempicsum.com/up/120/120/<?php echo(rand(1,6)); ?>" alt="">
+                            </div>
+                            <div class="single-result__info single-result__info--transparent">
+                                <p class="masonry__tile-category">
+                                    Neighbourhood: <span>Fashion</span>
+                                </p>
+                                <h3 class="masonry__tile-title property__poi-title">
+                                    Gallery name
+                                </h3>
+                                <p class="masonry__tile-desc property__poi-desc">
+                                    Restaurant labor aut quam accatur rehent quam fuga. Oruntotae nienitatem ut magnimus
+                                </p>
+                            </div>
+                        </a>
                     </div>
                 </div>
-            </a>
-        </div><!--
-        --><div class="grid__item tablet--one-half">
-            <a href="#" class="masonry__link">
-                <div class="grid__item one-half">
-                    <div class="masonry__item masonry__item--square">
-                        <div class="masonry__tile masonry__tile--white">
-                            <div class="masonry__tile-border"></div>
-                            <div class="masonry__tile-info">
-                                <p class="masonry__tile-category">Commercial: <span>Rent</span></p>
-                                <h3 class="masonry__tile-title">Stratford High Street, e15</h3>
-                                <p class="masonry__tile-price">114,905 pa</p>
-                                <p class="masonry__tile-desc masonry__tile-desc--big">610sqm UNIT</p>
-                            </div>
-                        </div>
-                    </div>
-                </div><!--
-                --><div class="grid__item one-half">
-                    <div class="masonry__item masonry__item--square masonry__image">
-                        <img src="<?= get_template_directory_uri(); ?>/dist/images/masonry_small_placeholder.jpg" alt="">
-                    </div>
-                </div>
-            </a>
-        </div>
-    </div>
-</div>
-
-<div class="container container--wide container--full">
-    <p class="section__category"><span>Recently viewed</span></p>
-    <div class="grid grid--full">
-        <div class="grid__item desktop--one-third">
-            <a href="#" class="masonry__link">
-                <div class="grid__item one-half">
-                    <div class="masonry__item masonry__item--square">
-                        <div class="masonry__tile masonry__tile--white masonry__tile-arrow">
-                            <div class="masonry__tile-border"></div>
-                            <div class="masonry__tile-info">
-                                <p class="masonry__tile-category">Commercial: <span>Rent</span></p>
-                                <h3 class="masonry__tile-title">Stratford High Street, e15</h3>
-                                <p class="masonry__tile-price">114,905 pa</p>
-                                <p class="masonry__tile-desc masonry__tile-desc--big">610sqm UNIT</p>
-                            </div>
-                        </div>
-                    </div>
-                </div><!--
-                --><div class="grid__item one-half">
-                    <div class="masonry__item masonry__item--square masonry__image">
-                        <img src="<?= get_template_directory_uri(); ?>/dist/images/masonry_small_placeholder.jpg" alt="">
-                    </div>
-                </div>
-            </a>
-        </div><!--
-        --><div class="grid__item desktop--one-third">
-            <a href="#" class="masonry__link">
-                <div class="grid__item one-half">
-                    <div class="masonry__item masonry__item--square">
-                        <div class="masonry__tile masonry__tile--white masonry__tile-arrow">
-                            <div class="masonry__tile-border"></div>
-                            <div class="masonry__tile-info">
-                                <p class="masonry__tile-category">Commercial: <span>Rent</span></p>
-                                <h3 class="masonry__tile-title">Stratford High Street, e15</h3>
-                                <p class="masonry__tile-price">114,905 pa</p>
-                                <p class="masonry__tile-desc masonry__tile-desc--big">610sqm UNIT</p>
-                            </div>
-                        </div>
-                    </div>
-                </div><!--
-                --><div class="grid__item one-half">
-                    <div class="masonry__item masonry__item--square masonry__image">
-                        <img src="<?= get_template_directory_uri(); ?>/dist/images/masonry_small_placeholder.jpg" alt="">
-                    </div>
-                </div>
-            </a>
-        </div><!--
-        --><div class="grid__item desktop--one-third">
-            <a href="#" class="masonry__link">
-                <div class="grid__item one-half">
-                    <div class="masonry__item masonry__item--square">
-                        <div class="masonry__tile masonry__tile--white masonry__tile-arrow">
-                            <div class="masonry__tile-border"></div>
-                            <div class="masonry__tile-info">
-                                <p class="masonry__tile-category">Commercial: <span>Rent</span></p>
-                                <h3 class="masonry__tile-title">Stratford High Street, e15</h3>
-                                <p class="masonry__tile-price">114,905 pa</p>
-                                <p class="masonry__tile-desc masonry__tile-desc--big">610sqm UNIT</p>
-                            </div>
-                        </div>
-                    </div>
-                </div><!--
-                --><div class="grid__item one-half">
-                    <div class="masonry__item masonry__item--square masonry__image">
-                        <img src="<?= get_template_directory_uri(); ?>/dist/images/masonry_small_placeholder.jpg" alt="">
-                    </div>
-                </div>
-            </a>
+            </div>
         </div>
     </div>
-</div>
+</section>
+
+<section class="property__section">
+    <div class="container container--wide container--full">
+        <p class="section__category"><span>Similar Properties</span></p>
+        <div class="grid grid--full">
+            <div class="grid__item tablet--one-half">
+                <a href="#" class="masonry__link">
+                    <div class="grid__item one-half">
+                        <div class="masonry__item masonry__item--square">
+                            <div class="masonry__tile masonry__tile--white">
+                                <div class="masonry__tile-border"></div>
+                                <div class="masonry__tile-info">
+                                    <p class="masonry__tile-category">Commercial: <span>Rent</span></p>
+                                    <h3 class="masonry__tile-title">Stratford High Street, e15</h3>
+                                    <p class="masonry__tile-price">114,905 pa</p>
+                                    <p class="masonry__tile-desc masonry__tile-desc--big">610sqm UNIT</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!--
+                    --><div class="grid__item one-half">
+                        <div class="masonry__item masonry__item--square masonry__image">
+                            <img src="<?= get_template_directory_uri(); ?>/dist/images/archi_small.jpg" alt="">
+                        </div>
+                    </div>
+                </a>
+            </div><!--
+            --><div class="grid__item tablet--one-half">
+                <a href="#" class="masonry__link">
+                    <div class="grid__item one-half">
+                        <div class="masonry__item masonry__item--square">
+                            <div class="masonry__tile masonry__tile--white">
+                                <div class="masonry__tile-border"></div>
+                                <div class="masonry__tile-info">
+                                    <p class="masonry__tile-category">Commercial: <span>Rent</span></p>
+                                    <h3 class="masonry__tile-title">Stratford High Street, e15</h3>
+                                    <p class="masonry__tile-price">114,905 pa</p>
+                                    <p class="masonry__tile-desc masonry__tile-desc--big">610sqm UNIT</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!--
+                    --><div class="grid__item one-half">
+                        <div class="masonry__item masonry__item--square masonry__image">
+                            <img src="<?= get_template_directory_uri(); ?>/dist/images/art_small.jpg" alt="">
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="property__section">
+    <div class="container container--wide container--full">
+        <p class="section__category"><span>Recently Viewed</span></p>
+        <div class="grid grid--full">
+            <div class="grid__item desktop--one-third">
+                <a href="#" class="masonry__link">
+                    <div class="grid__item one-half">
+                        <div class="masonry__item masonry__item--square">
+                            <div class="masonry__tile masonry__tile--white masonry__tile-arrow">
+                                <div class="masonry__tile-border"></div>
+                                <div class="masonry__tile-info">
+                                    <p class="masonry__tile-category">Commercial: <span>Rent</span></p>
+                                    <h3 class="masonry__tile-title">Stratford High Street, e15</h3>
+                                    <p class="masonry__tile-price">114,905 pa</p>
+                                    <p class="masonry__tile-desc masonry__tile-desc--big">610sqm UNIT</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!--
+                    --><div class="grid__item one-half">
+                        <div class="masonry__item masonry__item--square masonry__image">
+                            <img src="<?= get_template_directory_uri(); ?>/dist/images/masonry_small_placeholder.jpg" alt="">
+                        </div>
+                    </div>
+                </a>
+            </div><!--
+            --><div class="grid__item desktop--one-third">
+                <a href="#" class="masonry__link">
+                    <div class="grid__item one-half">
+                        <div class="masonry__item masonry__item--square">
+                            <div class="masonry__tile masonry__tile--white masonry__tile-arrow">
+                                <div class="masonry__tile-border"></div>
+                                <div class="masonry__tile-info">
+                                    <p class="masonry__tile-category">Commercial: <span>Rent</span></p>
+                                    <h3 class="masonry__tile-title">Stratford High Street, e15</h3>
+                                    <p class="masonry__tile-price">114,905 pa</p>
+                                    <p class="masonry__tile-desc masonry__tile-desc--big">610sqm UNIT</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!--
+                    --><div class="grid__item one-half">
+                        <div class="masonry__item masonry__item--square masonry__image">
+                            <img src="<?= get_template_directory_uri(); ?>/dist/images/design_small.jpg" alt="">
+                        </div>
+                    </div>
+                </a>
+            </div><!--
+            --><div class="grid__item desktop--one-third">
+                <a href="#" class="masonry__link">
+                    <div class="grid__item one-half">
+                        <div class="masonry__item masonry__item--square">
+                            <div class="masonry__tile masonry__tile--white masonry__tile-arrow">
+                                <div class="masonry__tile-border"></div>
+                                <div class="masonry__tile-info">
+                                    <p class="masonry__tile-category">Commercial: <span>Rent</span></p>
+                                    <h3 class="masonry__tile-title">Stratford High Street, e15</h3>
+                                    <p class="masonry__tile-price">114,905 pa</p>
+                                    <p class="masonry__tile-desc masonry__tile-desc--big">610sqm UNIT</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!--
+                    --><div class="grid__item one-half">
+                        <div class="masonry__item masonry__item--square masonry__image">
+                            <img src="<?= get_template_directory_uri(); ?>/dist/images/rent_small.jpg" alt="">
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
 
 <?php include 'homepage/stay-in-touch.php'; ?>

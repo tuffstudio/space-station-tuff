@@ -15,10 +15,6 @@ body {
     overflow-x: hidden;
     background-color: $body-bg-color;
     font-family: $base-font-family;
-
-    &.singleproperty {
-        background-color: $property-body-bg;
-    }
 }
 
 main {
