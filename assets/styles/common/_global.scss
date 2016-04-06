@@ -15,6 +15,10 @@ body {
     overflow-x: hidden;
     background-color: $body-bg-color;
     font-family: $base-font-family;
+
+    &.static {
+        overflow: hidden;
+    }
 }
 
 main {

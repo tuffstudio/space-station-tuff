@@ -47,6 +47,9 @@ function setup() {
     // Use main stylesheet for visual editor
     // To add custom styles edit /assets/styles/layouts/_tinymce.scss
     add_editor_style(Assets\asset_path('styles/main.css'));
+
+    // Load Gravity forms script in the footer
+    add_filter( 'gform_init_scripts_footer', '__return_true' );
 }
 add_action('after_setup_theme', __NAMESPACE__ . '\\setup');
 

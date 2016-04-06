@@ -1,0 +1,86 @@
+// Overlay styles
+// ---------------
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow-y: overlay;
+    z-index: 50;
+
+    &.is-opened {
+        display: block;
+    }
+}
+
+.overlay__bg {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba($black, .4);
+    cursor: pointer;
+}
+
+.overlay__content {
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    background-color: $overlay-content-bg;
+    cursor: default;
+    z-index: 55;
+
+    @include min-screen($desktop) {
+        top: 100px;
+        left: 50%;
+        width: 75%;
+        padding: 0 100px;
+        transform: translateX(-50%);
+    }
+
+    @include min-screen($desktop-medium) {
+        padding: 0 250px;
+    }
+}
+
+.overlay__close {
+    @include square(30px);
+    display: block;
+    position: absolute;
+    top: 25px;
+    right: 5px;
+    border: 0;
+    outline: 0;
+    background-color: transparent;
+
+    @include min-screen($desktop) {
+        top: 5px;
+        right: 113px;
+    }
+
+    @include min-screen($desktop-medium) {
+        right: 263px;
+    }
+
+    span {
+        display: block;
+        position: absolute;
+        left: 0;
+        width: 80%;
+        height: 2px;
+        background-color: $black;
+    }
+
+    span:first-child {
+        top: 15px;
+        transform: rotate(45deg);
+    }
+
+    span:last-child {
+        transform: rotate(-45deg);
+    }
+}

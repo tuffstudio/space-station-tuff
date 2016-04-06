@@ -102,3 +102,98 @@ input[type=search] {
 .input-checkbox:checked {
     background-color: $color-primary;
 }
+
+// Gravity forms
+// --------------
+.form-default_wrapper {
+    margin: 0 !important;
+
+    input[type=text],
+    input[type=tel],
+    input[type=email] {
+        @extend .input-search;
+        width: 100% !important;
+    }
+
+    textarea {
+        width: 99% !important;
+        outline: 0;
+        border: 0;
+        background-color: $input-bg-color;
+    }
+
+    #gform_submit_button_1 {
+        @extend .btn;
+        @extend .btn--submit;
+    }
+
+    .gfield_checkbox {
+        label {
+            display: inline-block !important;
+            margin-left: 10px !important;
+            color: $black;
+            font-family: $font-caslon;
+            font-weight: bold;
+            vertical-align: text-top !important;
+        }
+
+        input {
+            @include square(14px);
+            display: inline-block;
+            position: relative;
+            transition: background $standard-animation-time ease;
+            outline: 0;
+        }
+
+        a {
+            color: $black;
+        }
+    }
+
+    .privacy-policy > label {
+        display: none !important;
+    }
+}
+
+.gfield_label {
+    font-family: $font-light;
+    font-size: rem-calc(12);
+    letter-spacing: .2em;
+    text-transform: uppercase;
+}
+
+.gravity-field {
+    @include max-screen($desktop) {
+        display: block !important;
+        width: 100% !important;
+        clear: both !important;
+    }
+}
+
+.gform_wrapper li.gfield.gfield_error, .gform_wrapper li.gfield.gfield_error.gfield_contains_required.gfield_creditcard_warning {
+    background-color: transparent !important;
+    border: 0 !important;
+}
+
+.gfield_description.validation_message {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+}
+
+.validation_error {
+    display: none;
+}
+
+.gform_wrapper .top_label li.gfield.gfield_error.gf_left_half, .gform_wrapper .top_label li.gfield.gfield_error.gf_right_half {
+    @include max-screen($desktop) {
+        min-width: 100% !important;
+
+        > div {
+            max-width: 100% !important;
+        }
+    }
+
+    > div {
+        margin: 0 !important;        
+    }
+}

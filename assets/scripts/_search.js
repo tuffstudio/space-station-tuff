@@ -1,20 +1,6 @@
 window.SS = window.SS || {};
 
 window.SS.search = function($) {
-    function initSelect2() {
-        var $selects = $('select');
-
-        $selects.each(function() {
-            var $this = $(this);
-            var placeholder = $this.attr('placeholder');
-
-            $this.select2({
-                minimumResultsForSearch: Infinity,
-                placeholder: placeholder
-            });
-        });
-    }
-
     function goToNewsletter() {
         var $link = $('.js-newsletter-jump');
         var $target = $('.js-newsletter');
@@ -158,7 +144,7 @@ window.SS.search = function($) {
     $(document).ready(function() {
         SS.switchGrids('.js-grid-switcher', '.js-results-block');
         SS.switchGrids('.js-tab-switcher', '.js-tab-panel');
-        initSelect2();
+        SS.initSelect2();
         goToNewsletter();
         PropertyMap.init();
     });

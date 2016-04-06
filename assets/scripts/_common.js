@@ -194,3 +194,17 @@ window.SS.switchGrids = function(switcher, panel) {
         return false;
     });
 };
+
+window.SS.initSelect2 = function () {
+    var $selects = $('select');
+
+    $selects.each(function() {
+        var $this = $(this);
+        var placeholder = $this.attr('placeholder');
+
+        $this.select2({
+            minimumResultsForSearch: Infinity,
+            placeholder: placeholder
+        });
+    });
+};

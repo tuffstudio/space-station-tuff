@@ -141,3 +141,24 @@
         padding: 0;
     }
 }
+
+.property__form {
+    padding: 30px 5px 40px 15px;
+
+    @include min-screen($desktop) {
+        padding: 20px 0 50px;
+    }
+}
+
+.property__form-title {
+    margin: 0;
+    font-family: $font-medium;
+    font-size: rem-calc(14);
+    text-transform: uppercase;
+}
+
+.property__form-header {
+    @include min-screen($desktop) {
+        width: 40%;
+    }
+}
