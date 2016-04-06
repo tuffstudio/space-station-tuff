@@ -45,7 +45,7 @@ window.SS.singleproperty = function($) {
     }
 
     function checkIfOpenForm() {
-        if ($('.gform_validation_error').length > 0) {
+        if ($('.gform_validation_error').length > 0 || $('.gform_confirmation_message').length > 0) {
             openOverlay();
         }
     }
