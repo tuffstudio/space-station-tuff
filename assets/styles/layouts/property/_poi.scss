@@ -1,0 +1,32 @@
+// Points of interest - neighbourhood places
+// ------------------------------------------
+.property__poi-link {
+    display: block;
+    margin: 7px 5px 0;
+    color: $black;
+    text-decoration: none;
+
+    @include min-screen($desktop) {
+        margin: 0 5px;
+    }
+}
+
+.property__poi-image {
+    padding: 0 12vw;
+
+    @include min-screen($desktop) {
+        padding: 0 50px;
+    }
+}
+
+.property__poi-title {
+    @include min-screen($desktop) {
+        margin: -5px auto 7px;
+    }
+}
+
+.property__poi-desc {
+    font-family: $font-book;
+    font-size: rem-calc(14);
+    line-height: 1.5;
+}

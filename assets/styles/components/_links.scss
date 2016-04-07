@@ -9,3 +9,16 @@
     text-decoration: none;
     vertical-align: text-top;
 }
+
+.link--text {
+    color: $black;
+    font-family: $font-medium;
+    font-size: rem-calc(12);
+    font-weight: bold;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}

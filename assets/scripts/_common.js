@@ -58,8 +58,6 @@ window.SS.common = function($) {
 
                 $this.addClass('has-menu');
                 $this.on('click', function(event) {
-                    event.preventDefault();
-
                     var toggled = !$subMenu.hasClass('is-opened');
 
                     if(toggled) {
@@ -175,6 +173,38 @@ window.SS.common = function($) {
     $(window).resize(function() {
         subMenuAlignment();
     });
+};
 
+window.SS.switchGrids = function(switcher, panel) {
+    var $switchButton = $(switcher);
+    var $panel = $(panel);
 
+    $switchButton.on('click', function(event) {
+        var $this = $(this);
+        var targetId = $this.attr('href');
+        var $targetBlock = $(targetId);
+
+        $panel.removeClass('visible');
+        $switchButton.removeClass('active');
+
+        $targetBlock.addClass('visible');
+        $this.addClass('active');
+
+        event.preventDefault();
+        return false;
+    });
+};
+
+window.SS.initSelect2 = function () {
+    var $selects = $('select');
+
+    $selects.each(function() {
+        var $this = $(this);
+        var placeholder = $this.attr('placeholder');
+
+        $this.select2({
+            minimumResultsForSearch: Infinity,
+            placeholder: placeholder
+        });
+    });
 };

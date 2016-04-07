@@ -165,11 +165,7 @@
 
 // Results
 .search-results__block {
-    display: none;
-
-    &.visible {
-        display: block;
-    }
+    @include fluent-switch(1.3s);
 }
 
 .search-results__body {
@@ -243,4 +239,8 @@
     padding: 25px 0;
     background-color: $white;
     text-align: center;
+}
+
+.single-result__info--transparent {
+    background-color: transparent;
 }

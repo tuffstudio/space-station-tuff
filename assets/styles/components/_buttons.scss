@@ -69,24 +69,51 @@
 }
 
 .btn--play {
-    position: absolute;
+    @include center-align();
     display: block;
+    position: absolute;
     width: 50px;
     height: 50px;
-    border: none;
+    border: 0;
     border-radius: 50%;
     background-color: $btn-play-bg;
     font-size: 0;
     cursor: pointer;
-    @include center-align();
 
     &:hover {
         background-color: $btn-play-bg-hover;
     }
 
     &::after {
-        content: '';
         @include css-triangle(10px, $white, right);
         @include center-align();
+        content: '';
+    }
+}
+
+.btn--action {
+    min-width: 50px;
+    padding: 7px 20px 5px;
+    border: $btn-action-border;
+    background-color: $btn-action-bg;
+    color: $btn-action-color;
+    font-family: $btn-action-font;
+    font-size: $btn-action-font-size;
+    text-transform: uppercase;
+
+    @include min-screen($desktop) {
+        &:hover {
+            background-color: darken($btn-action-bg, 15%);
+        }
+    }
+}
+
+.btn--action--awarded {
+    border-color: transparent;
+    background-color: $color-primary;
+    color: $white;
+
+    &:hover {
+        background-color: darken($color-primary, 5%);
     }
 }

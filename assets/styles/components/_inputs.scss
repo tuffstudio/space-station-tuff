@@ -102,3 +102,127 @@ input[type=search] {
 .input-checkbox:checked {
     background-color: $color-primary;
 }
+
+// Gravity forms
+// --------------
+.gform_fields,
+.gfield_checkbox {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.gfield {
+    display: inline-block;
+    width: 100%;
+    vertical-align: text-top;
+}
+
+.gf_left_half,
+.gf_right_half {
+    @include min-screen($tablet) {
+        width: 50%;
+    }
+}
+
+.gf_left_half {
+    @include min-screen($tablet) {
+        padding-right: 10px;
+    }
+}
+
+.gf_right_half {
+    @include min-screen($tablet) {
+        padding-left: 10px;
+    }
+}
+
+.gfield_label {
+    display: block;
+    margin-bottom: 7px;
+    padding-left: 5px;
+    font-family: $font-medium;
+    font-size: rem-calc(12);
+    letter-spacing: .15em;
+    text-transform: uppercase;
+}
+
+.ginput_container {
+    input[type=text],
+    input[type=tel],
+    input[type=email],
+    textarea {
+        @extend .input-search;
+        width: 100%;
+        margin-bottom: 6px;
+    }
+
+    textarea {
+        height: 100px !important;
+        margin-bottom: 20px;
+        resize: none;
+    }
+}
+
+.privacy-policy > label {
+    display: none;
+}
+
+.gfield_checkbox {
+    margin-top: 10px;
+
+    input,
+    label {
+        display: inline-block;
+    }
+
+    input {
+        @include square(16px);
+        display: inline-block;
+        position: relative;
+        transition: background $standard-animation-time ease;
+        border: 2px solid $input-checkbox-border;
+        outline: 0;
+        cursor: pointer;
+        vertical-align: text-top;
+        -webkit-appearance: none;
+
+        &:hover {
+            background-color: $color-primary;
+        }
+
+        &:active,
+        &:checked:active,
+        &:checked {
+            background-color: $color-primary;
+        }
+    }
+
+    label {
+        margin-left: 10px;
+        color: $black;
+        font-family: $font-caslon;
+        font-weight: bold;
+        vertical-align: text-top;
+    }
+
+    a {
+        color: $black;
+    }
+}
+
+.validation_error {
+    display: none;
+}
+
+.validation_message {
+    margin-bottom: 10px;
+    font-size: rem-calc(12);
+    text-align: center;
+}
+
+.gform_button {
+    @extend .btn;
+    @extend .btn--submit;
+    margin-top: 30px;
+}

@@ -23,6 +23,7 @@
 // Global styles
 @import 'common/global';
 @import 'common/utilities';
+@import 'common/animations';
 
 // Components
 @import 'components/headline';
@@ -40,8 +41,13 @@
 @import 'components/select2';
 @import 'components/links';
 @import 'components/map';
+@import 'components/overlays';
 
 // Layouts
 @import 'layouts/header';
 @import 'layouts/footer';
 @import 'layouts/searchpage';
+@import 'layouts/property/navigation';
+@import 'layouts/property/gallery';
+@import 'layouts/property/content';
+@import 'layouts/property/poi';

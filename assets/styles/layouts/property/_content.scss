@@ -1,0 +1,164 @@
+// Single property content styles
+// ------------------------------
+.property__panel {
+    @include fluent-switch();
+    min-height: 300px;
+}
+
+.property__content {
+    padding: 5px 20px 50px;
+    background-color: $white;
+
+    @include min-screen($desktop) {
+        margin-bottom: 40px;
+    }
+}
+
+.property__info {
+    @include min-screen($desktop) {
+        padding: 0 30px;
+        border-right: 1px solid $mid-gray;
+    }
+}
+
+.property__info-head {
+    @include min-screen($desktop) {
+        width: 50%;
+    }
+}
+
+.property__title {
+    font-family: $property-title-font;
+    font-size: $property-title-font-size;
+    letter-spacing: $property-title-letterspacing;
+    text-transform: uppercase;
+}
+
+.property__price {
+    margin: 0 0 4px;
+    font-family: $property-title-font;
+    font-size: $property-price-font-size;
+
+    &::before {
+        content: '£';
+    }
+}
+
+.property__type {
+    margin: 0;
+    font-family: $property-type-font;
+    font-size: $property-type-font-size;
+    text-transform: uppercase;
+}
+
+.property__buttons {
+    margin: 30px 0 0;
+    padding: 0;
+    list-style-type: none;
+
+    @include min-screen($desktop) {
+        margin: 20px 0 0;
+    }
+}
+
+.property__button {
+    display: inline-block;
+    margin: 3px 0;
+
+    @include min-screen($tablet) {
+        margin: 0;
+    }
+
+    & + & {
+        margin-left: 5px;
+
+        @include min-screen($tablet) {
+            margin-left: 11px;
+        }
+    }
+}
+
+.property__description {
+    margin-top: 30px;
+    columns: 2 300px;
+    column-gap: 25px;
+    font-family: $property-desc-font;
+    font-size: $property-desc-font-size;
+    font-weight: bold;
+    line-height: 1.4;
+
+    @include min-screen($desktop) {
+        margin-top: 40px;
+    }
+}
+
+.property__sidebar {
+    @include min-screen($tablet) {
+        padding: 30px 0 0;
+    }
+
+    @include min-screen($desktop) {
+        padding: 15px 5px 0 30px;
+    }
+}
+
+.property__sidebar-title {
+    color: $color-primary;
+    font-family: $font-book;
+    font-size: rem-calc(14);
+    text-transform: uppercase;
+
+    @include min-screen($desktop) {
+        margin: 30px 0 28px;
+    }
+}
+
+.property__properties {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+
+    li {
+        margin: 3px 0;
+        font-family: $font-light;
+        font-size: rem-calc(15);
+        font-weight: bold;
+    }
+}
+
+.property__section {
+    margin: 40px 0;
+
+    @include min-screen($desktop) {
+        margin: 50px 0;
+    }
+}
+
+.property__section-header {
+    padding: 0 15px;
+
+    @include min-screen($desktop) {
+        padding: 0;
+    }
+}
+
+.property__form {
+    padding: 30px 15px 40px;
+
+    @include min-screen($desktop) {
+        padding: 20px 0 50px;
+    }
+}
+
+.property__form-title {
+    margin: 0;
+    font-family: $font-medium;
+    font-size: rem-calc(14);
+    text-transform: uppercase;
+}
+
+.property__form-header {
+    @include min-screen($desktop) {
+        width: 40%;
+    }
+}

@@ -83,9 +83,20 @@
     background-image: url('../images/#{$filename}');
 }
 
+@mixin fluent-switch($time: 700ms) {
+    display: none;
+    animation-name: hide;
+    animation-duration: $time;
+
+    &.visible {
+        display: block;
+        animation-name: show;
+    }
+}
+
 @mixin placeholder {
     &::-webkit-input-placeholder { @content }
-    &:-moz-placeholder           { @content }
+    &::-moz-placeholder           { @content }
     &::-moz-placeholder          { @content }
     &:-ms-input-placeholder      { @content }
 }

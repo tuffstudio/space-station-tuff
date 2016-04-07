@@ -1,0 +1,24 @@
+// Single property navigation styles
+// ---------------------------------
+.property__nav {
+    position: relative;
+    padding: 10px 15px;
+    background-color: $property-nav-bg;
+    text-align: center;
+    z-index: 10;
+
+    @include min-screen($desktop) {
+        height: $property-nav-height;
+        margin-top: -$property-nav-height;
+        padding: 10px 50px 0;
+    }
+
+    .property__buttons {
+        margin-top: 0;
+
+        @include min-screen($tablet) {
+            @include vertical-align(absolute);
+            margin: 0;
+        }
+    }
+}

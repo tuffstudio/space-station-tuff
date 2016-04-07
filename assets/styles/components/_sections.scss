@@ -88,6 +88,10 @@
     }
 }
 
+.section__title--small {
+    font-size: rem-calc(18);
+}
+
 .section__subtitle {
     font-family: $section-subtitle-font;
     font-size: $section-subtitle-size;
