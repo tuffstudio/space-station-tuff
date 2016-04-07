@@ -120,19 +120,19 @@ input[type=search] {
 
 .gf_left_half,
 .gf_right_half {
-    @include min-screen($desktop) {
+    @include min-screen($tablet) {
         width: 50%;
     }
 }
 
 .gf_left_half {
-    @include min-screen($desktop) {
+    @include min-screen($tablet) {
         padding-right: 10px;
     }
 }
 
 .gf_right_half {
-    @include min-screen($desktop) {
+    @include min-screen($tablet) {
         padding-left: 10px;
     }
 }
@@ -181,7 +181,7 @@ input[type=search] {
         display: inline-block;
         position: relative;
         transition: background $standard-animation-time ease;
-        border: 2px solid #bbb9b5;
+        border: 2px solid $input-checkbox-border;
         outline: 0;
         cursor: pointer;
         vertical-align: text-top;
