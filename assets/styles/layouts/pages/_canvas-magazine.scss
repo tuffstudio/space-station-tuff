@@ -1,0 +1,68 @@
+// Canvas magazine styles
+// -----------------------
+.canvas__header {
+    @include min-screen($desktop) {
+        margin: 80px 0 -60px;
+    }
+}
+
+.canvas__title-img {
+    display: block;
+
+    @include min-screen($desktop) {
+        margin: 0 auto;
+    }
+}
+
+.canvas__categories-menu {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+
+    @include min-screen($desktop) {
+        padding-left: 7px;
+    }
+}
+
+.canvas__categories-item {
+    margin: 10px 0;
+    padding-left: 16px;
+    font-family: $font-book;
+    font-size: rem-calc(14);
+    text-transform: uppercase;
+}
+
+.canvas__business-menu {
+    padding: 0;
+    list-style-type: none;
+
+    @include min-screen($desktop) {
+        padding-left: 25px;
+    }
+
+    li {
+        margin: 5px 0;
+        color: $color-primary;
+        font-family: $font-caslon;
+    }
+
+    li::before {
+        content: '-';
+        margin-right: 5px;
+    }
+}
+
+.canvas__business-directory {
+    display: inline-block;
+    margin: 0;
+    padding: 7px 20px 5px;
+    border: 3px solid $color-primary;
+    font-family: $font-book;
+    font-size: rem-calc(14);
+    font-weight: bold;
+    text-transform: uppercase;
+
+    @include min-screen($desktop) {
+        margin-top: 40px;
+    }
+}

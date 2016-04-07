@@ -2,8 +2,11 @@
     <div class="grid__item desktop--one-third">
         <a href="#" class="masonry__link">
             <div class="masonry__item masonry__item--square">
-                <div class="masonry__tile masonry__tile-link masonry__tile-link--brown">
-                    <span>View more properties</span>
+                <div class="masonry__tile masonry__tile-link masonry__tile-link--gradient">
+                    <span>
+                        <p class="masonry__tile-category"><span>New Features</span></p>
+                        Spotlight
+                    </span>
                 </div>
             </div>
         </a>
@@ -20,9 +23,8 @@
                         <div class="masonry__tile-border"></div>
                         <div class="masonry__tile-info">
                             <p class="masonry__tile-category">Residental: <span>Sale</span></p>
-                            <h3 class="masonry__tile-title">Camden road, e7</h3>
-                            <p class="masonry__tile-price">4,350,000</p>
-                            <p class="masonry__tile-desc masonry__tile-desc--big">5 bedroom penthouse</p>
+                            <h3 class="masonry__tile-title masonry__tile-title--bigger">Camden road, e7</h3>
+                            <p class="masonry__tile-desc masonry__tile-desc--small">Join Londons most exclusive property community.</p>
                         </div>
                     </div>
                 </div>
@@ -54,9 +56,8 @@
                         <div class="masonry__tile-border"></div>
                         <div class="masonry__tile-info">
                             <p class="masonry__tile-category">Commercial: <span>Rent</span></p>
-                            <h3 class="masonry__tile-title">Stratford High Street, e15</h3>
-                            <p class="masonry__tile-price">114,905 pa</p>
-                            <p class="masonry__tile-desc masonry__tile-desc--big">610sqm UNIT</p>
+                            <h3 class="masonry__tile-title masonry__tile-title--bigger">Stratford High Street, e15</h3>
+                            <p class="masonry__tile-desc masonry__tile-desc--small">Artist Tim Flach unleashes the inner beast</p>
                         </div>
                     </div>
                 </div>
@@ -76,9 +77,8 @@
                         <div class="masonry__tile-border"></div>
                         <div class="masonry__tile-info">
                             <p class="masonry__tile-category">Commercial: <span>Rent</span></p>
-                            <h3 class="masonry__tile-title">Stratford High Street, e15</h3>
-                            <p class="masonry__tile-price">114,905 pa</p>
-                            <p class="masonry__tile-desc masonry__tile-desc--big">610sqm UNIT</p>
+                            <h3 class="masonry__tile-title masonry__tile-title--bigger">Stratford High Street, e15</h3>
+                            <p class="masonry__tile-desc masonry__tile-desc--small">Artist Tim Flach unleashes the inner beast</p>
                         </div>
                     </div>
                 </div>
@@ -89,8 +89,11 @@
     --><div class="grid__item desktop--one-third">
         <a href="#" class="masonry__link">
             <div class="masonry__item masonry__item--square">
-                <div class="masonry__tile masonry__tile-link masonry__tile-link--brown">
-                    <span>View more properties</span>
+                <div class="masonry__tile masonry__tile-link masonry__tile-link--gradient">
+                    <span>
+                        Architecture
+                        <button class="btn masonry__tile-link-btn">Read more</button>
+                     </span>
                 </div>
             </div>
         </a>
@@ -107,9 +110,8 @@
                         <div class="masonry__tile-border"></div>
                         <div class="masonry__tile-info">
                             <p class="masonry__tile-category">Residental: <span>Sale</span></p>
-                            <h3 class="masonry__tile-title">Camden road, e7</h3>
-                            <p class="masonry__tile-price">4,350,000</p>
-                            <p class="masonry__tile-desc masonry__tile-desc--big">5 bedroom penthouse</p>
+                            <h3 class="masonry__tile-title masonry__tile-title--bigger">Camden road, e7</h3>
+                            <p class="masonry__tile-desc masonry__tile-desc--small">Join Londons most exclusive property community.</p>
                         </div>
                     </div>
                 </div>
@@ -128,9 +130,8 @@
                         <div class="masonry__tile-border"></div>
                         <div class="masonry__tile-info">
                             <p class="masonry__tile-category">Commercial: <span>Rent</span></p>
-                            <h3 class="masonry__tile-title">Stratford High Street, e15</h3>
-                            <p class="masonry__tile-price">114,905 pa</p>
-                            <p class="masonry__tile-desc masonry__tile-desc--big">610sqm UNIT</p>
+                            <h3 class="masonry__tile-title masonry__tile-title--bigger">Stratford High Street, e15</h3>
+                            <p class="masonry__tile-desc masonry__tile-desc--small">Artist Tim Flach unleashes the inner beast</p>
                         </div>
                     </div>
                 </div>
@@ -143,7 +144,7 @@
         </a>
     </div><!--
     --><div class="grid__item desktop--one-third">
-        <a href="#" class="masonry__link">
+        <a href="#" class="masonry__link js-newsletter-jump">
             <div class="masonry__item masonry__item--square">
                 <div class="masonry__tile masonry__tile-link masonry__tile-link--purple">
                     <span>Sign up to our newsletter</span>
@@ -154,8 +155,11 @@
     --><div class="grid__item desktop--one-third">
         <a href="#" class="masonry__link">
             <div class="masonry__item masonry__item--square">
-                <div class="masonry__tile masonry__tile-link masonry__tile-link--purple">
-                    <span>Design</span>
+                <div class="masonry__tile masonry__tile-link masonry__tile-link--gradient">
+                    <span>
+                        Design
+                        <button class="btn masonry__tile-link-btn">Read more</button>
+                    </span>
                 </div>
             </div>
         </a>
@@ -168,9 +172,8 @@
                         <div class="masonry__tile-border"></div>
                         <div class="masonry__tile-info">
                             <p class="masonry__tile-category">Commercial: <span>Rent</span></p>
-                            <h3 class="masonry__tile-title">Stratford High Street, e15</h3>
-                            <p class="masonry__tile-price">114,905 pa</p>
-                            <p class="masonry__tile-desc masonry__tile-desc--big">610sqm UNIT</p>
+                            <h3 class="masonry__tile-title masonry__tile-title--bigger">Stratford High Street, e15</h3>
+                            <p class="masonry__tile-desc masonry__tile-desc--small">Artist Tim Flach unleashes the inner beast</p>
                         </div>
                     </div>
                 </div>
@@ -195,9 +198,8 @@
                         <div class="masonry__tile-border"></div>
                         <div class="masonry__tile-info">
                             <p class="masonry__tile-category">Residental: <span>Sale</span></p>
-                            <h3 class="masonry__tile-title">Camden road, e7</h3>
-                            <p class="masonry__tile-price">4,350,000</p>
-                            <p class="masonry__tile-desc masonry__tile-desc--big">5 bedroom penthouse</p>
+                            <h3 class="masonry__tile-title masonry__tile-title--bigger">Camden road, e7</h3>
+                            <p class="masonry__tile-desc masonry__tile-desc--small">Join Londons most exclusive property community.</p>
                         </div>
                     </div>
                 </div>
@@ -210,8 +212,11 @@
     --><div class="grid__item desktop--one-third">
         <a href="#" class="masonry__link">
             <div class="masonry__item masonry__item--square">
-                <div class="masonry__tile masonry__tile-link masonry__tile-link--purple">
-                    <span>art</span>
+                <div class="masonry__tile masonry__tile-link masonry__tile-link--gradient">
+                    <span>
+                        art
+                        <button class="btn masonry__tile-link-btn">Read more</button>
+                    </span>
                 </div>
             </div>
         </a>
@@ -228,9 +233,8 @@
                         <div class="masonry__tile-border"></div>
                         <div class="masonry__tile-info">
                             <p class="masonry__tile-category">Residental: <span>Sale</span></p>
-                            <h3 class="masonry__tile-title">Camden road, e7</h3>
-                            <p class="masonry__tile-price">4,350,000</p>
-                            <p class="masonry__tile-desc masonry__tile-desc--big">5 bedroom penthouse</p>
+                            <h3 class="masonry__tile-title masonry__tile-title--bigger">Camden road, e7</h3>
+                            <p class="masonry__tile-desc masonry__tile-desc--small">Join Londons most exclusive property community.</p>
                         </div>
                     </div>
                 </div>
@@ -253,9 +257,8 @@
                         <div class="masonry__tile-border"></div>
                         <div class="masonry__tile-info">
                             <p class="masonry__tile-category">Commercial: <span>Rent</span></p>
-                            <h3 class="masonry__tile-title">Stratford High Street, e15</h3>
-                            <p class="masonry__tile-price">114,905 pa</p>
-                            <p class="masonry__tile-desc masonry__tile-desc--big">610sqm UNIT</p>
+                            <h3 class="masonry__tile-title masonry__tile-title--bigger">Stratford High Street, e15</h3>
+                            <p class="masonry__tile-desc masonry__tile-desc--small">Artist Tim Flach unleashes the inner beast</p>
                         </div>
                     </div>
                 </div>
@@ -266,8 +269,11 @@
     <div class="grid__item desktop--one-third">
         <a href="#" class="masonry__link">
             <div class="masonry__item masonry__item--square">
-                <div class="masonry__tile masonry__tile-link masonry__tile-link--purple">
-                    <span>lifestyle</span>
+                <div class="masonry__tile masonry__tile-link masonry__tile-link--gradient">
+                    <span>
+                        lifestyle
+                        <button class="btn masonry__tile-link-btn">Read more</button>
+                    </span>
                 </div>
             </div>
         </a>
@@ -285,9 +291,8 @@
                         <div class="masonry__tile-border"></div>
                         <div class="masonry__tile-info">
                             <p class="masonry__tile-category">Commercial: <span>Rent</span></p>
-                            <h3 class="masonry__tile-title">Stratford High Street, e15</h3>
-                            <p class="masonry__tile-price">114,905 pa</p>
-                            <p class="masonry__tile-desc masonry__tile-desc--big">610sqm UNIT</p>
+                            <h3 class="masonry__tile-title masonry__tile-title--bigger">Stratford High Street, e15</h3>
+                            <p class="masonry__tile-desc masonry__tile-desc--small">Artist Tim Flach unleashes the inner beast</p>
                         </div>
                     </div>
                 </div>
@@ -306,9 +311,8 @@
                         <div class="masonry__tile-border"></div>
                         <div class="masonry__tile-info">
                             <p class="masonry__tile-category">Residental: <span>Sale</span></p>
-                            <h3 class="masonry__tile-title">Camden road, e7</h3>
-                            <p class="masonry__tile-price">4,350,000</p>
-                            <p class="masonry__tile-desc masonry__tile-desc--big">5 bedroom penthouse</p>
+                            <h3 class="masonry__tile-title masonry__tile-title--bigger">Camden road, e7</h3>
+                            <p class="masonry__tile-desc masonry__tile-desc--small">Join Londons most exclusive property community.</p>
                         </div>
                     </div>
                 </div>
@@ -323,7 +327,7 @@
             <div class="masonry__item masonry__item--square"></div>
         </div><!--
         --><div class="grid__item">
-            <a href="#" class="masonry__link">
+            <a href="#" class="masonry__link js-newsletter-jump">
                 <div class="masonry__item masonry__item--square">
                     <div class="masonry__tile masonry__tile-link masonry__tile-link--purple">
                         <span>Sign up to our newsletter</span>
@@ -335,8 +339,11 @@
     <div class="grid__item desktop--one-third">
         <a href="#" class="masonry__link">
             <div class="masonry__item masonry__item--square">
-                <div class="masonry__tile masonry__tile-link masonry__tile-link--brown">
-                    <span>property</span>
+                <div class="masonry__tile masonry__tile-link masonry__tile-link--gradient">
+                    <span>
+                        property
+                        <button class="btn masonry__tile-link-btn">Read more</button>
+                    </span>
                 </div>
             </div>
         </a>
@@ -353,9 +360,8 @@
                         <div class="masonry__tile-border"></div>
                         <div class="masonry__tile-info">
                             <p class="masonry__tile-category">Residental: <span>Sale</span></p>
-                            <h3 class="masonry__tile-title">Camden road, e7</h3>
-                            <p class="masonry__tile-price">4,350,000</p>
-                            <p class="masonry__tile-desc masonry__tile-desc--big">5 bedroom penthouse</p>
+                            <h3 class="masonry__tile-title masonry__tile-title--bigger">Camden road, e7</h3>
+                            <p class="masonry__tile-desc masonry__tile-desc--small">Join Londons most exclusive property community.</p>
                         </div>
                     </div>
                 </div>
@@ -373,9 +379,8 @@
                         <div class="masonry__tile-border"></div>
                         <div class="masonry__tile-info">
                             <p class="masonry__tile-category">Commercial: <span>Rent</span></p>
-                            <h3 class="masonry__tile-title">Stratford High Street, e15</h3>
-                            <p class="masonry__tile-price">114,905 pa</p>
-                            <p class="masonry__tile-desc masonry__tile-desc--big">610sqm UNIT</p>
+                            <h3 class="masonry__tile-title masonry__tile-title--bigger">Stratford High Street, e15</h3>
+                            <p class="masonry__tile-desc masonry__tile-desc--small">Artist Tim Flach unleashes the inner beast</p>
                         </div>
                     </div>
                 </div>
@@ -397,9 +402,8 @@
                         <div class="masonry__tile-border"></div>
                         <div class="masonry__tile-info">
                             <p class="masonry__tile-category">Commercial: <span>Rent</span></p>
-                            <h3 class="masonry__tile-title">Stratford High Street, e15</h3>
-                            <p class="masonry__tile-price">114,905 pa</p>
-                            <p class="masonry__tile-desc masonry__tile-desc--big">610sqm UNIT</p>
+                            <h3 class="masonry__tile-title masonry__tile-title--bigger">Stratford High Street, e15</h3>
+                            <p class="masonry__tile-desc masonry__tile-desc--small">Artist Tim Flach unleashes the inner beast</p>
                         </div>
                     </div>
                 </div>

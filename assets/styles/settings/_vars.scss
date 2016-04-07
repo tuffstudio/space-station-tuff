@@ -108,7 +108,8 @@ $section-animation-transform: translateY(175);
 // ---------------
 $masonry-tile-link-cta: $purple;
 $masonry-tile-link-bg: #86754d;
-$masonry-animation-transition: transform 2s cubic-bezier(.23, 1, .32, 1);
+$masonry-animation-function: cubic-bezier(.23, 1, .32, 1);
+$masonry-animation-transition: transform 2s $masonry-animation-function;
 $masonry-animation-transform: scale(1.05);
 $masonry-title-size: rem-calc(16);
 $masonry-title-font: $font-heavy;

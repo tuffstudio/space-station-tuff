@@ -57,16 +57,16 @@
         padding: $masonry-padding 0;
 
         &:nth-child(3n + 1) {
-            padding-right: (4 * $masonry-padding)/3;
+            padding-right: (4 * $masonry-padding) / 3;
         }
 
         &:nth-child(3n + 2) {
-            padding-left: 2 * $masonry-padding/3;
-            padding-right: 2 * $masonry-padding/3;
+            padding-right: 2 * $masonry-padding / 3;
+            padding-left: 2 * $masonry-padding / 3;
         }
 
         &:nth-child(3n) {
-            padding-left: (4 * $masonry-padding)/3;
+            padding-left: (4 * $masonry-padding) / 3;
         }
     }
 }
@@ -154,6 +154,12 @@
     }
 }
 
+.masonry__tile-title--bigger {
+    @include min-screen($desktop) {
+        font-size: rem-calc(22);
+    }
+}
+
 .masonry__tile-price {
     margin: 2px 0;
     font-family: $masonry-price-font;
@@ -170,8 +176,8 @@
 
 .masonry__tile-desc {
     margin: 0 auto;
-    overflow: hidden;
     text-overflow: ellipsis;
+    overflow: hidden;
 
     @include min-screen($desktop) {
         width: 90%;
@@ -205,7 +211,7 @@
     transition: background-color $standard-animation-time ease;
     color: $white;
 
-    span {
+    > span {
         @include center-align();
         display: block;
         width: 80%;
@@ -218,6 +224,10 @@
         @include min-screen($desktop) {
             font-size: rem-calc(22);
         }
+    }
+
+    p {
+        text-transform: none;
     }
 }
 
@@ -234,6 +244,28 @@
 
     &:hover {
         background-color: lighten($masonry-tile-link-cta, 5%);
+    }
+}
+
+.masonry__tile-link-btn {
+    display: table-row;
+    margin: 25px auto 0;
+    padding: 8px 15px;
+    border: 1px solid $white;
+    background-color: transparent;
+    font-family: $font-book;
+    font-size: rem-calc(12);
+    letter-spacing: .15em;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.masonry__tile-link--gradient {
+    @include background-cover('tile-bg.jpg', center, 100%);
+    transition: all 750ms $masonry-animation-function;
+
+    &:hover {
+        background-size: 105%;
     }
 }
 
