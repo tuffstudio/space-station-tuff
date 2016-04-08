@@ -29,7 +29,7 @@
         --><div class="grid__item tablet-small--one-half tablet--one-third">
             <div class="business-directory__item">
                 <a href="#" class="animation--zoom">
-                    <img src="http://lorempicsum.com/up/300/230/<?php echo(rand(1,6)); ?>" alt="">
+                    <img src="http://lorempicsum.com/up/300/230/<?php echo(rand(1,6)); ?>" alt="" class="img--resposive">
                 </a>
                 <p class="section__category">
                     Commercial:
@@ -37,7 +37,7 @@
                         Rent
                     </span>
                 </p>
-                <a href="#">
+                <a href="#" class="link--standard">
                     <h3 class="headline--small">
                         CAMDEN ROAD, e17
                     </h3>

@@ -54,7 +54,6 @@
 }
 
 
-
 // View navigation
 .view-nav__container {
     @include min-screen($desktop) {
@@ -86,6 +85,10 @@
 
         &.active {
             color: $black;
+        }
+
+        &:hover {
+            text-decoration: underline;
         }
     }
 }

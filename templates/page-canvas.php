@@ -11,8 +11,11 @@
                     if (is_page(92)) {
                         include 'canvas/content-home.php';
                     }
-                    if (is_page(94)) {
+                    else if (is_page(94)) {
                         include 'canvas/content-business-directory.php';
+                    }
+                    else {
+                        include 'canvas/content-single-business-directory.php';
                     }
                 ?>
             </div>
