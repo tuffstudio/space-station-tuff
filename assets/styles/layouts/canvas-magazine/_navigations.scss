@@ -1,5 +1,13 @@
 // Canvas magazine page navigations
 // ---------------------------------
+.canvas__navigation {
+    margin-bottom: 40px;
+
+    @include min-screen($desktop) {
+        margin: 0;
+    }
+}
+
 .canvas__categories-menu {
     margin: 0;
     padding: 0;
@@ -20,6 +28,18 @@
         font-size: rem-calc(14);
         text-decoration: none;
         text-transform: uppercase;
+    }
+}
+
+.canvas__categories-menu,
+.canvas__business-nav {
+    display: inline-block;
+    width: 50%;
+    text-align: center;
+
+    @include min-screen($desktop) {
+        width: 100%;
+        text-align: left;
     }
 }
 

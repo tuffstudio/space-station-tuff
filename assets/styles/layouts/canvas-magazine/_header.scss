@@ -9,8 +9,5 @@
 .canvas__title-img {
     display: block;
     max-width: 100%;
-
-    @include min-screen($tablet) {
-        margin: 0 auto;
-    }
+    margin: 0 auto;
 }
