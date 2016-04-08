@@ -8,7 +8,7 @@
     </div>
 </section>
 <section class="section">
-    <div class="container js-canvas">
+    <div class="container container--mobile-full js-canvas">
         <div class="grid grid--full">
             <div class="grid__item desktop--one-third js-target">
                 <?php include 'canvas/categories-menu.php' ?>

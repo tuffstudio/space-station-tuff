@@ -261,7 +261,7 @@
 }
 
 .masonry__tile-link--gradient {
-    @include background-cover('tile-bg.jpg', center, 100%);
+    @include background-cover('tile-bg.jpg', center, 101%);
     transition: all 750ms $masonry-animation-function;
 
     &:hover {

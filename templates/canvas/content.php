@@ -1,5 +1,5 @@
 <div class="grid grid--full">
-    <div class="grid__item desktop--one-third">
+    <div class="grid__item tablet--one-third">
         <a href="#" class="masonry__link">
             <div class="masonry__item masonry__item--square">
                 <div class="masonry__tile masonry__tile-link masonry__tile-link--gradient">
@@ -11,7 +11,7 @@
             </div>
         </a>
     </div><!--
-    --><div class="grid__item desktop--two-thirds masonry__image">
+    --><div class="grid__item tablet--two-thirds masonry__image">
         <a href="#" class="masonry__link">
             <img src="<?= get_template_directory_uri() ?>/dist/images/masonry_big_placeholder.jpg" alt="" class="masonry__background-image">
             <div class="grid__item one-half">
@@ -34,7 +34,7 @@
             </div>
         </a>
     </div><!--
-    --><div class="grid__item desktop--one-third">
+    --><div class="grid__item tablet--one-third">
         <a href="#" class="masonry__link">
             <div class="masonry__item masonry__item--square">
                 <div class="masonry__tile masonry__tile-link masonry__tile-link--brown">
@@ -43,11 +43,11 @@
             </div>
         </a>
     </div><!--
-    --><div class="grid__item desktop--two-thirds">
+    --><div class="grid__item tablet--two-thirds">
         <a href="#" class="masonry__link">
             <div class="grid__item one-half">
                 <div class="masonry__item masonry__item--square masonry__image">
-                    <img src="<?= get_template_directory_uri(); ?>/dist/images/masonry_small_placeholder.jpg" alt="">
+                    <img src="<?= get_template_directory_uri(); ?>/dist/images/design_small.jpg" alt="">
                 </div>
             </div><!--
             --><div class="grid__item one-half">
@@ -64,11 +64,11 @@
             </div>
         </a>
     </div><!--
-    --><div class="grid__item desktop--two-thirds">
+    --><div class="grid__item tablet--two-thirds">
         <a href="#" class="masonry__link">
             <div class="grid__item one-half">
                 <div class="masonry__item masonry__item--square masonry__image">
-                    <img src="<?= get_template_directory_uri(); ?>/dist/images/masonry_small_placeholder.jpg" alt="">
+                    <img src="<?= get_template_directory_uri(); ?>/dist/images/design_small.jpg" alt="">
                 </div>
             </div><!--
             --><div class="grid__item one-half">
@@ -85,8 +85,8 @@
             </div>
         </a>
     </div><!--
-    --><div class="grid__item desktop--one-third"></div><!--
-    --><div class="grid__item desktop--one-third">
+    --><div class="grid__item tablet--one-third phone--hide tablet--show"></div><!--
+    --><div class="grid__item tablet--one-third">
         <a href="#" class="masonry__link">
             <div class="masonry__item masonry__item--square">
                 <div class="masonry__tile masonry__tile-link masonry__tile-link--gradient">
@@ -98,7 +98,7 @@
             </div>
         </a>
     </div><!--
-    --><div class="grid__item desktop--two-thirds masonry__image">
+    --><div class="grid__item tablet--two-thirds masonry__image">
         <a href="#" class="masonry__link">
             <img src="<?= get_template_directory_uri() ?>/dist/images/masonry_big_placeholder.jpg" alt="" class="masonry__background-image">
             <div class="grid__item one-half">
@@ -120,9 +120,8 @@
                 <div class="masonry__item masonry__item--rectangular"></div>
             </div>
         </a>
-    </div>
-
-    <div class="grid__item desktop--two-thirds">
+    </div><!--
+    --><div class="grid__item tablet--two-thirds">
         <a href="#" class="masonry__link">
             <div class="grid__item one-half">
                 <div class="masonry__item masonry__item--square">
@@ -138,12 +137,12 @@
             </div><!--
             --><div class="grid__item one-half">
                 <div class="masonry__item masonry__item--square masonry__image">
-                    <img src="<?= get_template_directory_uri(); ?>/dist/images/masonry_small_placeholder.jpg" alt="">
+                    <img src="<?= get_template_directory_uri(); ?>/dist/images/design_small.jpg" alt="">
                 </div>
             </div>
         </a>
     </div><!--
-    --><div class="grid__item desktop--one-third">
+    --><div class="grid__item tablet--one-third">
         <a href="#" class="masonry__link js-newsletter-jump">
             <div class="masonry__item masonry__item--square">
                 <div class="masonry__tile masonry__tile-link masonry__tile-link--purple">
@@ -152,7 +151,7 @@
             </div>
         </a>
     </div><!--
-    --><div class="grid__item desktop--one-third">
+    --><div class="grid__item tablet--one-third">
         <a href="#" class="masonry__link">
             <div class="masonry__item masonry__item--square">
                 <div class="masonry__tile masonry__tile-link masonry__tile-link--gradient">
@@ -164,14 +163,14 @@
             </div>
         </a>
     </div><!--
-    --><div class="grid__item desktop--two-thirds">
+    --><div class="grid__item tablet--two-thirds">
         <a href="#" class="masonry__link">
             <div class="grid__item one-half">
                 <div class="masonry__item masonry__item--square">
                     <div class="masonry__tile masonry__tile--white masonry__tile-arrow">
                         <div class="masonry__tile-border"></div>
                         <div class="masonry__tile-info">
-                            <p class="masonry__tile-category">Commercial: <span>Rent</span></p>
+                            <p class="masonry__tile-category">Sale: <span>Rent</span></p>
                             <h3 class="masonry__tile-title masonry__tile-title--bigger">Stratford High Street, e15</h3>
                             <p class="masonry__tile-desc masonry__tile-desc--small">Artist Tim Flach unleashes the inner beast</p>
                         </div>
@@ -180,13 +179,13 @@
             </div><!--
             --><div class="grid__item one-half">
                 <div class="masonry__item masonry__item--square masonry__image">
-                    <img src="<?= get_template_directory_uri(); ?>/dist/images/masonry_small_placeholder.jpg" alt="">
+                    <img src="<?= get_template_directory_uri(); ?>/dist/images/design_small.jpg" alt="">
                 </div>
             </div>
         </a>
     </div><!--
-    --><div class="grid__item desktop--one-third"></div><!--
-    --><div class="grid__item desktop--two-thirds masonry__image">
+    --><div class="grid__item tablet--one-third phone--hide tablet--show"></div><!--
+    --><div class="grid__item tablet--two-thirds masonry__image">
         <a href="#" class="masonry__link">
             <img src="<?= get_template_directory_uri() ?>/dist/images/masonry_big_placeholder.jpg" alt="" class="masonry__background-image">
             <div class="grid__item one-half">
@@ -209,7 +208,7 @@
             </div>
         </a>
     </div><!--
-    --><div class="grid__item desktop--one-third">
+    --><div class="grid__item tablet--one-third">
         <a href="#" class="masonry__link">
             <div class="masonry__item masonry__item--square">
                 <div class="masonry__tile masonry__tile-link masonry__tile-link--gradient">
@@ -221,7 +220,7 @@
             </div>
         </a>
     </div><!--
-    --><div class="grid__item desktop--two-thirds masonry__image">
+    --><div class="grid__item tablet--two-thirds masonry__image">
         <a href="#" class="masonry__link">
             <img src="<?= get_template_directory_uri() ?>/dist/images/masonry_big_placeholder.jpg" alt="" class="masonry__background-image">
             <div class="grid__item one-half">
@@ -244,11 +243,11 @@
             </div>
         </a>
     </div>
-    <div class="grid__item desktop--two-thirds">
+    <div class="grid__item tablet--two-thirds">
         <a href="#" class="masonry__link">
             <div class="grid__item one-half">
                 <div class="masonry__item masonry__item--square masonry__image">
-                    <img src="<?= get_template_directory_uri(); ?>/dist/images/masonry_small_placeholder.jpg" alt="">
+                    <img src="<?= get_template_directory_uri(); ?>/dist/images/design_small.jpg" alt="">
                 </div>
             </div><!--
             --><div class="grid__item one-half">
@@ -265,8 +264,8 @@
             </div>
         </a>
     </div><!--
-    --><div class="grid__item desktop--one-third"></div>
-    <div class="grid__item desktop--one-third">
+    --><div class="grid__item tablet--one-third phone--hide tablet--show"></div>
+    <div class="grid__item tablet--one-third">
         <a href="#" class="masonry__link">
             <div class="masonry__item masonry__item--square">
                 <div class="masonry__tile masonry__tile-link masonry__tile-link--gradient">
@@ -278,11 +277,11 @@
             </div>
         </a>
     </div><!--
-    --><div class="grid__item desktop--two-thirds">
+    --><div class="grid__item tablet--two-thirds">
         <a href="#" class="masonry__link">
             <div class="grid__item one-half">
                 <div class="masonry__item masonry__item--square masonry__image">
-                    <img src="<?= get_template_directory_uri(); ?>/dist/images/masonry_small_placeholder.jpg" alt="">
+                    <img src="<?= get_template_directory_uri(); ?>/dist/images/design_small.jpg" alt="">
                 </div>
             </div><!--
             --><div class="grid__item one-half">
@@ -299,7 +298,7 @@
             </div>
         </a>
     </div>
-    <div class="grid__item desktop--two-thirds masonry__image">
+    <div class="grid__item tablet--two-thirds masonry__image">
         <a href="#" class="masonry__link">
             <img src="<?= get_template_directory_uri() ?>/dist/images/masonry_big_placeholder.jpg" alt="" class="masonry__background-image">
             <div class="grid__item one-half">
@@ -322,7 +321,7 @@
             </div>
         </a>
     </div><!--
-    --><div class="grid__item desktop--one-third">
+    --><div class="grid__item tablet--one-third phone--hide tablet--show">
         <div class="grid__item">
             <div class="masonry__item masonry__item--square"></div>
         </div><!--
@@ -336,7 +335,7 @@
             </a>
         </div>
     </div>
-    <div class="grid__item desktop--one-third">
+    <div class="grid__item tablet--one-third">
         <a href="#" class="masonry__link">
             <div class="masonry__item masonry__item--square">
                 <div class="masonry__tile masonry__tile-link masonry__tile-link--gradient">
@@ -348,7 +347,7 @@
             </div>
         </a>
     </div><!--
-    --><div class="grid__item desktop--two-thirds masonry__image">
+    --><div class="grid__item tablet--two-thirds masonry__image">
         <a href="#" class="masonry__link">
             <img src="<?= get_template_directory_uri() ?>/dist/images/masonry_big_placeholder.jpg" alt="" class="masonry__background-image">
             <div class="grid__item one-half">
@@ -371,7 +370,7 @@
             </div>
         </a>
     </div>
-    <div class="grid__item desktop--two-thirds">
+    <div class="grid__item tablet--two-thirds">
         <a href="#" class="masonry__link">
             <div class="grid__item one-half">
                 <div class="masonry__item masonry__item--square">
@@ -379,7 +378,7 @@
                         <div class="masonry__tile-border"></div>
                         <div class="masonry__tile-info">
                             <p class="masonry__tile-category">Commercial: <span>Rent</span></p>
-                            <h3 class="masonry__tile-title masonry__tile-title--bigger">Stratford High Street, e15</h3>
+                            <h3 class="masonry__tile-title masonry__tile-title--bigger">Morcheeba</h3>
                             <p class="masonry__tile-desc masonry__tile-desc--small">Artist Tim Flach unleashes the inner beast</p>
                         </div>
                     </div>
@@ -387,14 +386,14 @@
             </div><!--
             --><div class="grid__item one-half">
                 <div class="masonry__item masonry__item--square masonry__image">
-                    <img src="<?= get_template_directory_uri(); ?>/dist/images/masonry_small_placeholder.jpg" alt="">
+                    <img src="<?= get_template_directory_uri(); ?>/dist/images/design_small.jpg" alt="">
                 </div>
             </div>
         </a>
     </div><!--
-    --><div class="grid__item desktop--one-third"></div>
-    <div class="grid__item desktop--one-third"></div><!--
-    --><div class="grid__item desktop--two-thirds">
+    --><div class="grid__item tablet--one-third phone--hide tablet--show"></div>
+    <div class="grid__item tablet--one-third phone--hide tablet--show"></div><!--
+    --><div class="grid__item tablet--two-thirds">
         <a href="#" class="masonry__link">
             <div class="grid__item one-half">
                 <div class="masonry__item masonry__item--square">
@@ -402,7 +401,7 @@
                         <div class="masonry__tile-border"></div>
                         <div class="masonry__tile-info">
                             <p class="masonry__tile-category">Commercial: <span>Rent</span></p>
-                            <h3 class="masonry__tile-title masonry__tile-title--bigger">Stratford High Street, e15</h3>
+                            <h3 class="masonry__tile-title masonry__tile-title--bigger">Animal instinct</h3>
                             <p class="masonry__tile-desc masonry__tile-desc--small">Artist Tim Flach unleashes the inner beast</p>
                         </div>
                     </div>
@@ -410,7 +409,7 @@
             </div><!--
             --><div class="grid__item one-half">
                 <div class="masonry__item masonry__item--square masonry__image">
-                    <img src="<?= get_template_directory_uri(); ?>/dist/images/masonry_small_placeholder.jpg" alt="">
+                    <img src="<?= get_template_directory_uri(); ?>/dist/images/design_small.jpg" alt="">
                 </div>
             </div>
         </a>
