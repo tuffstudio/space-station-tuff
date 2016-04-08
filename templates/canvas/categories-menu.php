@@ -1,11 +1,22 @@
+<?php
+    $categories = get_categories();
+?>
+
 <div class="js-sticky">
     <ul class="canvas__categories-menu">
-        <li class="canvas__categories-item">all</li>
-        <li class="canvas__categories-item">architecture</li>
-        <li class="canvas__categories-item">design</li>
-        <li class="canvas__categories-item">art</li>
-        <li class="canvas__categories-item">lifestyle</li>
-        <li class="canvas__categories-item">property</li>
+        <li class="canvas__categories-item">
+            <a href="/canvas-magazine">all</a>
+        </li>
+
+        <?php
+            foreach ($categories as $category) :
+                $name = $category->name;
+                $link = get_category_link($category->cat_ID);
+        ?>
+            <li class="canvas__categories-item">
+                <a href="<?php echo $link; ?>"><?php echo $name; ?></a>
+            </li>
+        <?php endforeach; ?>
     </ul>
 
     <h3 class="canvas__business-directory">Business directory</h3>

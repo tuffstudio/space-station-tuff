@@ -1,15 +1,12 @@
-<?php while (have_posts()) : the_post(); ?>
-  <article <?php post_class(); ?>>
-    <header>
-      <h1 class="entry-title"><?php the_title(); ?></h1>
-      <?php get_template_part('templates/entry-meta'); ?>
-    </header>
-    <div class="entry-content">
-      <?php the_content(); ?>
+<section class="section">
+    <div class="container container--mobile-full js-canvas">
+        <div class="grid grid--full">
+            <div class="grid__item desktop--one-third js-target">
+                <?php include 'canvas/categories-menu.php' ?>
+            </div><!--
+            --><div class="grid__item desktop--two-thirds js-owner">
+                <?php include 'canvas/blog-post.php'; ?>
+            </div>
+        </div>
     </div>
-    <footer>
-      <?php wp_link_pages(['before' => '<nav class="page-nav"><p>' . __('Pages:', 'sage'), 'after' => '</p></nav>']); ?>
-    </footer>
-    <?php comments_template('/templates/comments.php'); ?>
-  </article>
-<?php endwhile; ?>
+</section>
