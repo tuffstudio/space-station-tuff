@@ -57,11 +57,11 @@
                     <ul class="view-nav">
                         <li class="view-nav__item">
                             <a href="#dynamic-view" class="js-grid-switcher">dynamic view</a>
-                        </li>
-                        <li class="view-nav__item">
+                        </li><!--
+                        --><li class="view-nav__item">
                             <a href="#grid-view" class="js-grid-switcher">grid view</a>
-                        </li>
-                        <li class="view-nav__item">
+                        </li><!--
+                        --><li class="view-nav__item">
                             <a href="#map-view" class="active js-grid-switcher">map view</a>
                         </li>
                     </ul>

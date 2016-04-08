@@ -1,0 +1,35 @@
+// Canvas business directory styles
+// -----------------------
+.business-directory__item {
+    margin: 8px 8px 30px;
+    font-size: rem-calc(12);
+
+    @include min-screen($tablet-small) {
+        margin-bottom: 40px;
+    }
+
+    @include min-screen($desktop) {
+        margin-bottom: 50px;
+    }
+
+    .section__category {
+        margin-bottom: 0;
+    }
+
+    img {
+        width: 100%;
+    }
+
+    a {
+        color: inherit;
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+.business-directory__list {
+    margin: -8px;
+}

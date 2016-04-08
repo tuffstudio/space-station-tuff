@@ -97,6 +97,58 @@
     font-size: $section-subtitle-size;
 }
 
+%bg-stain {
+    content: '';
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: -100px;
+    left: 0;
+    background-repeat: no-repeat;
+    z-index: -1;
+
+    @include min-screen($desktop) {
+        display: block;
+    }
+}
+
+.section--bottom-stains {
+    position: relative;
+
+    &:before {
+        @extend %bg-stain;
+        background-image: url('../images/bg-bottom-left.png');
+        background-position: bottom left;
+
+    }
+
+    &:after {
+        @extend %bg-stain;
+        background-image: url('../images/bg-bottom-right.png');
+        background-position: bottom right;
+    }
+}
+
+.section--top-stains {
+    position: relative;
+
+    &:before {
+        @extend %bg-stain;
+        background-image: url('../images/bg-top-right.png');
+        background-position: top right;
+
+        @include min-screen($tablet) {
+            top: -120px;
+            display: block;
+        }
+
+        @include min-screen($desktop) {
+            top: -80px;
+        }
+    }
+}
+
 // Each homepage sections
 // ----------------------
 .magazine {
