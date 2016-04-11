@@ -67,7 +67,7 @@
                             <div class="masonry__tile-border"></div>
                             <div class="masonry__tile-info">
                                 <p class="masonry__tile-category"><span><?= $post->get_category(); ?></span></p>
-                                <h3 class="masonry__tile-title masonry__tile-title--bigger"><?= $post->get_title(); ?></h3>
+                                <h3 class="masonry__tile-title"><?= $post->get_title(); ?></h3>
                             </div>
                         </div>
                     </div>
@@ -104,7 +104,7 @@
                             <div class="masonry__tile-border"></div>
                             <div class="masonry__tile-info">
                                 <p class="masonry__tile-category"><span><?= $post->get_category(); ?></span></p>
-                                <h3 class="masonry__tile-title masonry__tile-title--bigger"><?= $post->get_title(); ?></h3>
+                                <h3 class="masonry__tile-title"><?= $post->get_title(); ?></h3>
                             </div>
                         </div>
                     </div>
@@ -129,7 +129,7 @@
                             <div class="masonry__tile-border"></div>
                             <div class="masonry__tile-info">
                                 <p class="masonry__tile-category"><span><?= $post->get_category(); ?></span></p>
-                                <h3 class="masonry__tile-title masonry__tile-title--bigger"><?= $post->get_title(); ?></h3>
+                                <h3 class="masonry__tile-title"><?= $post->get_title(); ?></h3>
                             </div>
                         </div>
                     </div>
@@ -171,7 +171,7 @@
                             <div class="masonry__tile-border"></div>
                             <div class="masonry__tile-info">
                                 <p class="masonry__tile-category"><span><?= $post_one->get_category(); ?></span></p>
-                                <h3 class="masonry__tile-title masonry__tile-title--bigger"><?= $post_one->get_title(); ?></h3>
+                                <h3 class="masonry__tile-title"><?= $post_one->get_title(); ?></h3>
                             </div>
                         </div>
                     </div>
@@ -189,7 +189,7 @@
                             <div class="masonry__tile-border"></div>
                             <div class="masonry__tile-info">
                                 <p class="masonry__tile-category"><span><?= $post_two->get_category(); ?></span></p>
-                                <h3 class="masonry__tile-title masonry__tile-title--bigger"><?= $post_two->get_title(); ?></h3>
+                                <h3 class="masonry__tile-title"><?= $post_two->get_title(); ?></h3>
                             </div>
                         </div>
                     </div>
@@ -239,7 +239,7 @@
                             <div class="masonry__tile-border"></div>
                             <div class="masonry__tile-info">
                                 <p class="masonry__tile-category"><span><?= $post_one->get_category(); ?></span></p>
-                                <h3 class="masonry__tile-title masonry__tile-title--bigger"><?= $post_one->get_title(); ?></h3>
+                                <h3 class="masonry__tile-title"><?= $post_one->get_title(); ?></h3>
                             </div>
                         </div>
                     </div>
@@ -264,7 +264,7 @@
                             <div class="masonry__tile-border"></div>
                             <div class="masonry__tile-info">
                                 <p class="masonry__tile-category"><span><?= $post_two->get_category(); ?></span></p>
-                                <h3 class="masonry__tile-title masonry__tile-title--bigger"><?= $post_two->get_title(); ?></h3>
+                                <h3 class="masonry__tile-title"><?= $post_two->get_title(); ?></h3>
                             </div>
                         </div>
                     </div>
@@ -307,7 +307,7 @@
                             <div class="masonry__tile-border"></div>
                             <div class="masonry__tile-info">
                                 <p class="masonry__tile-category"><span><?= $post_one->get_category(); ?></span></p>
-                                <h3 class="masonry__tile-title masonry__tile-title--bigger"><?= $post_one->get_title(); ?></h3>
+                                <h3 class="masonry__tile-title"><?= $post_one->get_title(); ?></h3>
                             </div>
                         </div>
                     </div>
@@ -330,7 +330,7 @@
                             <div class="masonry__tile-border"></div>
                             <div class="masonry__tile-info">
                                 <p class="masonry__tile-category"><span><?= $post_two->get_category(); ?></span></p>
-                                <h3 class="masonry__tile-title masonry__tile-title--bigger"><?= $post_two->get_title(); ?></h3>
+                                <h3 class="masonry__tile-title"><?= $post_two->get_title(); ?></h3>
                             </div>
                         </div>
                     </div>
@@ -372,7 +372,7 @@
                             <div class="masonry__tile-border"></div>
                             <div class="masonry__tile-info">
                                 <p class="masonry__tile-category"><span><?= $post_one->get_category(); ?></span></p>
-                                <h3 class="masonry__tile-title masonry__tile-title--bigger"><?= $post_one->get_title();  ?></h3>
+                                <h3 class="masonry__tile-title"><?= $post_one->get_title();  ?></h3>
                             </div>
                         </div>
                     </div>
@@ -391,7 +391,7 @@
                             <div class="masonry__tile-border"></div>
                             <div class="masonry__tile-info">
                                 <p class="masonry__tile-category"><span><?= $post_two->get_category(); ?></span></p>
-                                <h3 class="masonry__tile-title masonry__tile-title--bigger"><?= $post_two->get_title(); ?></h3>
+                                <h3 class="masonry__tile-title"><?= $post_two->get_title(); ?></h3>
                             </div>
                         </div>
                     </div>
@@ -448,7 +448,7 @@
                         <div class="masonry__tile-border"></div>
                         <div class="masonry__tile-info">
                             <p class="masonry__tile-category"><span><?= $post_one->get_category(); ?></span></p>
-                            <h3 class="masonry__tile-title masonry__tile-title--bigger"><?= $post_one->get_title(); ?></h3>
+                            <h3 class="masonry__tile-title"><?= $post_one->get_title(); ?></h3>
                         </div>
                     </div>
                 </div>
@@ -466,7 +466,7 @@
                         <div class="masonry__tile-border"></div>
                         <div class="masonry__tile-info">
                             <p class="masonry__tile-category"><span><?= $post_two->get_category(); ?></span></p>
-                            <h3 class="masonry__tile-title masonry__tile-title--bigger"><?= $post_two->get_title(); ?></h3>
+                            <h3 class="masonry__tile-title"><?= $post_two->get_title(); ?></h3>
                         </div>
                     </div>
                 </div>
@@ -489,14 +489,14 @@
                         <div class="masonry__tile-border"></div>
                         <div class="masonry__tile-info">
                             <p class="masonry__tile-category"><span>Blackbook</span></p>
-                            <h3 class="masonry__tile-title masonry__tile-title--bigger">Blackbook</h3>
+                            <h3 class="masonry__tile-title">Exclusive property community</h3>
                         </div>
                     </div>
                 </div>
             </div><!--
             --><div class="grid__item one-half">
                 <div class="masonry__item masonry__item--square masonry__image">
-                    <img src="<?= get_template_directory_uri(); ?>/dist/images/design_small.jpg" alt="">
+                    <img src="<?= get_template_directory_uri(); ?>/dist/images/btn-blackbook.jpg" alt="">
                 </div>
             </div>
         </a>
