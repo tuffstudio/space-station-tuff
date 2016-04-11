@@ -27,5 +27,5 @@ function create_types_taxonomies() {
         'query_var'         => true,
         'rewrite'           => array( 'slug' => 'typy' ),
     );
-    register_taxonomy('pe_trip_types', array('case-study' ), $casestudy_types_args);
+    register_taxonomy('case_study_category', array('case-study' ), $casestudy_types_args);
 }
