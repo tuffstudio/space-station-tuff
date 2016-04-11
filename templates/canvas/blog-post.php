@@ -36,14 +36,6 @@
     </div><!--
     --><div class="grid__item tablet--one-third">
         <div class="canvas-post__sidebar">
-            <p class="canvas-post__sidebar-tags-title">Tags</p>
-            <ul class="canvas-post__sidebar-tags">
-                <?php
-                    foreach ($tags as $tag ) :
-                ?>
-                    <li><?php echo $tag->name; ?></li>
-                <?php endforeach; ?>
-            </ul>
             <div class="moving-box is-moved full-visible moving-box--static canvas-post__sidebar-box">
                 <div class="moving-box__element moving-box__content">
                     <p class="moving-box__title">THE ART OF VALUATION</p>
