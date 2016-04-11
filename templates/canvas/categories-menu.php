@@ -3,6 +3,7 @@
 ?>
 
 <div class="canvas__navigation js-sticky">
+    <img class="canvas__title-img canvas__title-img--small" src="<?php echo get_template_directory_uri(); ?>/dist/images/canvas-headline.png" alt="nav-title" />
     <ul class="canvas__categories-menu">
         <?php
             foreach ($categories as $category) :
