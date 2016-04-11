@@ -19,4 +19,8 @@ class MagazinePost {
     function get_link() {
         return get_permalink($this->id);
     }
+
+    function get_category() {
+        return get_the_category($this->id)[0]->name;
+    }
 }

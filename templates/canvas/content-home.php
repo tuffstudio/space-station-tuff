@@ -1,3 +1,16 @@
+<?php
+    use Roots\Sage\MagazinePost;
+
+    $page_id = $post->ID;
+    $page_fields = CFS() -> get(false, $page_id);
+
+    $spotlight_posts = $page_fields['spotlight_posts'];
+
+    foreach ($spotlight_posts as $index => $id) {
+        $spotlight{$index} = new MagazinePost\MagazinePost($id);
+    }
+?>
+
 <div class="grid grid--full container--mobile-full">
     <div class="grid__item tablet--one-third">
         <a href="#" class="masonry__link">
@@ -12,27 +25,31 @@
         </a>
     </div><!--
     --><div class="grid__item tablet--two-thirds masonry__image">
-        <a href="#" class="masonry__link">
-            <img src="<?= get_template_directory_uri() ?>/dist/images/masonry_big_placeholder.jpg" alt="" class="masonry__background-image">
-            <div class="grid__item one-half">
-                <div class="masonry__item masonry__item--square"></div>
-            </div><!--
-            --><div class="grid__item one-half">
-                <div class="masonry__item masonry__item--square">
-                    <div class="masonry__tile masonry__tile--white">
-                        <div class="masonry__tile-border"></div>
-                        <div class="masonry__tile-info">
-                            <p class="masonry__tile-category">Residental: <span>Sale</span></p>
-                            <h3 class="masonry__tile-title masonry__tile-title--bigger">Camden road, e7</h3>
-                            <p class="masonry__tile-desc masonry__tile-desc--small">Join Londons most exclusive property community.</p>
+        <?php
+            if(array_key_exists(0, $spotlight_posts)):
+                $post = $spotlight{0};
+        ?>
+            <a href="<?= $post->get_link(); ?>" class="masonry__link">
+                <?= $post->get_image('square_big'); ?>
+                <div class="grid__item one-half">
+                    <div class="masonry__item masonry__item--square"></div>
+                </div><!--
+                --><div class="grid__item one-half">
+                    <div class="masonry__item masonry__item--square">
+                        <div class="masonry__tile masonry__tile--white">
+                            <div class="masonry__tile-border"></div>
+                            <div class="masonry__tile-info">
+                                <p class="masonry__tile-category"><span><?= $post->get_category(); ?></span></p>
+                                <h3 class="masonry__tile-title masonry__tile-title--bigger"><?= $post->get_title(); ?></h3>
+                            </div>
                         </div>
                     </div>
+                </div><!--
+                --><div class="grid__item">
+                    <div class="masonry__item masonry__item--rectangular"></div>
                 </div>
-            </div><!--
-            --><div class="grid__item">
-                <div class="masonry__item masonry__item--rectangular"></div>
-            </div>
-        </a>
+            </a>
+        <?php endif; ?>
     </div><!--
     --><div class="grid__item tablet--one-third">
         <a href="/?s=" class="masonry__link">
@@ -44,46 +61,54 @@
         </a>
     </div><!--
     --><div class="grid__item tablet--two-thirds">
-        <a href="#" class="masonry__link">
-            <div class="grid__item one-half">
-                <div class="masonry__item masonry__item--square masonry__image">
-                    <img src="<?= get_template_directory_uri(); ?>/dist/images/design_small.jpg" alt="">
-                </div>
-            </div><!--
-            --><div class="grid__item one-half">
-                <div class="masonry__item masonry__item--square">
-                    <div class="masonry__tile masonry__tile--white masonry__tile-arrow">
-                        <div class="masonry__tile-border"></div>
-                        <div class="masonry__tile-info">
-                            <p class="masonry__tile-category">Commercial: <span>Rent</span></p>
-                            <h3 class="masonry__tile-title masonry__tile-title--bigger">Stratford High Street, e15</h3>
-                            <p class="masonry__tile-desc masonry__tile-desc--small">Artist Tim Flach unleashes the inner beast</p>
+        <?php
+            if(array_key_exists(1, $spotlight_posts)):
+                $post = $spotlight{1};
+        ?>
+            <a href="<?= $post->get_link(); ?>" class="masonry__link">
+                <div class="grid__item one-half">
+                    <div class="masonry__item masonry__item--square masonry__image">
+                        <?= $post->get_image('square_small'); ?>
+                    </div>
+                </div><!--
+                --><div class="grid__item one-half">
+                    <div class="masonry__item masonry__item--square">
+                        <div class="masonry__tile masonry__tile--white masonry__tile-arrow">
+                            <div class="masonry__tile-border"></div>
+                            <div class="masonry__tile-info">
+                                <p class="masonry__tile-category"><span><?= $post->get_category(); ?></span></p>
+                                <h3 class="masonry__tile-title masonry__tile-title--bigger"><?= $post->get_title(); ?></h3>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </a>
+            </a>
+        <?php endif; ?>
     </div><!--
     --><div class="grid__item tablet--two-thirds">
-        <a href="#" class="masonry__link">
-            <div class="grid__item one-half">
-                <div class="masonry__item masonry__item--square masonry__image">
-                    <img src="<?= get_template_directory_uri(); ?>/dist/images/design_small.jpg" alt="">
-                </div>
-            </div><!--
-            --><div class="grid__item one-half">
-                <div class="masonry__item masonry__item--square">
-                    <div class="masonry__tile masonry__tile--white masonry__tile-arrow">
-                        <div class="masonry__tile-border"></div>
-                        <div class="masonry__tile-info">
-                            <p class="masonry__tile-category">Commercial: <span>Rent</span></p>
-                            <h3 class="masonry__tile-title masonry__tile-title--bigger">Stratford High Street, e15</h3>
-                            <p class="masonry__tile-desc masonry__tile-desc--small">Artist Tim Flach unleashes the inner beast</p>
+        <?php
+            if(array_key_exists(2, $spotlight_posts)):
+                $post = $spotlight{2};
+        ?>
+            <a href="<?= $post->get_link(); ?>" class="masonry__link">
+                <div class="grid__item one-half">
+                    <div class="masonry__item masonry__item--square masonry__image">
+                        <?= $post->get_image('square_small'); ?>
+                    </div>
+                </div><!--
+                --><div class="grid__item one-half">
+                    <div class="masonry__item masonry__item--square">
+                        <div class="masonry__tile masonry__tile--white masonry__tile-arrow">
+                            <div class="masonry__tile-border"></div>
+                            <div class="masonry__tile-info">
+                                <p class="masonry__tile-category"><span><?= $post->get_category(); ?></span></p>
+                                <h3 class="masonry__tile-title masonry__tile-title--bigger"><?= $post->get_title(); ?></h3>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </a>
+            </a>
+        <?php endif; ?>
     </div><!--
     --><div class="grid__item tablet--one-third phone--hide tablet--show"></div><!--
     --><div class="grid__item tablet--one-third">
@@ -111,7 +136,6 @@
                         <div class="masonry__tile-info">
                             <p class="masonry__tile-category">Residental: <span>Sale</span></p>
                             <h3 class="masonry__tile-title masonry__tile-title--bigger">Camden road, e7</h3>
-                            <p class="masonry__tile-desc masonry__tile-desc--small">Join Londons most exclusive property community.</p>
                         </div>
                     </div>
                 </div>
@@ -130,7 +154,6 @@
                         <div class="masonry__tile-info">
                             <p class="masonry__tile-category">Commercial: <span>Rent</span></p>
                             <h3 class="masonry__tile-title masonry__tile-title--bigger">Stratford High Street, e15</h3>
-                            <p class="masonry__tile-desc masonry__tile-desc--small">Artist Tim Flach unleashes the inner beast</p>
                         </div>
                     </div>
                 </div>
@@ -172,7 +195,6 @@
                         <div class="masonry__tile-info">
                             <p class="masonry__tile-category">Sale: <span>Rent</span></p>
                             <h3 class="masonry__tile-title masonry__tile-title--bigger">Stratford High Street, e15</h3>
-                            <p class="masonry__tile-desc masonry__tile-desc--small">Artist Tim Flach unleashes the inner beast</p>
                         </div>
                     </div>
                 </div>
@@ -198,7 +220,6 @@
                         <div class="masonry__tile-info">
                             <p class="masonry__tile-category">Residental: <span>Sale</span></p>
                             <h3 class="masonry__tile-title masonry__tile-title--bigger">Camden road, e7</h3>
-                            <p class="masonry__tile-desc masonry__tile-desc--small">Join Londons most exclusive property community.</p>
                         </div>
                     </div>
                 </div>
@@ -233,7 +254,6 @@
                         <div class="masonry__tile-info">
                             <p class="masonry__tile-category">Residental: <span>Sale</span></p>
                             <h3 class="masonry__tile-title masonry__tile-title--bigger">Camden road, e7</h3>
-                            <p class="masonry__tile-desc masonry__tile-desc--small">Join Londons most exclusive property community.</p>
                         </div>
                     </div>
                 </div>
@@ -257,7 +277,6 @@
                         <div class="masonry__tile-info">
                             <p class="masonry__tile-category">Commercial: <span>Rent</span></p>
                             <h3 class="masonry__tile-title masonry__tile-title--bigger">Stratford High Street, e15</h3>
-                            <p class="masonry__tile-desc masonry__tile-desc--small">Artist Tim Flach unleashes the inner beast</p>
                         </div>
                     </div>
                 </div>
@@ -291,7 +310,6 @@
                         <div class="masonry__tile-info">
                             <p class="masonry__tile-category">Commercial: <span>Rent</span></p>
                             <h3 class="masonry__tile-title masonry__tile-title--bigger">Stratford High Street, e15</h3>
-                            <p class="masonry__tile-desc masonry__tile-desc--small">Artist Tim Flach unleashes the inner beast</p>
                         </div>
                     </div>
                 </div>
@@ -311,7 +329,6 @@
                         <div class="masonry__tile-info">
                             <p class="masonry__tile-category">Residental: <span>Sale</span></p>
                             <h3 class="masonry__tile-title masonry__tile-title--bigger">Camden road, e7</h3>
-                            <p class="masonry__tile-desc masonry__tile-desc--small">Join Londons most exclusive property community.</p>
                         </div>
                     </div>
                 </div>
@@ -360,7 +377,6 @@
                         <div class="masonry__tile-info">
                             <p class="masonry__tile-category">Residental: <span>Sale</span></p>
                             <h3 class="masonry__tile-title masonry__tile-title--bigger">Camden road, e7</h3>
-                            <p class="masonry__tile-desc masonry__tile-desc--small">Join Londons most exclusive property community.</p>
                         </div>
                     </div>
                 </div>
@@ -379,7 +395,6 @@
                         <div class="masonry__tile-info">
                             <p class="masonry__tile-category">Commercial: <span>Rent</span></p>
                             <h3 class="masonry__tile-title masonry__tile-title--bigger">Morcheeba</h3>
-                            <p class="masonry__tile-desc masonry__tile-desc--small">Artist Tim Flach unleashes the inner beast</p>
                         </div>
                     </div>
                 </div>
@@ -402,7 +417,6 @@
                         <div class="masonry__tile-info">
                             <p class="masonry__tile-category">Commercial: <span>Rent</span></p>
                             <h3 class="masonry__tile-title masonry__tile-title--bigger">Animal instinct</h3>
-                            <p class="masonry__tile-desc masonry__tile-desc--small">Artist Tim Flach unleashes the inner beast</p>
                         </div>
                     </div>
                 </div>
