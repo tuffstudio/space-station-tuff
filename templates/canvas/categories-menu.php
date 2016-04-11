@@ -4,10 +4,6 @@
 
 <div class="canvas__navigation js-sticky">
     <ul class="canvas__categories-menu">
-        <li class="canvas__categories-item">
-            <a href="/canvas-magazine">all</a>
-        </li>
-
         <?php
             foreach ($categories as $category) :
                 $name = $category->name;

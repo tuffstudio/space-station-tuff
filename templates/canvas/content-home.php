@@ -35,7 +35,7 @@
         </a>
     </div><!--
     --><div class="grid__item tablet--one-third">
-        <a href="#" class="masonry__link">
+        <a href="/?s=" class="masonry__link">
             <div class="masonry__item masonry__item--square">
                 <div class="masonry__tile masonry__tile-link masonry__tile-link--brown">
                     <span>What's your property worth?</span>

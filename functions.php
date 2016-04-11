@@ -20,7 +20,8 @@ $sage_includes = [
   'lib/post-types.php',          // Custom post types
   'lib/excerpt-text.php',        // Custom text length
   'lib/magazine-posts.php',      // Magazie Posts class
-  'lib/categories-in-page.php'   // Categories in page
+  'lib/categories-in-page.php',  // Categories in page
+  'lib/taxonomies.php'           // Custom taxonomies
 ];
 
 foreach ($sage_includes as $file) {
