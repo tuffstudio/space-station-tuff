@@ -54,7 +54,6 @@
 }
 
 
-
 // View navigation
 .view-nav__container {
     @include min-screen($desktop) {
@@ -71,7 +70,7 @@
 
 .view-nav__item {
     display: inline-block;
-    padding: 3px 0 3px 6px;
+    padding: 3px 8px;
 
     & + & {
         border-left: 1px solid $view-item-color;
@@ -86,6 +85,10 @@
 
         &.active {
             color: $black;
+        }
+
+        &:hover {
+            text-decoration: underline;
         }
     }
 }

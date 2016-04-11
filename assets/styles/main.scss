@@ -42,6 +42,7 @@
 @import 'components/links';
 @import 'components/map';
 @import 'components/overlays';
+@import 'components/media';
 
 // Layouts
 @import 'layouts/header';
@@ -54,3 +55,5 @@
 @import 'layouts/canvas-magazine/header';
 @import 'layouts/canvas-magazine/navigations';
 @import 'layouts/canvas-magazine/blog-post';
+
+@import 'layouts/pages/business-directory';

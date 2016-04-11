@@ -1,5 +1,5 @@
 <section class="section">
-    <div class="container container--wide container--mobile-full js-canvas">
+    <div class="container container--wide js-canvas">
         <div class="grid grid--full">
             <div class="grid__item desktop--one-quarter js-target">
                 <?php include 'canvas/categories-menu.php' ?>

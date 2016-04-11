@@ -1,4 +1,4 @@
-<div class="grid grid--full">
+<div class="grid grid--full container--mobile-full">
     <div class="grid__item tablet--one-third">
         <a href="#" class="masonry__link">
             <div class="masonry__item masonry__item--square">

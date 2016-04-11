@@ -63,8 +63,9 @@
     }
 
     p {
+        font-family: $font-light;
+
         @include min-screen($desktop) {
-            font-family: $font-light;
             font-size: rem-calc(14);
         }
     }
@@ -72,6 +73,7 @@
     img {
         display: inline-block;
         max-width: 100%;
+        height: auto;
 
         & + & {
             margin-left: 10px;

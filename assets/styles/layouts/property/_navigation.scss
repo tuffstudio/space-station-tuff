@@ -22,3 +22,17 @@
         }
     }
 }
+
+.nav__secondary {
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-size: rem-calc(10);
+
+    @include min-screen($tablet-small) {
+        margin-bottom: 20px;
+    }
+
+    @include min-screen($desktop) {
+        margin-bottom: 30px;
+    }
+}
