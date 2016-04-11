@@ -269,6 +269,45 @@
     }
 }
 
+.masonry__tile-link--blackbook {
+    @include background-cover('btn-blackbook.jpg', center, 101%);
+    transition: all 750ms $masonry-animation-function;
+
+    &:hover {
+        background-size: 105%;
+    }
+}
+
+.masonry__tile-link--cs {
+    @include background-cover('');
+    transition: all 750ms $masonry-animation-function;
+
+    &:hover {
+        &::after {
+            box-shadow: inset 0 0 6em $dark-gray;
+        }
+    }
+
+    &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        transition: box-shadow $standard-animation-time ease;
+        background-color: rgba($white, .6);
+        z-index: 0;
+    }
+
+    span {
+        color: $black;
+        z-index: 5;
+    }
+}
+
+
 .masonry__image {
     position: relative;
     overflow: hidden;

@@ -1,2 +1,119 @@
 // Single blog post styles
 // ------------------------
+.canvas-post__image {
+    img {
+        @include min-screen($desktop) {
+            max-width: 95%;
+            height: auto;
+        }
+    }
+}
+
+.canvas-post__header {
+    @include min-screen($desktop) {
+        padding: 10px 20px;
+    }
+}
+
+.canvas-post__category {
+    margin-bottom: 0;
+}
+
+.canvas-post__title {
+    margin: 8px 0;
+    font-family: $font-heavy;
+    font-size: rem-calc(24);
+    text-transform: uppercase;
+}
+
+.canvas-post__info {
+    margin: 0;
+    color: $color-primary;
+    font-family: $font-light;
+    font-size: rem-calc(14);
+}
+
+.canvas-post__content {
+    position: relative;
+    padding: 0 20px;
+}
+
+.canvas-post__post {
+    margin-bottom: 20px;
+
+    &::after {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 10px;
+        margin: 20px auto 0;
+        background-color: $black;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-family: $font-heavy;
+        font-size: rem-calc(28);
+        line-height: 1.5;
+        text-transform: uppercase;
+    }
+
+    p {
+        @include min-screen($desktop) {
+            font-family: $font-light;
+            font-size: rem-calc(14);
+        }
+    }
+
+    img {
+        display: inline-block;
+        max-width: 100%;
+
+        & + & {
+            margin-left: 10px;
+        }
+    }
+}
+
+.canvas-post__recommended-title {
+    font-family: $font-heavy;
+    font-size: rem-calc(17);
+    letter-spacing: .02em;
+    text-transform: uppercase;
+}
+
+// Sidebar
+// ---------
+.canvas-post__sidebar-box {
+    @include square($moving-box-size);
+    margin: 0 auto 10px;
+}
+
+.canvas-post__sidebar-tags-title {
+    margin: 0;
+    padding-left: 10px;
+    font-family: $font-book;
+    font-size: $tag-font-size;
+    text-transform: uppercase;
+}
+
+.canvas-post__sidebar-tags {
+    width: 80%;
+    margin: 0 0 20px;
+    padding-left: 10px;
+    list-style-type: none;
+
+    li {
+        display: inline-block;
+        font-family: $font-book;
+        font-size: $tag-font-size;
+
+        &:not(:last-child)::after {
+            content: ',';
+        }
+    }
+}
