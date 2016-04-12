@@ -2,9 +2,16 @@
 // ------------------------
 .canvas-post__image {
     img {
+        max-width: 100%;
+        height: auto;
+
+        @include min-screen($tablet) {
+            width: 100%;
+        }
+
         @include min-screen($desktop) {
+            width: auto;
             max-width: 95%;
-            height: auto;
         }
     }
 }
@@ -35,7 +42,14 @@
 
 .canvas-post__content {
     position: relative;
-    padding: 0 20px;
+
+    @include min-screen($tablet) {
+        padding: 0 20px 0 0;
+    }
+
+    @include min-screen($desktop) {
+        padding: 0 20px;
+    }
 }
 
 .canvas-post__post {
@@ -79,17 +93,33 @@
 
 // Recommended posts
 .canvas-post__recommended-title {
+    margin: 40px 0 30px;
     font-family: $font-heavy;
     font-size: rem-calc(17);
     letter-spacing: .02em;
     text-transform: uppercase;
-
-    @include min-screen($desktop) {
-        margin: 40px 0 30px;
-    }
 }
 
 .recommended-post {
+    margin-bottom: 25px;
+
+    @include min-screen($tablet) {
+        $padding-ratio: 10px;
+        margin: 0;
+
+        &:first-child {
+            padding-right: $padding-ratio;
+        }
+
+        &:nth-child(2) {
+            padding: 0 $padding-ratio / 2;
+        }
+
+        &:last-child {
+            padding-left: $padding-ratio;
+        }
+    }
+
     @include min-screen($desktop) {
         $padding-ratio: 15px;
 
@@ -115,8 +145,12 @@
 .recommended-post__image {
     @include background-cover('', 101%);
     position: relative;
-    height: 120px;
+    height: 150px;
     margin-bottom: 5px;
+
+    @include min-screen($tablet) {
+        height: 120px;
+    }
 }
 
 .recommended-post__category {
@@ -135,29 +169,4 @@
 .canvas-post__sidebar-box {
     @include square($moving-box-size);
     margin: 0 auto 10px;
-}
-
-.canvas-post__sidebar-tags-title {
-    margin: 0;
-    padding-left: 10px;
-    font-family: $font-book;
-    font-size: $tag-font-size;
-    text-transform: uppercase;
-}
-
-.canvas-post__sidebar-tags {
-    width: 80%;
-    margin: 0 0 20px;
-    padding-left: 10px;
-    list-style-type: none;
-
-    li {
-        display: inline-block;
-        font-family: $font-book;
-        font-size: $tag-font-size;
-
-        &:not(:last-child)::after {
-            content: ',';
-        }
-    }
 }

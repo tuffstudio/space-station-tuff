@@ -9,12 +9,32 @@
 }
 
 .canvas__categories-menu {
-    margin: 0;
+    width: 50%;
+    margin: 0 auto;
     padding: 0;
     list-style-type: none;
+    text-align: center;
+
+    @include min-screen($tablet) {
+        margin-top: 40px;
+    }
 
     @include min-screen($desktop) {
+        display: inline-block;
+        width: 100%;
+        margin: 0;
         padding-left: 7px;
+        text-align: left;
+    }
+
+    li {
+        @include min-screen($tablet) {
+            display: inline-block;
+        }
+
+        @include min-screen($desktop) {
+            display: block;
+        }
     }
 }
 
@@ -28,52 +48,5 @@
         font-size: rem-calc(14);
         text-decoration: none;
         text-transform: uppercase;
-    }
-}
-
-.canvas__categories-menu,
-.canvas__business-nav {
-    display: inline-block;
-    width: 50%;
-    text-align: center;
-
-    @include min-screen($desktop) {
-        width: 100%;
-        text-align: left;
-    }
-}
-
-.canvas__business-menu {
-    padding: 0;
-    list-style-type: none;
-
-    @include min-screen($desktop) {
-        padding-left: 25px;
-    }
-
-    li {
-        margin: 5px 0;
-        color: $color-primary;
-        font-family: $font-caslon;
-    }
-
-    li::before {
-        content: '-';
-        margin-right: 5px;
-    }
-}
-
-.canvas__business-directory {
-    display: inline-block;
-    margin: 0;
-    padding: 7px 20px 5px;
-    border: 3px solid $color-primary;
-    font-family: $font-book;
-    font-size: rem-calc(14);
-    font-weight: bold;
-    text-transform: uppercase;
-
-    @include min-screen($desktop) {
-        margin-top: 40px;
     }
 }
