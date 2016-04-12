@@ -206,6 +206,7 @@ window.SS.common = function($) {
         subMenuAlignment();
         goToNewsletter();
         stickyMenu();
+        SS.initSelect2();
     });
 
     $(window).resize(function() {
@@ -234,7 +235,7 @@ window.SS.switchGrids = function(switcher, panel) {
 };
 
 window.SS.initSelect2 = function () {
-    var $selects = $('select');
+    var $selects = $('.js-select');
 
     $selects.each(function() {
         var $this = $(this);

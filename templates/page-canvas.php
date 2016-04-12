@@ -8,14 +8,14 @@
             </div><!--
             --><div class="grid__item desktop--three-quarters js-owner">
                 <?php
-                    if (is_page(97)) {
+                    if (is_single()) {
+                        include 'canvas/content-single-address-book.php';
+                    }
+                    else if(is_post_type_archive('address-book') || is_taxonomy('address-book-category')) {
+                        include 'canvas/content-address-book.php';
+                    }
+                    else if (is_page(97)) {
                         include 'canvas/content-home.php';
-                    }
-                    else if (is_page(116)) {
-                        include 'canvas/content-business-directory.php';
-                    }
-                    else {
-                        include 'canvas/content-single-business-directory.php';
                     }
                 ?>
             </div>

@@ -35,4 +35,12 @@
     @include min-screen($desktop) {
         margin-bottom: 30px;
     }
+
+    .select__item {
+        &:not(:first-of-type) {
+            @include min-screen($tablet) {
+                padding-left: 10px;
+            }
+        }
+    }
 }

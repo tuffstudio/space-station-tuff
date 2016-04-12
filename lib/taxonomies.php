@@ -8,7 +8,7 @@ function create_types_taxonomies() {
         'name'              => 'Case study categories',
         'singular_name'     => 'Case study category',
         'search_items'      => 'Search case study category',
-        'all_items'         => 'All case study categories',
+        'all_items'         => 'All categories',
         'parent_item'       => 'Parent',
         'parent_item_colon' => 'Parent: ',
         'edit_item'         => 'Edit case study category',
@@ -35,13 +35,13 @@ function create_types_taxonomies() {
         'name'              => 'Address Book categories',
         'singular_name'     => 'Address Book category',
         'search_items'      => 'Search address book category',
-        'all_items'         => 'All address book categories',
+        'all_items'         => 'All categories',
         'parent_item'       => 'Parent',
         'parent_item_colon' => 'Parent: ',
         'edit_item'         => 'Edit address book category',
         'update_item'       => 'Update address book category',
         'add_new_item'      => 'Add new address book category',
-        'new_item_name'     => 'New address book category name',
+        'new_item_name'     => 'New category name',
         'menu_name'         => 'Categories',
     );
     $address_book_args = array(
@@ -50,9 +50,9 @@ function create_types_taxonomies() {
         'show_ui'           => true,
         'show_admin_column' => true,
         'query_var'         => true,
-        'rewrite'           => array( 'slug' => 'address-book' ),
+        'rewrite'           => array( 'slug' => 'address-book/category' ),
     );
-    register_taxonomy('address_book_category', array('address-book' ), $address_book_args);
+    register_taxonomy('address-book-category', array('address-book' ), $address_book_args);
 }
 
 add_action( 'init', 'create_types_taxonomies', 0 );
