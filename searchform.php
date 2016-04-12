@@ -6,7 +6,7 @@
         --><div class="grid__item">
             <div class="grid__item desktop--one-half input-container">
                 <?php // TODO: Input names, values etc are just temporary. Waiting for integration with SalesForce. ?>
-                <select class="js-select" name="radius" placeholder="Search radius">
+                <select name="radius" placeholder="Search radius">
                     <option></option>
                     <option value="0.25">0.25 miles</option>
                     <option value="0.50">0.50 miles</option>
@@ -19,7 +19,7 @@
                     <option value="3.00+">3.00+ miles</option>
                 </select>
 
-                <select class="js-select" name="type" placeholder="property type">
+                <select name="type" placeholder="property type">
                     <option></option>
                     <option value="foo">foo</option>
                     <option value="bar">bar</option>
@@ -28,7 +28,7 @@
             </div><!--
             --><div class="grid__item desktop--one-half input-container">
                 <div class="grid__item desktop--one-half input-container--right">
-                    <select class="js-select" name="min_price" placeholder="min price">
+                    <select name="min_price" placeholder="min price">
                         <option></option>
                         <option value="20">20</option>
                         <option value="30">30</option>
@@ -36,7 +36,7 @@
                     </select>
                 </div><!--
                 --><div class="grid__item desktop--one-half input-container--left">
-                    <select class="js-select" name="max_price" placeholder="max price">
+                    <select name="max_price" placeholder="max price">
                         <option></option>
                         <option value="20000">20000</option>
                         <option value="25000">25000</option>
@@ -44,7 +44,7 @@
                     </select>
                 </div><!--
                 --><div class="grid__item">
-                    <select class="js-select" name="bedrooms" placeholder="Bedrooms">
+                    <select name="bedrooms" placeholder="Bedrooms">
                         <option></option>
                         <option value="2">2</option>
                         <option value="4">4</option>

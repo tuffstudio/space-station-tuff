@@ -10,13 +10,13 @@
 <nav class="nav__secondary">
     <div class="grid">
         <div class="grid__item tablet--one-half select__item">
-            <select class="js-select" name="radius" placeholder="Where are you going?">
+            <select name="radius" placeholder="Where are you going?">
                 <option></option>
                 <option value="0">This is category?</option>
             </select>
         </div><!--
         --><div class="grid__item tablet--one-half select__item">
-            <select class="js-select" name="radius" placeholder="What are you looking for?">
+            <select name="radius" placeholder="What are you looking for?">
                 <option></option>
                 <?php
                     $terms = get_terms($taxonomy_address_book);
@@ -42,7 +42,7 @@
                 $category_name = get_the_terms($page_id, $taxonomy_address_book)[0]->name;
                 $category_link = get_term_link($category_name, $taxonomy_address_book);
 
-                $telephon = $page_fields['ss_address_book_tel'];
+                $telephone = $page_fields['ss_address_book_tel'];
                 $website = $page_fields['ss_address_book_website'];
                 $city = $page_fields['ss_address_book_city'];
                 $post_code = $page_fields['ss_address_book_post_code'];
@@ -71,7 +71,7 @@
 
                 <p class="paragraph__address">
                     <span>
-                        <?= $telephon ?>
+                        <?= $telephone ?>
                     </span>
                     <span>
                         <?= $house_number . ' ' . $road . ', ' . $post_code ?>

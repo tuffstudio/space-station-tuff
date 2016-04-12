@@ -235,7 +235,7 @@ window.SS.switchGrids = function(switcher, panel) {
 };
 
 window.SS.initSelect2 = function () {
-    var $selects = $('.js-select');
+    var $selects = $('select');
 
     $selects.each(function() {
         var $this = $(this);
