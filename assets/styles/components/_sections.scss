@@ -11,24 +11,24 @@
         margin: 150px 0;
     }
 
-    &.is-hidden {
-        transform: translateY(125px);
-        transition: $section-animation-transition;
-        opacity: 0;
-
-        @include min-screen($desktop) {
-            transform: translateY(175px);
-        }
-    }
-
-    &.is-revealed {
-        transform: translateY(0);
-        opacity: 1;
-    }
-
     &.search-results {
         margin: 50px 0 70px;
     }
+}
+
+.is-hidden {
+    transform: translateY(125px);
+    transition: $section-animation-transition;
+    opacity: 0;
+
+    @include min-screen($desktop) {
+        transform: translateY(175px);
+    }
+}
+
+.is-revealed {
+    transform: translateY(0);
+    opacity: 1;
 }
 
 .section--small-space {
@@ -116,14 +116,14 @@
 .section--bottom-stains {
     position: relative;
 
-    &:before {
+    &::before {
         @extend %bg-stain;
         background-image: url('../images/bg-bottom-left.png');
         background-position: bottom left;
 
     }
 
-    &:after {
+    &::after {
         @extend %bg-stain;
         background-image: url('../images/bg-bottom-right.png');
         background-position: bottom right;
@@ -133,14 +133,14 @@
 .section--top-stains {
     position: relative;
 
-    &:before {
+    &::before {
         @extend %bg-stain;
         background-image: url('../images/bg-top-right.png');
         background-position: top right;
 
         @include min-screen($tablet) {
-            top: -120px;
             display: block;
+            top: -120px;
         }
 
         @include min-screen($desktop) {
