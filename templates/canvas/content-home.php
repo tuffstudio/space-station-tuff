@@ -1,5 +1,6 @@
 <?php
     use Roots\Sage\MagazinePost;
+    use Roots\Sage\CategoriesInPage;
 
     $page_id = $post->ID;
     $page_fields = CFS() -> get(false, $page_id);
@@ -11,31 +12,6 @@
     }
 
     $categories = get_categories();
-
-    function category_info($category) {
-        $category_id = $category->term_id;
-        $category_name = $category->name;
-        $category_link = get_category_link($category_id);
-
-        return array(
-            'name' => $category_name,
-            'link' => $category_link,
-            'id' => $category_id
-        );
-    }
-
-    function two_last_posts($category_id) {
-        $args = array(
-            'numberposts' => 2,
-            'category' => $category_id,
-            'orderby' => 'post_date',
-            'order' => 'DESC',
-            'post_type' => 'post',
-            'post_status' => 'publish',
-        );
-
-        return wp_get_recent_posts($args, OBJECT);
-    }
 ?>
 
 <div class="grid grid--full container--mobile-full">
@@ -141,8 +117,8 @@
     --><div class="grid__item tablet--one-third">
         <?php
             if(array_key_exists(0, $categories)):
-                $category = category_info($categories[0]);
-                $last_posts = two_last_posts($category['id']);
+                $category = CategoriesInPage\category_info($categories[0]);
+                $last_posts = CategoriesInPage\last_posts($category['id']);
 
                 $post_one = new MagazinePost\MagazinePost($last_posts[0]->ID);
                 $post_two = new MagazinePost\MagazinePost($last_posts[1]->ID);
@@ -214,8 +190,8 @@
     --><div class="grid__item tablet--one-third">
         <?php
             if(array_key_exists(1, $categories)):
-                $category = category_info($categories[1]);
-                $last_posts = two_last_posts($category['id']);
+                $category = CategoriesInPage\category_info($categories[1]);
+                $last_posts = CategoriesInPage\last_posts($category['id']);
 
                 $post_one = new MagazinePost\MagazinePost($last_posts[0]->ID);
                 $post_two = new MagazinePost\MagazinePost($last_posts[1]->ID);
@@ -278,8 +254,8 @@
     --><div class="grid__item tablet--one-third">
         <?php
             if(array_key_exists(2, $categories)):
-                $category = category_info($categories[2]);
-                $last_posts = two_last_posts($category['id']);
+                $category = CategoriesInPage\category_info($categories[2]);
+                $last_posts = CategoriesInPage\last_posts($category['id']);
 
                 $post_one = new MagazinePost\MagazinePost($last_posts[0]->ID);
                 $post_two = new MagazinePost\MagazinePost($last_posts[1]->ID);
@@ -341,8 +317,8 @@
     --><div class="grid__item tablet--one-third phone--hide tablet--show"></div>
     <?php
         if(array_key_exists(3, $categories)):
-            $category = category_info($categories[3]);
-            $last_posts = two_last_posts($category['id']);
+            $category = CategoriesInPage\category_info($categories[3]);
+            $last_posts = CategoriesInPage\last_posts($category['id']);
 
             $post_one = new MagazinePost\MagazinePost($last_posts[0]->ID);
             $post_two = new MagazinePost\MagazinePost($last_posts[1]->ID);
@@ -419,8 +395,8 @@
     <div class="grid__item tablet--one-third">
         <?php
             if(array_key_exists(4, $categories)):
-                $category = category_info($categories[4]);
-                $last_posts = two_last_posts($category['id']);
+                $category = CategoriesInPage\category_info($categories[4]);
+                $last_posts = CategoriesInPage\last_posts($category['id']);
 
                 $post_one = new MagazinePost\MagazinePost($last_posts[0]->ID);
                 $post_two = new MagazinePost\MagazinePost($last_posts[1]->ID);

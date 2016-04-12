@@ -10,3 +10,5 @@
         </div>
     </div>
 </section>
+
+<?php include 'homepage/stay-in-touch.php'; ?>

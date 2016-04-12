@@ -1,9 +1,19 @@
 <?php
-    // Post logic
-    $tags = wp_get_post_tags($post->ID);
+    use Roots\Sage\MagazinePost;
+    use Roots\Sage\CategoriesInPage;
 
+    // Post logic
     // TODO: Get author informations
-    $related_case_study = CFS() -> get('related_case_study', $post->ID);
+    $post_id = $post->ID;
+    $categories = get_the_category();
+
+    if(array_key_exists(0, $categories)) {
+        $category = CategoriesInPage\category_info($categories[0]);
+    }
+
+
+
+    $related_case_study = CFS() -> get('related_case_study', $post_id);
 ?>
 <div class="grid grid--full">
     <div class="grid__item">
@@ -13,9 +23,9 @@
     </div>
     <div class="grid__item">
         <div class="canvas-post__header">
-            <p class="masonry__tile-category canvas-post__category">Art: <span>Photography Spotlight</span></p>
+            <p class="masonry__tile-category canvas-post__category"><span><?= $category['name']; ?></span></p>
             <h1 class="canvas-post__title"><?php the_title(); ?></h1>
-            <p class="canvas-post__info">Posted by Liv Siddal, <?= get_the_date('l j F Y'); ?></p>
+            <p class="canvas-post__info">Posted by , <?= get_the_date('l j F Y'); ?></p>
             <?php get_template_part('entry-meta'); ?>
         </div>
     </div>
@@ -31,6 +41,26 @@
             </div>
             <div class="canvas-post__recommended">
                 <h3 class="canvas-post__recommended-title">Recommended articles</h3>
+                <div class="grid grid--full">
+                    <?php
+                        $three_last_posts = CategoriesInPage\last_posts($category['id'], 3, $post_id);
+
+                        foreach ($three_last_posts as $index) :
+                            $post = new MagazinePost\MagazinePost($index->ID);
+                    ?><!--
+                    --><div class="grid__item tablet--one-third recommended-post">
+                        <a href="<?= $post->get_link(); ?>" class="recommended-post__link">
+                            <div class="">
+                                <div class="recommended-post__image" style="background-image: url('<?= $post->get_image_url(); ?>')"></div>
+                                <div class="">
+                                    <p class="masonry__tile-category recommended-post__category"><span><?= $post->get_category(); ?></span></p>
+                                    <h3 class="recommended-post__title"><?= $post->get_title(); ?></h3>
+                                </div>
+                            </div>
+                        </a>
+                    </div><!--
+                    --><?php endforeach; ?>
+                </div>
             </div>
         </div>
     </div><!--
