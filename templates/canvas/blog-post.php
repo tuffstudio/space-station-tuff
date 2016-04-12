@@ -23,7 +23,7 @@
     </div>
     <div class="grid__item">
         <div class="canvas-post__header">
-            <p class="masonry__tile-category canvas-post__category"><span><?= $category['name']; ?></span></p>
+            <p class="masonry__tile-category canvas-post__category"><a href="<?= $category['link']; ?>"><span><?= $category['name']; ?></span></a></p>
             <h1 class="canvas-post__title"><?php the_title(); ?></h1>
             <p class="canvas-post__info">Posted by , <?= get_the_date('l j F Y'); ?></p>
             <?php get_template_part('entry-meta'); ?>
@@ -52,10 +52,8 @@
                         <a href="<?= $post->get_link(); ?>" class="recommended-post__link">
                             <div class="">
                                 <div class="recommended-post__image" style="background-image: url('<?= $post->get_image_url(); ?>')"></div>
-                                <div class="">
-                                    <p class="masonry__tile-category recommended-post__category"><span><?= $post->get_category(); ?></span></p>
-                                    <h3 class="recommended-post__title"><?= $post->get_title(); ?></h3>
-                                </div>
+                                <p class="masonry__tile-category recommended-post__category"><span><?= $post->get_category(); ?></span></p>
+                                <h3 class="recommended-post__title"><?= $post->get_title(); ?></h3>
                             </div>
                         </a>
                     </div><!--

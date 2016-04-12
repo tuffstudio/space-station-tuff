@@ -23,7 +23,15 @@
 }
 
 .canvas-post__category {
-    margin-bottom: 0;
+    margin: 5px 0;
+
+    @include min-screen($desktop) {
+        margin-bottom: 0;
+    }
+
+    a {
+        text-decoration: none;
+    }
 }
 
 .canvas-post__title {
