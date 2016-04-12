@@ -3,15 +3,15 @@
     use Roots\Sage\CategoriesInPage;
 
     // Post logic
-    // TODO: Get author informations
     $post_id = $post->ID;
     $categories = get_the_category();
+
+    $author_id = $post->post_author;
+    $author_name = get_the_author_meta('display_name', $author_id);
 
     if(array_key_exists(0, $categories)) {
         $category = CategoriesInPage\category_info($categories[0]);
     }
-
-
 
     $related_case_study = CFS() -> get('related_case_study', $post_id);
 ?>
@@ -25,8 +25,7 @@
         <div class="canvas-post__header">
             <p class="masonry__tile-category canvas-post__category"><a href="<?= $category['link']; ?>"><span><?= $category['name']; ?></span></a></p>
             <h1 class="canvas-post__title"><?php the_title(); ?></h1>
-            <p class="canvas-post__info">Posted by , <?= get_the_date('l j F Y'); ?></p>
-            <?php get_template_part('entry-meta'); ?>
+            <p class="canvas-post__info">Posted by <?= $author_name; ?>, <?= get_the_date('l j F Y'); ?></p>
         </div>
     </div>
     <div class="grid__item tablet--two-thirds">
