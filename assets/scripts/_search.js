@@ -130,7 +130,6 @@ window.SS.search = function($) {
     $(document).ready(function() {
         SS.switchGrids('.js-grid-switcher', '.js-results-block');
         SS.switchGrids('.js-tab-switcher', '.js-tab-panel');
-        SS.initSelect2();
         PropertyMap.init();
     });
 };

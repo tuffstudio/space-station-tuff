@@ -19,7 +19,7 @@
                     <option value="3.00+">3.00+ miles</option>
                 </select>
 
-                <select class="" name="type" placeholder="property type">
+                <select name="type" placeholder="property type">
                     <option></option>
                     <option value="foo">foo</option>
                     <option value="bar">bar</option>
