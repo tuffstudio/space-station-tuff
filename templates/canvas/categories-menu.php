@@ -15,7 +15,7 @@
             </li>
         <?php endforeach; ?>
         <li class="canvas__categories-item">
-            <a href="/address-book">Address book</a>
+            <a href="<?= get_post_type_archive_link('address-book'); ?>">Address book</a>
         </li>
     </ul>
 </div>

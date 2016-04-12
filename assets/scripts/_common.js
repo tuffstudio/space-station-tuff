@@ -206,6 +206,7 @@ window.SS.common = function($) {
         subMenuAlignment();
         goToNewsletter();
         stickyMenu();
+        SS.initSelect2();
     });
 
     $(window).resize(function() {

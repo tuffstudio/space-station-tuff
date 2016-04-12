@@ -23,7 +23,7 @@
 </div>
 
 <?php
-    if ($case_study_category_id == 6) {
+    if ($case_study_category_id == 74) {
         include('commercial/properies.php');
     }
     include('homepage/stay-in-touch.php');
