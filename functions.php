@@ -21,7 +21,8 @@ $sage_includes = [
   'lib/excerpt-text.php',        // Custom text length
   'lib/magazine-posts.php',      // Magazie Posts class
   'lib/categories-in-page.php',  // Categories in page
-  'lib/taxonomies.php'           // Custom taxonomies
+  'lib/taxonomies.php',          // Custom taxonomies
+  'lib/shortcodes.php'           // Custom shortcodes
 ];
 
 foreach ($sage_includes as $file) {

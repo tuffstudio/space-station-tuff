@@ -91,6 +91,18 @@
     }
 }
 
+.canvas-post__quote {
+    margin: 5px 0;
+    font-family: $font-heavy;
+    font-size: rem-calc(24);
+    line-height: 1.5;
+    text-transform: uppercase;
+
+    &::before {
+        content: '"';
+    }
+}
+
 // Recommended posts
 .canvas-post__recommended-title {
     margin: 40px 0 30px;
