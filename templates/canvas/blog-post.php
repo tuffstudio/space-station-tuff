@@ -17,6 +17,11 @@
 ?>
 <div class="grid grid--full">
     <div class="grid__item">
+        <nav class="nav__secondary">
+            <a href="/canvas-magazine" class="link--standard link--back">
+                back to Canvas Magazine
+            </a>
+        </nav>
         <div class="canvas-post__image">
             <?php the_post_thumbnail() ?>
         </div>

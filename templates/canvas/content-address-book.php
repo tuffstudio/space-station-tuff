@@ -4,7 +4,7 @@
     $taxonomy_address_book = 'address-book-category';
 
     $current_category = get_term_by( 'slug', get_query_var('term'), get_query_var('taxonomy') );
-    $current_category_slug = $current_category->slug;
+    @$current_category_slug = $current_category->slug;
 ?>
 
 <nav class="nav__secondary">
@@ -55,7 +55,7 @@
         --><div class="grid__item tablet-small--one-half tablet--one-third">
             <div class="business-directory__item">
                 <a href="<?= the_permalink() ?>" class="animation--zoom">
-                    <?php the_post_thumbnail('thumbnail', array( 'class' => 'img--resposive') ); ?>
+                    <?php the_post_thumbnail('full', array( 'class' => 'img--resposive') ); ?>
                 </a>
                 <p class="section__category">
                     Directory:
@@ -77,7 +77,7 @@
                         <?= $house_number . ' ' . $road . ', ' . $post_code ?>
                     </span>
                     <span>
-                        <a href="<?= $website['url'] ?>" taget="<?= $website['target'] ?>">
+                        <a href="<?= $website['url'] ?>" target="<?= $website['target'] ?>">
                             <?= $website['text'] ?>
                         </a>
                     </span>
