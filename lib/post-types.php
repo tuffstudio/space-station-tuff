@@ -21,7 +21,7 @@ function custom_post_types_init() {
         'not_found_in_trash' => 'Not found Case Study in trash'
     );
 
-    $args = array(
+    $args_case_studies = array(
         'labels'             => $labels_case_studies,
         'public'             => true,
         'publicly_queryable' => true,
@@ -33,12 +33,49 @@ function custom_post_types_init() {
         'has_archive'        => true,
         'hierarchical'       => false,
         'menu_position'      => 2,
-        'supports'           => array('title', 'editor'),
-        'taxonomies'         => array('category'),
+        'supports'           => array('title', 'editor', 'thumbnail'),
         'menu_icon'          => 'dashicons-chart-line'
     );
 
-    register_post_type( 'case-study', $args );
+    register_post_type( 'case-study', $args_case_studies );
+
+
+    /**
+     * Register a address book (business directory) post type.
+     */
+    $labels_address_book = array(
+        'name'               => 'Address Book',
+        'singular_name'      => 'Address Book',
+        'menu_name'          => 'Address Book',
+        'name_admin_bar'     => 'Address Book',
+        'add_new'            => 'New Address Book',
+        'add_new_item'       => 'Add new Address Book',
+        'new_item'           => 'New Address Book',
+        'edit_item'          => 'Edit Address Book',
+        'view_item'          => 'See Address Book',
+        'all_items'          => 'All Address Books',
+        'search_items'       => 'Search Address Book',
+        'not_found'          => 'Address Book not found ',
+        'not_found_in_trash' => 'Not found Address Book in trash'
+    );
+
+    $args_address_book = array(
+        'labels'             => $labels_address_book,
+        'public'             => true,
+        'publicly_queryable' => true,
+        'show_ui'            => true,
+        'show_in_menu'       => true,
+        'query_var'          => true,
+        'rewrite'            => array( 'slug' => 'address-book' ),
+        'capability_type'    => 'post',
+        'has_archive'        => true,
+        'hierarchical'       => false,
+        'menu_position'      => 2,
+        'supports'           => array('title', 'editor', 'thumbnail'),
+        'menu_icon'          => 'dashicons-book-alt'
+    );
+
+    register_post_type( 'address-book', $args_address_book );
 }
 
 add_action('init', __NAMESPACE__ . '\\custom_post_types_init');

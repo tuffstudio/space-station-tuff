@@ -4,6 +4,7 @@
         <div class="moving-box__element moving-box__content">
             <p class="moving-box__title">THE ART OF VALUATION</p>
             <p class="moving-box__text">
+                <?php // TODO: Remember to replace lorem text with correct one ?>
                 Ta nobit quam, to amniet que ficipidus nam as quislinerercst
             </p>
             <a href="#" class="btn btn--primary">Download now</a>

@@ -1,20 +1,6 @@
 window.SS = window.SS || {};
 
 window.SS.search = function($) {
-    function goToNewsletter() {
-        var $link = $('.js-newsletter-jump');
-        var $target = $('.js-newsletter');
-        var SCROLL_SPEED = 1000;
-
-        $link.on('click', function(event) {
-            var offsetTop = $target.offset().top;
-
-            $('html, body').animate({ scrollTop: offsetTop }, SCROLL_SPEED);
-
-            return false;
-        });
-    }
-
     // Google map integration. Revealing module pattern
     var PropertyMap = (function() {
         // private
@@ -144,8 +130,6 @@ window.SS.search = function($) {
     $(document).ready(function() {
         SS.switchGrids('.js-grid-switcher', '.js-results-block');
         SS.switchGrids('.js-tab-switcher', '.js-tab-panel');
-        SS.initSelect2();
-        goToNewsletter();
         PropertyMap.init();
     });
 };

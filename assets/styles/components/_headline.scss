@@ -68,3 +68,16 @@
         text-decoration: none;
     }
 }
+
+.headline--small {
+    margin: 0 auto;
+    font-family: $masonry-title-font;
+    font-size: rem-calc(14);
+    letter-spacing: 2px;
+    line-height: 1.5;
+    text-transform: uppercase;
+
+    @include min-screen($desktop) {
+        font-size: $masonry-title-size;
+    }
+}

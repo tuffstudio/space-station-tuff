@@ -1,0 +1,75 @@
+// Canvas magazine page navigations
+// ---------------------------------
+.canvas__navigation {
+    margin-bottom: 40px;
+
+    @include min-screen($desktop) {
+        margin: 0;
+    }
+}
+
+.canvas__categories-menu {
+    width: 50%;
+    margin: 0 auto;
+    padding: 0;
+    list-style-type: none;
+    text-align: center;
+
+    @include min-screen($tablet) {
+        margin-top: 40px;
+    }
+
+    @include min-screen($desktop) {
+        display: inline-block;
+        width: 100%;
+        margin: 0;
+        padding: 0 7px 0 0;
+        text-align: left;
+    }
+
+    li {
+        @include min-screen($tablet) {
+            display: inline-block;
+        }
+
+        @include min-screen($desktop) {
+            display: block;
+            transition: background-position $canvas-nav-animation;
+            background: {
+                image: url('../images/paint_brush.png');
+                position: -259px 0;
+                repeat: no-repeat;
+                size: contain;
+            }
+
+            &:hover {
+                background-position: 1px 0;
+            }
+        }
+    }
+}
+
+.canvas__categories-item {
+    margin: 10px 0;
+    padding-left: 16px;
+
+    @include min-screen($desktop) {
+        margin: 0;
+        padding-left: 0;
+    }
+
+    a {
+        display: block;
+        padding: 10px 10px 10px 20px;
+        transition: color $canvas-nav-animation;
+        color: $black;
+        font-family: $font-book;
+        font-size: rem-calc(14);
+        text-decoration: none;
+        text-transform: uppercase;
+
+        &:hover {
+            color: $white;
+        }
+    }
+}

@@ -1,6 +1,8 @@
 window.SS = window.SS || {};
 
 window.SS.common = function($) {
+    var $window = $(window);
+    var isDesktop = $window.width() > 1024 ? true : false;
     var $navTrigger = $('.js-nav-trigger');
     var $mobileNavigation = $('.js-primary-nav');
 
@@ -161,6 +163,40 @@ window.SS.common = function($) {
         });
     }
 
+    function goToNewsletter() {
+        var $link = $('.js-newsletter-jump');
+        var $target = $('.js-newsletter');
+        var SCROLL_SPEED = 1000;
+
+        $link.on('click', function(event) {
+            var offsetTop = $target.offset().top;
+
+            $('html, body').animate({ scrollTop: offsetTop }, SCROLL_SPEED);
+
+            return false;
+        });
+    }
+
+    function equalHeight(owner, target) {
+        var $owner = $(owner);
+        var $target = $(target);
+        var ownerHeight = $owner.height();
+
+        $target.height(ownerHeight);
+    }
+
+    function stickyMenu() {
+        $('.js-canvas').imagesLoaded(function() {
+            if (isDesktop) {
+                equalHeight('.js-owner', '.js-target');
+
+                $('.js-sticky').stick_in_parent({
+                    offset_top: 200
+                });
+            }
+        });
+    }
+
     $(document).ready(function() {
         toggleMobileNavigation();
         toggleSubMenu();
@@ -168,6 +204,9 @@ window.SS.common = function($) {
         revealSections();
         caseStudiesCarousel();
         subMenuAlignment();
+        goToNewsletter();
+        stickyMenu();
+        SS.initSelect2();
     });
 
     $(window).resize(function() {

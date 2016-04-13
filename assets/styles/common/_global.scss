@@ -44,6 +44,14 @@ main {
     padding: 0;
 }
 
+.container--mobile-full {
+    margin: 0 -20px;
+
+    @include min-screen($tablet) {
+        margin: 0;
+    }
+}
+
 .container--wide {
     max-width: $desktop-medium - 150;
 }

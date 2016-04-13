@@ -16,7 +16,15 @@ class MagazinePost {
         return get_the_post_thumbnail($this->id, $size);
     }
 
+    function get_image_url() {
+        return get_the_post_thumbnail_url($this->id);
+    }
+
     function get_link() {
         return get_permalink($this->id);
+    }
+
+    function get_category() {
+        return get_the_category($this->id)[0]->name;
     }
 }

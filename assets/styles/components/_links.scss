@@ -22,3 +22,31 @@
         text-decoration: underline;
     }
 }
+
+.link--standard {
+    color: inherit;
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.link--back {
+    &::before {
+        content: '<';
+        display: inline-block;
+        position: relative;
+        top: -1px;
+        margin-right: 5px;
+    }
+}
+
+// Used on index lists, eg. adress book
+.link--image {
+    overflow: hidden;
+
+    @include min-screen($desktop) {
+        max-height: 135px;
+    }
+}

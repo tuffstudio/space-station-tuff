@@ -51,3 +51,10 @@
     font-family: $moving-box-text-font;
     font-size: $moving-box-text-size;
 }
+
+.moving-box--static {
+    position: relative;
+    top: 0;
+    left: 0;
+    transform: none;
+}

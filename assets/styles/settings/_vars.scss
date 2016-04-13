@@ -70,6 +70,7 @@ $mobile-menu-down-animation: 2s;
 $sub-menu-up-animation: 300ms;
 $sub-menu-down-animation: 1s;
 $dropdown-animation: 750ms;
+$canvas-nav-animation: 500ms cubic-bezier(.57, .31, .19, .93);
 
 // Homepage moving box
 // -------------------
@@ -108,7 +109,8 @@ $section-animation-transform: translateY(175);
 // ---------------
 $masonry-tile-link-cta: $purple;
 $masonry-tile-link-bg: #86754d;
-$masonry-animation-transition: transform 2s cubic-bezier(.23, 1, .32, 1);
+$masonry-animation-function: cubic-bezier(.23, 1, .32, 1);
+$masonry-animation-transition: transform 2s $masonry-animation-function;
 $masonry-animation-transform: scale(1.05);
 $masonry-title-size: rem-calc(16);
 $masonry-title-font: $font-heavy;
@@ -170,3 +172,7 @@ $property-desc-font-size: rem-calc(14);
 // Overlay
 // --------
 $overlay-content-bg: $gray;
+
+// Tags
+// -----
+$tag-font-size: rem-calc(14);
