@@ -17,16 +17,14 @@
 <div class="container--mobile-full">
     <div class="grid grid--full">
         <div class="grid__item tablet--one-third">
-            <a href="#" class="masonry__link">
-                <div class="masonry__item masonry__item--square">
-                    <div class="masonry__tile masonry__tile-link masonry__tile-link--gradient">
-                        <span>
-                            <p class="masonry__tile-category"><span>New Features</span></p>
-                            Spotlight
-                        </span>
-                    </div>
+            <div class="masonry__item masonry__item--square">
+                <div class="masonry__tile masonry__tile-link masonry__tile-link--gradient">
+                    <span>
+                        <p class="masonry__tile-category"><span>New Features</span></p>
+                        Spotlight
+                    </span>
                 </div>
-            </a>
+            </div>
         </div><!--
         --><div class="grid__item tablet--two-thirds masonry__image">
             <?php
