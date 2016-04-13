@@ -247,6 +247,17 @@
     }
 }
 
+.masonry__tile-link--quote {
+    background-color: $black;
+
+    .quote {
+        font-family: $font-caslon;
+        font-size: rem-calc(20);
+        font-style: italic;
+        text-transform: none;
+    }
+}
+
 .masonry__tile-link-btn {
     display: table-row;
     margin: 25px auto 0;
