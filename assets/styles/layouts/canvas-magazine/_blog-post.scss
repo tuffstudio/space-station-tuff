@@ -91,6 +91,7 @@
 
     p {
         font-family: $font-light;
+        line-height: 1.5;
 
         @include min-screen($desktop) {
             font-size: rem-calc(14);
@@ -168,9 +169,9 @@
 }
 
 .recommended-post__image {
-    @include background-cover('', 101%);
+    @include background-cover('', center, 101%);
     position: relative;
-    height: 150px;
+    height: 200px;
     margin-bottom: 5px;
 
     @include min-screen($tablet) {

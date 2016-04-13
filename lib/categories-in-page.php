@@ -22,8 +22,8 @@
         $args = array(
             'numberposts' => $number_posts,
             'category' => $category_id,
-            'orderby' => 'post_date',
-            'order' => 'DESC',
+            'orderby' => 'date',
+            'order' => 'ASC',
             'post_type' => 'post',
             'post_status' => 'publish',
             'exclude' => $exclude,

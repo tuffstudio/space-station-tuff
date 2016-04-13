@@ -49,7 +49,7 @@ function custom_post_types_init() {
         'menu_name'          => 'Address Book',
         'name_admin_bar'     => 'Address Book',
         'add_new'            => 'New Address Book',
-        'add_new_item'       => 'Add nowe Address Book',
+        'add_new_item'       => 'Add new Address Book',
         'new_item'           => 'New Address Book',
         'edit_item'          => 'Edit Address Book',
         'view_item'          => 'See Address Book',

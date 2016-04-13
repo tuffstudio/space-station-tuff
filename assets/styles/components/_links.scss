@@ -33,11 +33,20 @@
 }
 
 .link--back {
-    &:before {
+    &::before {
         content: '<';
+        display: inline-block;
         position: relative;
         top: -1px;
-        display: inline-block;
         margin-right: 5px;
+    }
+}
+
+// Used on index lists, eg. adress book
+.link--image {
+    overflow: hidden;
+
+    @include min-screen($desktop) {
+        max-height: 135px;
     }
 }
