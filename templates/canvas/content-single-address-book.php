@@ -21,7 +21,7 @@
 </nav>
 
 <section class="business-directory__single">
-    <?php the_post_thumbnail(false, array( 'class' => 'img--resposive') ); ?>
+    <?php the_post_thumbnail(false, array( 'class' => 'img--responsive') ); ?>
     <div class="business-directory__content">
         <p class="section__category">
             Directory:

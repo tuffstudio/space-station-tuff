@@ -55,7 +55,7 @@
         --><div class="grid__item tablet-small--one-half tablet--one-third">
             <div class="business-directory__item">
                 <a href="<?= the_permalink() ?>" class="link--image animation--zoom">
-                    <?php the_post_thumbnail('medium', array( 'class' => 'img--resposive') ); ?>
+                    <?php the_post_thumbnail('medium', array( 'class' => 'img--responsive') ); ?>
                 </a>
                 <p class="section__category">
                     Directory:
