@@ -90,7 +90,7 @@
                             </div><!--
                             --><div class="grid__item one-half">
                                 <div class="masonry__item masonry__item--square masonry__image">
-                                    <img src="<?= get_template_directory_uri(); ?>/dist/images/masonry_small_placeholder.jpg" alt="">
+                                    <?= $case->get_image('square_small'); ?>
                                 </div>
                             </div>
                         </a>
@@ -104,7 +104,7 @@
                             $case = $case_study{1};
                     ?>
                         <a href="<?= $case->get_link(); ?>" class="masonry__link">
-                            <img src="<?= get_template_directory_uri() ?>/dist/images/masonry_big_placeholder.jpg" alt="" class="masonry__background-image">
+                            <?= $case->get_image('square_big'); ?>
                             <div class="grid__item one-half">
                                 <div class="masonry__item masonry__item--square"></div>
                             </div><!--
@@ -174,7 +174,7 @@
                             </div><!--
                             --><div class="grid__item one-half">
                                 <div class="masonry__item masonry__item--square masonry__image">
-                                    <img src="<?= get_template_directory_uri(); ?>/dist/images/masonry_small_placeholder.jpg" alt="">
+                                    <?= $case->get_image('square_small'); ?>
                                 </div>
                             </div>
                         </a>
@@ -195,7 +195,7 @@
                             $case = $case_study{5};
                     ?>
                         <a href="<?= $case->get_link(); ?>" class="masonry__link">
-                            <img src="<?= get_template_directory_uri() ?>/dist/images/masonry_big_placeholder.jpg" alt="" class="masonry__background-image">
+                            <?= $case->get_image('square_big'); ?>
                             <div class="grid__item one-half">
                                 <div class="masonry__item masonry__item--square"></div>
                             </div><!--
@@ -240,7 +240,7 @@
                         </div><!--
                         --><div class="grid__item one-half">
                             <div class="masonry__item masonry__item--square masonry__image">
-                                <img src="<?= get_template_directory_uri(); ?>/dist/images/masonry_small_placeholder.jpg" alt="">
+                                <?= $case->get_image('square_small'); ?>
                             </div>
                         </div>
                     </a>
