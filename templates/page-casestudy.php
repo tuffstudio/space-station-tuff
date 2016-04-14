@@ -24,7 +24,7 @@
 
     foreach ($case_studies as $index => $object) {
         $id = $object->ID;
-        $case_study{$index} = new MagazinePost\MagazinePost($id);
+        $case_study{$index} = new MagazinePost\CaseStudyPost($id);
     }
 
     wp_reset_postdata();
@@ -60,7 +60,7 @@
                                     <div class="masonry__tile masonry__tile--white masonry__tile-arrow">
                                         <div class="masonry__tile-border"></div>
                                         <div class="masonry__tile-info">
-                                            <p class="masonry__tile-category">Case studies: <span><?= $case->get_casestudy_category(); ?></span></p>
+                                            <p class="masonry__tile-category">Case studies: <span><?= $case->get_category(); ?></span></p>
                                             <h3 class="masonry__tile-title"><?= $case->get_title() ?></h3>
                                             <p class="masonry__tile-desc masonry__tile-desc--small"><?= $case->get_excerpt(); ?></p>
                                         </div>
@@ -81,7 +81,7 @@
                                     <div class="masonry__tile masonry__tile--white masonry__tile-arrow">
                                         <div class="masonry__tile-border"></div>
                                         <div class="masonry__tile-info">
-                                            <p class="masonry__tile-category">Case studies: <span><?= $case->get_casestudy_category(); ?></span></p>
+                                            <p class="masonry__tile-category">Case studies: <span><?= $case->get_category(); ?></span></p>
                                             <h3 class="masonry__tile-title"><?= $case->get_title() ?></h3>
                                             <p class="masonry__tile-desc masonry__tile-desc--small"><?= $case->get_excerpt(); ?></p>
                                         </div>
@@ -113,7 +113,7 @@
                                     <div class="masonry__tile masonry__tile--white">
                                         <div class="masonry__tile-border"></div>
                                         <div class="masonry__tile-info">
-                                            <p class="masonry__tile-category">Case studies: <span><?= $case->get_casestudy_category(); ?></span></p>
+                                            <p class="masonry__tile-category">Case studies: <span><?= $case->get_category(); ?></span></p>
                                             <h3 class="masonry__tile-title"><?= $case->get_title() ?></h3>
                                             <p class="masonry__tile-desc masonry__tile-desc--small"><?= $case->get_excerpt(); ?></p>
                                         </div>
@@ -144,7 +144,7 @@
                                     <div class="masonry__tile masonry__tile--white masonry__tile-arrow">
                                         <div class="masonry__tile-border"></div>
                                         <div class="masonry__tile-info">
-                                            <p class="masonry__tile-category">Case studies: <span><?= $case->get_casestudy_category(); ?></span></p>
+                                            <p class="masonry__tile-category">Case studies: <span><?= $case->get_category(); ?></span></p>
                                             <h3 class="masonry__tile-title"><?= $case->get_title() ?></h3>
                                             <p class="masonry__tile-desc masonry__tile-desc--small"><?= $case->get_excerpt(); ?></p>
                                         </div>
@@ -165,7 +165,7 @@
                                     <div class="masonry__tile masonry__tile--white masonry__tile-arrow">
                                         <div class="masonry__tile-border"></div>
                                         <div class="masonry__tile-info">
-                                            <p class="masonry__tile-category">Case studies: <span><?= $case->get_casestudy_category(); ?></span></p>
+                                            <p class="masonry__tile-category">Case studies: <span><?= $case->get_category(); ?></span></p>
                                             <h3 class="masonry__tile-title"><?= $case->get_title() ?></h3>
                                             <p class="masonry__tile-desc masonry__tile-desc--small"><?= $case->get_excerpt(); ?></p>
                                         </div>
@@ -204,7 +204,7 @@
                                     <div class="masonry__tile masonry__tile--white">
                                         <div class="masonry__tile-border"></div>
                                         <div class="masonry__tile-info">
-                                            <p class="masonry__tile-category">Case studies: <span><?= $case->get_casestudy_category(); ?></span></p>
+                                            <p class="masonry__tile-category">Case studies: <span><?= $case->get_category(); ?></span></p>
                                             <h3 class="masonry__tile-title"><?= $case->get_title() ?></h3>
                                             <p class="masonry__tile-desc masonry__tile-desc--small"><?= $case->get_excerpt(); ?></p>
                                         </div>
@@ -231,7 +231,7 @@
                                 <div class="masonry__tile masonry__tile--white masonry__tile-arrow">
                                     <div class="masonry__tile-border"></div>
                                     <div class="masonry__tile-info">
-                                        <p class="masonry__tile-category">Case studies: <span><?= $case->get_casestudy_category(); ?></span></p>
+                                        <p class="masonry__tile-category">Case studies: <span><?= $case->get_category(); ?></span></p>
                                         <h3 class="masonry__tile-title"><?= $case->get_title() ?></h3>
                                         <p class="masonry__tile-desc masonry__tile-desc--small"><?= $case->get_excerpt(); ?></p>
                                     </div>

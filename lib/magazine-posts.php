@@ -4,7 +4,7 @@ namespace Roots\Sage\MagazinePost;
 use Roots\Sage\ExcerptText;
 
 class MagazinePost {
-    private $id;
+    protected $id;
 
     function __construct($id) {
         $this->id = $id;
@@ -30,13 +30,15 @@ class MagazinePost {
         return get_the_category($this->id)[0]->name;
     }
 
-    function get_casestudy_category() {
-        return get_the_terms($this->id, 'case_study_category')[0]->name;
-    }
-
     function get_excerpt($length = 100) {
         $post_content = get_post_field('post_content', $this->id);
 
         return ExcerptText\getShortText($post_content, $length);
+    }
+}
+
+class CaseStudyPost extends MagazinePost {
+    function get_category() {
+        return get_the_terms($this->id, 'case_study_category')[0]->name;
     }
 }
