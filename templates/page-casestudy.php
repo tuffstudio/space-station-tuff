@@ -2,6 +2,7 @@
     use Roots\Sage\MagazinePost;
 
     $content = $post->post_content;
+    $commercial_fiels = CFS()->get(false, $post->ID);
     $case_studies = [];
 
     $args = array(
@@ -35,7 +36,7 @@
         <?php the_title(); ?>
     </h2>
     <h1 class="headline--main">
-        Client stories
+        <?= $commercial_fiels['sp_commercial_headline']; ?>
     </h1>
     <article class="text-description text-description--single">
         <?= $content; ?>
@@ -47,10 +48,10 @@
         <div class="grid grid--full">
             <div class="grid__item tablet--one-half">
                 <div class="grid__item">
-                    <div class="grid__item tablet--one-half phone--hide tablet--show">
+                    <div class="grid__item one-half">
                         <div class="masonry__item masonry__item--square"></div>
                     </div><!--
-                    --><div class="grid__item tablet--one-half">
+                    --><div class="grid__item one-half">
                         <?php
                             if(array_key_exists(0, $case_studies)) :
                                 $case = $case_study{0};
@@ -131,10 +132,10 @@
         <div class="grid grid--full is-hidden js-section-reveal">
             <div class="grid__item tablet--one-half">
                 <div class="grid__item">
-                    <div class="grid__item tablet--one-half phone--hide tablet--show">
+                    <div class="grid__item one-half">
                         <div class="masonry__item masonry__item--square"></div>
                     </div><!--
-                    --><div class="grid__item tablet--one-half">
+                    --><div class="grid__item one-half">
                         <?php
                             if(array_key_exists(3, $case_studies)) :
                                 $case = $case_study{3};
@@ -182,10 +183,13 @@
                 </div>
             </div><!--
             --><div class="grid__item tablet--one-half">
-                <div class="grid__item tablet--one-half">
+                <div class="grid__item one-half">
                     <div class="masonry__item masonry__item--square">
                         <div class="masonry__tile masonry__tile-link masonry__tile-link--quote">
-                            <span class="quote">Russel is the master of mortar, the king of concrete and the master of the deal</span>
+                            <span class="quote">
+                                Russel is the master of mortar, the king of concrete and the master of the deal
+                                <span class="author">King Arthur</span>
+                            </span>
                         </div>
                     </div>
                 </div>
@@ -247,11 +251,14 @@
                 <?php endif; ?>
             </div><!--
             --><div class="grid__item tablet--one-half">
-                <div class="grid__item tablet--one-half phone--hide tablet--show"></div><!--
-                --><div class="grid__item tablet--one-half">
+                <div class="grid__item one-half"></div><!--
+                --><div class="grid__item one-half">
                     <div class="masonry__item masonry__item--square">
                         <div class="masonry__tile masonry__tile-link masonry__tile-link--quote">
-                            <span class="quote">Russel is the master of mortar, the king of concrete and the master of the deal</span>
+                            <span class="quote">
+                                Russel is the master of mortar, the king of concrete and the master of the deal
+                                <span class="author">Marc Quinn, Artist</span>
+                            </span>
                         </div>
                     </div>
                 </div>
