@@ -1,6 +1,8 @@
 <?php
 namespace Roots\Sage\MagazinePost;
 
+use Roots\Sage\ExcerptText;
+
 class MagazinePost {
     private $id;
 
@@ -26,5 +28,11 @@ class MagazinePost {
 
     function get_category() {
         return get_the_category($this->id)[0]->name;
+    }
+
+    function get_excerpt($length = 100) {
+        $post_content = get_post_field('post_content', $this->id);
+
+        return ExcerptText\getShortText($post_content, $length);
     }
 }

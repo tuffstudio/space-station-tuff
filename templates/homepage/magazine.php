@@ -43,7 +43,7 @@
                                             <div class="masonry__tile-info">
                                                 <p class="masonry__tile-category"><span><?= $post->get_category(); ?></span></p>
                                                 <h3 class="masonry__tile-title"><?= $post->get_title() ?></h3>
-                                                <p class="masonry__tile-desc masonry__tile-desc--small">Room Focus on one room of Space Station's properties</p>
+                                                <p class="masonry__tile-desc masonry__tile-desc--small"><?= $post->get_excerpt(); ?></p>
                                             </div>
                                         </div>
                                     </div>
@@ -64,9 +64,7 @@
                                             <div class="masonry__tile-info">
                                                 <p class="masonry__tile-category"><span><?= $post->get_category(); ?></span></p>
                                                 <h3 class="masonry__tile-title"><?= $post->get_title(); ?></h3>
-                                                <p class="masonry__tile-desc masonry__tile-desc--small">
-                                                    Design classics and new instant classics: Cool stationery/cutlery/inspirational
-                                                </p>
+                                                <p class="masonry__tile-desc masonry__tile-desc--small"><?= $post->get_excerpt(); ?></p>
                                             </div>
                                         </div>
                                     </div>
@@ -95,7 +93,7 @@
                                         <div class="masonry__tile-info">
                                             <p class="masonry__tile-category"><span><?= $post->get_category(); ?></span></p>
                                             <h3 class="masonry__tile-title"><?= $post->get_title(); ?></h3>
-                                            <p class="masonry__tile-desc masonry__tile-desc--small">The influence of World War II on East London's urban landscape</p>
+                                            <p class="masonry__tile-desc masonry__tile-desc--small"><?= $post->get_excerpt(); ?></p>
                                         </div>
                                     </div>
                                 </div>
@@ -125,7 +123,7 @@
                                         <div class="masonry__tile-info">
                                             <p class="masonry__tile-category"><span><?= $post->get_category(); ?></span></p>
                                             <h3 class="masonry__tile-title"><?= $post->get_title(); ?></h3>
-                                            <p class="masonry__tile-desc masonry__tile-desc--small">Design classics and new instant classics: Cool stationery/cutlery/inspirational</p>
+                                            <p class="masonry__tile-desc masonry__tile-desc--small"><?= $post->get_excerpt(); ?></p>
                                         </div>
                                     </div>
                                 </div>
