@@ -1,3 +1,28 @@
+<?php
+    use Roots\Sage\MagazinePost;
+
+    $content = $post->post_content;
+
+    $args = array(
+        'post_type' => 'case-study',
+        'post_status' => 'published',
+        'posts_per_page' => 7
+    );
+
+    $query = new WP_Query( $args );
+
+    $case_studies_list = [];
+
+    if ($query->have_posts()) {
+        while ($query->have_posts()) {
+            $query->the_post();
+            $case_studies_list[] = $post;
+        }
+    }
+
+    wp_reset_postdata();
+?>
+
 <section class="section--top-small-space container container--space">
     <h2 class="title--main">
         <?php the_title(); ?>
@@ -5,12 +30,12 @@
     <h1 class="headline--main">
         Client stories
     </h1>
-    <article class="text--description">
-
+    <article class="text-description text-description--single">
+        <?= $content; ?>
     </article>
 </section>
 
-<section>
+<section class="section--bottom-space">
     <div class="container container--full">
         <div class="grid grid--full">
             <div class="grid__item tablet--one-half">
@@ -26,8 +51,7 @@
                                     <div class="masonry__tile-info">
                                         <p class="masonry__tile-category">Case studies: <span>Commercial</span></p>
                                         <h3 class="masonry__tile-title">Metropolitan Wharf, e1</h3>
-                                        <p class="masonry__tile-price">2,700pw</p>
-                                        <p class="masonry__tile-desc masonry__tile-desc--big">2 bedroom penthouse</p>
+                                        <p class="masonry__tile-desc masonry__tile-desc--small">2 bedroom penthouse</p>
                                     </div>
                                 </div>
                             </div>
@@ -43,8 +67,7 @@
                                     <div class="masonry__tile-info">
                                         <p class="masonry__tile-category">Case studies: <span>Residential</span></p>
                                         <h3 class="masonry__tile-title">Stratford High Street, e15</h3>
-                                        <p class="masonry__tile-price">114,905 pa</p>
-                                        <p class="masonry__tile-desc masonry__tile-desc--big">610sqm UNIT</p>
+                                        <p class="masonry__tile-desc masonry__tile-desc--small">610sqm UNIT</p>
                                     </div>
                                 </div>
                             </div>
@@ -71,8 +94,7 @@
                                     <div class="masonry__tile-info">
                                         <p class="masonry__tile-category">Case studies: <span>Commercial</span></p>
                                         <h3 class="masonry__tile-title">Camden road, e7</h3>
-                                        <p class="masonry__tile-price">4,350,000</p>
-                                        <p class="masonry__tile-desc masonry__tile-desc--big">5 bedroom penthouse</p>
+                                        <p class="masonry__tile-desc masonry__tile-desc--small">5 bedroom penthouse</p>
                                     </div>
                                 </div>
                             </div>
@@ -98,8 +120,7 @@
                                     <div class="masonry__tile-info">
                                         <p class="masonry__tile-category">Case studies: <span>Commercial</span></p>
                                         <h3 class="masonry__tile-title">Metropolitan Wharf, e1</h3>
-                                        <p class="masonry__tile-price">2,700pw</p>
-                                        <p class="masonry__tile-desc masonry__tile-desc--big">2 bedroom penthouse</p>
+                                        <p class="masonry__tile-desc masonry__tile-desc--small">2 bedroom penthouse</p>
                                     </div>
                                 </div>
                             </div>
@@ -115,8 +136,7 @@
                                     <div class="masonry__tile-info">
                                         <p class="masonry__tile-category">Case studies: <span>Residential</span></p>
                                         <h3 class="masonry__tile-title">Stratford High Street, e15</h3>
-                                        <p class="masonry__tile-price">114,905 pa</p>
-                                        <p class="masonry__tile-desc masonry__tile-desc--big">610sqm UNIT</p>
+                                        <p class="masonry__tile-desc masonry__tile-desc--small">610sqm UNIT</p>
                                     </div>
                                 </div>
                             </div>
@@ -150,8 +170,7 @@
                                     <div class="masonry__tile-info">
                                         <p class="masonry__tile-category">Case studies: <span>Commercial</span></p>
                                         <h3 class="masonry__tile-title">Camden road, e7</h3>
-                                        <p class="masonry__tile-price">4,350,000</p>
-                                        <p class="masonry__tile-desc masonry__tile-desc--big">5 bedroom penthouse</p>
+                                        <p class="masonry__tile-desc masonry__tile-desc--small">5 bedroom penthouse</p>
                                     </div>
                                 </div>
                             </div>
@@ -173,8 +192,7 @@
                                 <div class="masonry__tile-info">
                                     <p class="masonry__tile-category">Case studies: <span>Commercial</span></p>
                                     <h3 class="masonry__tile-title">Stratford High Street, e15</h3>
-                                    <p class="masonry__tile-price">114,905 pa</p>
-                                    <p class="masonry__tile-desc masonry__tile-desc--big">610sqm UNIT</p>
+                                    <p class="masonry__tile-desc masonry__tile-desc--small">610sqm UNIT</p>
                                 </div>
                             </div>
                         </div>

@@ -252,9 +252,13 @@
 
     .quote {
         font-family: $font-caslon;
-        font-size: rem-calc(20);
+        font-size: rem-calc(26);
         font-style: italic;
         text-transform: none;
+
+        @include min-screen($desktop) {
+            font-size: rem-calc(26);
+        }
     }
 }
 

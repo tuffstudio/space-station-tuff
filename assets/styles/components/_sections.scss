@@ -72,7 +72,8 @@
     font-size: $case-study-category-size;
     font-style: italic;
 
-    span, a {
+    span,
+    a {
         color: $case-study-category-color;
         text-decoration: none;
     }

@@ -1,11 +1,11 @@
 // Text/Paragraph styles
 // --------------------
-.text--description {
-    column-gap: 40px;
+.text-description {
     columns: 2 300px;
-    line-height: 1.8em;
+    column-gap: 40px;
     font-family: $font-light;
     font-size: rem-calc(14);
+    line-height: 1.8em;
 
     @include min-screen($tablet) {
         font-size: rem-calc(15);
@@ -15,21 +15,33 @@
         font-size: rem-calc(16);
     }
 
+    p:first-of-type {
+        margin-top: 0;
+    }
+}
+
+.text-description--letter {
     &::first-letter {
-        float: left;
         padding-right: 20px;
+        float: left;
+        font-size: rem-calc(74);
         line-height: 1em;
-        font-size: rem-calc(74px);
 
         @include min-screen($desktop) {
-            font-size: rem-calc(84px);
+            font-size: rem-calc(84);
         }
     }
+}
 
-    p {
-        &:first-of-type {
-            margin-top: 0;
-        }
+.text-description--single {
+    columns: none;
+
+    @include min-screen($tablet) {
+        max-width: 70%;
+    }
+
+    @include min-screen($desktop) {
+        max-width: 50%;
     }
 }
 
@@ -42,8 +54,8 @@
 
     a {
         color: inherit;
-        text-decoration: none;
         font-weight: 700;
+        text-decoration: none;
 
         &:hover {
             text-decoration: underline;

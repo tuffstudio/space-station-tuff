@@ -114,3 +114,4 @@ add_action('wp_enqueue_scripts', __NAMESPACE__ . '\\assets', 100);
  */
  add_image_size( 'square_small', 250, 250, true );
  add_image_size( 'square_big', 500, 500, true );
+ add_image_size( 'case_study', 450, 370, true );
