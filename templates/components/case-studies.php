@@ -14,7 +14,7 @@
                 'post__in' => $case_studies,
             );
 
-            $query = new WP_Query( $args_case_study );
+            $query = new WP_Query($args_case_study);
 
             if ( $query->have_posts() ) :
                 while ( $query->have_posts() ) :
