@@ -92,6 +92,9 @@
                             --><div class="grid__item one-half">
                                 <div class="masonry__item masonry__item--square masonry__image">
                                     <?= $case->get_image('square_small'); ?>
+                                    <?php if($case->has_video()) : ?>
+                                        <button class="btn btn--play">play</button>
+                                    <?php endif; ?>
                                 </div>
                             </div>
                         </a>
@@ -176,6 +179,9 @@
                             --><div class="grid__item one-half">
                                 <div class="masonry__item masonry__item--square masonry__image">
                                     <?= $case->get_image('square_small'); ?>
+                                    <?php if($case->has_video()) : ?>
+                                        <button class="btn btn--play">play</button>
+                                    <?php endif; ?>
                                 </div>
                             </div>
                         </a>
@@ -245,6 +251,9 @@
                         --><div class="grid__item one-half">
                             <div class="masonry__item masonry__item--square masonry__image">
                                 <?= $case->get_image('square_small'); ?>
+                                <?php if($case->has_video()) : ?>
+                                    <button class="btn btn--play">play</button>
+                                <?php endif; ?>
                             </div>
                         </div>
                     </a>

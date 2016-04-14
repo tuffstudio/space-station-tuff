@@ -41,4 +41,11 @@ class CaseStudyPost extends MagazinePost {
     function get_category() {
         return get_the_terms($this->id, 'case_study_category')[0]->name;
     }
+
+    // Returns boolean value
+    function has_video() {
+        $video_link = CFS()->get('case_study_video_link', $this->id);
+
+        return strlen($video_link) != 0 ? true : false;
+    }
 }
