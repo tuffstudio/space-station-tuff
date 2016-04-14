@@ -14,13 +14,6 @@
 </section>
 
 <?php
-    $args_case_study = array(
-        'post_type' => 'case-study',
-        'post_status' => 'publish',
-        'meta_key' => 'case_study_featured',
-        'meta_value' => true,
-    );
-
     include('components/case-studies.php');
     include('homepage/properties.php');
     include('homepage/magazine.php');

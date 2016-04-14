@@ -6,6 +6,13 @@
     <div class="container">
         <div class="owl-carousel js-case-studies-carousel">
             <?php
+            $case_studies = CFS() -> get('ss_case_studies_list', $post->ID);
+
+            $args_case_study = array(
+                'post_type' => 'case-study',
+                'post_status' => 'publish',
+                'post__in' => $case_studies,
+            );
 
             $query = new WP_Query( $args_case_study );
 
