@@ -25,7 +25,7 @@
 
                     $case_study_fields = CFS()->get(false, $case_study_id, array( 'format' => 'raw' ));
                     $case_study_img_id = $case_study_fields['case_study_thumbnail'];
-                    $case_study_img_url = get_the_post_thumbnail($case_study_id, 'full');
+                    $case_study_img_url = get_the_post_thumbnail($case_study_id, 'case_study');
                     $case_study_video = $case_study_fields['case_study_video_link'];
             ?>
                 <div class="grid grid--middle">
