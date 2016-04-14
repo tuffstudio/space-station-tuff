@@ -1,7 +1,7 @@
 
 <?php
-    $commercial_fiels = CFS()->get();
-    $content = apply_filters('the_content', $post->post_content);
+    $commercial_fiels = CFS()->get(false, $post->ID);
+    $content = $post->post_content;
 ?>
 
 <section class="section--top-small-space container container--space">
@@ -11,7 +11,7 @@
     <h1 class="headline--main">
         <?= $commercial_fiels['sp_commercial_headline'] ?>
     </h1>
-    <article class="text--description">
+    <article class="text-description text-description--letter">
         <?= $content ?>
     </article>
 </section>
