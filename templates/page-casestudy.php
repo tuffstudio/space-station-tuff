@@ -56,18 +56,7 @@
                             if(array_key_exists(0, $case_studies)) :
                                 $case = $case_study{0};
                         ?>
-                            <a href="<?= $case->get_link(); ?>" class="masonry__link">
-                                <div class="masonry__item masonry__item--square">
-                                    <div class="masonry__tile masonry__tile--white masonry__tile-arrow">
-                                        <div class="masonry__tile-border"></div>
-                                        <div class="masonry__tile-info">
-                                            <p class="masonry__tile-category">Case studies: <span><?= $case->get_category(); ?></span></p>
-                                            <h3 class="masonry__tile-title"><?= $case->get_title() ?></h3>
-                                            <p class="masonry__tile-desc masonry__tile-desc--small"><?= $case->get_excerpt(); ?></p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
+                            <?php include 'case-studies/small-single.php'; ?>
                         <?php endif; ?>
                     </div>
                 </div>
@@ -76,28 +65,7 @@
                         if(array_key_exists(2, $case_studies)) :
                             $case = $case_study{2};
                     ?>
-                        <a href="<?= $case->get_link(); ?>" class="masonry__link">
-                            <div class="grid__item one-half">
-                                <div class="masonry__item masonry__item--square">
-                                    <div class="masonry__tile masonry__tile--white masonry__tile-arrow">
-                                        <div class="masonry__tile-border"></div>
-                                        <div class="masonry__tile-info">
-                                            <p class="masonry__tile-category">Case studies: <span><?= $case->get_category(); ?></span></p>
-                                            <h3 class="masonry__tile-title"><?= $case->get_title() ?></h3>
-                                            <p class="masonry__tile-desc masonry__tile-desc--small"><?= $case->get_excerpt(); ?></p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div><!--
-                            --><div class="grid__item one-half">
-                                <div class="masonry__item masonry__item--square masonry__image">
-                                    <?= $case->get_image('square_small'); ?>
-                                    <?php if($case->has_video()) : ?>
-                                        <button class="btn btn--play">play</button>
-                                    <?php endif; ?>
-                                </div>
-                            </div>
-                        </a>
+                        <?php include 'case-studies/small.php'; ?>
                     <?php endif; ?>
                 </div>
             </div><!--
@@ -107,27 +75,7 @@
                         if(array_key_exists(1, $case_studies)) :
                             $case = $case_study{1};
                     ?>
-                        <a href="<?= $case->get_link(); ?>" class="masonry__link">
-                            <?= $case->get_image('square_big'); ?>
-                            <div class="grid__item one-half">
-                                <div class="masonry__item masonry__item--square"></div>
-                            </div><!--
-                            --><div class="grid__item one-half">
-                                <div class="masonry__item masonry__item--square">
-                                    <div class="masonry__tile masonry__tile--white">
-                                        <div class="masonry__tile-border"></div>
-                                        <div class="masonry__tile-info">
-                                            <p class="masonry__tile-category">Case studies: <span><?= $case->get_category(); ?></span></p>
-                                            <h3 class="masonry__tile-title"><?= $case->get_title() ?></h3>
-                                            <p class="masonry__tile-desc masonry__tile-desc--small"><?= $case->get_excerpt(); ?></p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div><!--
-                            --><div class="grid__item">
-                                <div class="masonry__item masonry__item--rectangular"></div>
-                            </div>
-                        </a>
+                        <?php include 'case-studies/big.php'; ?>
                     <?php endif; ?>
                 </div>
             </div>
@@ -143,18 +91,7 @@
                             if(array_key_exists(3, $case_studies)) :
                                 $case = $case_study{3};
                         ?>
-                            <a href="<?= $case->get_link(); ?>" class="masonry__link">
-                                <div class="masonry__item masonry__item--square">
-                                    <div class="masonry__tile masonry__tile--white masonry__tile-arrow">
-                                        <div class="masonry__tile-border"></div>
-                                        <div class="masonry__tile-info">
-                                            <p class="masonry__tile-category">Case studies: <span><?= $case->get_category(); ?></span></p>
-                                            <h3 class="masonry__tile-title"><?= $case->get_title() ?></h3>
-                                            <p class="masonry__tile-desc masonry__tile-desc--small"><?= $case->get_excerpt(); ?></p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
+                            <?php include 'case-studies/small-single.php'; ?>
                         <?php endif; ?>
                     </div>
                 </div>
@@ -163,28 +100,7 @@
                         if(array_key_exists(4, $case_studies)) :
                             $case = $case_study{4};
                     ?>
-                        <a href="<?= $case->get_link(); ?>" class="masonry__link">
-                            <div class="grid__item one-half">
-                                <div class="masonry__item masonry__item--square">
-                                    <div class="masonry__tile masonry__tile--white masonry__tile-arrow">
-                                        <div class="masonry__tile-border"></div>
-                                        <div class="masonry__tile-info">
-                                            <p class="masonry__tile-category">Case studies: <span><?= $case->get_category(); ?></span></p>
-                                            <h3 class="masonry__tile-title"><?= $case->get_title() ?></h3>
-                                            <p class="masonry__tile-desc masonry__tile-desc--small"><?= $case->get_excerpt(); ?></p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div><!--
-                            --><div class="grid__item one-half">
-                                <div class="masonry__item masonry__item--square masonry__image">
-                                    <?= $case->get_image('square_small'); ?>
-                                    <?php if($case->has_video()) : ?>
-                                        <button class="btn btn--play">play</button>
-                                    <?php endif; ?>
-                                </div>
-                            </div>
-                        </a>
+                        <?php include 'case-studies/small.php'; ?>
                     <?php endif; ?>
                 </div>
             </div><!--
@@ -199,32 +115,12 @@
                         </div>
                     </div>
                 </div>
-                <div class="grid__item masonry__image">
+                <div class="grid__item">
                     <?php
                         if(array_key_exists(5, $case_studies)) :
                             $case = $case_study{5};
                     ?>
-                        <a href="<?= $case->get_link(); ?>" class="masonry__link">
-                            <?= $case->get_image('square_big'); ?>
-                            <div class="grid__item one-half">
-                                <div class="masonry__item masonry__item--square"></div>
-                            </div><!--
-                            --><div class="grid__item one-half">
-                                <div class="masonry__item masonry__item--square">
-                                    <div class="masonry__tile masonry__tile--white">
-                                        <div class="masonry__tile-border"></div>
-                                        <div class="masonry__tile-info">
-                                            <p class="masonry__tile-category">Case studies: <span><?= $case->get_category(); ?></span></p>
-                                            <h3 class="masonry__tile-title"><?= $case->get_title() ?></h3>
-                                            <p class="masonry__tile-desc masonry__tile-desc--small"><?= $case->get_excerpt(); ?></p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div><!--
-                            --><div class="grid__item">
-                                <div class="masonry__item masonry__item--rectangular"></div>
-                            </div>
-                        </a>
+                        <?php include 'case-studies/big.php'; ?>
                     <?php endif; ?>
                 </div>
             </div>
@@ -235,28 +131,7 @@
                     if(array_key_exists(6, $case_studies)) :
                         $case = $case_study{6};
                 ?>
-                    <a href="<?= $case->get_link(); ?>" class="masonry__link">
-                        <div class="grid__item one-half">
-                            <div class="masonry__item masonry__item--square">
-                                <div class="masonry__tile masonry__tile--white masonry__tile-arrow">
-                                    <div class="masonry__tile-border"></div>
-                                    <div class="masonry__tile-info">
-                                        <p class="masonry__tile-category">Case studies: <span><?= $case->get_category(); ?></span></p>
-                                        <h3 class="masonry__tile-title"><?= $case->get_title() ?></h3>
-                                        <p class="masonry__tile-desc masonry__tile-desc--small"><?= $case->get_excerpt(); ?></p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div><!--
-                        --><div class="grid__item one-half">
-                            <div class="masonry__item masonry__item--square masonry__image">
-                                <?= $case->get_image('square_small'); ?>
-                                <?php if($case->has_video()) : ?>
-                                    <button class="btn btn--play">play</button>
-                                <?php endif; ?>
-                            </div>
-                        </div>
-                    </a>
+                    <?php include 'case-studies/small.php'; ?>
                 <?php endif; ?>
             </div><!--
             --><div class="grid__item tablet--one-half">
