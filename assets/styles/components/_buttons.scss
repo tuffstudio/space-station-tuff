@@ -33,6 +33,18 @@
     }
 }
 
+.btn--primary-big {
+    padding: 17px 17px 15px;
+    border-width: 3px;
+    border-color: $black;
+    color: $black;
+    font-size: rem-calc(12);
+
+    &:hover {
+        color: $color-primary;
+    }
+}
+
 .btn--submit {
     padding: 8px 12px 7px;
     border: 0;

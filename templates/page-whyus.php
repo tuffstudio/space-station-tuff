@@ -24,7 +24,7 @@
                 $section_content = apply_filters('the_content', $section_content);
                 $section_case_study_id = $section['section_case_study'][0];
                 $section_case_study = new MagazinePost\CaseStudyPost($section_case_study_id);
-
+                $section_buttons = $section['section_buttons'];
         ?>
             <div id="js-whyus-<?= $index; ?>" class="anchor"></div>
             <div class="grid grid--middle whyus__section <?php echo $index % 2 == 0 ? '' : 'grid--rev'; ?> is-hidden js-section-reveal">
@@ -44,6 +44,17 @@
                             $case = $section_case_study;
                             include 'case-studies/small.php';
                         ?>
+                        <div class="whyus__buttons">
+                            <?php
+                                if ($section_buttons) :
+                                    foreach($section_buttons as $button) :
+                                        $button = $button['section_button'];
+                            ?>
+                                <a href="<?= $button['url']; ?>" target="<?= $button['target']; ?>" class="btn btn--primary btn--primary-big">
+                                    <?= $button['text']; ?>
+                                </a>
+                            <?php endforeach; endif; ?>
+                        </div>
                     </div>
                 </div>
             </div>
