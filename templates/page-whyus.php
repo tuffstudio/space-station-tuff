@@ -16,7 +16,7 @@
 </section>
 
 <section class="section--bottom-space">
-    <div class="container">
+    <div class="container--mobile-full container">
         <?php
             foreach ($sections as $index => $section) :
                 $section_title = $section['section_title'];

@@ -1,14 +1,22 @@
 // Why us page styles
 // -------------------
 .whyus__nav {
-    margin: 50px auto 20px;
+    margin: 40px auto;
     padding: 0;
     text-align: center;
     list-style-type: none;
 
+    @include min-screen($desktop) {
+        margin: 50px auto 20px;
+    }
+
     li {
-        display: inline-block;
-        margin: 0 5px;
+        margin: 7px 0;
+
+        @include min-screen($desktop) {
+            display: inline-block;
+            margin: 0 5px;
+        }
     }
 }
 
@@ -30,10 +38,23 @@
     }
 }
 
+.whyus__text {
+    padding: 0 20px;
+
+    @include min-screen($desktop) {
+        padding: 0;
+    }
+}
+
 .whyus__case-study {
+    margin: 20px 0 40px;
     text-align: center;
+
+    @include min-screen($desktop) {
+        margin: 0;
+    }
 }
 
 .whyus__buttons {
-    margin-top: 30px;
+    margin-top: 20px;
 }
