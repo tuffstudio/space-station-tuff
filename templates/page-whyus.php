@@ -28,7 +28,7 @@
         ?>
             <div id="js-whyus-<?= $index; ?>" class="anchor"></div>
             <div class="grid grid--middle whyus__section <?php echo $index % 2 == 0 ? '' : 'grid--rev'; ?> is-hidden js-section-reveal">
-                <div class="grid__item tablet--one-half whyus__section-half">
+                <div class="grid__item desktop--one-half whyus__section-half">
                     <div class="whyus__text">
                         <h3 class="section__title section__title--small whyus__section-title">
                             <?= $section_title; ?>
@@ -38,7 +38,7 @@
                         </div>
                     </div>
                 </div><!--
-                --><div class="grid__item tablet--one-half whyus__section-half">
+                --><div class="grid__item desktop--one-half whyus__section-half">
                     <div class="whyus__case-study">
                         <?php
                             $case = $section_case_study;

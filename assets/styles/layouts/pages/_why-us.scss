@@ -13,7 +13,7 @@
     li {
         margin: 7px 0;
 
-        @include min-screen($desktop) {
+        @include min-screen($tablet) {
             display: inline-block;
             margin: 0 5px;
         }
