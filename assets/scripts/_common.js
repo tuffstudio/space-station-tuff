@@ -41,6 +41,20 @@ window.SS.common = function($) {
         });
     }
 
+    function userBox() {
+        var $userBox = $('.js-user-box');
+        var $userBoxTrigger = $userBox.find('.js-user-box-trigger');
+        var $userBoxClose = $userBox.find('.js-user-box-close');
+
+        $userBoxTrigger.on('click', function() {
+            $('body').toggleClass('user-box-is-opened');
+        });
+
+        $userBoxClose.on('click', function() {
+            $('body').removeClass('user-box-is-opened');
+        });
+    }
+
     function toggleMobileNavigation() {
         $navTrigger.on('click', function(event) {
             $navTrigger.toggleClass('is-opened');
@@ -80,7 +94,6 @@ window.SS.common = function($) {
                 });
             }
         });
-
     }
 
     function goToTopButton() {
@@ -213,10 +226,15 @@ window.SS.common = function($) {
         goToTopButton();
         revealSections();
         caseStudiesCarousel();
-        subMenuAlignment();
         goToNewsletter();
         stickyMenu();
+        userBox();
         SS.initSelect2();
+
+        setTimeout(function() {
+            subMenuAlignment();
+        }, 200);
+
     });
 
     $(window).resize(function() {
