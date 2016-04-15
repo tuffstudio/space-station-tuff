@@ -11,6 +11,12 @@
                         wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => 'navigation-menu']);
                     endif;
                     ?>
+
+                    <div class="user-box">
+                        <div class="user-box__trigger">
+                            <i class="icon icon-heart"></i>
+                        </div>
+                    </div>
                 </nav>
             </div>
         </div>
