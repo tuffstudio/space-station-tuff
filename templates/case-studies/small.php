@@ -6,7 +6,7 @@
                 <div class="masonry__tile-info">
                     <p class="masonry__tile-category">Case studies: <span><?= $case->get_category(); ?></span></p>
                     <h3 class="masonry__tile-title"><?= $case->get_title() ?></h3>
-                    <p class="masonry__tile-desc masonry__tile-desc--small"><?= $case->get_excerpt(); ?></p>
+                    <p class="masonry__tile-desc masonry__tile-desc--small"><?= $case->get_excerpt(80); ?></p>
                 </div>
             </div>
         </div>
