@@ -34,7 +34,7 @@
                             <p class="section__category">Case studies: <span><?= $case_study_category; ?></span></p>
                             <h2 class="headline--default">
                                 <a href="<?= $case_study_link; ?>">
-                                    <?= the_title(); ?>aa
+                                    <?= the_title(); ?>
                                 </a>
                             </h2>
                             <div class="case-study__description">

@@ -49,7 +49,7 @@ window.SS.common = function($) {
     }
 
     function toggleSubMenu() {
-        var $navigation = $('.navigation-menu ');
+        var $navigation = $('.navigation-menu');
         var $menuItem = $('.navigation-menu > .Nav-item');
 
         $menuItem.each(function() {

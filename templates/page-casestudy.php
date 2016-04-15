@@ -36,7 +36,7 @@
         <?php the_title(); ?>
     </h2>
     <h1 class="headline--main headline--small-space">
-        <strong><?= $commercial_fiels['sp_commercial_headline']; ?></strgon>
+        <strong><?= $commercial_fiels['sp_commercial_headline']; ?></strong>
     </h1>
     <article class="text-description text-description--single">
         <?= $content; ?>
