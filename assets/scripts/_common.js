@@ -49,6 +49,7 @@ window.SS.common = function($) {
     }
 
     function toggleSubMenu() {
+        var $navigation = $('.navigation-menu ');
         var $menuItem = $('.navigation-menu > .Nav-item');
 
         $menuItem.each(function() {
@@ -59,18 +60,27 @@ window.SS.common = function($) {
                 var toggled = false;
 
                 $this.addClass('has-menu');
+
                 $this.on('click', function(event) {
                     var toggled = !$subMenu.hasClass('is-opened');
+                    var isSpecialItem = $(this).hasClass('Item--find-a-property');
 
                     if(toggled) {
                         $('.sub-menu').removeClass('is-opened');
                         $subMenu.addClass('is-opened');
+                        $navigation.removeClass('is-normal');
+
+                        if (!isSpecialItem) {
+                            $navigation.addClass('is-normal');
+                        }
                     } else {
                         $subMenu.removeClass('is-opened');
+                        $navigation.removeClass('is-normal');
                     }
                 });
             }
         });
+
     }
 
     function goToTopButton() {
