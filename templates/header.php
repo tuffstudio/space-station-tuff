@@ -11,6 +11,24 @@
                         wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => 'navigation-menu']);
                     endif;
                     ?>
+
+                    <div class="user-box js-user-box">
+                        <div class="user-box__trigger js-user-box-trigger">
+                            <i class="icon icon-heart"></i>
+                        </div>
+                        <div class="user-box__content">
+                            <h3 class="masonry__tile-title">User box</h3>
+                            <ul>
+                                <li>Example text</li>
+                                <li>Second text</li>
+                                <li>Lorem ipsum</li>
+                                <li>nummy nibh eui</li>
+                                <li>Lorem ipsum</li>
+                                <li>ipsum dolor sit am</li>
+                            </ul>
+                        </div>
+                        <div class="user-box__overlay js-user-box-close"></div>
+                    </div>
                 </nav>
             </div>
         </div>
