@@ -1,0 +1,31 @@
+// Why us page styles
+// -------------------
+.whyus__nav {
+    margin: 50px auto 20px;
+    padding: 0;
+    text-align: center;
+    list-style-type: none;
+
+    li {
+        display: inline-block;
+        margin: 0 5px;
+    }
+}
+
+.whyus__section-title {
+    @include min-screen($desktop) {
+        margin-bottom: 30px;
+    }
+}
+
+.whyus__section {
+    @include min-screen($desktop) {
+        margin: 50px -25px;
+    }
+}
+
+.whyus__section-half {
+    @include min-screen($desktop) {
+        padding: 0 25px;
+    }
+}
