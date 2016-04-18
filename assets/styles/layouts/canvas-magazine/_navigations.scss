@@ -49,7 +49,7 @@
         }
 
         &.is-active,
-        &:hover {
+        .is-desktop &:hover {
             background-position: 1px 0;
 
             a {

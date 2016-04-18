@@ -28,14 +28,13 @@
 // Headline styles
 // --------------------
 .headline--main {
-    margin: 0.8em 0 1.2em;
+    margin: .8em 0 1.2em;
+    font-size: rem-calc($case-study-title-size * .7);
     letter-spacing: $moving-box-title-letterspacing;
-    letter-spacing: 3px;
     text-transform: uppercase;
-    font-size: rem-calc($case-study-title-size * 0.7);
 
     @include min-screen($tablet) {
-        font-size: rem-calc($case-study-title-size * 0.85);
+        font-size: rem-calc($case-study-title-size * .85);
     }
 
     @include min-screen($desktop) {
@@ -51,12 +50,12 @@
 .headline--default {
     margin-top: 16px;
     font-family: $case-study-title-font;
-    font-size: rem-calc($case-study-title-size * 0.7);
+    font-size: rem-calc($case-study-title-size * .7);
     letter-spacing: 3px;
     text-transform: uppercase;
 
     @include min-screen($tablet) {
-        font-size: rem-calc($case-study-title-size * 0.85);
+        font-size: rem-calc($case-study-title-size * .85);
     }
 
     @include min-screen($desktop) {
@@ -83,5 +82,5 @@
 }
 
 .headline--small-space {
-    margin: 0.5em 0;
+    margin: .5em 0;
 }

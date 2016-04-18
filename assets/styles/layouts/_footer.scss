@@ -24,12 +24,6 @@
     opacity: 0;
     z-index: 130;
 
-    @include min-screen($desktop) {
-        &:hover {
-            background-color: $color-primary;
-        }
-    }
-
     &::after {
         content: '';
         position: absolute;

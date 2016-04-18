@@ -33,7 +33,7 @@
         color: $color-primary;
         text-decoration: none;
 
-        &:hover {
+        .is-desktop &:hover {
             text-decoration: underline;
         }
     }
@@ -110,6 +110,16 @@
         display: inline-block;
         max-width: 100%;
         height: auto;
+    }
+
+    a {
+        color: $black;
+        font-family: $font-heavy;
+        text-decoration: none;
+
+        .is-desktop &:hover {
+            text-decoration: underline;
+        }
     }
 }
 

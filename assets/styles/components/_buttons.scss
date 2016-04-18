@@ -46,7 +46,7 @@
         font-size: rem-calc(12);
     }
 
-    &:hover {
+    .is-desktop &:hover {
         color: $color-primary;
     }
 }
@@ -78,7 +78,7 @@
     letter-spacing: .2em;
     text-transform: uppercase;
 
-    &:hover,
+    .is-desktop &:hover,
     &.active {
         border-color: $color-primary;
         color: $color-primary;
@@ -98,7 +98,7 @@
     font-size: 0;
     cursor: pointer;
 
-    &:hover {
+    .is-desktop &:hover {
         background-color: $btn-play-bg-hover;
     }
 
@@ -120,7 +120,7 @@
     text-transform: uppercase;
 
     @include min-screen($desktop) {
-        &:hover {
+        .is-desktop &:hover {
             background-color: darken($btn-action-bg, 15%);
         }
     }
@@ -131,7 +131,7 @@
     background-color: $color-primary;
     color: $white;
 
-    &:hover {
+    .is-desktop &:hover {
         background-color: darken($color-primary, 5%);
     }
 }
