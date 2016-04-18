@@ -1,0 +1,46 @@
+// Canvas magazine category page styling
+// --------------------------------------
+.category__posts {
+    overflow-x: hidden;
+}
+
+.single-canvas {
+    margin: 0 0 30px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid $single-post-border-color;
+
+    @include min-screen($tablet) {
+        margin: 0 -15px 30px;
+    }
+
+    @include min-screen($desktop) {
+        margin: 0 -15px 40px;
+        padding-bottom: 25px;
+    }
+}
+
+.single-canvas__half {
+    @include min-screen($tablet) {
+        padding: 0 15px;
+    }
+}
+
+.single-canvas__thumbnail {
+    position: relative;
+    overflow: hidden;
+
+    img {
+        max-width: 100%;
+        height: auto;
+        transition: $masonry-animation-transition;
+    }
+}
+
+.single-canvas__link {
+    color: $black;
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}

@@ -46,11 +46,19 @@
     text-transform: uppercase;
 }
 
+.canvas-post__title--small {
+    font-size: rem-calc(20);
+}
+
 .canvas-post__info {
     margin: 0;
     color: $color-primary;
     font-family: $font-light;
     font-size: rem-calc(14);
+}
+
+.canvas-post__info--space {
+    margin: 20px 0 0;
 }
 
 .canvas-post__content {

@@ -13,6 +13,12 @@
     @include min-screen($desktop) {
         padding-bottom: 0;
     }
+
+    nav {
+        @include min-screen($desktop) {
+            margin-top: -1px;
+        }
+    }
 }
 
 .navigation__brand-link {
