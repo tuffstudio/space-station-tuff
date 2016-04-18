@@ -42,8 +42,13 @@
                 size: contain;
             }
 
-            &:hover {
+            &:hover,
+            &.is-active {
                 background-position: 1px 0;
+
+                a {
+                    color: $white;
+                }
             }
         }
     }
@@ -67,9 +72,5 @@
         font-size: rem-calc(14);
         text-decoration: none;
         text-transform: uppercase;
-
-        &:hover {
-            color: $white;
-        }
     }
 }
