@@ -25,8 +25,8 @@
 
 .nav__secondary {
     margin-bottom: 20px;
-    text-transform: uppercase;
     font-size: rem-calc(10);
+    text-transform: uppercase;
 
     @include min-screen($tablet-small) {
         margin-bottom: 20px;

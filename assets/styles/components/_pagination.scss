@@ -5,7 +5,7 @@
         color: $black;
         text-decoration: none;
 
-        &:hover {
+        .is-desktop &:hover {
             text-decoration: underline;
         }
     }

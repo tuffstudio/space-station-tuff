@@ -18,7 +18,7 @@
     text-decoration: none;
     text-transform: uppercase;
 
-    &:hover {
+    .is-desktop &:hover {
         text-decoration: underline;
     }
 }
@@ -27,7 +27,7 @@
     color: inherit;
     text-decoration: none;
 
-    &:hover {
+    .is-desktop &:hover {
         text-decoration: underline;
     }
 }

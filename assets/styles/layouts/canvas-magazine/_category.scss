@@ -44,3 +44,10 @@
         text-decoration: underline;
     }
 }
+
+.single-canvas__text {
+    margin: 10px 0;
+    font-family: $font-light;
+    font-size: rem-calc(14);
+    line-height: 1.8em;
+}

@@ -6,6 +6,12 @@ window.SS.common = function($) {
     var $navTrigger = $('.js-nav-trigger');
     var $mobileNavigation = $('.js-primary-nav');
 
+    function setIsMobile() {
+        if (isDesktop) {
+            $('body').addClass('is-desktop');
+        }
+    }
+
     function subMenuAlignment() {
         var siteWidth = $(window).width();
         var $itemsWithSubMenu = $('.has-menu');
@@ -233,6 +239,7 @@ window.SS.common = function($) {
     }
 
     $(document).ready(function() {
+        setIsMobile();
         toggleMobileNavigation();
         toggleSubMenu();
         goToTopButton();

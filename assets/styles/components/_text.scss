@@ -22,6 +22,7 @@
     a {
         color: $black;
         font-family: $font-heavy;
+        white-space: nowrap;
     }
 }
 
@@ -62,7 +63,7 @@
         font-weight: 700;
         text-decoration: none;
 
-        &:hover {
+        .is-desktop &:hover {
             text-decoration: underline;
         }
     }

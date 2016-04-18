@@ -136,14 +136,14 @@
     position: absolute;
     max-width: 250px;
     max-height: 0;
-    overflow: hidden;
     margin: 0;
     padding: 0;
-    text-align: left;
     list-style: none;
     background: $dropdown-bg;
-    transition: max-height $dropdown-animation/2 ease-in-out;
+    transition: max-height $dropdown-animation / 2 ease-in-out;
     pointer-events: none;
+    text-align: left;
+    overflow: hidden;
     z-index: 5;
 
     .dropdown.active &,
@@ -158,7 +158,7 @@
             display: block;
             padding: 8px 22px 8px 10px;
 
-            &:hover {
+            .is-desktop &:hover {
                 background: $white;
                 color: $black;
             }

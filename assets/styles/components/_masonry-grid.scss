@@ -77,7 +77,7 @@
     text-decoration: none;
     overflow: hidden;
 
-    &:hover {
+    .is-desktop &:hover {
         @include min-screen($desktop) {
             .masonry__tile-border {
                 box-shadow: 0 0 0 1px $black;
@@ -234,7 +234,7 @@
 .masonry__tile-link--brown {
     background-color: $masonry-tile-link-bg;
 
-    &:hover {
+    .is-desktop &:hover {
         background-color: $color-primary;
     }
 }
@@ -242,7 +242,7 @@
 .masonry__tile-link--purple {
     background-color: $masonry-tile-link-cta;
 
-    &:hover {
+    .is-desktop &:hover {
         background-color: lighten($masonry-tile-link-cta, 5%);
     }
 }
@@ -298,7 +298,7 @@
     @include background-cover('btn-blackbook.jpg', center, 101%);
     transition: all 750ms $masonry-animation-function;
 
-    &:hover {
+    .is-desktop &:hover {
         background-size: 105%;
     }
 }
@@ -307,7 +307,7 @@
     @include background-cover('');
     transition: all 750ms $masonry-animation-function;
 
-    &:hover {
+    .is-desktop &:hover {
         &::after {
             box-shadow: inset 0 0 6em $dark-gray;
         }

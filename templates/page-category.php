@@ -29,7 +29,7 @@
                                     <a href="<?= $canvas_post->get_link(); ?>" class="single-canvas__link">
                                         <h2 class="canvas-post__title canvas-post__title--small"><?= $canvas_post->get_title(); ?></h2>
                                     </a>
-                                    <div class="text-description"><?= $canvas_post->get_excerpt(120); ?>...</div>
+                                    <div class="single-canvas__text"><?= $canvas_post->get_excerpt(120); ?>...</div>
                                     <p class="canvas-post__info canvas-post__info--space">Posted by <?= get_the_author(); ?>, <?= get_the_date('l j F Y'); ?></p>
                                 </div>
                             </div>

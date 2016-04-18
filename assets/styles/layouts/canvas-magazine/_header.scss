@@ -22,12 +22,12 @@
 
 .canvas__logo {
     display: none;
-    max-height: 0;
     width: 100%;
-    opacity: 0;
-    overflow: hidden;
+    max-height: 0;
     transition: 2 * $standard-animation-time max-height $standard-animation-time ease-in-out,
                 opacity 2 * $standard-animation-time ease-in-out;
+    opacity: 0;
+    overflow: hidden;
 
     @include min-screen($desktop) {
         display: block;
@@ -35,8 +35,8 @@
 
     &.is-visible {
         max-height: 100px;
-        opacity: 1;
         transition: max-height 2 * $standard-animation-time ease-in-out,
                     2 * $standard-animation-time opacity $standard-animation-time ease-in-out;
+        opacity: 1;
     }
 }
