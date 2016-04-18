@@ -220,6 +220,18 @@ window.SS.common = function($) {
         });
     }
 
+    function canvasAnimation() {
+        var $canvasAnimation = $('.js-canvas-animation');
+
+        $(window).on('scroll', function() {
+            if ($(this).scrollTop() >= 200) {
+                $canvasAnimation.addClass('is-visible');
+            } else {
+                $canvasAnimation.removeClass('is-visible');
+            }
+        });
+    }
+
     $(document).ready(function() {
         toggleMobileNavigation();
         toggleSubMenu();
@@ -229,6 +241,7 @@ window.SS.common = function($) {
         goToNewsletter();
         stickyMenu();
         userBox();
+        canvasAnimation();
         SS.initSelect2();
 
         setTimeout(function() {
