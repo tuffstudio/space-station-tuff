@@ -12,11 +12,11 @@
                 $name = $category->name;
                 $link = get_category_link($category->cat_ID);
         ?>
-            <li class="canvas__categories-item <?= is_category($category->cat_ID) ? 'active' : ''; ?>">
+            <li class="canvas__categories-item <?= is_category($category->cat_ID) ? 'is-active' : ''; ?>">
                 <a href="<?php echo $link; ?>"><?php echo $name; ?></a>
             </li>
         <?php endforeach; ?>
-        <li class="canvas__categories-item <?php  if (is_post_type_archive('address-book')) echo 'is-active'; ?>">
+        <li class="canvas__categories-item <?php if (is_post_type_archive('address-book')) echo 'is-active'; ?>">
             <a href="<?= get_post_type_archive_link('address-book'); ?>">Address book </a>
         </li>
     </ul>

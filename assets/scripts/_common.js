@@ -214,7 +214,7 @@ window.SS.common = function($) {
                 equalHeight('.js-owner', '.js-target');
 
                 $('.js-sticky').stick_in_parent({
-                    offset_top: 200
+                    offset_top: 100
                 });
             }
         });

@@ -26,41 +26,36 @@
         padding: 0 7px 0 0;
         text-align: left;
     }
-
-    li {
-        @include min-screen($tablet) {
-            display: inline-block;
-        }
-
-        @include min-screen($desktop) {
-            display: block;
-            transition: background-position $canvas-nav-animation;
-            background: {
-                image: url('../images/paint_brush.png');
-                position: -259px 0;
-                repeat: no-repeat;
-                size: contain;
-            }
-
-            &:hover,
-            &.is-active {
-                background-position: 1px 0;
-
-                a {
-                    color: $white;
-                }
-            }
-        }
-    }
 }
 
 .canvas__categories-item {
     margin: 10px 0;
     padding-left: 16px;
 
+    @include min-screen($tablet) {
+        display: inline-block;
+    }
+
     @include min-screen($desktop) {
+        display: block;
         margin: 0;
         padding-left: 0;
+        transition: background-position $canvas-nav-animation;
+        background: {
+            image: url('../images/paint_brush.png');
+            position: -259px 0;
+            repeat: no-repeat;
+            size: contain;
+        }
+
+        &.is-active,
+        &:hover {
+            background-position: 1px 0;
+
+            a {
+                color: $white;
+            }
+        }
     }
 
     a {
