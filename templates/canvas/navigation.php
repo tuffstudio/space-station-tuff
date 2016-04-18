@@ -10,7 +10,7 @@
                 $name = $category->name;
                 $link = get_category_link($category->cat_ID);
         ?>
-            <li class="canvas__categories-item">
+            <li class="canvas__categories-item <?= is_category($category->cat_ID) ? 'active' : ''; ?>">
                 <a href="<?php echo $link; ?>"><?php echo $name; ?></a>
             </li>
         <?php endforeach; ?>
