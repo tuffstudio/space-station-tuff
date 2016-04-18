@@ -1,5 +1,9 @@
 // Canvas magazine category page styling
 // --------------------------------------
+.category__posts {
+    overflow-x: hidden;
+}
+
 .single-canvas {
     margin: 0 0 30px;
     padding-bottom: 15px;

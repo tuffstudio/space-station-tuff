@@ -7,7 +7,7 @@
             <div class="grid__item desktop--one-quarter js-target">
                 <?php include 'canvas/navigation.php' ?>
             </div><!--
-            --><div class="grid__item desktop--three-quarters js-owner" style="overflow-x: hidden;">
+            --><div class="grid__item desktop--three-quarters category__posts js-owner">
                 <?php
                     $i = 1;
                     while (have_posts()) :
