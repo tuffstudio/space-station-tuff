@@ -32,6 +32,22 @@
     content: '\e902';
 }
 
-.icon-heart:before {
+.icon-heart::before {
     content: '\e904';
+}
+
+.icon-twitter::before {
+    content: '\e905';
+}
+
+.icon-facebook::before {
+    content: '\e906';
+}
+
+.icon-pinterest::before {
+    content: '\e907';
+}
+
+.icon-email::before {
+    content: '\e908';
 }
