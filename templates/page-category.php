@@ -14,7 +14,7 @@
                         the_post();
                         $canvas_post = new MagazinePost\MagazinePost($post->ID);
                 ?>
-                    <div class="single-canvas">
+                    <div class="single-canvas <?= $i > 2 ? 'is-hidden js-section-reveal' : ''; ?> ">
                         <div class="grid grid--middle <?= $i % 2 == 0 ? 'grid--rev' : ''; ?>">
                             <div class="grid__item tablet--one-third desktop--two-fifths single-canvas__half">
                                 <a href="<?= $canvas_post->get_link(); ?>" class="masonry__link">
