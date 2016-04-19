@@ -2,6 +2,8 @@
     use Roots\Sage\MagazinePost;
 
     $home_fields = CFS() -> get(false, $post->ID);
+    $title = $home_fields['ss_homepage_magazine_title'];
+    $subtitle = $home_fields['ss_homepage_magazine_subtitle'];
     $magazine_posts = $home_fields['ss_homepage_posts'];
 
     foreach ($magazine_posts as $index => $id) {
@@ -17,10 +19,8 @@
                     <div class="masonry__item masonry__item--rectangular">
                         <div class="masonry__tile--center">
                             <p class="section__category">Magazine</p>
-                            <h2 class="section__title">Canvas magazine</h2>
-                            <p class="section__subtitle">
-                                Latest news and trends in the industry
-                            </p>
+                            <h2 class="section__title"><?= $title; ?></h2>
+                            <p class="section__subtitle"><?= $subtitle; ?></p>
                         </div>
                     </div>
                 </div><!--
