@@ -14,6 +14,7 @@
     }
 
     $related_case_study = CFS() -> get('related_case_study', $post_id);
+    $sidebar_fields = CFS() -> get(false, $post_id);
 
     $page_url = urlencode(get_permalink());
     $page_title = urlencode(get_the_title());
@@ -105,35 +106,41 @@
     </div><!--
     --><div class="grid__item tablet--one-third">
         <div class="canvas-post__sidebar">
-            <div class="moving-box is-moved full-visible moving-box--static canvas-post__sidebar-box">
-                <div class="moving-box__element moving-box__content">
-                    <p class="moving-box__title">THE ART OF VALUATION</p>
-                    <p class="moving-box__text">
-                        <?php // TODO: Remember to replace lorem text with correct one ?>
-                        Ta nobit quam, to amniet que ficipidus nam as quislinerercst
-                    </p>
-                    <a href="#" class="btn btn--primary">Download now</a>
+            <?php if($sidebar_fields['sidebar_first_box']): ?>
+                <div class="moving-box is-moved full-visible moving-box--static canvas-post__sidebar-box">
+                    <div class="moving-box__element moving-box__content">
+                        <p class="moving-box__title">THE ART OF VALUATION</p>
+                        <p class="moving-box__text">
+                            <?php // TODO: Remember to replace lorem text with correct one ?>
+                            Ta nobit quam, to amniet que ficipidus nam as quislinerercst
+                        </p>
+                        <a href="#" class="btn btn--primary">Download now</a>
+                    </div>
+                    <div class="moving-box__element moving-box__border"></div>
                 </div>
-                <div class="moving-box__element moving-box__border"></div>
-            </div>
+            <?php endif; ?>
 
-            <div class="canvas-post__sidebar-box">
-                <a href="/?s=" class="masonry__link">
-                    <div class="masonry__item masonry__item--square">
-                        <div class="masonry__tile masonry__tile-link masonry__tile-link--brown">
-                            <span>Find a property</span>
+            <?php if($sidebar_fields['sidebar_second_box']): ?>
+                <div class="canvas-post__sidebar-box">
+                    <a href="/?s=" class="masonry__link">
+                        <div class="masonry__item masonry__item--square">
+                            <div class="masonry__tile masonry__tile-link masonry__tile-link--brown">
+                                <span>Find a property</span>
+                            </div>
                         </div>
-                    </div>
-                </a>
-            </div>
+                    </a>
+                </div>
+            <?php endif; ?>
 
-            <div class="canvas-post__sidebar-box">
-                <a href="#" class="masonry__link">
-                    <div class="masonry__item masonry__item--square">
-                        <div class="masonry__tile masonry__tile-link masonry__tile-link--blackbook"></div>
-                    </div>
-                </a>
-            </div>
+            <?php if($sidebar_fields['sidebar_third_box']): ?>
+                <div class="canvas-post__sidebar-box">
+                    <a href="#" class="masonry__link">
+                        <div class="masonry__item masonry__item--square">
+                            <div class="masonry__tile masonry__tile-link masonry__tile-link--blackbook"></div>
+                        </div>
+                    </a>
+                </div>
+            <?php endif; ?>
 
             <?php
                 if ($related_case_study):
