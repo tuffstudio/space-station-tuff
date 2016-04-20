@@ -76,6 +76,43 @@ function custom_post_types_init() {
     );
 
     register_post_type( 'address-book', $args_address_book );
+
+    /**
+     * Register team member post type.
+     */
+    $labels_team_member = array(
+        'name'               => 'Team member',
+        'singular_name'      => 'Team member',
+        'menu_name'          => 'Team member',
+        'name_admin_bar'     => 'Team member',
+        'add_new'            => 'New Team member',
+        'add_new_item'       => 'Add new Team member',
+        'new_item'           => 'New Team member',
+        'edit_item'          => 'Edit Team member',
+        'view_item'          => 'See Team member',
+        'all_items'          => 'All Team members',
+        'search_items'       => 'Search Team member',
+        'not_found'          => 'Team member not found ',
+        'not_found_in_trash' => 'Not found Team member in trash'
+    );
+
+    $args_team_member = array(
+        'labels'             => $labels_team_member,
+        'public'             => true,
+        'publicly_queryable' => true,
+        'show_ui'            => true,
+        'show_in_menu'       => true,
+        'query_var'          => true,
+        'rewrite'            => array( 'slug' => 'team-member' ),
+        'capability_type'    => 'post',
+        'has_archive'        => true,
+        'hierarchical'       => false,
+        'menu_position'      => 2,
+        'supports'           => array('title', 'editor', 'thumbnail'),
+        'menu_icon'          => 'dashicons-groups'
+    );
+
+    register_post_type( 'team-member', $args_team_member );
 }
 
 add_action('init', __NAMESPACE__ . '\\custom_post_types_init');

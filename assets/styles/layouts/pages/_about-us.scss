@@ -1,0 +1,7 @@
+// About us page styles
+// ---------------------
+.about__members-title {
+    @include min-screen($desktop) {
+        padding-left: 30px;
+    }
+}
