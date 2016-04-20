@@ -1,18 +1,26 @@
-<?php include 'commercial/informations.php'; ?>
+<div class="background--skew">
+    <?php include 'commercial/informations.php'; ?>
+</div>
 
-<section class="section">
+<section class="section section--between-skew is-hidden js-section-reveal">
+    <?php
+        $heritage_fields = CFS()->get(false, $post->ID);
+        $title = $heritage_fields['ss_heritage_title'];
+        $content = $heritage_fields['ss_heritage_content'];
+    ?>
     <div class="container">
         <h1 class="headline--main">
-            <strong>Our heritage</strong>
+            <strong><?= $title; ?></strong>
         </h1>
         <article class="text-description">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            <?= $content; ?>
         </article>
     </div>
 </section>
 
-<?php include 'components/case-studies.php'; ?>
+<div class="background--skew">
+    <?php include 'components/case-studies.php'; ?>
+</div>
 
 <?php include 'about-us/team-members.php'; ?>
 

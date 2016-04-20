@@ -5,3 +5,17 @@
         padding-left: 30px;
     }
 }
+
+.team-members {
+    position: relative;
+
+    &::before {
+        content: '';
+        display: block;
+        position: absolute;
+        top: -100px;
+        width: 100%;
+        height: 100px;
+        background-image: url('../images/bg-paper.png');
+    }
+}
