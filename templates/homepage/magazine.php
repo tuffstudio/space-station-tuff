@@ -30,7 +30,7 @@
                             if(array_key_exists(0, $magazine_posts)):
                                 $post = $magazine{0};
                         ?>
-                            <a href="#" class="masonry__link">
+                            <a href="<?= $post->get_link(); ?>" class="masonry__link">
                                 <div class="grid__item one-half">
                                     <div class="masonry__item masonry__item--square masonry__image">
                                         <?= $post->get_image('square_small'); ?>
@@ -56,7 +56,7 @@
                             if(array_key_exists(1, $magazine_posts)):
                                 $post = $magazine{1};
                         ?>
-                            <a href="#" class="masonry__link">
+                            <a href="<?= $post->get_link(); ?>" class="masonry__link">
                                 <div class="grid__item one-half">
                                     <div class="masonry__item masonry__item--square">
                                         <div class="masonry__tile masonry__tile--white masonry__tile-arrow">
@@ -85,7 +85,7 @@
                         if(array_key_exists(2, $magazine_posts)):
                             $post = $magazine{2};
                     ?>
-                        <a href="#" class="masonry__link">
+                        <a href="<?= $post->get_link(); ?>" class="masonry__link">
                             <div class="grid__item one-half">
                                 <div class="masonry__item masonry__item--square">
                                     <div class="masonry__tile masonry__tile--white masonry__tile-arrow">
@@ -111,7 +111,7 @@
                         if(array_key_exists(3, $magazine_posts)) :
                             $post = $magazine{3};
                     ?>
-                        <a href="#" class="masonry__link">
+                        <a href="<?= $post->get_link(); ?>" class="masonry__link">
                             <?= $post->get_image('square_big'); ?>
                             <div class="grid__item one-half">
                                 <div class="masonry__item masonry__item--square"></div>
