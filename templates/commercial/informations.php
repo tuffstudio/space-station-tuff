@@ -2,6 +2,7 @@
 <?php
     $commercial_fiels = CFS()->get(false, $post->ID);
     $content = $post->post_content;
+    $content = apply_filters('the_content', $content);
 ?>
 
 <section class="section--top-small-space container container--space">
