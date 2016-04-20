@@ -22,7 +22,12 @@
     a {
         color: $black;
         font-family: $font-heavy;
+        text-decoration: none;
         white-space: nowrap;
+
+        .is-desktop &:hover {
+            text-decoration: underline;
+        }
     }
 }
 

@@ -2,6 +2,8 @@
     use Roots\Sage\MagazinePost;
 
     $home_fields = CFS() -> get(false, $post->ID);
+    $title = $home_fields['ss_homepage_magazine_title'];
+    $subtitle = $home_fields['ss_homepage_magazine_subtitle'];
     $magazine_posts = $home_fields['ss_homepage_posts'];
 
     foreach ($magazine_posts as $index => $id) {
@@ -17,10 +19,8 @@
                     <div class="masonry__item masonry__item--rectangular">
                         <div class="masonry__tile--center">
                             <p class="section__category">Magazine</p>
-                            <h2 class="section__title">Canvas magazine</h2>
-                            <p class="section__subtitle">
-                                Latest news and trends in the industry
-                            </p>
+                            <h2 class="section__title"><?= $title; ?></h2>
+                            <p class="section__subtitle"><?= $subtitle; ?></p>
                         </div>
                     </div>
                 </div><!--
@@ -30,7 +30,7 @@
                             if(array_key_exists(0, $magazine_posts)):
                                 $post = $magazine{0};
                         ?>
-                            <a href="#" class="masonry__link">
+                            <a href="<?= $post->get_link(); ?>" class="masonry__link">
                                 <div class="grid__item one-half">
                                     <div class="masonry__item masonry__item--square masonry__image">
                                         <?= $post->get_image('square_small'); ?>
@@ -56,7 +56,7 @@
                             if(array_key_exists(1, $magazine_posts)):
                                 $post = $magazine{1};
                         ?>
-                            <a href="#" class="masonry__link">
+                            <a href="<?= $post->get_link(); ?>" class="masonry__link">
                                 <div class="grid__item one-half">
                                     <div class="masonry__item masonry__item--square">
                                         <div class="masonry__tile masonry__tile--white masonry__tile-arrow">
@@ -85,7 +85,7 @@
                         if(array_key_exists(2, $magazine_posts)):
                             $post = $magazine{2};
                     ?>
-                        <a href="#" class="masonry__link">
+                        <a href="<?= $post->get_link(); ?>" class="masonry__link">
                             <div class="grid__item one-half">
                                 <div class="masonry__item masonry__item--square">
                                     <div class="masonry__tile masonry__tile--white masonry__tile-arrow">
@@ -111,7 +111,7 @@
                         if(array_key_exists(3, $magazine_posts)) :
                             $post = $magazine{3};
                     ?>
-                        <a href="#" class="masonry__link">
+                        <a href="<?= $post->get_link(); ?>" class="masonry__link">
                             <?= $post->get_image('square_big'); ?>
                             <div class="grid__item one-half">
                                 <div class="masonry__item masonry__item--square"></div>

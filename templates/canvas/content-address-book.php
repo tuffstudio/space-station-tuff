@@ -94,3 +94,13 @@
         ?>
     </div>
 </section>
+<div class="pagination <?php if(get_next_posts_link() || get_previous_posts_link()) echo 'pagination--border' ?>">
+    <div class="grid grid--full">
+        <div class="grid__item one-half u--align-left">
+            <?php previous_posts_link(); ?>
+        </div><!--
+        --><div class="grid__item one-half u--align-right">
+            <?php next_posts_link(); ?>
+        </div>
+    </div>
+</div>

@@ -14,6 +14,14 @@
     }
 
     $related_case_study = CFS() -> get('related_case_study', $post_id);
+    $sidebar_fields = CFS() -> get(false, $post_id);
+
+    $page_url = urlencode(get_permalink());
+    $page_title = urlencode(get_the_title());
+
+    $facebook_share = 'https://www.facebook.com/sharer/sharer.php?u=' . $page_url . '&title=' . $page_title . '&display=popup';
+    $twitter_share = 'http://twitter.com/intent/tweet?status=' . $page_title . '+' . $page_url;
+    $linkedin_share = 'http://www.linkedin.com/shareArticle?mini=true&url=' . $page_url . '&title=' . $page_title;
 ?>
 <div class="grid grid--full">
     <div class="grid__item">
@@ -34,6 +42,36 @@
         </div>
     </div>
     <div class="grid__item tablet--two-thirds">
+        <div class="socials">
+            <script
+                type="text/javascript"
+                async defer
+                src="https://assets.pinterest.com/js/pinit.js"
+                data-pin-hover="true"
+                data-pin-tall="true">
+            </script>
+            <span class="social__title">Share</span>
+            <ul class="socials__list">
+                <li class="socials__list-item">
+                    <a href="<?= $facebook_share ?>" onclick="return !window.open(this.href, 'Facebook', 'width=640,height=580')">
+                        <span class="icon icon-facebook"></span>
+                    </a>
+                </li>
+                <li class="socials__list-item">
+                    <a href="<?= $twitter_share ?>" onclick="return !window.open(this.href, 'Twitter', 'width=640,height=380')">
+                        <span class="icon icon-twitter"></span>
+                    </a>
+                </li>
+                <li class="socials__list-item">
+                    <a data-pin-do="buttonBookmark" data-pin-custom="true" data-pin-log="button_pinit_bookmarklet" href="https://pl.pinterest.com/pin/create/button/">
+                        <span class="icon icon-pinterest"></span>
+                    </a>
+                </li>
+                <li class="socials__list-item">
+                    <a href="mailto:?subject=<?php the_title(); ?>"><span class="icon icon-email"></span></a>
+                </li>
+            </ul>
+        </div>
         <div class="canvas-post__content">
             <div class="canvas-post__post">
                 <?php
@@ -68,35 +106,41 @@
     </div><!--
     --><div class="grid__item tablet--one-third">
         <div class="canvas-post__sidebar">
-            <div class="moving-box is-moved full-visible moving-box--static canvas-post__sidebar-box">
-                <div class="moving-box__element moving-box__content">
-                    <p class="moving-box__title">THE ART OF VALUATION</p>
-                    <p class="moving-box__text">
-                        <?php // TODO: Remember to replace lorem text with correct one ?>
-                        Ta nobit quam, to amniet que ficipidus nam as quislinerercst
-                    </p>
-                    <a href="#" class="btn btn--primary">Download now</a>
+            <?php if($sidebar_fields['sidebar_first_box']): ?>
+                <div class="moving-box is-moved full-visible moving-box--static canvas-post__sidebar-box">
+                    <div class="moving-box__element moving-box__content">
+                        <p class="moving-box__title">THE ART OF VALUATION</p>
+                        <p class="moving-box__text">
+                            <?php // TODO: Remember to replace lorem text with correct one ?>
+                            Ta nobit quam, to amniet que ficipidus nam as quislinerercst
+                        </p>
+                        <a href="#" class="btn btn--primary">Download now</a>
+                    </div>
+                    <div class="moving-box__element moving-box__border"></div>
                 </div>
-                <div class="moving-box__element moving-box__border"></div>
-            </div>
+            <?php endif; ?>
 
-            <div class="canvas-post__sidebar-box">
-                <a href="/?s=" class="masonry__link">
-                    <div class="masonry__item masonry__item--square">
-                        <div class="masonry__tile masonry__tile-link masonry__tile-link--brown">
-                            <span>Find a property</span>
+            <?php if($sidebar_fields['sidebar_second_box']): ?>
+                <div class="canvas-post__sidebar-box">
+                    <a href="/?s=" class="masonry__link">
+                        <div class="masonry__item masonry__item--square">
+                            <div class="masonry__tile masonry__tile-link masonry__tile-link--brown">
+                                <span>Find a property</span>
+                            </div>
                         </div>
-                    </div>
-                </a>
-            </div>
+                    </a>
+                </div>
+            <?php endif; ?>
 
-            <div class="canvas-post__sidebar-box">
-                <a href="#" class="masonry__link">
-                    <div class="masonry__item masonry__item--square">
-                        <div class="masonry__tile masonry__tile-link masonry__tile-link--blackbook"></div>
-                    </div>
-                </a>
-            </div>
+            <?php if($sidebar_fields['sidebar_third_box']): ?>
+                <div class="canvas-post__sidebar-box">
+                    <a href="#" class="masonry__link">
+                        <div class="masonry__item masonry__item--square">
+                            <div class="masonry__tile masonry__tile-link masonry__tile-link--blackbook"></div>
+                        </div>
+                    </a>
+                </div>
+            <?php endif; ?>
 
             <?php
                 if ($related_case_study):
