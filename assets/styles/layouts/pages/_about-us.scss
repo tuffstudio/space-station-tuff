@@ -1,21 +1,16 @@
 // About us page styles
 // ---------------------
 .about__members-title {
-    @include min-screen($desktop) {
-        padding-left: 30px;
-    }
+    padding-left: 30px;
 }
 
 .team-members {
     position: relative;
+    margin-top: -16px;
+    padding-top: 70px;
 
-    &::before {
-        content: '';
-        display: block;
-        position: absolute;
-        top: -100px;
-        width: 100%;
-        height: 100px;
-        background-image: url('../images/bg-paper.png');
+    @include min-screen($desktop) {
+        margin-top: -40px;
+        padding-top: 140px;
     }
 }

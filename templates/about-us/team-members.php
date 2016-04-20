@@ -11,7 +11,7 @@
             $team_member{$index} = new MagazinePost\TeamMember($member_id);
         }
     ?>
-    <div class="container">
+    <div class="container--mobile-full container">
         <h2 class="section__title about__members-title">
             <?= $title; ?>
         </h2>
