@@ -135,20 +135,24 @@ main {
     }
 }
 
-.background--skew-commercial:first-of-type {
-    &::after {
-        @include background-cover('commercial_bg_phone.jpg');
-        height: 90%;
-        transform: skewY(-9deg);
+$pages: ('commercial', 'investment');
 
-        @include min-screen($tablet) {
-            @include background-cover('commercial_bg_tablet.jpg');
-            height: 100%;
-        }
+@each $page in $pages {
+    .background--skew-#{$page}:first-of-type {
+        &::after {
+            @include background-cover('#{$page}_bg_phone.jpg');
+            height: 90%;
+            transform: skewY(-9deg);
 
-        @include min-screen($desktop) {
-            @include background-cover('commercial_bg.jpg');
-            height: 105%;
+            @include min-screen($tablet) {
+                @include background-cover('#{$page}_bg_tablet.jpg');
+                height: 100%;
+            }
+
+            @include min-screen($desktop) {
+                @include background-cover('#{$page}_bg.jpg');
+                height: 105%;
+            }
         }
     }
 }
