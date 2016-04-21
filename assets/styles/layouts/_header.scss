@@ -284,6 +284,7 @@
 .user-box {
     display: none;
     position: relative;
+    vertical-align: middle;
     z-index: 5;
 
     @include min-screen($desktop) {
@@ -292,13 +293,19 @@
 }
 
 .user-box__trigger {
-    padding: 10px 30px 10px 15px;
+    padding: 8px 30px 6px 8px;
     transition: color $standard-animation-time ease;
     color: $menu-link-color;
     cursor: pointer;
 
+    @include min-screen($desktop-medium) {
+        padding: 8px 40px 6px 20px;
+    }
+
     &:hover {
-        color: $menu-link-color-hover;
+        .user-box__icon {
+            fill: $white;
+        }
     }
 }
 

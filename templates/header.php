@@ -14,7 +14,13 @@
 
                     <div class="user-box js-user-box">
                         <div class="user-box__trigger js-user-box-trigger">
-                            <i class="icon icon-heart"></i>
+                            <svg version="1.1" class="user-box__icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                width="23.886px" height="22.815px" viewBox="247.274 242.936 23.886 22.815"
+                                enable-background="new 247.274 242.936 23.886 22.815" xml:space="preserve">
+                            <polygon class="user-box__icon" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="
+                                259.217,243.936 262.599,250.788 270.16,251.887 264.688,257.221 265.98,264.751 259.217,261.195 252.454,264.751 253.746,257.221
+                                248.274,251.887 255.835,250.788 "/>
+                            </svg>
                         </div>
                         <div class="user-box__content">
                             <h3 class="masonry__tile-title">User box</h3>
