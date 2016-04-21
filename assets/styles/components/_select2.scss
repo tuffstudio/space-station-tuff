@@ -50,3 +50,15 @@
         font-family: $font-icons;
     }
 }
+
+.select2-dropdown {
+    background-color: rgba($white, .9);
+}
+
+.select2-container--default .select2-results__option--highlighted {
+    background-color: rgba($input-bg-color, .5) !important;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__placeholder {
+    color: $black;
+}
