@@ -175,7 +175,7 @@ window.SS.common = function($) {
     function revealSections() {
         $('.js-section-reveal').viewportChecker({
             classToAdd: 'is-revealed',
-            offset: 100
+            offset: 50
         });
     }
 
