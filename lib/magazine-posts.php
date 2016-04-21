@@ -49,3 +49,7 @@ class CaseStudyPost extends MagazinePost {
         return strlen($video_link) != 0 ? true : false;
     }
 }
+
+class TeamMember extends MagazinePost {
+    
+}

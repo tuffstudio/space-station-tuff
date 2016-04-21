@@ -2,6 +2,7 @@
 // -----------
 .section {
     margin: 50px 0;
+    z-index: 1;
 
     @include min-screen($tablet) {
         margin: 120px 0;
@@ -64,6 +65,35 @@
 
     @include min-screen($desktop) {
         margin-top: 70px;
+    }
+}
+
+.section--between-skew {
+    padding: 50px 0;
+
+    @include min-screen($tablet) {
+        padding: 0;
+    }
+
+    @include min-screen($desktop) {
+        padding: 0 0 60px;
+    }
+}
+
+.section--background {
+    background-image: url('../images/bg-paper.png');
+}
+
+.section--background-space {
+    margin: 0;
+    padding: 50px 0;
+
+    @include min-screen($tablet) {
+        padding: 120px 0;
+    }
+
+    @include min-screen($desktop) {
+        padding: 150px 0;
     }
 }
 
