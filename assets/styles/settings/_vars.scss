@@ -87,13 +87,13 @@ $moving-box-title-letterspacing: 2px;
 $moving-box-text-size: rem-calc(11);
 $moving-box-text-font: $secondary-font-family;
 
-// Homepage case studies
+// Case studies
 // ---------------------
 $case-study-category-size: rem-calc(14);
 $case-study-category-color: $color-primary;
 $case-study-title-size: 30;
 $case-study-title-font: $font-heavy;
-$case-study-description-size: rem-calc(12);
+$case-study-description-size: rem-calc(14);
 
 // Sections
 // ------------
@@ -102,7 +102,7 @@ $section-title-size-desktop: rem-calc(30);
 $section-title-font: $font-heavy;
 $section-subtitle-size: rem-calc(14);
 $section-subtitle-font: $font-book;
-$section-animation-transition: transform 650ms ease-out, opacity 1000ms ease;
+$section-animation-transition: transform 450ms ease-out, opacity 800ms ease;
 $section-animation-transform: translateY(175);
 
 // Masonry grid
@@ -166,7 +166,7 @@ $property-title-letterspacing: 2px;
 $property-price-font-size: rem-calc(16);
 $property-type-font: $font-light;
 $property-type-font-size: $property-price-font-size;
-$property-desc-font: $font-book;
+$property-desc-font: $font-light;
 $property-desc-font-size: rem-calc(14);
 
 // Overlay

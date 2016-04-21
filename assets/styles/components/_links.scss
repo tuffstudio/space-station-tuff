@@ -47,6 +47,6 @@
     overflow: hidden;
 
     @include min-screen($desktop) {
-        max-height: 135px;
+        max-height: 175px;
     }
 }

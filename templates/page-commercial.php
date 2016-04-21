@@ -1,16 +1,15 @@
+<div class="background--skew background--skew-<?php echo strtolower(get_the_title()); ?>">
+    <?php
+        include('commercial/informations.php');
+        $page_id = $post->ID;
 
-<?php
-    include('commercial/informations.php');
-    $page_id = $post->ID;
-?>
-
-<div class="bg--slant ">
-    <?php include('components/case-studies.php'); ?>
+        include('components/case-studies.php');
+    ?>
 </div>
 
 <?php
     if ($page_id == 74) {
-        include('commercial/properies.php');
+        include('commercial/properties.php');
     }
     include('homepage/stay-in-touch.php');
 ?>

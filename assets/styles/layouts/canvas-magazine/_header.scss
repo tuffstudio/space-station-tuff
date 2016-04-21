@@ -10,14 +10,21 @@
     display: block;
     max-width: 100%;
     margin: 0 auto;
+    pointer-events: none;
 }
 
 .canvas__title-img--small {
+
     @include min-screen($desktop) {
         display: block;
         max-width: 55%;
         margin: 0 0 10px 10px;
     }
+}
+
+.canvas__header-link {
+    display: block;
+    text-align: center;
 }
 
 .canvas__logo {
@@ -38,5 +45,20 @@
         transition: max-height 2 * $standard-animation-time ease-in-out,
                     2 * $standard-animation-time opacity $standard-animation-time ease-in-out;
         opacity: 1;
+    }
+}
+
+.path {
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    animation: dash 5s linear alternate infinite;
+}
+
+@keyframes dash {
+    from {
+        stroke-dashoffset: 1000;
+    }
+    to {
+        stroke-dashoffset: 0;
     }
 }

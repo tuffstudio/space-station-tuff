@@ -23,11 +23,12 @@
 
 .navigation__brand-link {
     display: inline-block;
-    margin-left: 10px;
-    padding: 13px 0 13px 70px;
+    margin-left: 15px;
+    padding: 13px 0 13px 50px;
     background-image: url('../images/footer_logo.svg');
     background-repeat: no-repeat;
-    background-size: contain;
+    background-position: center left;
+    background-size: 23%;
     color: $brand-link-color;
     font-size: $brand-link-size;
     letter-spacing: 2px;
@@ -283,6 +284,7 @@
 .user-box {
     display: none;
     position: relative;
+    vertical-align: middle;
     z-index: 5;
 
     @include min-screen($desktop) {
@@ -291,13 +293,19 @@
 }
 
 .user-box__trigger {
-    padding: 10px 40px 10px 20px;
+    padding: 8px 30px 6px 8px;
     transition: color $standard-animation-time ease;
     color: $menu-link-color;
     cursor: pointer;
 
+    @include min-screen($desktop-medium) {
+        padding: 8px 40px 6px 20px;
+    }
+
     &:hover {
-        color: $menu-link-color-hover;
+        .user-box__icon {
+            fill: $white;
+        }
     }
 }
 
@@ -308,15 +316,15 @@
     bottom: 0;
     width: 200px;
     padding: 20px;
+    transition: right $standard-animation-time ease;
     background: $overlay-content-bg;
     font-size: $brand-link-size;
     text-align: left;
-    transition: right $standard-animation-time ease;
 
     ul {
-        list-style: none;
         margin: 0;
         padding: 20px 0;
+        list-style: none;
 
         > li {
             display: block;
@@ -331,11 +339,11 @@
     right: 0;
     bottom: 0;
     left: 0;
-    background-color: $overlay-bg;
-    z-index: -1;
-    opacity: 0;
     transition: opacity $standard-animation-time ease;
+    background-color: $overlay-bg;
     pointer-events: none;
+    opacity: 0;
+    z-index: -1;
 }
 
 .user-box-is-opened {
