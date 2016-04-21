@@ -27,7 +27,7 @@
                 --><div class="grid__item">
                     <div class="grid__item">
                         <?php
-                            if(array_key_exists(0, $magazine_posts)):
+                            if(array_key_exists(0, $magazine_posts)) :
                                 $post = $magazine{0};
                         ?>
                             <a href="<?= $post->get_link(); ?>" class="masonry__link">
@@ -43,7 +43,6 @@
                                             <div class="masonry__tile-info">
                                                 <p class="masonry__tile-category"><span><?= $post->get_category(); ?></span></p>
                                                 <h3 class="masonry__tile-title"><?= $post->get_title() ?></h3>
-                                                <p class="masonry__tile-desc masonry__tile-desc--small"><?= $post->get_excerpt(); ?></p>
                                             </div>
                                         </div>
                                     </div>
@@ -53,7 +52,7 @@
                     </div><!--
                     --><div class="grid__item">
                         <?php
-                            if(array_key_exists(1, $magazine_posts)):
+                            if(array_key_exists(1, $magazine_posts)) :
                                 $post = $magazine{1};
                         ?>
                             <a href="<?= $post->get_link(); ?>" class="masonry__link">
@@ -64,7 +63,6 @@
                                             <div class="masonry__tile-info">
                                                 <p class="masonry__tile-category"><span><?= $post->get_category(); ?></span></p>
                                                 <h3 class="masonry__tile-title"><?= $post->get_title(); ?></h3>
-                                                <p class="masonry__tile-desc masonry__tile-desc--small"><?= $post->get_excerpt(); ?></p>
                                             </div>
                                         </div>
                                     </div>
@@ -82,7 +80,7 @@
             --><div class="grid__item tablet--one-half">
                 <div class="grid__item">
                     <?php
-                        if(array_key_exists(2, $magazine_posts)):
+                        if(array_key_exists(2, $magazine_posts)) :
                             $post = $magazine{2};
                     ?>
                         <a href="<?= $post->get_link(); ?>" class="masonry__link">
@@ -93,7 +91,6 @@
                                         <div class="masonry__tile-info">
                                             <p class="masonry__tile-category"><span><?= $post->get_category(); ?></span></p>
                                             <h3 class="masonry__tile-title"><?= $post->get_title(); ?></h3>
-                                            <p class="masonry__tile-desc masonry__tile-desc--small"><?= $post->get_excerpt(); ?></p>
                                         </div>
                                     </div>
                                 </div>
@@ -123,7 +120,6 @@
                                         <div class="masonry__tile-info">
                                             <p class="masonry__tile-category"><span><?= $post->get_category(); ?></span></p>
                                             <h3 class="masonry__tile-title"><?= $post->get_title(); ?></h3>
-                                            <p class="masonry__tile-desc masonry__tile-desc--small"><?= $post->get_excerpt(); ?></p>
                                         </div>
                                     </div>
                                 </div>
