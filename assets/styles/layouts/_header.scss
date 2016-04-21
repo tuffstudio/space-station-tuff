@@ -23,11 +23,12 @@
 
 .navigation__brand-link {
     display: inline-block;
-    margin-left: 10px;
-    padding: 13px 0 13px 70px;
+    margin-left: 15px;
+    padding: 13px 0 13px 50px;
     background-image: url('../images/footer_logo.svg');
     background-repeat: no-repeat;
-    background-size: contain;
+    background-position: center left;
+    background-size: 23%;
     color: $brand-link-color;
     font-size: $brand-link-size;
     letter-spacing: 2px;
