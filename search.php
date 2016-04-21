@@ -56,20 +56,20 @@
                     </ul>
                     <ul class="view-nav">
                         <li class="view-nav__item">
-                            <a href="#dynamic-view" class="js-grid-switcher">dynamic view</a>
+                            <a href="#dynamic-view" class="active js-grid-switcher">dynamic view</a>
                         </li><!--
                         --><li class="view-nav__item">
                             <a href="#grid-view" class="js-grid-switcher">grid view</a>
                         </li><!--
                         --><li class="view-nav__item">
-                            <a href="#map-view" class="active js-grid-switcher">map view</a>
+                            <a href="#map-view" class="js-grid-switcher">map view</a>
                         </li>
                     </ul>
                 </div>
             </div>
         </div>
         <div class="search-results__body">
-            <div id="dynamic-view" class="search-results__block js-results-block">
+            <div id="dynamic-view" class="search-results__block js-results-block visible">
                 <div class="search-results--dynamic">
                     <?php if (have_posts()) : the_post(); ?>
                         <?php get_template_part('templates/searchpage/dynamic', 'view'); ?>
@@ -98,7 +98,7 @@
                 </div>
             </div>
 
-            <div id="map-view" class="search-results__block js-results-block visible">
+            <div id="map-view" class="search-results__block js-results-block">
                 <div class="search-results--map">
                     <?php if (have_posts()) : the_post(); ?>
                         <?php get_template_part('templates/searchpage/map', 'view'); ?>
