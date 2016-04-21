@@ -83,7 +83,7 @@
                     </span>
                 </p>
 
-                <p>
+                <p class="business-directory__description">
                     <?= $text ?>
                 </p>
             </div>
