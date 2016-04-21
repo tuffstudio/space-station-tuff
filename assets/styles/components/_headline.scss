@@ -78,7 +78,7 @@
     text-transform: uppercase;
 
     @include min-screen($desktop) {
-        font-size: $masonry-title-size;
+        font-size: rem-calc(18);
     }
 }
 
