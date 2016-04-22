@@ -1,7 +1,7 @@
 <?php use Roots\Sage\MagazinePost; ?>
 <?php include 'canvas/header.php'; ?>
 
-<section class="section section--bottom-stains">
+<section class="section--bottom-space section--bottom-stains">
     <div class="container js-canvas">
         <div class="grid grid--full">
             <div class="grid__item desktop--one-quarter js-target">
@@ -52,5 +52,6 @@
         </div>
     </div>
 </section>
+
 
 <?php include 'homepage/stay-in-touch.php'; ?>
