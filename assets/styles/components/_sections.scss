@@ -171,8 +171,7 @@
 
     &::before {
         @extend %bg-stain;
-        background-image: url('../images/bg-top-right.png');
-        background-position: top right;
+        @include background-cover('splatter_top.png', 100% -55px, cover);
 
         @include min-screen($tablet) {
             display: block;
