@@ -1,8 +1,6 @@
 // Text/Paragraph styles
 // --------------------
-.text-description {
-    columns: 2 300px;
-    column-gap: 40px;
+%normal-text {
     font-family: $font-light;
     font-size: rem-calc(14);
     line-height: 1.8em;
@@ -15,10 +13,6 @@
         font-size: rem-calc(16);
     }
 
-    p:first-of-type {
-        margin-top: 0;
-    }
-
     a {
         color: $black;
         font-family: $font-heavy;
@@ -28,6 +22,20 @@
         .is-desktop &:hover {
             text-decoration: underline;
         }
+    }
+}
+
+.paragraph--default {
+    @extend %normal-text;
+}
+
+.text-description {
+    @extend %normal-text;
+    columns: 2 300px;
+    column-gap: 40px;
+
+    p:first-of-type {
+        margin-top: 0;
     }
 }
 

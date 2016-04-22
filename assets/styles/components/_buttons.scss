@@ -21,6 +21,24 @@
     }
 }
 
+.btn--brand {
+    padding: 8px 12px 7px;
+    border: 0;
+    outline: 0;
+    background-color: $btn-primary-border-hover;
+    border: 1px solid $btn-primary-border-hover;
+    color: $white;
+    font-family: $font-medium;
+    font-size: rem-calc(12);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+
+    &:hover {
+        background-color: transparent;
+        color: $btn-primary-border-hover;
+    }
+}
+
 .btn--primary {
     padding: $btn-primary-padding;
     border: 1px solid $btn-primary-border-color;
@@ -133,5 +151,19 @@
 
     .is-desktop &:hover {
         background-color: darken($color-primary, 5%);
+    }
+}
+
+.btn-right-container {
+    margin: 30px 0;
+    text-align: center;
+
+    @include min-screen($desktop) {
+        text-align: right;
+    }
+
+    .btn {
+        margin: 7px 10px;
+        padding: 10px 15px;
     }
 }
