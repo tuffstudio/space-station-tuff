@@ -1,0 +1,115 @@
+// Favourities aside styles
+// -----------------------
+
+.favourites-box {
+    display: none;
+    position: relative;
+    vertical-align: middle;
+    z-index: 5;
+
+    @include min-screen($desktop) {
+        display: inline-block;
+    }
+}
+
+.favourites-box__trigger {
+    padding: 8px 30px 6px 8px;
+    transition: color $standard-animation-time ease;
+    color: $menu-link-color;
+    cursor: pointer;
+
+    @include min-screen($desktop-medium) {
+        padding: 8px 40px 6px 20px;
+    }
+
+    &:hover {
+        .favourites-box__icon {
+            fill: $white;
+            stroke: $white;
+        }
+    }
+
+    .favourites-box__icon {
+        transition: all $standard-animation-time ease-in-out;
+    }
+}
+
+.favourites-box__content {
+    position: fixed;
+    top: 50px;
+    right: -$favourites-box-width;
+    bottom: 0;
+    width: $favourites-box-width;
+    padding: 20px;
+    transition: right $standard-animation-time ease-in-out;
+    background: $overlay-content-bg;
+    font-size: $brand-link-size;
+    text-align: left;
+    overflow-y: scroll;
+}
+
+.favourites-box__overlay {
+    position: fixed;
+    top: 50px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transition: opacity $standard-animation-time ease-in-out;
+    background-color: $overlay-bg;
+    pointer-events: none;
+    opacity: 0;
+    z-index: -1;
+}
+
+.favourites-box-is-opened {
+    right: $favourites-box-width * 0.5;
+    overflow: hidden;
+
+    .favourites-box__overlay {
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    .favourites-box__content {
+        right: 0;
+    }
+}
+
+.favourites-box__information {
+    padding-left: 10px;
+    text-align: center;
+}
+
+.favourites-box__title {
+    margin: 0 auto;
+    font-family: $masonry-title-font;
+    font-size: rem-calc(12);
+    letter-spacing: 1px;
+    line-height: 1.3;
+    text-transform: uppercase;
+
+    @include min-screen($desktop) {
+        font-size: rem-calc(13);
+    }
+}
+
+.favourites-box__price {
+    margin: 5px 0;
+    font-family: $masonry-price-font;
+    font-size: rem-calc(11);
+
+    &::before {
+        content: '£';
+    }
+}
+
+.favourites-box__img {
+    padding: 10px 0;
+}
+
+.favourites-box--has-properties {
+    .favourites-box__icon {
+        fill: $color-primary;
+        stroke: $color-primary;
+    }
+}

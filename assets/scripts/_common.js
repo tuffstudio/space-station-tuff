@@ -2,13 +2,14 @@ window.SS = window.SS || {};
 
 window.SS.common = function($) {
     var $window = $(window);
+    var $body = $('body');
     var isDesktop = $window.width() > 1024 ? true : false;
     var $navTrigger = $('.js-nav-trigger');
     var $mobileNavigation = $('.js-primary-nav');
 
     function setIsMobile() {
         if (isDesktop) {
-            $('body').addClass('is-desktop');
+            $body.addClass('is-desktop');
         }
     }
 
@@ -48,16 +49,18 @@ window.SS.common = function($) {
     }
 
     function userBox() {
-        var $userBox = $('.js-user-box');
-        var $userBoxTrigger = $userBox.find('.js-user-box-trigger');
-        var $userBoxClose = $userBox.find('.js-user-box-close');
+        var $userBox = $('.js-favourites-box');
+        var $userBoxTrigger = $userBox.find('.js-favourites-box-trigger');
+        var $userBoxClose = $userBox.find('.js-favourites-box-close');
+        var $subMenu = $('.sub-menu');
 
         $userBoxTrigger.on('click', function() {
-            $('body').toggleClass('user-box-is-opened');
+            $body.toggleClass('favourites-box-is-opened');
+            $subMenu.removeClass('is-opened');
         });
 
         $userBoxClose.on('click', function() {
-            $('body').removeClass('user-box-is-opened');
+            $body.removeClass('favourites-box-is-opened');
         });
     }
 
@@ -84,6 +87,7 @@ window.SS.common = function($) {
                 $this.on('click', function(event) {
                     var toggled = !$subMenu.hasClass('is-opened');
                     var isSpecialItem = $(this).hasClass('Item--find-a-property');
+                    $body.removeClass('favourites-box-is-opened');
 
                     if(toggled) {
                         $('.sub-menu').removeClass('is-opened');
