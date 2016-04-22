@@ -109,6 +109,11 @@ main {
                 top: -20%;
                 height: 130%;
             }
+
+            @include min-screen($desktop) {
+                top: -27%;
+                height: 135%;
+            }
         }
     }
 
@@ -129,8 +134,8 @@ main {
         }
 
         @include min-screen($desktop) {
-            top: -27%;
-            height: 138%;
+            top: -22%;
+            height: 136%;
         }
     }
 }
