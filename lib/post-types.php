@@ -98,7 +98,7 @@ function custom_post_types_init() {
 
     $args_team_member = array(
         'labels'             => $labels_team_member,
-        'public'             => true,
+        'public'             => false,
         'publicly_queryable' => true,
         'show_ui'            => true,
         'show_in_menu'       => true,
