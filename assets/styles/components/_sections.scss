@@ -188,10 +188,10 @@
 // Each homepage sections
 // ----------------------
 .magazine {
-    @include background-cover('splash_bg.png', 80% 0, auto);
     margin-bottom: 0;
 
     @include min-screen($desktop) {
+        @include background-cover('homepage_splatter.png', center 200px, cover);
         padding: 100px 0 150px;
     }
 }
