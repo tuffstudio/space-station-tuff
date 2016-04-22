@@ -135,6 +135,16 @@ main {
     }
 }
 
+.background--skew-half:first-of-type {
+    &::after {
+        height: 50%;
+
+        @include min-screen($desktop) {
+            top: -27%;
+        }
+    }
+}
+
 $pages: ('commercial', 'investment');
 
 @each $page in $pages {
