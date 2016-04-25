@@ -1,9 +1,86 @@
 // Footer styling
 // ---------------
 .footer {
-    min-height: 300px;
+    padding: 50px 0;
     background-color: $footer-bg-color;
+    color: $footer-color;
+    font-size: rem-calc(11);
+    letter-spacing: 0.1em;
 }
+
+.footer__contact {
+    padding: 40px 20px 40px 30px;
+}
+
+.footer__headline {
+    text-transform: uppercase;
+}
+
+.footer--link {
+    display: block;
+    position: relative;
+    margin: 4px 0;
+    color: $footer-color;
+    text-decoration: none;
+    transition: color $standard-animation-time ease-in-out;
+
+    &:before {
+        position: absolute;
+        left: -25px;
+        color: $color-primary;
+        font-size: rem-calc(10);
+    }
+}
+
+.footer__view-map {
+    @extend .link--italic;
+    display: inline-block;
+    margin: 15px 0 0;
+    padding: 0;
+    color: $color-primary;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+a.footer--link:hover {
+    color: $color-primary;
+}
+
+.footer__address {
+    &:before {
+        content: 'A';
+    }
+}
+
+.footer__email {
+    &:before {
+        content: 'E';
+    }
+}
+
+.footer__telephone {
+    &:before {
+        content: 'T';
+    }
+}
+
+.footer__logo {
+    display: inline-block;
+    color: $footer-color;
+    font-size: rem-calc(16);
+    letter-spacing: 2px;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    span {
+        position: relative;
+        top: -10px;
+        padding-left: 10px;
+    }
+}
+
 
 // Go to top button
 // ----------------

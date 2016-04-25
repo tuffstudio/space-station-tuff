@@ -22,7 +22,8 @@ $sage_includes = [
   'lib/magazine-posts.php',      // Magazie Posts class
   'lib/categories-in-page.php',  // Categories in page
   'lib/taxonomies.php',          // Custom taxonomies
-  'lib/shortcodes.php'           // Custom shortcodes
+  'lib/shortcodes.php',           // Custom shortcodes
+  'lib/menus.php'                // Additional navigation
 ];
 
 foreach ($sage_includes as $file) {

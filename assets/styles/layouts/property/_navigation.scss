@@ -44,3 +44,18 @@
         }
     }
 }
+
+.footer__nav {
+    padding: 35px 0 0 35px;
+    list-style: none;
+    text-transform: uppercase;
+    column-count: 2;
+    column-gap: 30px;
+
+    a {
+        display: inline-block;
+        padding: 10px 0;
+        color: $footer-color;
+        text-decoration: none;
+    }
+}
