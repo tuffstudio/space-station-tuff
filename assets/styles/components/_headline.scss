@@ -27,6 +27,27 @@
 
 // Headline styles
 // --------------------
+%headline-default {
+    margin-top: 16px;
+    font-family: $case-study-title-font;
+    font-size: rem-calc($case-study-title-size * .7);
+    letter-spacing: 3px;
+    text-transform: uppercase;
+
+    @include min-screen($tablet) {
+        font-size: rem-calc($case-study-title-size * .85);
+    }
+
+    @include min-screen($desktop) {
+        font-size: rem-calc($case-study-title-size);
+    }
+
+    a {
+        color: $black;
+        text-decoration: none;
+    }
+}
+
 .headline--main {
     margin: .8em 0 1.2em;
     font-family: $font-light;
@@ -49,24 +70,7 @@
 }
 
 .headline--default {
-    margin-top: 16px;
-    font-family: $case-study-title-font;
-    font-size: rem-calc($case-study-title-size * .7);
-    letter-spacing: 3px;
-    text-transform: uppercase;
-
-    @include min-screen($tablet) {
-        font-size: rem-calc($case-study-title-size * .85);
-    }
-
-    @include min-screen($desktop) {
-        font-size: rem-calc($case-study-title-size);
-    }
-
-    a {
-        color: $black;
-        text-decoration: none;
-    }
+    @extend %headline-default;
 }
 
 .headline--small {
@@ -79,6 +83,19 @@
 
     @include min-screen($desktop) {
         font-size: rem-calc(18);
+    }
+}
+
+.headline--middle {
+    @extend %headline-default;
+    font-size: rem-calc($case-study-title-size * .6);
+
+    @include min-screen($tablet) {
+        font-size: rem-calc($case-study-title-size * .7);
+    }
+
+    @include min-screen($desktop) {
+        font-size: rem-calc($case-study-title-size * .75);
     }
 }
 

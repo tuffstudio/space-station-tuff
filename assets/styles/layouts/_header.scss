@@ -147,7 +147,8 @@
         color: $white;
     }
 
-    &.is-normal {
+    &.is-normal,
+    .favourites-box--is-opened & {
         > li:nth-last-child(2) > a {
             &:after {
                 bottom: -4px;
@@ -278,81 +279,5 @@
 .menu-primary_navigation-container {
     @include min-screen($desktop) {
         display: inline-block;
-    }
-}
-
-.user-box {
-    display: none;
-    position: relative;
-    vertical-align: middle;
-    z-index: 5;
-
-    @include min-screen($desktop) {
-        display: inline-block;
-    }
-}
-
-.user-box__trigger {
-    padding: 8px 30px 6px 8px;
-    transition: color $standard-animation-time ease;
-    color: $menu-link-color;
-    cursor: pointer;
-
-    @include min-screen($desktop-medium) {
-        padding: 8px 40px 6px 20px;
-    }
-
-    &:hover {
-        .user-box__icon {
-            fill: $white;
-        }
-    }
-}
-
-.user-box__content {
-    position: fixed;
-    top: 0;
-    right: -100%;
-    bottom: 0;
-    width: 200px;
-    padding: 20px;
-    transition: right $standard-animation-time ease;
-    background: $overlay-content-bg;
-    font-size: $brand-link-size;
-    text-align: left;
-
-    ul {
-        margin: 0;
-        padding: 20px 0;
-        list-style: none;
-
-        > li {
-            display: block;
-            padding: 5px 20px;
-        }
-    }
-}
-
-.user-box__overlay {
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    transition: opacity $standard-animation-time ease;
-    background-color: $overlay-bg;
-    pointer-events: none;
-    opacity: 0;
-    z-index: -1;
-}
-
-.user-box-is-opened {
-    .user-box__overlay {
-        opacity: 1;
-        pointer-events: auto;
-    }
-
-    .user-box__content {
-        right: 0;
     }
 }
