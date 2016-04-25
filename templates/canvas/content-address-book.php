@@ -58,7 +58,6 @@
                     <?php the_post_thumbnail('medium', array( 'class' => 'img--responsive') ); ?>
                 </a>
                 <p class="section__category">
-                    Directory:
                     <a href="<?= $category_link ?>">
                         <?= $category_name ?>
                     </a>

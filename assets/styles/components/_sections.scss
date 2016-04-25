@@ -106,6 +106,12 @@
     a {
         color: $case-study-category-color;
         text-decoration: none;
+        text-transform: capitalize;
+        transition: color $standard-animation-time ease-in-out;
+    }
+
+    a:hover {
+        color: darken($case-study-category-color, 10%);
     }
 
     .is-desktop a:hover {
