@@ -22,6 +22,8 @@
     $facebook_share = 'https://www.facebook.com/sharer/sharer.php?u=' . $page_url . '&title=' . $page_title . '&display=popup';
     $twitter_share = 'http://twitter.com/intent/tweet?status=' . $page_title . '+' . $page_url;
     $linkedin_share = 'http://www.linkedin.com/shareArticle?mini=true&url=' . $page_url . '&title=' . $page_title;
+
+    $art_of_valuation_url = get_option('art_of_valuation_url');
 ?>
 <div class="grid grid--full">
     <div class="grid__item">
@@ -114,7 +116,7 @@
                             <?php // TODO: Remember to replace lorem text with correct one ?>
                             Ta nobit quam, to amniet que ficipidus nam as quislinerercst
                         </p>
-                        <a href="#" class="btn btn--primary">Download now</a>
+                        <a href="<?= $art_of_valuation_url; ?>" class="btn btn--primary">Download now</a>
                     </div>
                     <div class="moving-box__element moving-box__border"></div>
                 </div>
