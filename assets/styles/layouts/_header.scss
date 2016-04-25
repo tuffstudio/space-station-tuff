@@ -147,7 +147,8 @@
         color: $white;
     }
 
-    &.is-normal, .favourites-box-is-opened & {
+    &.is-normal,
+    .favourites-box--is-opened & {
         > li:nth-last-child(2) > a {
             &:after {
                 bottom: -4px;

@@ -55,12 +55,12 @@ window.SS.common = function($) {
         var $subMenu = $('.sub-menu');
 
         $userBoxTrigger.on('click', function() {
-            $body.toggleClass('favourites-box-is-opened');
+            $body.toggleClass('favourites-box--is-opened');
             $subMenu.removeClass('is-opened');
         });
 
         $userBoxClose.on('click', function() {
-            $body.removeClass('favourites-box-is-opened');
+            $body.removeClass('favourites-box--is-opened');
         });
     }
 
@@ -87,7 +87,7 @@ window.SS.common = function($) {
                 $this.on('click', function(event) {
                     var toggled = !$subMenu.hasClass('is-opened');
                     var isSpecialItem = $(this).hasClass('Item--find-a-property');
-                    $body.removeClass('favourites-box-is-opened');
+                    $body.removeClass('favourites-box--is-opened');
 
                     if(toggled) {
                         $('.sub-menu').removeClass('is-opened');
