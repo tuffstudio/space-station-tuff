@@ -169,6 +169,8 @@
 }
 
 .section--middle-stains {
+    position: relative;
+
     &::before {
         @extend %bg-stain;
         @include background-cover('splatter_right.png', 100% 65%, 30%);

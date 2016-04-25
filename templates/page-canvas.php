@@ -2,7 +2,7 @@
 
 <div class="section--middle-stains">
     <section class="section--bottom-space section--bottom-stains">
-        <div class="container js-canvas section--middle-stains">
+        <div class="container js-canvas">
             <div class="grid grid--full">
                 <div class="grid__item desktop--one-quarter js-target">
                     <?php include 'canvas/navigation.php' ?>
