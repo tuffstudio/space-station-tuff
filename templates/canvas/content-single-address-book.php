@@ -24,7 +24,6 @@
     <?php the_post_thumbnail(false, array( 'class' => 'img--responsive') ); ?>
     <div class="business-directory__content">
         <p class="section__category">
-            Directory:
             <a href="<?= $category_link ?>">
                 <?= $category_name ?>
             </a>
@@ -46,6 +45,8 @@
                 </a>
             </span>
         </p>
-        <?= $content ?>
+        <div class="paragraph--default">
+            <?= $content ?>
+        </div>
     </div>
 </section>
