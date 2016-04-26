@@ -36,26 +36,33 @@ window.SS.contact = function($) {
 
     function initMap() {
         var initCoords = {
-            latitude: 51.5085300,
+            latitude: 51.5185300,
             longitude: -0.1257400
         };
+
+        var contactMapOptions = {
+            zoom: 13,
+            zoomControl: false,
+            scrollwheel: false
+        };
+
         var officePins = [
             {
-                title: 'Foobar',
+                title: 'Shoreditch',
                 coordinates: {
-                    lat: 51.5085300,
-                    lng: -0.1257400
+                    lat: 51.524596,
+                    lng: -0.081968
                 }
             },
             {
-                title: 'Boomar',
+                title: 'Bermondsey',
                 coordinates: {
                     lat: 51.5085300,
                     lng: -0.1857400
                 }
             }
         ];
-        var map = new window.SS.PropertyMap('contact-map', initCoords);
+        var map = new window.SS.PropertyMap('contact-map', initCoords, contactMapOptions);
         map.init();
 
         pins.first = map.setPin(officePins[0].coordinates, officePins[0].title);

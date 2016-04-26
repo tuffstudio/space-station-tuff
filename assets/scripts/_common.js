@@ -301,7 +301,7 @@ window.SS.initSelect2 = function () {
 };
 
 // Google map integration. Revealing module pattern
-window.SS.PropertyMap = function(id, initCoords) {
+window.SS.PropertyMap = function(id, initCoords, customOptions) {
     // private
     var map;
     var containerId = id;
@@ -326,6 +326,11 @@ window.SS.PropertyMap = function(id, initCoords) {
     };
     var allMarkers = [];
 
+    if (customOptions !== 'undefined') {
+        for (var option in customOptions) {
+            mapOptions[option] = customOptions[option];
+        }
+    }
 
     var createPin = function(LatLng, title) {
         var iconBase = '/wp-content/themes/spacestation/dist/images/';
