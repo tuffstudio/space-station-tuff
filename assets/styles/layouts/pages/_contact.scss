@@ -1,14 +1,17 @@
 // Contact page styles
 // --------------------
 .contact-section {
+    @include background-cover('contact_pageback_mobile.jpg');
     margin: 0;
     padding: 50px 0;
 
     @include min-screen($tablet) {
+        @include background-cover('contact_pageback_tablet.jpg');
         padding: 90px 0;
     }
 
     @include min-screen($desktop) {
+        @include background-cover('contact_pageback.jpg');
         padding: 100px 0;
     }
 }
@@ -86,10 +89,15 @@
 // Join us section
 // ---------
 .join-us {
-    @include background-cover('join-us-bg.jpg');
+    @include background-cover('social_background_mobile.jpg');
     padding: 50px 0;
 
+    @include min-screen($tablet) {
+        @include background-cover('social_background_tablet.jpg');
+    }
+
     @include min-screen($desktop) {
+        @include background-cover('social_background.jpg');
         padding: 75px 0;
     }
 }
