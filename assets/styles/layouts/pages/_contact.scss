@@ -82,3 +82,49 @@
         height: 325px;
     }
 }
+
+// Join us section
+// ---------
+.join-us {
+    @include background-cover('join-us-bg.jpg');
+    padding: 50px 0;
+
+    @include min-screen($desktop) {
+        padding: 75px 0;
+    }
+}
+
+.join-us__title {
+    margin: 0;
+    padding: 0;
+    color: $white;
+    font-family: $font-heavy;
+    letter-spacing: .1em;
+    line-height: 1;
+}
+
+.join-us__socials {
+    margin: 0;
+    list-style-type: none;
+}
+
+.join-us__social {
+    display: inline-block;
+
+    & + & {
+        margin-left: 20px;
+    }
+}
+
+.join-us__social-link {
+    padding: 12px 11px 8px;
+    transition: background-color $canvas-nav-animation;
+    background-color: $contact-time-color;
+    color: $white;
+    font-size: rem-calc(15);
+    text-decoration: none;
+
+    .is-desktop &:hover {
+        background-color: $color-primary;
+    }
+}
