@@ -1,6 +1,8 @@
 window.SS = window.SS || {};
 
 window.SS.contact = function($) {
+    var pins = {};
+
     function getLondonWeather() {
         $weather = $('.js-contact-weather');
         $.simpleWeather({
@@ -33,32 +35,58 @@ window.SS.contact = function($) {
     }
 
     function initMap() {
-        var map;
-        var containerId = 'contact-map';
-        var containerObject = document.getElementById(containerId);
         var initCoords = {
-            latitude: 50.2945,
-            longitude: 18.6714
+            latitude: 51.5085300,
+            longitude: -0.1257400
         };
+        var officePins = [
+            {
+                title: 'Foobar',
+                coordinates: {
+                    lat: 51.5085300,
+                    lng: -0.1257400
+                }
+            },
+            {
+                title: 'Boomar',
+                coordinates: {
+                    lat: 51.5085300,
+                    lng: -0.1857400
+                }
+            }
+        ];
+        var map = new window.SS.PropertyMap('contact-map', initCoords);
+        map.init();
 
-        var mapStyles = [{"featureType":"all","elementType":"labels.text.fill","stylers":[{"saturation":36},{"color":"#000000"},{"lightness":40}]},{"featureType":"all","elementType":"labels.text.stroke","stylers":[{"visibility":"on"},{"color":"#000000"},{"lightness":16}]},{"featureType":"all","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"administrative","elementType":"geometry.fill","stylers":[{"color":"#000000"},{"lightness":20}]},{"featureType":"administrative","elementType":"geometry.stroke","stylers":[{"color":"#000000"},{"lightness":17},{"weight":1.2}]},{"featureType":"landscape","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":20}]},{"featureType":"poi","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":21}]},{"featureType":"road.highway","elementType":"geometry.fill","stylers":[{"color":"#000000"},{"lightness":17}]},{"featureType":"road.highway","elementType":"geometry.stroke","stylers":[{"color":"#000000"},{"lightness":29},{"weight":0.2}]},{"featureType":"road.arterial","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":18}]},{"featureType":"road.local","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":16}]},{"featureType":"transit","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":19}]},{"featureType":"water","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":17}]}];
-
-        var mapOptions = {
-            zoom: 10,
-            center: new google.maps.LatLng(initCoords.latitude, initCoords.longitude),
-            styles: mapStyles,
-            mapTypeControl: false,
-            zoomControl: false,
-            streetViewControl: false,
-        };
-
-        map = new google.maps.Map(containerObject, mapOptions);
+        pins.first = map.setPin(officePins[0].coordinates, officePins[0].title);
+        pins.second = map.setPin(officePins[1].coordinates, officePins[1].title);
     }
 
+    function setOfficeActive() {
+        $links = $('.js-change-pin');
+
+        $links.each(function() {
+            var $this = $(this);
+
+            $this.on('click', function(event) {
+                event.preventDefault();
+                var target = $this.data('target');
+
+                for (var pin in pins) {
+                    pins[pin].changeIcon();
+                }
+
+                $('.js-office').removeClass('active');
+                $('#' + target).toggleClass('active');
+                pins[target].changeIcon('active');
+            });
+        });
+    }
 
     $(document).ready(function() {
-        initMap();
         getLondonWeather();
         getLondonTime();
+        initMap();
+        setOfficeActive();
     });
 };
