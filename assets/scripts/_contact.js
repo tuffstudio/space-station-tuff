@@ -1,14 +1,35 @@
 window.SS = window.SS || {};
 
 window.SS.contact = function($) {
-    function getWeather() {
+    function getLondonWeather() {
+        $weather = $('.js-contact-weather');
         $.simpleWeather({
             location: 'London',
             unit: 'c',
             success: function(weather) {
-                $('.js-contact-weather').html(weather.temp +'&deg;');
+                $weather.html(weather.temp +'&deg;');
             }
         });
+    }
+
+    function getLondonTime() {
+        var $time = $('.js-contact-time');
+        var timeOptions = {
+            hour: '2-digit',
+            minute: '2-digit',
+            hour12: false,
+            timeZone: 'Europe/London'
+        };
+
+        function setTime() {
+            var date = new Date();
+            var time = date.toLocaleString('en-EN', timeOptions);
+
+            $time.html(time);
+        }
+
+        setTime();
+        setInterval(setTime, 60000);
     }
 
     function initMap() {
@@ -37,6 +58,7 @@ window.SS.contact = function($) {
 
     $(document).ready(function() {
         initMap();
-        getWeather();
+        getLondonWeather();
+        getLondonTime();
     });
 };

@@ -1,5 +1,18 @@
 // Contact page styles
 // --------------------
+.contact-section {
+    margin: 0;
+    padding: 50px 0;
+
+    @include min-screen($tablet) {
+        padding: 90px 0;
+    }
+
+    @include min-screen($desktop) {
+        padding: 100px 0;
+    }
+}
+
 .contact__headline {
     font-size: rem-calc(52);
     letter-spacing: .3em;
@@ -26,7 +39,18 @@
     color: $contact-time-color;
 }
 
+.contact__office {
+    a {
+        color: $purple;
+    }
+
+    &.active a {
+        color: $color-primary;
+    }
+}
+
 .contact__office-name {
+    margin-bottom: 24px;
     font-family: $font-heavy;
     font-size: rem-calc(16);
     letter-spacing: .1em;
@@ -46,6 +70,7 @@
 }
 
 .contact__office-address {
+    margin: 21px 0;
     font-family: $font-light;
     font-size: rem-calc(15);
     letter-spacing: .1em;
