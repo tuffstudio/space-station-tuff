@@ -17,8 +17,12 @@
 }
 
 .contact__headline {
-    font-size: rem-calc(52);
+    font-size: rem-calc(40);
     letter-spacing: .3em;
+
+    @include min-screen($tablet) {
+        font-size: rem-calc(52);
+    }
 }
 
 .contact__info {
@@ -43,6 +47,12 @@
 }
 
 .contact__office {
+    margin-bottom: 40px;
+
+    @include min-screen($tablet) {
+        margin: 0;
+    }
+
     a {
         color: $purple;
     }
@@ -81,7 +91,9 @@
 }
 
 .contact__map {
-    @include min-screen($desktop) {
+    height: 400px;
+
+    @include min-screen($tablet) {
         height: 325px;
     }
 }
@@ -94,6 +106,7 @@
 
     @include min-screen($tablet) {
         @include background-cover('social_background_tablet.jpg');
+        padding: 60px 0;
     }
 
     @include min-screen($desktop) {
@@ -103,16 +116,21 @@
 }
 
 .join-us__title {
-    margin: 0;
+    margin: 0 0 40px;
     padding: 0;
     color: $white;
     font-family: $font-heavy;
     letter-spacing: .1em;
     line-height: 1;
+
+    @include min-screen($tablet) {
+        margin: 0;
+    }
 }
 
 .join-us__socials {
     margin: 0;
+    padding: 0;
     list-style-type: none;
 }
 

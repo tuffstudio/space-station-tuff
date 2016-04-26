@@ -1,10 +1,14 @@
 window.SS = window.SS || {};
 
 window.SS.contact = function($) {
+    var $window = $(window);
+    var $body = $('body');
     var pins = {};
+    var isDesktop = $window.width() > 1024 ? true : false;
 
     function getLondonWeather() {
         $weather = $('.js-contact-weather');
+
         $.simpleWeather({
             location: 'London',
             unit: 'c',
@@ -41,10 +45,14 @@ window.SS.contact = function($) {
         };
 
         var contactMapOptions = {
-            zoom: 13,
+            zoom: 11,
             zoomControl: false,
             scrollwheel: false
         };
+
+        if (isDesktop) {
+            contactMapOptions.zoom = 13;
+        }
 
         var officePins = [
             {

@@ -154,12 +154,22 @@
 }
 
 .btn-container {
+    margin: 20px 0 0;
+
+    @include min-screen($tablet) {
+        margin: 40px 0 0;
+    }
+
     @include min-screen($desktop) {
         margin: 55px 0 0;
     }
 
     .btn + .btn {
-        margin-left: 20px;
+        margin: 20px 0 0;
+
+        @include min-screen($tablet) {
+            margin: 0 0 0 20px;
+        }
     }
 }
 

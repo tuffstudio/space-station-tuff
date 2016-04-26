@@ -11,7 +11,7 @@
             <div class="grid__item tablet--one-half u--align-center">
                 <h3 class="join-us__title u--text-uppercase">join us</h3>
             </div><!--
-            --><div class="grid__item tablet--one-half u--align-left">
+            --><div class="grid__item tablet--one-half u--align-center">
                 <ul class="join-us__socials">
                     <li class="join-us__social">
                         <a href="<?= $facebook_url; ?>" target="_blank" class="join-us__social-link">
