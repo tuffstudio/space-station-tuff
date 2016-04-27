@@ -307,7 +307,7 @@ window.SS.PropertyMap = function(id, initCoords, customOptions) {
     var containerId = id;
     var containerObject = document.getElementById(containerId);
 
-    if (typeof initCoords === 'undefined') {
+    if (initCoords === undefined) {
         initCoords = {
             latitude: 50.2945,
             longitude: 18.6714
@@ -326,7 +326,7 @@ window.SS.PropertyMap = function(id, initCoords, customOptions) {
     };
     var allMarkers = [];
 
-    if (customOptions !== 'undefined') {
+    if (customOptions !== undefined) {
         for (var option in customOptions) {
             mapOptions[option] = customOptions[option];
         }
@@ -337,7 +337,7 @@ window.SS.PropertyMap = function(id, initCoords, customOptions) {
     };
 
     var createPin = function(LatLng, title, url) {
-        var iconBase = SS.settings.imagesPath;
+        var iconsPath = SS.settings.imagesPath;
         var iconDefault = 'mapicon.png';
         var iconActive = 'mapicongold.png';
 
@@ -346,22 +346,22 @@ window.SS.PropertyMap = function(id, initCoords, customOptions) {
             map: map,
             title: title,
             animation: google.maps.Animation.DROP,
-            icon: iconBase + iconDefault
+            icon: iconsPath + iconDefault
         };
 
         var pin = new google.maps.Marker(pinOptions);
 
         pin.changeIcon = function(state) {
-            if (typeof state !== 'undefined') {
+            if (state !== undefined) {
                 // set new icon
-                pin.setIcon(iconBase + iconActive);
+                pin.setIcon(iconsPath + iconActive);
             } else {
                 // reset icon to default
-                pin.setIcon(iconBase + iconDefault);
+                pin.setIcon(iconsPath + iconDefault);
             }
         };
 
-        if (typeof url !== 'undefined') {
+        if (url !== undefined) {
             pin.addListener('click', function() {
                 window.open(url, '_blank');
             });
@@ -412,7 +412,7 @@ window.SS.PropertyMap = function(id, initCoords, customOptions) {
     };
 
     var setupMarkers = function(json) {
-        if (typeof json === 'undefined') {
+        if (json === undefined) {
             json = getJson();
         }
 
