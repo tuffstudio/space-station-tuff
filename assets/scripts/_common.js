@@ -332,18 +332,24 @@ window.SS.PropertyMap = function(id, initCoords, customOptions) {
         }
     }
 
-    var createPin = function(LatLng, title) {
-        var iconBase = '/wp-content/themes/spacestation/dist/images/';
+    var getJson = function() {
+        return JSON.parse(containerObject.getAttribute('data-json'));
+    };
+
+    var createPin = function(LatLng, title, url) {
+        var iconBase = SS.settings.imagesPath;
         var iconDefault = 'mapicon.png';
         var iconActive = 'mapicongold.png';
 
-        var pin = new google.maps.Marker({
+        var pinOptions = {
             position: LatLng,
             map: map,
             title: title,
             animation: google.maps.Animation.DROP,
             icon: iconBase + iconDefault
-        });
+        };
+
+        var pin = new google.maps.Marker(pinOptions);
 
         pin.changeIcon = function(state) {
             if (typeof state !== 'undefined') {
@@ -354,6 +360,12 @@ window.SS.PropertyMap = function(id, initCoords, customOptions) {
                 pin.setIcon(iconBase + iconDefault);
             }
         };
+
+        if (typeof url !== 'undefined') {
+            pin.addListener('click', function() {
+                window.open(url, '_blank');
+            });
+        }
 
         return pin;
     };
@@ -401,7 +413,7 @@ window.SS.PropertyMap = function(id, initCoords, customOptions) {
 
     var setupMarkers = function(json) {
         if (typeof json === 'undefined') {
-            json = JSON.parse(containerObject.getAttribute('data-json'));
+            json = getJson();
         }
 
         json.forEach(function(property) {
@@ -435,6 +447,16 @@ window.SS.PropertyMap = function(id, initCoords, customOptions) {
     return {
         init: initMap,
         setupMarkers: setupMarkers,
-        setPin: createPin
+        setPin: createPin,
+        getJson: getJson
     };
+};
+
+window.isMobile = function() {
+    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent)) {
+        return true;
+    }
+    else {
+        return false;
+    }
 };

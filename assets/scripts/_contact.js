@@ -54,27 +54,14 @@ window.SS.contact = function($) {
             contactMapOptions.zoom = 13;
         }
 
-        var officePins = [
-            {
-                title: 'Shoreditch',
-                coordinates: {
-                    lat: 51.524596,
-                    lng: -0.081968
-                }
-            },
-            {
-                title: 'Bermondsey',
-                coordinates: {
-                    lat: 51.5085300,
-                    lng: -0.1857400
-                }
-            }
-        ];
         var map = new window.SS.PropertyMap('contact-map', initCoords, contactMapOptions);
         map.init();
 
-        pins.first = map.setPin(officePins[0].coordinates, officePins[0].title);
-        pins.second = map.setPin(officePins[1].coordinates, officePins[1].title);
+        var officePins = map.getJson();
+
+        for(var office in officePins) {
+            pins[office] = map.setPin(officePins[office].coordinates, officePins[office].title, officePins[office].link);
+        }
     }
 
     function setOfficeActive() {
@@ -84,7 +71,10 @@ window.SS.contact = function($) {
             var $this = $(this);
 
             $this.on('click', function(event) {
-                event.preventDefault();
+                if (!isMobile()) {
+                    event.preventDefault();
+                }
+
                 var target = $this.data('target');
 
                 for (var pin in pins) {

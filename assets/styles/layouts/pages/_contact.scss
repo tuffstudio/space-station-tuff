@@ -13,6 +13,7 @@
     @include min-screen($desktop) {
         @include background-cover('contact_pageback.jpg');
         padding: 100px 0;
+        background-attachment: fixed;
     }
 }
 
@@ -22,6 +23,14 @@
 
     @include min-screen($tablet) {
         font-size: rem-calc(52);
+    }
+}
+
+.contact__city {
+    display: block;
+
+    @include min-screen($tablet) {
+        display: inline-block;
     }
 }
 

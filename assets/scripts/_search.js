@@ -16,7 +16,7 @@ window.SS.search = function($) {
 
                 mapOn = true;
             }
-        })
+        });
     }
 
     $(document).ready(function() {
