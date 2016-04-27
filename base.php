@@ -25,6 +25,13 @@ use Roots\Sage\Wrapper;
                 </main><!-- /.main -->
             </div><!-- /.content -->
         </div><!-- /.wrap -->
+
+        <script type="text/javascript">
+            window.SS = window.SS || {};
+            window.SS.settings = window.SS.settings || {};
+
+            window.SS.settings.imagesPath = '<?= get_template_directory_uri(); ?>/dist/images/';
+        </script>
         <?php
             do_action('get_footer');
             get_template_part('templates/footer');

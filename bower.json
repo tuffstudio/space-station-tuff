@@ -13,7 +13,8 @@
     "select2": "~4.0.2",
     "jquery-cycle2": "~2.1.6",
     "imagesloaded": "~4.1.0",
-    "sticky-kit": "~1.1.2"
+    "sticky-kit": "~1.1.2",
+    "simpleWeather": "~3.1.0"
   },
   "overrides": {
     "jQuery-viewport-checker": {
@@ -33,6 +34,9 @@
     },
     "sticky-kit": {
       "main": "./jquery.sticky-kit.js"
+    },
+    "simpleWeather": {
+      "main": "./jquery.simpleWeather.js"
     }
   }
 }
