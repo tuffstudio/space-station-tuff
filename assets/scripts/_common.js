@@ -394,13 +394,13 @@ window.SS.PropertyMap = function(id, initCoords, customOptions) {
 
     var popupStyling = function(infowindow) {
         google.maps.event.addListener(infowindow, 'domready', function() {
-            var iwOuter = $('.gm-style-iw');
-            var iwBackground = iwOuter.prev();
-            var iwCloseBtn = iwOuter.next();
+            var $iwOuter = $('.gm-style-iw');
+            var $iwBackground = $iwOuter.prev();
+            var $iwCloseBtn = $iwOuter.next();
 
-            iwBackground.children(':nth-child(2), :nth-child(4)').addClass('gm-wrapper');
+            $iwBackground.children(':nth-child(2), :nth-child(4)').addClass('gm-wrapper');
 
-            iwCloseBtn.addClass('gm-close-btn');
+            $iwCloseBtn.addClass('gm-close-btn');
         });
     };
 
