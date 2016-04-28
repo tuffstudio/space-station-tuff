@@ -1,12 +1,9 @@
 // Owl carousel custom styling
 // ---------------------------
 .owl-dots {
-    margin-top: 5px;
+    width: 80%;
+    margin: 15px auto;
     text-align: center;
-
-    @include min-screen($tablet) {
-        margin-top: 15px;
-    }
 
     @include min-screen($desktop) {
         margin-top: 25px;
@@ -29,4 +26,38 @@
             background-color: $color-primary;
         }
     }
+}
+
+.owl-nav {
+    @include min-screen($tablet) {
+        display: none;
+    }
+}
+
+.owl-carousel {
+    position: relative;
+}
+
+.owl-nav {
+    position: absolute;
+    bottom: 38px;
+    width: 100%;
+}
+
+%arrow-styles {
+    position: absolute;
+    padding: 10px 15px;
+    background: rgba($black, .5);
+    color: $white;
+    font-size: rem-calc(12);
+}
+
+.owl-prev {
+    @extend %arrow-styles;
+    left: 0;
+}
+
+.owl-next {
+    @extend %arrow-styles;
+    right: 0;
 }

@@ -192,7 +192,9 @@ window.SS.common = function($) {
             autoplay: true,
             loop: true,
             autoplaySpeed: 2000,
-            autoplayHoverPause: true
+            autoplayHoverPause: true,
+            nav: true,
+            navText: ['<', '>']
         });
     }
 
