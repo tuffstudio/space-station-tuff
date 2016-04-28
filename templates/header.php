@@ -33,7 +33,7 @@
                                     while($i < 5):
                                 ?>
                                 <div class="grid__item two-fifths">
-                                    <img src="<?= get_template_directory_uri(); ?>/dist/images/masonry_small_placeholder.jpg" alt="" class="img--responsive favourites-box__img">
+                                    <img src="<?= get_template_directory_uri(); ?>/dist/images/masonry_small_placeholder.jpg" alt="" data-pin-nopin="true" class="img--responsive favourites-box__img">
                                 </div><!--
                                 --><div class="grid__item three-fifths">
                                     <div class="favourites-box__information">

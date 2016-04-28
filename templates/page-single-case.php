@@ -17,10 +17,14 @@
                     </nav>
                     <div class="canvas-post__image">
                         <?php if($case_study->has_video()) : ?>
-                            <?php
-                                // TODO: it a place for video
-                                echo 'here is a video';
-                            ?>
+                            <video
+                                id="case-study"
+                                class="case-study__video"
+                                src="<?= $case_study->get_video_link(); ?>"
+                                controls
+                            >
+                                Your browser does nor support video tag.
+                            </video>
                         <?php else : ?>
                             <?= $case_study->get_image('full'); ?>
                         <?php endif; ?>
