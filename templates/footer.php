@@ -23,7 +23,7 @@
         <div class="grid">
             <div class="grid__item tablet-small--one-half desktop--three-tenths">
                 <div class="footer__contact">
-                    <h4 class="footer__headline"><?= $contact_fields['first_office_name']; ?></h4>
+                    <h4 class="u--text-uppercase"><?= $contact_fields['first_office_name']; ?></h4>
                     <a class="footer--link footer__telephone" href="tel:<?= $first_contact_phone_trimmed; ?>"><?= $contact_fields['first_office_phone_number']; ?></a>
                     <a class="footer--link footer__email" href="mailto:<?= $contact_fields['first_office_email']; ?>"><?= $contact_fields['first_office_email']; ?></a>
                     <span class="footer--link footer__address"><?= $contact_fields['first_office_address']; ?></span>
@@ -34,7 +34,7 @@
             </div><!--
             --><div class="grid__item tablet-small--one-half desktop--three-tenths">
                 <div class="footer__contact">
-                    <h4 class="footer__headline"><?= $contact_fields['second_office_name']; ?></h4>
+                    <h4 class="u--text-uppercase"><?= $contact_fields['second_office_name']; ?></h4>
                     <a class="footer--link footer__telephone" href="tel:<?= $second_contact_phone_trimmed; ?>"><?= $contact_fields['second_office_phone_number']; ?></a>
                     <a class="footer--link footer__email" href="mailto:<?= $contact_fields['second_office_email']; ?>"><?= $contact_fields['second_office_email']; ?></a>
                     <span class="footer--link footer__address"><?= $contact_fields['second_office_address']; ?></span>
