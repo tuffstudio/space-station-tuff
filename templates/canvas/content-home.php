@@ -469,7 +469,7 @@
     <div class="grid grid--full is-hidden js-section-reveal">
         <div class="grid__item tablet--one-third phone--hide tablet--show"></div><!--
         --><div class="grid__item tablet--two-thirds">
-            <a href="/black-book" class="masonry__link">
+            <a href="/blackbook" class="masonry__link">
                 <div class="grid__item one-half">
                     <div class="masonry__item masonry__item--square">
                         <div class="masonry__tile masonry__tile--white masonry__tile-arrow">

@@ -98,7 +98,7 @@
 
             <?php if($sidebar_fields['sidebar_third_box']): ?>
                 <div class="canvas-post__sidebar-box">
-                    <a href="#" class="masonry__link">
+                    <a href="/blackbook" class="masonry__link">
                         <div class="masonry__item masonry__item--square">
                             <div class="masonry__tile masonry__tile-link masonry__tile-link--blackbook"></div>
                         </div>
@@ -109,20 +109,14 @@
             <?php
                 if ($related_case_study):
                     $related_case_study_id = $related_case_study[0];
-                    $related_case_study_link = get_permalink($related_case_study_id);
-                    $related_case_study_title = get_the_title($related_case_study_id);
 
-
-                    $related_case_study_fields = CFS() -> get(false, $related_case_study_id);
-
-                    $related_case_study_img_id = $related_case_study_fields['case_study_thumbnail'];
-                    $related_case_study_img_url = wp_get_attachment_url($related_case_study_img_id, 'full');
+                    $related_case_study = new MagazinePost\CaseStudyPost($related_case_study_id);
             ?>
                 <div class="canvas-post__sidebar-box">
-                    <a href="<?php echo $related_case_study_link ?>" class="masonry__link">
+                    <a href="<?= $related_case_study->get_link(); ?>" class="masonry__link">
                         <div class="masonry__item masonry__item--square">
-                            <div class="masonry__tile masonry__tile-link masonry__tile-link--cs" style="background-image: url('<?php echo $related_case_study_img_url; ?>')">
-                                <span><?php echo $related_case_study_title; ?></span>
+                            <div class="masonry__tile masonry__tile-link masonry__tile-link--cs" style="background-image: url('<?= $related_case_study->get_image_url(); ?>')">
+                                <span><?= $related_case_study->get_title(); ?></span>
                             </div>
                         </div>
                     </a>
