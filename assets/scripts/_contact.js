@@ -20,22 +20,18 @@ window.SS.contact = function($) {
 
     function getLondonTime() {
         var $time = $('.js-contact-time');
-        var timeOptions = {
-            hour: '2-digit',
-            minute: '2-digit',
-            hour12: false,
-            timeZone: 'Europe/London'
-        };
 
         function setTime() {
             var date = new Date();
-            var time = date.toLocaleString('en-EN', timeOptions);
+            var time = date.getUTCHours() + 1;
+            var minutes = date.getUTCMinutes();
+            var londonTime = time + ':' + minutes;
 
-            $time.html(time);
+            $time.html(londonTime);
         }
 
         setTime();
-        setInterval(setTime, 60000);
+        setInterval(setTime, 5000);
     }
 
     function initMap() {
@@ -46,12 +42,14 @@ window.SS.contact = function($) {
 
         var contactMapOptions = {
             zoom: 11,
-            zoomControl: false,
-            scrollwheel: false
+            zoomControl: true,
+            scrollwheel: false,
+            draggable: false
         };
 
         if (isDesktop) {
             contactMapOptions.zoom = 13;
+            contactMapOptions.draggable = true;
         }
 
         var map = new window.SS.PropertyMap('contact-map', initCoords, contactMapOptions);
