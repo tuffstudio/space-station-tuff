@@ -6,22 +6,12 @@
     $post_id = $post->ID;
     $categories = get_the_category();
 
-    $author_id = $post->post_author;
-    $author_name = get_the_author_meta('display_name', $author_id);
-
     if(array_key_exists(0, $categories)) {
         $category = CategoriesInPage\category_info($categories[0]);
     }
 
     $related_case_study = CFS() -> get('related_case_study', $post_id);
     $sidebar_fields = CFS() -> get(false, $post_id);
-
-    $page_url = urlencode(get_permalink());
-    $page_title = urlencode(get_the_title());
-
-    $facebook_share = 'https://www.facebook.com/sharer/sharer.php?u=' . $page_url . '&title=' . $page_title . '&display=popup';
-    $twitter_share = 'http://twitter.com/intent/tweet?status=' . $page_title . '+' . $page_url;
-    $linkedin_share = 'http://www.linkedin.com/shareArticle?mini=true&url=' . $page_url . '&title=' . $page_title;
 
     $art_of_valuation_url = get_option('art_of_valuation_url');
 ?>
@@ -40,40 +30,12 @@
         <div class="canvas-post__header">
             <p class="masonry__tile-category canvas-post__category"><a href="<?= $category['link']; ?>"><span><?= $category['name']; ?></span></a></p>
             <h1 class="canvas-post__title"><?php the_title(); ?></h1>
-            <p class="canvas-post__info">Posted by <?= $author_name; ?>, <?= get_the_date('l j F Y'); ?></p>
+            <?php include dirname(__FILE__) . '/../components/author.php'; ?>
         </div>
     </div>
     <div class="grid__item tablet--two-thirds">
-        <div class="socials">
-            <script
-                type="text/javascript"
-                async defer
-                src="https://assets.pinterest.com/js/pinit.js"
-                data-pin-hover="true"
-                data-pin-tall="true">
-            </script>
-            <span class="social__title">Share</span>
-            <ul class="socials__list">
-                <li class="socials__list-item">
-                    <a href="<?= $facebook_share ?>" onclick="return !window.open(this.href, 'Facebook', 'width=640,height=580')">
-                        <span class="icon icon-facebook"></span>
-                    </a>
-                </li>
-                <li class="socials__list-item">
-                    <a href="<?= $twitter_share ?>" onclick="return !window.open(this.href, 'Twitter', 'width=640,height=380')">
-                        <span class="icon icon-twitter"></span>
-                    </a>
-                </li>
-                <li class="socials__list-item">
-                    <a data-pin-do="buttonBookmark" data-pin-custom="true" data-pin-log="button_pinit_bookmarklet" href="https://pl.pinterest.com/pin/create/button/">
-                        <span class="icon icon-pinterest"></span>
-                    </a>
-                </li>
-                <li class="socials__list-item">
-                    <a href="mailto:?subject=<?php the_title(); ?>"><span class="icon icon-email"></span></a>
-                </li>
-            </ul>
-        </div>
+        <?php include dirname(__FILE__) . '/../components/socials.php'; ?>
+
         <div class="canvas-post__content">
             <div class="canvas-post__post">
                 <?php

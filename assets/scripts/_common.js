@@ -242,6 +242,13 @@ window.SS.common = function($) {
         });
     }
 
+    function goBack() {
+        $('.js-go-back').on('click', function(event) {
+            event.preventDefault();
+            window.history.back();
+        });
+    }
+
     $(document).ready(function() {
         setIsMobile();
         toggleMobileNavigation();
@@ -254,6 +261,7 @@ window.SS.common = function($) {
         userBox();
         canvasAnimation();
         SS.initSelect2();
+        goBack();
 
         setTimeout(function() {
             subMenuAlignment();
