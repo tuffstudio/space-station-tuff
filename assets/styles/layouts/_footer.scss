@@ -1,12 +1,16 @@
 // Footer styling
 // ---------------
 .footer {
-    padding: 50px 0;
+    padding: 40px 0 20px;
     background-color: $footer-bg-color;
     color: $footer-color;
     font-family: $font-light;
     font-size: rem-calc(11);
     letter-spacing: 0.1em;
+
+    @include min-screen($tablet-small) {
+        padding: 50px 0;
+    }
 }
 
 .footer__contact {
@@ -95,9 +99,33 @@ a.footer--link:hover {
     margin-top: 40px;
     padding-right: 50px;
     line-height: 1.5em;
+    color: $dark-gray;
 
     @include min-screen($tablet-small) {
         margin-top: 0;
+    }
+}
+
+.footer__social {
+    margin: 40px 0 0 0;
+
+    @include min-screen($tablet-small) {
+        margin: 0 0 30px 0;
+    }
+
+    @include min-screen($desktop) {
+        margin: 0 0 50px 0;
+    }
+
+    .join-us__social + .join-us__social {
+        margin-left: 0;
+    }
+
+    .join-us__social-link {
+        @include min-screen($tablet-small) {
+            font-size: rem-calc(11);
+            padding: 7px 7px 5px 7px;
+        }
     }
 }
 

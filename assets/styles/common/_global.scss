@@ -111,6 +111,11 @@ main {
                 top: -20%;
                 height: 130%;
             }
+
+            @include min-screen($desktop) {
+                top: -27%;
+                height: 135%;
+            }
         }
     }
 
@@ -131,8 +136,18 @@ main {
         }
 
         @include min-screen($desktop) {
+            top: -22%;
+            height: 136%;
+        }
+    }
+}
+
+.background--skew-half:first-of-type {
+    &::after {
+        height: 50%;
+
+        @include min-screen($desktop) {
             top: -27%;
-            height: 138%;
         }
     }
 }

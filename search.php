@@ -62,7 +62,7 @@
                             <a href="#grid-view" class="js-grid-switcher">grid view</a>
                         </li><!--
                         --><li class="view-nav__item">
-                            <a href="#map-view" class="js-grid-switcher">map view</a>
+                            <a href="#map-view" class="js-grid-switcher js-map-switch">map view</a>
                         </li>
                     </ul>
                 </div>

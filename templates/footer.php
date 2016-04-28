@@ -1,3 +1,9 @@
+<?php
+    $contact_fields = CFS() -> get(false, 259);
+    $first_contact_phone_trimmed = str_replace(' ', '', $contact_fields['first_office_phone_number']);
+    $second_contact_phone_trimmed = str_replace(' ', '', $contact_fields['second_office_phone_number']);
+?>
+
 <footer class="footer">
     <div class="container">
         <a href="<?= get_home_url(); ?>" class="footer__logo">
@@ -17,38 +23,22 @@
         <div class="grid">
             <div class="grid__item tablet-small--one-half desktop--three-tenths">
                 <div class="footer__contact">
-                    <h4 class="footer__headline">
-                        Shoreditch office
-                    </h4>
-                    <a href="tel:+44 20 7613 6262" class="footer--link footer__telephone">
-                        +44 20 7613 6262
-                    </a>
-                    <a href="mailto:shoreditch@thespacestation.co.uk" class="footer--link footer__email">
-                        shoreditch@thespacestation.co.uk
-                    </a>
-                    <span class="footer--link footer__address">
-                        92 Leonard Street, London, EC2A 4RH
-                    </span>
-                    <a href="#" class="footer__view-map link--italic">
+                    <h4 class="footer__headline"><?= $contact_fields['first_office_name']; ?></h4>
+                    <a class="footer--link footer__telephone" href="tel:<?= $first_contact_phone_trimmed; ?>"><?= $contact_fields['first_office_phone_number']; ?></a>
+                    <a class="footer--link footer__email" href="mailto:<?= $contact_fields['first_office_email']; ?>"><?= $contact_fields['first_office_email']; ?></a>
+                    <span class="footer--link footer__address"><?= $contact_fields['first_office_address']; ?></span>
+                    <a href="/contact" class="footer__view-map link--italic">
                         view map
                     </a>
                 </div>
             </div><!--
             --><div class="grid__item tablet-small--one-half desktop--three-tenths">
                 <div class="footer__contact">
-                    <h4 class="footer__headline">
-                        Bermondsey office
-                    </h4>
-                    <a href="tel:+44 20 7613 6262" class="footer--link footer__telephone">
-                        +44 20 7613 6262
-                    </a>
-                    <a href="mailto:shoreditch@thespacestation.co.uk" class="footer--link footer__email">
-                        bermondsey@thespacestation.co.uk
-                    </a>
-                    <span class="footer--link footer__address">
-                        92 Leonard Street, London, EC2A 4RH
-                    </span>
-                    <a href="#" class="footer__view-map link--italic">
+                    <h4 class="footer__headline"><?= $contact_fields['second_office_name']; ?></h4>
+                    <a class="footer--link footer__telephone" href="tel:<?= $second_contact_phone_trimmed; ?>"><?= $contact_fields['second_office_phone_number']; ?></a>
+                    <a class="footer--link footer__email" href="mailto:<?= $contact_fields['second_office_email']; ?>"><?= $contact_fields['second_office_email']; ?></a>
+                    <span class="footer--link footer__address"><?= $contact_fields['second_office_address']; ?></span>
+                    <a href="/contact" class="footer__view-map link--italic">
                         view map
                     </a>
                 </div>
@@ -60,6 +50,10 @@
                     endif;
                 ?>
             </div>
+        </div>
+
+        <div class="footer__social">
+            <?php include 'components/socials.php'; ?>
         </div>
 
         <div class="grid">
@@ -74,7 +68,6 @@
                 ?>
             </div>
         </div>
-
 
     </div>
 </footer>

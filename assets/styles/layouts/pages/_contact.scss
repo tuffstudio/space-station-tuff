@@ -1,0 +1,165 @@
+// Contact page styles
+// --------------------
+.contact-section {
+    @include background-cover('contact_pageback_mobile.jpg');
+    margin: 0;
+    padding: 50px 0;
+
+    @include min-screen($tablet) {
+        @include background-cover('contact_pageback_tablet.jpg');
+        padding: 90px 0;
+    }
+
+    @include min-screen($desktop) {
+        @include background-cover('contact_pageback.jpg');
+        padding: 100px 0;
+        background-attachment: fixed;
+    }
+}
+
+.contact__headline {
+    font-size: rem-calc(40);
+    letter-spacing: .3em;
+
+    @include min-screen($tablet) {
+        font-size: rem-calc(52);
+    }
+}
+
+.contact__city {
+    display: block;
+
+    @include min-screen($tablet) {
+        display: inline-block;
+    }
+}
+
+.contact__info {
+    display: inline-block;
+    padding: 0 25px;
+    font-family: $font-light;
+    font-size: rem-calc(38);
+    letter-spacing: normal;
+    vertical-align: text-top;
+
+    & + & {
+        border-left: 3px solid $contact-time-color;
+    }
+}
+
+.contact__weather {
+    color: $color-primary;
+}
+
+.contact__time {
+    color: $contact-time-color;
+}
+
+.contact__office {
+    margin-bottom: 40px;
+
+    @include min-screen($tablet) {
+        margin: 0;
+    }
+
+    a {
+        color: $purple;
+    }
+
+    &.active a {
+        color: $color-primary;
+    }
+}
+
+.contact__office-name {
+    margin-bottom: 24px;
+    font-family: $font-heavy;
+    font-size: rem-calc(16);
+    letter-spacing: .1em;
+}
+
+.contact__office-link {
+    display: block;
+    margin-bottom: 4px;
+    color: $black;
+    font-size: rem-calc(15);
+    letter-spacing: .1em;
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.contact__office-address {
+    margin: 21px 0;
+    font-family: $font-light;
+    font-size: rem-calc(15);
+    letter-spacing: .1em;
+    line-height: 1.5;
+}
+
+.contact__map {
+    height: 400px;
+
+    @include min-screen($tablet) {
+        height: 325px;
+    }
+}
+
+// Join us section
+// ---------
+.join-us {
+    @include background-cover('social_background_mobile.jpg');
+    padding: 50px 0;
+
+    @include min-screen($tablet) {
+        @include background-cover('social_background_tablet.jpg');
+        padding: 60px 0;
+    }
+
+    @include min-screen($desktop) {
+        @include background-cover('social_background.jpg');
+        padding: 75px 0;
+    }
+}
+
+.join-us__title {
+    margin: 0 0 40px;
+    padding: 0;
+    color: $white;
+    font-family: $font-heavy;
+    letter-spacing: .1em;
+    line-height: 1;
+
+    @include min-screen($tablet) {
+        margin: 0;
+    }
+}
+
+.join-us__socials {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.join-us__social {
+    display: inline-block;
+
+    & + & {
+        margin-left: 20px;
+    }
+}
+
+.join-us__social-link {
+    padding: 12px 11px 8px;
+    transition: background-color $canvas-nav-animation;
+    background-color: $contact-time-color;
+    color: $white;
+    font-size: rem-calc(15);
+    text-decoration: none;
+
+    .is-desktop &:hover {
+        background-color: $color-primary;
+    }
+}
