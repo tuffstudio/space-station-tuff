@@ -4,12 +4,17 @@
     padding: 50px 0;
     background-color: $footer-bg-color;
     color: $footer-color;
+    font-family: $font-light;
     font-size: rem-calc(11);
     letter-spacing: 0.1em;
 }
 
 .footer__contact {
-    padding: 40px 20px 40px 30px;
+    padding: 30px 20px 0 30px;
+
+    @include min-screen($tablet-small) {
+        padding: 40px 20px 40px 30px;
+    }
 }
 
 .footer__headline {
@@ -29,6 +34,7 @@
         left: -25px;
         color: $color-primary;
         font-size: rem-calc(10);
+        transition: left $standard-animation-time ease-in-out;
     }
 }
 
@@ -46,6 +52,10 @@
 
 a.footer--link:hover {
     color: $color-primary;
+
+    &:before {
+        left: -20px;
+    }
 }
 
 .footer__address {
@@ -78,6 +88,16 @@ a.footer--link:hover {
         position: relative;
         top: -10px;
         padding-left: 10px;
+    }
+}
+
+.footer__copyright {
+    margin-top: 40px;
+    padding-right: 50px;
+    line-height: 1.5em;
+
+    @include min-screen($tablet-small) {
+        margin-top: 0;
     }
 }
 

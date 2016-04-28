@@ -62,6 +62,19 @@
             </div>
         </div>
 
+        <div class="grid">
+            <div class="grid__item tablet--one-half desktop--six-tenths footer__copyright">
+                Spacestation &copy; 2016 Design and development by&nbsp;<a href="http://www.matchboxpublishing.com/" class="link--standard ">Matchbox</a>
+            </div><!--
+            --><div class="grid__item phone--hide tablet--show tablet--one-half desktop--four-tenths">
+                <?php
+                    if (has_nav_menu('secondary_footer_navigation')) :
+                        wp_nav_menu(array('theme_location' => 'secondary_footer_navigation', 'menu_class' => 'secondary-footer__nav'));
+                    endif;
+                ?>
+            </div>
+        </div>
+
 
     </div>
 </footer>
