@@ -34,7 +34,7 @@
         </div>
     </div>
     <div class="grid__item tablet--two-thirds">
-        <?php include dirname(__FILE__) . '/../components/socials.php'; ?>
+        <?php include dirname(__FILE__) . '/../components/socials-share.php'; ?>
 
         <div class="canvas-post__content">
             <div class="canvas-post__post">
