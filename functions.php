@@ -23,6 +23,8 @@ $sage_includes = [
   'lib/categories-in-page.php',  // Categories in page
   'lib/taxonomies.php',          // Custom taxonomies
   'lib/shortcodes.php',          // Custom shortcodes
+  'lib/menus.php',               // Additional navigation
+  'lib/shortcodes.php',          // Custom shortcodes
   'lib/theme-settings.php'       // Theme settings page
 ];
 

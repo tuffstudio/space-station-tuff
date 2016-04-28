@@ -1,9 +1,130 @@
 // Footer styling
 // ---------------
 .footer {
-    min-height: 300px;
+    padding: 40px 0 20px;
     background-color: $footer-bg-color;
+    color: $footer-color;
+    font-family: $font-light;
+    font-size: rem-calc(11);
+    letter-spacing: 0.1em;
+
+    @include min-screen($tablet-small) {
+        padding: 50px 0;
+    }
 }
+
+.footer__contact {
+    padding: 30px 20px 0 30px;
+
+    @include min-screen($tablet-small) {
+        padding: 40px 20px 40px 30px;
+    }
+}
+
+.footer--link {
+    display: block;
+    position: relative;
+    margin: 4px 0;
+    color: $footer-color;
+    text-decoration: none;
+    transition: color $standard-animation-time ease-in-out;
+
+    &:before {
+        position: absolute;
+        left: -25px;
+        color: $color-primary;
+        font-size: rem-calc(10);
+        transition: left $standard-animation-time ease-in-out;
+    }
+}
+
+.footer__view-map {
+    @extend .link--italic;
+    display: inline-block;
+    margin: 15px 0 0;
+    padding: 0;
+    color: $color-primary;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+a.footer--link:hover {
+    color: $color-primary;
+
+    &:before {
+        left: -20px;
+    }
+}
+
+.footer__address {
+    &:before {
+        content: 'A';
+    }
+}
+
+.footer__email {
+    &:before {
+        content: 'E';
+    }
+}
+
+.footer__telephone {
+    &:before {
+        content: 'T';
+    }
+}
+
+.footer__logo {
+    display: inline-block;
+    color: $footer-color;
+    font-size: rem-calc(16);
+    letter-spacing: 2px;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    span {
+        position: relative;
+        top: -10px;
+        padding-left: 10px;
+    }
+}
+
+.footer__copyright {
+    margin-top: 40px;
+    padding-right: 50px;
+    line-height: 1.5em;
+    color: $dark-gray;
+
+    @include min-screen($tablet-small) {
+        margin-top: 0;
+    }
+}
+
+.footer__social {
+    margin: 40px 0 0 0;
+
+    @include min-screen($tablet-small) {
+        margin: 0 0 30px 0;
+    }
+
+    @include min-screen($desktop) {
+        margin: 0 0 50px 0;
+    }
+
+    .join-us__social + .join-us__social {
+        margin-left: 0;
+    }
+
+    .join-us__social-link {
+        @include min-screen($tablet-small) {
+            font-size: rem-calc(11);
+            padding: 7px 7px 5px 7px;
+        }
+    }
+}
+
 
 // Go to top button
 // ----------------
