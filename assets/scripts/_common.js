@@ -53,14 +53,17 @@ window.SS.common = function($) {
         var $userBoxTrigger = $userBox.find('.js-favourites-box-trigger');
         var $userBoxClose = $userBox.find('.js-favourites-box-close');
         var $subMenu = $('.sub-menu');
+        var $navigation = $('.navigation-menu');
 
         $userBoxTrigger.on('click', function() {
             $body.toggleClass('favourites-box--is-opened');
             $subMenu.removeClass('is-opened');
+            $navigation.removeClass('is-normal');
         });
 
         $userBoxClose.on('click', function() {
             $body.removeClass('favourites-box--is-opened');
+            $navigation.removeClass('is-normal');
         });
     }
 
@@ -94,7 +97,7 @@ window.SS.common = function($) {
                         $subMenu.addClass('is-opened');
                         $navigation.removeClass('is-normal');
 
-                        if (!isSpecialItem) {
+                        if (isSpecialItem) {
                             $navigation.addClass('is-normal');
                         }
                     } else {
