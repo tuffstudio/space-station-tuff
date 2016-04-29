@@ -5,6 +5,7 @@
 
     @include min-screen($desktop) {
         margin: 0;
+        z-index: 1;
     }
 }
 
