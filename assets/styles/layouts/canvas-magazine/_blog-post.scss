@@ -91,8 +91,8 @@
     h4,
     h5,
     h6 {
+        margin-bottom: -.5em;
         font-family: $font-heavy;
-        font-size: rem-calc(28);
         line-height: 1.5;
         text-transform: uppercase;
     }
@@ -119,6 +119,19 @@
 
         .is-desktop &:hover {
             text-decoration: underline;
+        }
+    }
+
+    ul,
+    ol {
+        font-family: $font-light;
+
+        @include min-screen($desktop) {
+            font-size: rem-calc(14);
+        }
+
+        li {
+            margin: 4px 0;
         }
     }
 }
