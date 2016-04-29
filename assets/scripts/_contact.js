@@ -36,8 +36,8 @@ window.SS.contact = function($) {
 
     function initMap() {
         var initCoords = {
-            latitude: 51.5185300,
-            longitude: -0.1257400
+            latitude: 51.5145300,
+            longitude: -0.0888400
         };
 
         var contactMapOptions = {
@@ -48,7 +48,7 @@ window.SS.contact = function($) {
         };
 
         if (isDesktop) {
-            contactMapOptions.zoom = 12;
+            contactMapOptions.zoom = 13;
             contactMapOptions.draggable = true;
         }
 

@@ -101,10 +101,6 @@
 
 .contact__map {
     height: 400px;
-
-    @include min-screen($tablet) {
-        height: 325px;
-    }
 }
 
 // Join us section
