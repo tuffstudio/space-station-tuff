@@ -48,7 +48,7 @@ window.SS.contact = function($) {
         };
 
         if (isDesktop) {
-            contactMapOptions.zoom = 13;
+            contactMapOptions.zoom = 12;
             contactMapOptions.draggable = true;
         }
 
