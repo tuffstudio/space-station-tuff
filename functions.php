@@ -25,7 +25,8 @@ $sage_includes = [
   'lib/shortcodes.php',          // Custom shortcodes
   'lib/menus.php',               // Additional navigation
   'lib/shortcodes.php',          // Custom shortcodes
-  'lib/theme-settings.php'       // Theme settings page
+  'lib/theme-settings.php',      // Theme settings page
+  'lib/ajax.php'                 // Ajax
 ];
 
 foreach ($sage_includes as $file) {
