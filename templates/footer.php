@@ -7,7 +7,7 @@
 <footer class="footer">
     <div class="container">
         <a href="<?= get_home_url(); ?>" class="footer__logo">
-            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+            <svg version="1.1" class="footer__svg" x="0px" y="0px"
             	 width="45.218px" height="35.441px" viewBox="0 0 45.218 35.441" enable-background="new 0 0 45.218 35.441" xml:space="preserve">
                 <path fill="#FFFFFF" d="M42.228,17.731l-19.233,5.255v-10.51L42.228,17.731z M43.336,28.758l-19.232-5.256l19.232-5.256V28.758z
                 	 M22.995,34.526V24.016l19.233,5.256L22.995,34.526z M22.995,0.938l19.233,5.255l-19.233,5.257V0.938z M22.222,11.449L2.989,6.192
