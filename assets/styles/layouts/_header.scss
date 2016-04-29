@@ -45,8 +45,8 @@
     @include min-screen($desktop) {
         max-height: 100%;
         transition: none;
-        overflow: visible;
         text-align: right;
+        overflow: visible;
     }
 
     &.is-opened {
@@ -108,10 +108,10 @@
     }
 
     > li {
-        border-top: 1px solid rgba($white, 0.15);
+        border-top: 1px solid rgba($white, .15);
 
         @include min-screen($desktop) {
-            border-top: none;
+            border-top: 0;
         }
     }
 
@@ -131,17 +131,17 @@
         > a {
             position: relative;
 
-            &:after {
+            &::after {
                 content: '';
+                display: none;
                 position: absolute;
                 top: -5px;
                 right: -15px;
-                bottom: -41px;
+                bottom: -4px;
                 left: -15px;
-                display: none;
+                transition: bottom $sub-menu-up-animation ease 100ms;
                 border: 4px solid $color-primary;
                 z-index: 1;
-                transition: bottom $standard-animation-time ease;
 
                 @include min-screen($desktop) {
                     display: block;
@@ -161,11 +161,10 @@
         }
     }
 
-    &.is-normal,
-    .favourites-box--is-opened & {
+    &.is-normal {
         > li:nth-last-child(2) > a {
-            &:after {
-                bottom: -4px;
+            &::after {
+                bottom: -41px;
             }
         }
     }

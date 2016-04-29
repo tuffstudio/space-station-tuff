@@ -5,6 +5,7 @@
 
     @include min-screen($desktop) {
         margin: 0;
+        z-index: 1;
     }
 }
 
@@ -42,7 +43,7 @@
         padding-left: 0;
         transition: background-position $canvas-nav-animation;
         background: {
-            image: url('../images/paint_brush.png');
+            image: url('../images/paint_brush.svg');
             position: -259px 0;
             repeat: no-repeat;
             size: contain;

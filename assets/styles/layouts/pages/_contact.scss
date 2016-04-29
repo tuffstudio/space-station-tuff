@@ -101,10 +101,6 @@
 
 .contact__map {
     height: 400px;
-
-    @include min-screen($tablet) {
-        height: 325px;
-    }
 }
 
 // Join us section
@@ -112,6 +108,7 @@
 .join-us {
     @include background-cover('social_background_mobile.jpg');
     padding: 50px 0;
+    text-align: center;
 
     @include min-screen($tablet) {
         @include background-cover('social_background_tablet.jpg');
@@ -121,6 +118,20 @@
     @include min-screen($desktop) {
         @include background-cover('social_background.jpg');
         padding: 75px 0;
+    }
+}
+
+.join-us__left {
+    @include min-screen($desktop) {
+        padding-right: 75px;
+        text-align: right;
+    }
+}
+
+.join-us__right {
+    @include min-screen($desktop) {
+        padding-left: 75px;
+        text-align: left;
     }
 }
 

@@ -64,6 +64,9 @@
                     <input id="offer" name="under-offer" type="checkbox" value="true" class="input-checkbox" />
                     <label for="sold">Sold</label>
                     <input id="sold" name="sold" type="checkbox" value="true" class="input-checkbox" />
+                    <input id="buy" class="input--hidden" type="radio" name="type" value="buy">
+                    <input id="rent" class="input--hidden" type="radio" name="type" value="rent">
+                    <input id="short-let" class="input--hidden" type="radio" name="type" value="short-let">
                 </div>
             </div><!--
             --><div class="grid__item desktop--one-half u--align-right input-container">
