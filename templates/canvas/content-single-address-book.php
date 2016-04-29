@@ -4,7 +4,7 @@
     $category_name = get_the_terms($page_id, 'address-book-category')[0]->name;
     $category_link = get_term_link($category_name, 'address-book-category');
 
-    $telephone = $page_fields['ss_address_book_tel'];
+    $telephone = str_replace(' ', '', $page_fields['ss_address_book_tel']);
     $website = $page_fields['ss_address_book_website'];
     $city = $page_fields['ss_address_book_city'];
     $post_code = $page_fields['ss_address_book_post_code'];
@@ -33,9 +33,9 @@
         </h3>
 
         <p class="paragraph__address">
-            <span>
+            <a href="tel:<?= $telephone ?>">
                 <?= $telephone ?>
-            </span>
+            </a>
             <span>
                 <?= $house_number . ' ' . $road . ', ' . $post_code ?>
             </span>
