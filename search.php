@@ -16,7 +16,7 @@
 <?php get_template_part('templates/searchpage/tabs'); ?>
 
 <section class="section search-results">
-    <div class="container">
+    <div class="container--mobile-full container">
         <div class="search-results__nav">
             <div class="grid grid--full grid--middle">
                 <div class="grid__item desktop--one-half">

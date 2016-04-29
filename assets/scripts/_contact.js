@@ -31,7 +31,7 @@ window.SS.contact = function($) {
         }
 
         setTime();
-        setInterval(setTime, 60000);
+        setInterval(setTime, 5000);
     }
 
     function initMap() {
@@ -48,7 +48,7 @@ window.SS.contact = function($) {
         };
 
         if (isDesktop) {
-            contactMapOptions.zoom = 13;
+            contactMapOptions.zoom = 12;
             contactMapOptions.draggable = true;
         }
 

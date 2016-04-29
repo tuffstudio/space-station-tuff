@@ -216,10 +216,14 @@
         display: block;
         width: 80%;
         font-family: $font-book;
-        font-size: rem-calc(18);
+        font-size: rem-calc(16);
         letter-spacing: 2px;
         text-align: center;
         text-transform: uppercase;
+
+        @include min-screen($tablet) {
+            font-size: rem-calc(18);
+        }
 
         @include min-screen($desktop) {
             font-size: rem-calc(22);
@@ -347,6 +351,24 @@
         width: 100%;
         height: 100%;
         transition: $masonry-animation-transition;
+    }
+}
+
+.masonry__label {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 3px 0;
+    background-color: $black-transparent;
+    color: $white;
+    font-family: $font-light;
+    font-size: rem-calc(12);
+    text-align: center;
+
+    @include min-screen($tablet) {
+        padding: 5px 0;
+        font-size: rem-calc(14);
     }
 }
 

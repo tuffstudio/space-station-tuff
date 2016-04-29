@@ -46,7 +46,7 @@
                 ?>
             </div>
             <div class="canvas-post__recommended">
-                <h3 class="canvas-post__recommended-title">Recommended articles</h3>
+                <h3 class="canvas-post__recommended-title">Related articles</h3>
                 <div class="grid grid--full">
                     <?php
                         $three_last_posts = CategoriesInPage\last_posts($category['id'], 3, $post_id);

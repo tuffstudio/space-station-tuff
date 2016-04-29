@@ -1,6 +1,6 @@
 <?php use Roots\Sage\MagazinePost; ?>
 
-<section class="section team-members is-hidden js-section-reveal section--background-space section--background">
+<section class="section team-members is-hidden js-section-reveal section--background-space">
     <?php
         $page_fields = CFS()->get(false, $post->ID);
         $title  = $page_fields['ss_section_title'];

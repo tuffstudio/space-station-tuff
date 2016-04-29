@@ -11,12 +11,12 @@ html {
 
 body {
     position: relative;
+    right: 0;
     padding-top: $nav-height;
+    transition: right $standard-animation-time ease-in-out;
     overflow-x: hidden;
     background-color: $body-bg-color;
     font-family: $base-font-family;
-    right: 0;
-    transition: right $standard-animation-time ease-in-out;
 
     &.static {
         overflow: hidden;
@@ -107,6 +107,12 @@ main {
 
     &:first-of-type {
         &::after {
+            top: -8%;
+
+            @include min-screen($tablet) {
+                top: -14%;
+            }
+
             @include min-screen($desktop - 1) {
                 top: -20%;
                 height: 130%;
