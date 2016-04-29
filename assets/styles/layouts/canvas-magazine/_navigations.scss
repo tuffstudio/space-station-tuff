@@ -30,10 +30,10 @@
 
 .canvas__categories-item {
     margin: 10px 0;
-    padding-left: 16px;
 
     @include min-screen($tablet) {
         display: inline-block;
+        padding-left: 16px;
     }
 
     @include min-screen($desktop) {

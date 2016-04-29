@@ -216,10 +216,14 @@
         display: block;
         width: 80%;
         font-family: $font-book;
-        font-size: rem-calc(18);
+        font-size: rem-calc(16);
         letter-spacing: 2px;
         text-align: center;
         text-transform: uppercase;
+
+        @include min-screen($tablet) {
+            font-size: rem-calc(18);
+        }
 
         @include min-screen($desktop) {
             font-size: rem-calc(22);

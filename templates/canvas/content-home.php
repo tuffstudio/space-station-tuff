@@ -16,7 +16,7 @@
 
 <div class="container--mobile-full">
     <div class="grid grid--full">
-        <div class="grid__item tablet--one-third">
+        <div class="grid__item one-half tablet--one-third">
             <div class="masonry__item masonry__item--square">
                 <div class="masonry__tile masonry__tile-link masonry__tile-link--gradient">
                     <span>
@@ -53,7 +53,7 @@
                 </a>
             <?php endif; ?>
         </div><!--
-        --><div class="grid__item tablet--one-third">
+        --><div class="grid__item one-half tablet--one-third">
             <a href="/?s=" class="masonry__link">
                 <div class="masonry__item masonry__item--square">
                     <div class="masonry__tile masonry__tile-link masonry__tile-link--brown">
@@ -115,7 +115,7 @@
         --><div class="grid__item tablet--one-third phone--hide tablet--show"></div>
     </div>
     <div class="grid grid--full is-hidden js-section-reveal">
-        <div class="grid__item tablet--one-third">
+        <div class="grid__item one-half tablet--one-third">
             <?php
                 if(array_key_exists(0, $categories)):
                     $category = CategoriesInPage\category_info($categories[0]);
@@ -178,7 +178,7 @@
                     </div>
                 </a>
             </div><!--
-            --><div class="grid__item tablet--one-third">
+            --><div class="grid__item one-half tablet--one-third">
                 <a href="#" class="masonry__link js-newsletter-jump">
                     <div class="masonry__item masonry__item--square">
                         <div class="masonry__tile masonry__tile-link masonry__tile-link--purple">
@@ -190,7 +190,7 @@
         </div>
     </div>
     <div class="grid grid--full is-hidden js-section-reveal">
-        <div class="grid__item tablet--one-third">
+        <div class="grid__item one-half tablet--one-third">
             <?php
                 if(array_key_exists(1, $categories)):
                     $category = CategoriesInPage\category_info($categories[1]);
@@ -264,7 +264,7 @@
                 $post_one = new MagazinePost\MagazinePost($last_posts[0]->ID);
                 $post_two = new MagazinePost\MagazinePost($last_posts[1]->ID);
         ?>
-        <div class="grid__item tablet--one-third">
+        <div class="grid__item one-half tablet--one-third">
             <a href="<?php echo $category['link']; ?>" class="masonry__link">
                 <div class="masonry__item masonry__item--square">
                     <div class="masonry__tile masonry__tile-link masonry__tile-link--gradient">
@@ -330,7 +330,7 @@
                 $post_one = new MagazinePost\MagazinePost($last_posts[0]->ID);
                 $post_two = new MagazinePost\MagazinePost($last_posts[1]->ID);
         ?>
-        <div class="grid__item tablet--one-third">
+        <div class="grid__item one-half tablet--one-third">
             <a href="<?= $category['link']; ?>" class="masonry__link">
                 <div class="masonry__item masonry__item--square">
                     <div class="masonry__tile masonry__tile-link masonry__tile-link--gradient">
@@ -401,7 +401,7 @@
         <?php endif; ?>
     </div>
     <div class="grid grid--full is-hidden js-section-reveal">
-        <div class="grid__item tablet--one-third">
+        <div class="grid__item one-half tablet--one-third">
             <?php
                 if(array_key_exists(4, $categories)):
                     $category = CategoriesInPage\category_info($categories[4]);
