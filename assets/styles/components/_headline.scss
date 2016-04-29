@@ -45,6 +45,11 @@
     a {
         color: $black;
         text-decoration: none;
+        transition: color $standard-animation-time ease-in-out;
+
+        &:hover {
+            color: $color-primary;
+        }
     }
 }
 

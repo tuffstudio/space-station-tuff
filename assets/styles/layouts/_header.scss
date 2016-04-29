@@ -57,7 +57,7 @@
 
 .navigation-menu {
     margin: 0;
-    padding: 8px 0 10px 40px;
+    padding: 10px 20px;
     list-style-type: none;
 
     @include min-screen($desktop) {
@@ -67,7 +67,6 @@
 
     li {
         position: relative;
-        margin: 10px 0;
 
         @include min-screen($desktop) {
             display: inline-block;
@@ -88,8 +87,8 @@
                 @include css-triangle(5px, $menu-link-color, down);
                 content: '';
                 position: absolute;
-                top: 5px;
-                right: 20px;
+                top: 15px;
+                right: 0;
 
                 @include min-screen($desktop) {
                     display: none;
@@ -102,9 +101,17 @@
         }
 
         &:hover {
-            a {
+            > a {
                 color: $menu-link-color-hover;
             }
+        }
+    }
+
+    > li {
+        border-top: 1px solid rgba($white, 0.15);
+
+        @include min-screen($desktop) {
+            border-top: none;
         }
     }
 
@@ -144,7 +151,14 @@
     }
 
     > li:last-child a {
+        margin-top: 10px;
         color: $white;
+        text-align: center;
+
+        @include min-screen($desktop) {
+            margin-top: 0;
+            text-align: left;
+        }
     }
 
     &.is-normal,
@@ -157,9 +171,11 @@
     }
 
     a {
+        display: block;
+        padding: 14px 0;
         transition: color $standard-animation-time ease;
         color: $menu-link-color;
-        font-size: rem-calc(12);
+        font-size: rem-calc(13);
         line-height: 1;
         text-decoration: none;
         text-transform: uppercase;
@@ -176,10 +192,25 @@
     }
 
     .sub-menu {
+        position: relative;
         list-style-type: none;
         max-height: 0;
         transition: max-height $sub-menu-up-animation ease;
         overflow: hidden;
+
+        &:before {
+            content: '';
+            position: absolute;
+            left: 15px;
+            top: 10px;
+            bottom: 10px;
+            width: 3px;
+            background-color: $color-primary;
+
+            @include min-screen($desktop) {
+                display: none;
+            }
+        }
 
         @include min-screen($desktop) {
             position: absolute;
@@ -192,9 +223,13 @@
         }
 
         &.is-opened {
-            max-height: 150px;
+            max-height: 350px;
             transition-duration: $sub-menu-down-animation;
             box-shadow: 5px 0 5px rgba($black, 0.2);
+
+            @include min-screen($desktop) {
+                max-height: 150px;
+            }
         }
 
         li {
