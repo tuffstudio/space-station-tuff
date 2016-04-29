@@ -189,6 +189,7 @@
 
 .section--top-stains {
     position: relative;
+    z-index: -1;
 
     &::before {
         @extend %bg-stain;

@@ -29,10 +29,10 @@
                         </div>
                     </div><!--
                     --><div class="grid__item tablet--one-half phone--hide tablet--show">
-                        <div class="case-study__thumbnail <?= $case_study->has_video() ? 'is-video' : ''?>">
+                        <a href="<?= $case_study->get_link(); ?><?= $case_study->has_video() ? '#play' : ''?>" class="case-study__thumbnail <?= $case_study->has_video() ? 'is-video' : ''?>">
                             <?= $case_study->get_image('case_study'); ?>
-                            <a href="<?= $case_study->get_link(); ?>#play" class="btn btn--play">play</a>
-                        </div>
+                            <button class="btn btn--play">play</button>
+                        </a>
                     </div>
                 </div>
             <?php endforeach; endif; ?>
