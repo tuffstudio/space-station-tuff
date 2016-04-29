@@ -244,6 +244,13 @@ window.SS.common = function($) {
         });
     }
 
+    function goBack() {
+        $('.js-go-back').on('click', function(event) {
+            event.preventDefault();
+            window.history.back();
+        });
+    }
+
     $(document).ready(function() {
         setIsMobile();
         toggleMobileNavigation();
@@ -256,6 +263,7 @@ window.SS.common = function($) {
         userBox();
         canvasAnimation();
         SS.initSelect2();
+        goBack();
 
         setTimeout(function() {
             subMenuAlignment();
@@ -396,13 +404,13 @@ window.SS.PropertyMap = function(id, initCoords, customOptions) {
 
     var popupStyling = function(infowindow) {
         google.maps.event.addListener(infowindow, 'domready', function() {
-            var iwOuter = $('.gm-style-iw');
-            var iwBackground = iwOuter.prev();
-            var iwCloseBtn = iwOuter.next();
+            var $iwOuter = $('.gm-style-iw');
+            var $iwBackground = $iwOuter.prev();
+            var $iwCloseBtn = $iwOuter.next();
 
-            iwBackground.children(':nth-child(2), :nth-child(4)').addClass('gm-wrapper');
+            $iwBackground.children(':nth-child(2), :nth-child(4)').addClass('gm-wrapper');
 
-            iwCloseBtn.addClass('gm-close-btn');
+            $iwCloseBtn.addClass('gm-close-btn');
         });
     };
 

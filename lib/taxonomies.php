@@ -23,7 +23,7 @@ function create_types_taxonomies() {
         'show_ui'           => true,
         'show_admin_column' => true,
         'query_var'         => true,
-        'rewrite'           => array( 'slug' => 'case-study' ),
+        'rewrite'           => array( 'slug' => 'case-study/category' ),
     );
     register_taxonomy('case_study_category', array('case-study' ), $case_study_args);
 

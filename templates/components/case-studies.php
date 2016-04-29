@@ -31,7 +31,7 @@
                     --><div class="grid__item tablet--one-half phone--hide tablet--show">
                         <div class="case-study__thumbnail <?= $case_study->has_video() ? 'is-video' : ''?>">
                             <?= $case_study->get_image('case_study'); ?>
-                            <button class="btn btn--play">play</button>
+                            <a href="<?= $case_study->get_link(); ?>#play" class="btn btn--play">play</a>
                         </div>
                     </div>
                 </div>

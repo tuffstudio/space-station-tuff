@@ -38,18 +38,31 @@ class MagazinePost {
 }
 
 class CaseStudyPost extends MagazinePost {
+    private $video_link;
+
+    function __construct($id) {
+        $this->id = $id;
+        $this->set_video_link($id);
+    }
+
+    private function set_video_link($id) {
+        $this->video_link = CFS()->get('case_study_video_link', $id);
+    }
+
     function get_category() {
         return get_the_terms($this->id, 'case_study_category')[0]->name;
     }
 
     // Returns boolean value
     function has_video() {
-        $video_link = CFS()->get('case_study_video_link', $this->id);
+        return strlen($this->video_link) != 0 ? true : false;
+    }
 
-        return strlen($video_link) != 0 ? true : false;
+    function get_video_link() {
+        return $this->video_link;
     }
 }
 
 class TeamMember extends MagazinePost {
-    
+
 }

@@ -22,6 +22,25 @@
     }
 }
 
+@keyframes ping {
+    0% {
+        transform: rotate(0);
+    }
+
+    7% {
+        transform: rotate(-13deg);
+
+    }
+
+    21% {
+        transform: rotate(13deg);
+    }
+
+    28% {
+        transform: rotate(0);
+    }
+}
+
 .animation--zoom {
     display: block;
     overflow: hidden;

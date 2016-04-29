@@ -6,11 +6,16 @@
     color: $footer-color;
     font-family: $font-light;
     font-size: rem-calc(11);
-    letter-spacing: 0.1em;
+    letter-spacing: .1em;
 
     @include min-screen($tablet-small) {
         padding: 50px 0;
     }
+}
+
+.footer__svg {
+    animation: ping 6s infinite;
+    animation-delay: 1s;
 }
 
 .footer__contact {
@@ -25,16 +30,16 @@
     display: block;
     position: relative;
     margin: 4px 0;
+    transition: color $standard-animation-time ease-in-out;
     color: $footer-color;
     text-decoration: none;
-    transition: color $standard-animation-time ease-in-out;
 
-    &:before {
+    &::before {
         position: absolute;
         left: -25px;
+        transition: left $standard-animation-time ease-in-out;
         color: $color-primary;
         font-size: rem-calc(10);
-        transition: left $standard-animation-time ease-in-out;
     }
 }
 
@@ -53,25 +58,25 @@
 a.footer--link:hover {
     color: $color-primary;
 
-    &:before {
+    &::before {
         left: -20px;
     }
 }
 
 .footer__address {
-    &:before {
+    &::before {
         content: 'A';
     }
 }
 
 .footer__email {
-    &:before {
+    &::before {
         content: 'E';
     }
 }
 
 .footer__telephone {
-    &:before {
+    &::before {
         content: 'T';
     }
 }
@@ -94,8 +99,8 @@ a.footer--link:hover {
 .footer__copyright {
     margin-top: 40px;
     padding-right: 50px;
-    line-height: 1.5em;
     color: $dark-gray;
+    line-height: 1.5em;
 
     @include min-screen($tablet-small) {
         margin-top: 0;
@@ -103,14 +108,14 @@ a.footer--link:hover {
 }
 
 .footer__social {
-    margin: 40px 0 0 0;
+    margin: 40px 0 0;
 
     @include min-screen($tablet-small) {
-        margin: 0 0 30px 0;
+        margin: 0 0 30px;
     }
 
     @include min-screen($desktop) {
-        margin: 0 0 50px 0;
+        margin: 0 0 50px;
     }
 
     .join-us__social + .join-us__social {
@@ -119,8 +124,8 @@ a.footer--link:hover {
 
     .join-us__social-link {
         @include min-screen($tablet-small) {
+            padding: 7px 7px 5px;
             font-size: rem-calc(11);
-            padding: 7px 7px 5px 7px;
         }
     }
 }
