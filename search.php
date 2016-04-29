@@ -21,7 +21,7 @@
             <div class="grid grid--full grid--middle">
                 <div class="grid__item desktop--one-half">
                     <h3 class="title--default">Properties for sale</h3>
-                    <a href="#" class="link--italic">Switch to Rent</a>
+                    <label for="rent" class="link--italic">Switch to Rent</label>
                 </div><!--
                 --><div class="grid__item view-nav__container desktop--one-half">
                     <ul class="view-nav sort-nav">

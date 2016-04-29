@@ -103,6 +103,10 @@ input[type=search] {
     background-color: $color-primary;
 }
 
+.input--hidden {
+    display: none;
+}
+
 // Gravity forms
 // --------------
 .gform_fields,

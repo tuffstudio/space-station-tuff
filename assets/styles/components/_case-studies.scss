@@ -44,3 +44,21 @@
     width: 100%;
     max-width: 100%;
 }
+
+.case-studies__bg {
+    @include background-cover('about_us_background_mobile.jpg');
+    padding: 40px 0;
+    background-repeat: repeat-y;
+    background-size: contain;
+
+    @include min-screen($tablet) {
+        @include background-cover('casestudies_background_tablet.jpg');
+    }
+
+
+    @include min-screen($desktop) {
+        @include background-cover('casestudies_background.jpg');
+        padding: 70px 0;
+        background-attachment: fixed;
+    }
+}

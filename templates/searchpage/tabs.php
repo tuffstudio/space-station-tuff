@@ -14,13 +14,13 @@
                     <div class="grid__item desktop--one-third">
                         <div class="search-tab__side-menu">
                             <div class="search-tab__side-menu__item">
-                                <button class="btn btn--switcher active">buy</button>
+                                <label for="buy" class="btn btn--switcher active">buy</label>
                             </div>
                             <div class="search-tab__side-menu__item">
-                                <button class="btn btn--switcher">rent</button>
+                                <label for="rent" class="btn btn--switcher">rent</label>
                             </div>
                             <div class="search-tab__side-menu__item">
-                                <button class="btn btn--switcher">short let</button>
+                                <label for="short-let" class="btn btn--switcher">short let</label>
                             </div>
                         </div>
                     </div><!--
