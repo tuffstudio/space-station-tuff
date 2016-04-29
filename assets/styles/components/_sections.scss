@@ -152,6 +152,7 @@
     bottom: -100px;
     left: 0;
     background-repeat: no-repeat;
+    pointer-events: none;
     z-index: -1;
 
     @include min-screen($desktop) {
