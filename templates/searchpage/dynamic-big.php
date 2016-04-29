@@ -1,5 +1,6 @@
 <a href="#" class="masonry__link">
     <img src="<?= get_template_directory_uri() ?>/dist/images/masonry_big_placeholder.jpg" alt="" class="masonry__background-image">
+    <div class="masonry__label u--text-uppercase">under offer</div>
     <div class="grid__item one-half">
         <div class="masonry__item masonry__item--square"></div>
     </div><!--

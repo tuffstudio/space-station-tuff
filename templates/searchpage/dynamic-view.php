@@ -29,7 +29,7 @@
         </div>
     </div><!--
     --><div class="grid__item tablet--one-half">
-        <div class="grid__item">
+        <div class="grid__item phone--hide tablet--show">
             <div class="masonry__item masonry__item--rectangular"></div>
         </div><!--
         --><div class="grid__item">
@@ -42,7 +42,7 @@
         <div class="grid__item">
             <?php include 'dynamic-small-left.php'; ?>
         </div><!--
-        --><div class="grid__item">
+        --><div class="grid__item phone--hide tablet--show">
             <div class="masonry__item masonry__item--rectangular"></div>
         </div><!--
         --><div class="grid__item">
@@ -101,7 +101,7 @@
         </div>
     </div><!--
     --><div class="grid__item tablet--one-half">
-        <div class="grid__item">
+        <div class="grid__item phone--hide tablet--show">
             <div class="masonry__item masonry__item--rectangular"></div>
         </div><!--
         --><div class="grid__item">
@@ -114,7 +114,7 @@
         <div class="grid__item">
             <?php include 'dynamic-small-left.php'; ?>
         </div><!--
-        --><div class="grid__item">
+        --><div class="grid__item phone--hide tablet--show">
             <div class="masonry__item masonry__item--rectangular"></div>
         </div><!--
         --><div class="grid__item">

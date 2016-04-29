@@ -15,6 +15,7 @@
     --><div class="grid__item one-half">
         <div class="masonry__item masonry__item--square masonry__image">
             <img src="<?= get_template_directory_uri(); ?>/dist/images/masonry_small_placeholder.jpg" alt="">
+            <div class="masonry__label u--text-uppercase">Sold out</div>
         </div>
     </div>
 </a>

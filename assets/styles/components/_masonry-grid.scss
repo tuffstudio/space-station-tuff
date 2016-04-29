@@ -354,6 +354,24 @@
     }
 }
 
+.masonry__label {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 3px 0;
+    background-color: $black-transparent;
+    color: $white;
+    font-family: $font-light;
+    font-size: rem-calc(12);
+    text-align: center;
+
+    @include min-screen($tablet) {
+        padding: 5px 0;
+        font-size: rem-calc(14);
+    }
+}
+
 .masonry__tile-border {
     @include square(calc(100% - #{$masonry-border-ratio}));
     position: absolute;
