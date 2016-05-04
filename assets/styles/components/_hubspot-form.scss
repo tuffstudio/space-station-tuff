@@ -22,9 +22,9 @@
         font-family: $font-book;
         font-size: rem-calc(12);
         letter-spacing: 1.7px;
-        text-align: center;
-        text-transform: uppercase;
         line-height: 1;
+        text-align: center;
+        text-transform: lowercase;
         -webkit-appearance: none;
 
         @include min-screen($tablet) {
