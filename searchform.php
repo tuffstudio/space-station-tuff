@@ -19,7 +19,7 @@
                     <option value="3.00+">3.00+ miles</option>
                 </select>
 
-                <select name="type" placeholder="property type">
+                <select name="property_type" placeholder="property type">
                     <option></option>
                     <option value="foo">foo</option>
                     <option value="bar">bar</option>
@@ -61,11 +61,17 @@
                 <div class="search-form__labels">
                     <span>Include:</span>
                     <label for="offer">Under offer</label>
-                    <input id="offer" name="under-offer" type="checkbox" value="true" class="input-checkbox" />
-                    <label for="sold">Sold</label>
-                    <input id="sold" name="sold" type="checkbox" value="true" class="input-checkbox" />
+                    <input id="offer" name="under-offer" type="checkbox" value="true" class="input-checkbox">
+                    <span class="sold-input input-types <?= $is_buy ? 'active': ''; ?>">
+                        <label for="sold">Sold</label>
+                        <input id="sold" name="sold" type="checkbox" value="true" class="input-checkbox">
+                    </span>
+                    <span class="rent-input input-types <?= $is_rent ? 'active': ''; ?>">
+                        <label for="rent">Rent</label>
+                        <input id="rent" name="rent" type="checkbox" value="true" class="input-checkbox">
+                    </span>
                     <input id="buy" class="input--hidden" type="radio" name="type" value="buy">
-                    <input id="rent" class="input--hidden" type="radio" name="type" value="rent">
+                    <input id="rent-input" class="input--hidden" type="radio" name="type" value="rent">
                     <input id="short-let" class="input--hidden" type="radio" name="type" value="short-let">
                 </div>
             </div><!--

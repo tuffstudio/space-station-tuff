@@ -19,9 +19,24 @@ window.SS.search = function($) {
         });
     }
 
+    function switchFormTypes() {
+        $btns = $('.js-switch-type');
+
+        $btns.on('click', function() {
+            var $this = $(this);
+            var targetInput = $this.data('input');
+            $btns.removeClass('active');
+            $this.addClass('active');
+
+            $('.input-types').removeClass('active');
+            $('.' + targetInput).addClass('active');
+        });
+    }
+
     $(document).ready(function() {
         SS.switchGrids('.js-grid-switcher', '.js-results-block');
         SS.switchGrids('.js-tab-switcher', '.js-tab-panel');
         turnMapOn();
+        switchFormTypes();
     });
 };

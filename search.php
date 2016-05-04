@@ -1,3 +1,9 @@
+<?php
+    $is_buy = isset($_GET['type']) && $_GET['type'] == 'buy' ? true : false;
+    $is_rent = isset($_GET['type']) && $_GET['type'] == 'rent' ? true : false;
+    $is_let = isset($_GET['type']) && $_GET['type'] == 'short-let' ? true : false;
+?>
+
 <div class="search-page__header">
     <div class="container">
         <div class="grid grid--full">
@@ -13,7 +19,7 @@
     </div>
 </div>
 
-<?php get_template_part('templates/searchpage/tabs'); ?>
+<?php include 'templates/searchpage/tabs.php'; ?>
 
 <section class="section search-results">
     <div class="container--mobile-full container">
@@ -21,7 +27,8 @@
             <div class="grid grid--full grid--middle">
                 <div class="grid__item desktop--one-half">
                     <h3 class="title--default">Properties for sale</h3>
-                    <label for="rent" class="link--italic">Switch to Rent</label>
+                    <label for="rent-input" class="link--italic sold-input input-types js-switch-type <?= $is_buy ? 'active': ''; ?>" data-input="rent-input">Switch to Rent</label>
+                    <label for="buy" class="link--italic rent-input input-types js-switch-type <?= $is_rent ? 'active': ''; ?>" data-input="sold-input">Switch to Buy</label>
                 </div><!--
                 --><div class="grid__item view-nav__container desktop--one-half">
                     <ul class="view-nav sort-nav">
