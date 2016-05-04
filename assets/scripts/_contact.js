@@ -69,10 +69,6 @@ window.SS.contact = function($) {
             var $this = $(this);
 
             $this.on('click', function(event) {
-                if (!isMobile()) {
-                    event.preventDefault();
-                }
-
                 var target = $this.data('target');
 
                 for (var pin in pins) {
