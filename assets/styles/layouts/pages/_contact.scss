@@ -122,15 +122,18 @@
 }
 
 .join-us__left {
-    @include min-screen($desktop) {
-        padding-right: 75px;
+    @include min-screen($tablet) {
+        padding-right: 100px;
         text-align: right;
+    }
+
+    @include min-screen($desktop) {
+        padding-right: 85px;
     }
 }
 
 .join-us__right {
-    @include min-screen($desktop) {
-        padding-left: 75px;
+    @include min-screen($tablet) {
         text-align: left;
     }
 }

@@ -25,6 +25,7 @@
     $json_data = json_encode($map_data);
 ?>
 
+<div id="map" class="anchor"></div>
 <section>
     <div id="contact-map" class="contact__map" data-json='<?= $json_data; ?>'></div>
 </section>
