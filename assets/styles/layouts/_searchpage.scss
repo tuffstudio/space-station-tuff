@@ -248,3 +248,11 @@
 .single-result__info--transparent {
     background-color: transparent;
 }
+
+.input-types {
+    display: none;
+
+    &.active {
+        display: inline;
+    }
+}
