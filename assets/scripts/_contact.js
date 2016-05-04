@@ -24,7 +24,8 @@ window.SS.contact = function($) {
         function setTime() {
             var date = new Date();
             var time = date.getUTCHours() + 1;
-            var minutes = date.getUTCMinutes();
+            var UTCminutes = date.getUTCMinutes();
+            var minutes = UTCminutes > 9 ? UTCminutes : '0' + UTCminutes;
             var londonTime = time + ':' + minutes;
 
             $time.html(londonTime);
