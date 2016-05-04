@@ -43,7 +43,6 @@
     overflow: hidden;
 
     @include min-screen($desktop) {
-        max-height: 100%;
         transition: none;
         text-align: right;
         overflow: visible;
