@@ -17,12 +17,12 @@
                     ?>
                     <div class="favourites-box js-favourites-box">
                         <div class="favourites-box__trigger js-favourites-box-trigger">
-                            <svg version="1.1" class="favourites-box__icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                            <svg version="1.1" class="favourites-box__icon" x="0px" y="0px"
                                 width="23.886px" height="22.815px" viewBox="247.274 242.936 23.886 22.815"
                                 enable-background="new 247.274 242.936 23.886 22.815" xml:space="preserve">
-                                <polygon class="favourites-box__icon" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="
-                                    259.217,243.936 262.599,250.788 270.16,251.887 264.688,257.221 265.98,264.751 259.217,261.195 252.454,264.751 253.746,257.221
-                                    248.274,251.887 255.835,250.788 "/>
+                                <polygon class="favourites-box__icon" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"
+                                    points="257.885,246.469 260.855,252.488 267.497,253.453 262.69,258.138 263.826,264.751 257.885,261.627 251.945,264.751 253.08,258.138 248.274,253.453 254.915,252.488 "
+                                />
                             </svg>
                         </div>
                         <aside class="favourites-box__content">

@@ -43,7 +43,6 @@
     overflow: hidden;
 
     @include min-screen($desktop) {
-        max-height: 100%;
         transition: none;
         text-align: right;
         overflow: visible;
@@ -71,13 +70,17 @@
         @include min-screen($desktop) {
             display: inline-block;
             position: static;
-            margin: 0 10px;
+            margin: 0 7px;
             transition: border-bottom-color $standard-animation-time ease;
             border-bottom: 4px solid transparent;
 
             &:hover {
                 border-bottom-color: $color-primary;
             }
+        }
+
+        @include min-screen($desktop-medium) {
+            margin: 0 10px;
         }
 
         &.has-menu {
