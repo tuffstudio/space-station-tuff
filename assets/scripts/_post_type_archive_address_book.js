@@ -2,9 +2,8 @@ window.SS = window.SS || {};
 
 window.SS.post_type_archive_address_book = function($) {
     var $addressBookContainer = $('.js-address-book');
-    
+
     function fetchData(query) {
-        console.log(query);
         $.ajax({
             type: 'GET',
             url: '/wp-admin/admin-ajax.php',
@@ -26,7 +25,10 @@ window.SS.post_type_archive_address_book = function($) {
         var $selectCategory = $('.js-address-book-category');
         var currentLocalization = $selectLocalization.val();
         var currentCategory = $selectCategory.val();
-        var pageUrl = 'http://' + '192.168.99.100:8000/' + window.location.pathname;
+        var pageUrl = window.location.href;
+        var pageUrlArray = pageUrl.split("/");
+
+        pageUrl = pageUrlArray[0] + "//" + pageUrlArray[2] + "/address-book/";
 
         function generatePath() {
             var path = '?';
@@ -41,16 +43,20 @@ window.SS.post_type_archive_address_book = function($) {
             return path;
         }
 
+        function dataUpdater() {
+            var newPath = generatePath();
+            history.pushState({}, window.title, pageUrl + newPath);
+            fetchData(newPath);
+        }
+
         $selectLocalization.on('change', function() {
             currentLocalization = $(this).val();
-            history.pushState({}, window.title, pageUrl + generatePath());
-            fetchData(generatePath());
+            dataUpdater();
         });
 
         $selectCategory.on('change', function() {
             currentCategory = $(this).val();
-            history.pushState({}, window.title, pageUrl + generatePath());
-            fetchData(generatePath());
+            dataUpdater();
         });
     }
 

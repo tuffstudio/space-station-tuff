@@ -2,7 +2,7 @@
 
 function get_address_book_posts($param) {
     $query_string = $_GET['data'];
-    include(locate_template('templates/canvas/content-address-book.php'));
+    include(locate_template('templates/canvas/ajax-address-book.php'));
     die();
 }
 add_action('wp_ajax_get_address_book_posts', 'get_address_book_posts');

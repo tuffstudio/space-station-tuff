@@ -1,6 +1,4 @@
 <?php
-    namespace Roots\Sage\ExcerptText;
-
     $taxonomy_categories = 'address-book-category';
     $taxonomy_localizations = 'address-book-localization';
 
@@ -12,46 +10,14 @@
         $query_string = isset($_SERVER['QUERY_STRING']) ? $_SERVER['QUERY_STRING'] : NULL;
     }
 
-    if ($query_string) {
-        $tax_category = '';
-        $tax_localization = '';
+    parse_str($query_string, $query_array);
 
-        parse_str($query_string);
-
-        $tax_query = array(
-            'relation' => 'AND',
-        );
-
-        if ($tax_category) {
-            $tmp = array(
-                'taxonomy' => $taxonomy_categories,
-                'field'    => 'slug',
-                'terms'    => array($tax_category),
-            );
-            array_push($tax_query , $tmp);
-            $current_category_slug = $tax_category;
-        }
-        if ($tax_localization) {
-            $tmp = array(
-                'taxonomy' => $taxonomy_localizations,
-                'field'    => 'slug',
-                'terms'    => array($tax_localization),
-            );
-            array_push($tax_query , $tmp);
-            $current_localization_slug = $tax_localization;
-        }
-
-        $args = array(
-            'post_type' => 'address-book',
-            'post_status' => 'publish',
-            'posts_per_page' => -1,
-            'tax_query' => $tax_query,
-        );
-
-        $query = new \WP_Query( $args );
-        $posts = $query->posts;
+    if (isset($query_array['tax_category'])) {
+        $current_category_slug = $query_array['tax_category'];
     }
-
+    if (isset($query_array['tax_localization'])) {
+        $current_localization_slug = $query_array['tax_localization'];
+    }
 ?>
 
 <nav class="nav__secondary">
@@ -92,63 +58,10 @@
 </nav>
 
 <section class="business-directory__list">
-    <div class="grid grid--full">
-        <?php
-            foreach ($posts as $post) :
-                $page_id = $post->ID;
-                $page_fields = CFS() -> get(false, $page_id);
-                $category_name = get_the_terms($page_id, $taxonomy_categories)[0]->name;
-                $category_link = get_term_link($category_name, $taxonomy_categories);
+    <div class="grid grid--full js-address-book">
 
-                $telephone = str_replace(' ', '', $page_fields['ss_address_book_tel']);
-                $website = $page_fields['ss_address_book_website'];
-                $city = $page_fields['ss_address_book_city'];
-                $post_code = $page_fields['ss_address_book_post_code'];
-                $road = $page_fields['ss_address_book_road'];
-                $house_number = $page_fields['ss_address_book_house_number'];
+        <?php include dirname(__FILE__) . '/ajax-address-book.php'; ?>
 
-                $text = getShortText($post->post_content, 100);
-        ?><!--
-
-        --><div class="grid__item tablet-small--one-half tablet--one-third">
-            <div class="business-directory__item">
-                <a href="<?= the_permalink() ?>" class="link--image animation--zoom">
-                    <?php the_post_thumbnail('medium', array( 'class' => 'img--responsive') ); ?>
-                </a>
-                <p class="section__category">
-                    <a href="<?= $category_link ?>">
-                        <?= $category_name ?>
-                    </a>
-                </p>
-                <a href="<?= the_permalink() ?>" class="link--standard">
-                    <h3 class="headline--small">
-                        <?php the_title($page_id); ?>
-                    </h3>
-                </a>
-
-                <p class="paragraph__address">
-                    <a href="tel:<?= $telephone ?>">
-                        <?= $telephone ?>
-                    </a>
-                    <span>
-                        <?= $house_number . ' ' . $road . ', ' . $post_code ?>
-                    </span>
-                    <span>
-                        <a href="<?= $website['url'] ?>" target="<?= $website['target'] ?>">
-                            <?= $website['text'] ?>
-                        </a>
-                    </span>
-                </p>
-
-                <p class="business-directory__description">
-                    <?= $text ?>
-                </p>
-            </div>
-        </div><!--
-
-        --><?php
-            endforeach;
-        ?>
     </div>
 </section>
 <div class="pagination <?php if(get_next_posts_link() || get_previous_posts_link()) echo 'pagination--border' ?>">

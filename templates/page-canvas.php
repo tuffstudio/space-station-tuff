@@ -25,7 +25,7 @@
                 <div class="grid__item desktop--one-quarter js-target">
                     <?php include 'canvas/navigation.php' ?>
                 </div><!--
-                --><div class="grid__item desktop--three-quarters js-owner js-address-book">
+                --><div class="grid__item desktop--three-quarters js-owner">
                     <?php include $template_path; ?>
                 </div>
             </div>
