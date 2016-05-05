@@ -1,0 +1,36 @@
+// Cookies info bar
+// -----------------
+.cookies-info {
+    position: fixed;
+    top: -$cookies-height;
+    right: 0;
+    left: 0;
+    width: 100%;
+    height: $cookies-height;
+    transition: top $standard-animation-time ease;
+    background-color: $cookies-bg-color;
+    cursor: pointer;
+    z-index: 150;
+
+    &.active {
+        top: 0;
+    }
+}
+
+.cookies-info__body {
+    color: $white;
+    font-family: $font-book;
+    font-size: rem-calc(12);
+    letter-spacing: .02em;
+
+    a {
+        color: $black;
+        font-family: $font-heavy;
+        letter-spacing: .03em;
+    }
+}
+
+.cookies-info__close {
+    padding: 10px 48px 10px 40px;
+    cursor: pointer;
+}

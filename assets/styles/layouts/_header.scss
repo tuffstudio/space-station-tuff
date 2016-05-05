@@ -7,11 +7,16 @@
     left: 0;
     height: $nav-height;
     padding: 5px 0 3px;
+    transition: top $standard-animation-time ease;
     background-color: $nav-bg-color;
     z-index: 100;
 
     @include min-screen($desktop) {
         padding-bottom: 0;
+    }
+
+    &.cookies-opened {
+        top: $cookies-height;
     }
 
     nav {

@@ -270,6 +270,25 @@ window.SS.common = function($) {
         });
     }
 
+    function cookiesInfo() {
+        var $closeBtn = $('.js-cookies-close');
+        var $cookiesBar = $('.js-cookies-bar');
+        var $navigation = $('.js-navigation');
+        var cookie = getCookie('ss-new-user');
+
+
+        if (cookie === null) {
+            $cookiesBar.addClass('active');
+            $navigation.addClass('cookies-opened');
+        }
+
+        $closeBtn.on('click', function() {
+            setCookie('ss-new-user', 1, 500);
+            $cookiesBar.removeClass('active');
+            $navigation.removeClass('cookies-opened');
+        });
+    }
+
     $(document).ready(function() {
         setIsMobile();
         toggleMobileNavigation();
@@ -284,6 +303,7 @@ window.SS.common = function($) {
         SS.initSelect2();
         goBack();
         smoothScroll();
+        cookiesInfo();
 
         setTimeout(function() {
             subMenuAlignment();
@@ -296,6 +316,9 @@ window.SS.common = function($) {
     });
 };
 
+
+// Common function visible everywhere
+// ----------------------------------
 window.SS.switchGrids = function(switcher, panel) {
     var $switchButton = $(switcher);
     var $panel = $(panel);
