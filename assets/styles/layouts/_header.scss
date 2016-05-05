@@ -16,7 +16,15 @@
     }
 
     &.cookies-opened {
-        top: $cookies-height;
+        top: $cookies-height-mobile;
+
+        @include min-screen($tablet) {
+            top: $cookies-height-tablet;
+        }
+
+        @include min-screen($desktop) {
+            top: $cookies-height-desktop;
+        }
     }
 
     nav {

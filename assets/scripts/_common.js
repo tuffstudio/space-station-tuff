@@ -282,7 +282,8 @@ window.SS.common = function($) {
             $navigation.addClass('cookies-opened');
         }
 
-        $closeBtn.on('click', function() {
+        $closeBtn.on('click', function(event) {
+            event.preventDefault();
             setCookie('ss-new-user', 1, 500);
             $cookiesBar.removeClass('active');
             $navigation.removeClass('cookies-opened');
