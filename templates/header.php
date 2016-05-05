@@ -1,4 +1,5 @@
-<header class="navigation">
+<?php include 'cookies.php'; ?>
+<header class="navigation js-navigation">
     <div class="navigation__container">
         <div class="grid">
             <div class="grid__item desktop--one-fifth">

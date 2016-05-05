@@ -93,6 +93,7 @@
     h6 {
         margin-bottom: -.5em;
         font-family: $font-heavy;
+        letter-spacing: .06em;
         line-height: 1.5;
         text-transform: uppercase;
     }
@@ -133,6 +134,20 @@
         li {
             margin: 4px 0;
         }
+    }
+}
+
+.page-content {
+    @include min-screen($tablet) {
+        margin-top: 30px;
+    }
+
+    @include min-screen($desktop) {
+        margin-top: 50px;
+    }
+
+    &::after {
+        display: none;
     }
 }
 
