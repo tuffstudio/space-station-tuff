@@ -13,13 +13,25 @@ body {
     position: relative;
     right: 0;
     padding-top: $nav-height;
-    transition: right $standard-animation-time ease-in-out;
+    transition: right $standard-animation-time ease-in-out, padding-top $standard-animation-time ease;
     overflow-x: hidden;
     background-color: $body-bg-color;
     font-family: $base-font-family;
 
     &.static {
         overflow: hidden;
+    }
+
+    &.cookies-opened {
+        padding-top: $nav-height + $cookies-height-mobile;
+
+        @include min-screen($tablet) {
+            padding-top: $nav-height + $cookies-height-tablet;
+        }
+
+        @include min-screen($desktop) {
+            padding-top: $nav-height + $cookies-height-desktop;
+        }
     }
 }
 

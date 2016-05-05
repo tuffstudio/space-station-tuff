@@ -280,6 +280,7 @@ window.SS.common = function($) {
         if (cookie === null) {
             $cookiesBar.addClass('active');
             $navigation.addClass('cookies-opened');
+            $body.addClass('cookies-opened');
         }
 
         $closeBtn.on('click', function(event) {
@@ -287,6 +288,7 @@ window.SS.common = function($) {
             setCookie('ss-new-user', 1, 500);
             $cookiesBar.removeClass('active');
             $navigation.removeClass('cookies-opened');
+            $body.removeClass('cookies-opened');
         });
     }
 
