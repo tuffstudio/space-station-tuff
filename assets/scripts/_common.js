@@ -160,25 +160,6 @@ window.SS.common = function($) {
         return cookie;
     }
 
-    function cookiesInfo($elem) {
-        var cookie = getCookie(cookieUser);
-
-        if (cookie === null) {
-            $elem.show();
-        }
-
-        $elem.on('click', function(e) {
-            var target  = $(e.target);
-            if (target.is('a')) {
-                return true;
-            } else {
-                e.preventDefault();
-                setCookie(cookieUser, 1, 500);
-                $elem.fadeOut('slow');
-            }
-        });
-    }
-
     function revealSections() {
         $('.js-section-reveal').viewportChecker({
             classToAdd: 'is-revealed',
