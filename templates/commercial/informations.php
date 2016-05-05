@@ -1,4 +1,3 @@
-
 <?php
     $commercial_fiels = CFS()->get(false, $post->ID);
     $content = $post->post_content;
