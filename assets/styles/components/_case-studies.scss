@@ -43,6 +43,10 @@
 .case-study__video {
     width: 100%;
     max-width: 100%;
+
+    @include min-screen($tablet) {
+        max-width: 90%;
+    }
 }
 
 .case-studies__bg {
