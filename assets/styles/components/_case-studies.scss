@@ -43,9 +43,17 @@
 .case-study__video {
     width: 100%;
     max-width: 100%;
+    transition: opacity 1s ease;
+    opacity: 0;
 
-    @include min-screen($tablet) {
+    @include min-screen($desktop) {
         max-width: 90%;
+        height: 460px;
+        max-height: 460px;
+    }
+
+    &.visible {
+        opacity: 1;
     }
 }
 

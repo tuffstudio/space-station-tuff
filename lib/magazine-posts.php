@@ -33,7 +33,7 @@ class MagazinePost {
     function get_excerpt($length = 100) {
         $post_content = get_post_field('post_content', $this->id);
 
-        return ExcerptText\getShortText($post_content, $length);
+        return ExcerptText\getShortText(strip_tags($post_content), $length);
     }
 }
 

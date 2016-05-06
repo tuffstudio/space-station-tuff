@@ -21,9 +21,10 @@
                         <?php if($case_study->has_video()) : ?>
                             <video
                                 id="case-study"
-                                class="case-study__video"
+                                class="video-js vjs-default-skin case-study__video"
                                 src="<?= $case_study->get_video_link(); ?>"
-                                controls
+                                controls preload="auto"
+                                data-setup="{}"
                             >
                                 Your browser does nor support video tag.
                             </video>
