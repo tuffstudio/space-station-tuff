@@ -14,7 +14,8 @@
     "jquery-cycle2": "~2.1.6",
     "imagesloaded": "~4.1.0",
     "sticky-kit": "~1.1.2",
-    "simpleWeather": "~3.1.0"
+    "simpleWeather": "~3.1.0",
+    "video.js": "~5.10.1"
   },
   "overrides": {
     "jQuery-viewport-checker": {
@@ -37,6 +38,9 @@
     },
     "simpleWeather": {
       "main": "./jquery.simpleWeather.js"
+    },
+    "video.js": {
+      "main": "./dist/video.js"
     }
   }
 }

@@ -37,7 +37,7 @@ function custom_post_types_init() {
         'menu_icon'          => 'dashicons-chart-line'
     );
 
-    register_post_type( 'case-study', $args_case_studies );
+    register_post_type('case-study', $args_case_studies);
 
 
     /**
@@ -75,7 +75,7 @@ function custom_post_types_init() {
         'menu_icon'          => 'dashicons-book-alt'
     );
 
-    register_post_type( 'address-book', $args_address_book );
+    register_post_type('address-book', $args_address_book);
 
     /**
      * Register team member post type.
@@ -112,7 +112,44 @@ function custom_post_types_init() {
         'menu_icon'          => 'dashicons-groups'
     );
 
-    register_post_type( 'team-member', $args_team_member );
+    register_post_type('team-member', $args_team_member);
+
+    /**
+     * Register quote post type.
+     */
+    $labels_quotes = array(
+        'name'               => 'Quotes',
+        'singular_name'      => 'Quote',
+        'menu_name'          => 'Quotes',
+        'name_admin_bar'     => 'Quote',
+        'add_new'            => 'New Quote',
+        'add_new_item'       => 'Add new Quote',
+        'new_item'           => 'New Quote',
+        'edit_item'          => 'Edit Quote',
+        'view_item'          => 'See Quote',
+        'all_items'          => 'All Quotes',
+        'search_items'       => 'Search Quotes',
+        'not_found'          => 'Quotes not found ',
+        'not_found_in_trash' => 'Not found Quote in trash'
+    );
+
+    $args_quotes = array(
+        'labels'             => $labels_quotes,
+        'public'             => true,
+        'publicly_queryable' => true,
+        'show_ui'            => true,
+        'show_in_menu'       => true,
+        'query_var'          => true,
+        'rewrite'            => array( 'slug' => 'quote' ),
+        'capability_type'    => 'post',
+        'has_archive'        => true,
+        'hierarchical'       => false,
+        'menu_position'      => 2,
+        'supports'           => array('title'),
+        'menu_icon'          => 'dashicons-format-quote'
+    );
+
+    register_post_type('quote', $args_quotes);
 }
 
 add_action('init', __NAMESPACE__ . '\\custom_post_types_init');

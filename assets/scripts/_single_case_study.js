@@ -2,12 +2,18 @@ window.SS = window.SS || {};
 
 window.SS.single_case_study = function($) {
     function autoplayVideo() {
+        var videoID = 'case-study';
         var isHash = window.location.hash === '#play' ? true : false;
 
-        if (isHash) {
-            var video = document.getElementById('case-study');
-            video.play();
-        }
+        videojs(videoID).ready(function() {
+            var video = this;
+
+            $('.case-study__video').addClass('visible');
+
+            if (isHash) {
+                video.play();
+            }
+        });
     }
 
     $(document).ready(function() {

@@ -8,6 +8,7 @@
 @import 'owl.carousel';
 @import 'owl.theme.green';
 @import 'select2';
+@import 'video-js';
 
 // Theme settings
 @import 'settings/mixins';
@@ -48,6 +49,7 @@
 @import 'components/pagination';
 @import 'components/favourites-aside';
 @import 'components/cookies';
+@import 'components/videojs';
 
 // Layouts
 @import 'layouts/header';
