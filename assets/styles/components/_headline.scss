@@ -79,11 +79,11 @@
 }
 
 .headline--small {
-    margin: 0 auto;
+    margin: 7px auto;
     font-family: $masonry-title-font;
     font-size: rem-calc(14);
     letter-spacing: 2px;
-    line-height: 1.5;
+    line-height: 1.3;
     text-transform: uppercase;
 
     @include min-screen($desktop) {
@@ -106,4 +106,19 @@
 
 .headline--small-space {
     margin: .5em 0;
+}
+
+.subheadline--default {
+    margin: -5px 0 20px;
+    text-transform: uppercase;
+    color: rgba($black, 0.8);
+    font-size: rem-calc(13);
+
+    @include min-screen($tablet) {
+        font-size: rem-calc(14);
+    }
+
+    @include min-screen($desktop) {
+        font-size: rem-calc(16);
+    }
 }

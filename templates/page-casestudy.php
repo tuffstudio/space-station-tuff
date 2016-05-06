@@ -53,29 +53,30 @@
                         </div><!--
                         --><div class="grid__item one-half">
                             <?php
-                                if(array_key_exists(0, $case_studies)) :
+                                if(array_key_exists(0, $case_studies)) {
                                     $case = $case_study{0};
+                                    include 'case-studies/small-single.php';
+                                }
                             ?>
-                                <?php include 'case-studies/small-single.php'; ?>
-                            <?php endif; ?>
                         </div>
                     </div>
                     <div class="grid__item">
                         <?php
-                            if(array_key_exists(2, $case_studies)) :
+                            if(array_key_exists(2, $case_studies)) {
                                 $case = $case_study{2};
+                                include 'case-studies/small.php';
+                            }
                         ?>
-                            <?php include 'case-studies/small.php'; ?>
-                        <?php endif; ?>
                     </div>
                 </div><!--
                 --><div class="grid__item tablet--one-half">
                     <div class="grid__item masonry__image">
                         <?php
-                            if(array_key_exists(1, $case_studies)) :
+                            if(array_key_exists(1, $case_studies)) {
                                 $case = $case_study{1};
+                                include 'case-studies/big.php';
+                            }
                         ?>
-                            <?php include 'case-studies/big.php'; ?>
                         <?php endif; ?>
                     </div>
                 </div>
@@ -88,20 +89,20 @@
                         </div><!--
                         --><div class="grid__item one-half">
                             <?php
-                                if(array_key_exists(3, $case_studies)) :
+                                if(array_key_exists(3, $case_studies)) {
                                     $case = $case_study{3};
+                                    include 'case-studies/small-single.php';
+                                }
                             ?>
-                                <?php include 'case-studies/small-single.php'; ?>
-                            <?php endif; ?>
                         </div>
                     </div>
                     <div class="grid__item">
                         <?php
-                            if(array_key_exists(4, $case_studies)) :
+                            if(array_key_exists(4, $case_studies)) {
                                 $case = $case_study{4};
+                                include 'case-studies/small.php';
+                            }
                         ?>
-                            <?php include 'case-studies/small.php'; ?>
-                        <?php endif; ?>
                     </div>
                 </div><!--
                 --><div class="grid__item tablet--one-half">
@@ -117,22 +118,22 @@
                     </div>
                     <div class="grid__item">
                         <?php
-                            if(array_key_exists(5, $case_studies)) :
+                            if(array_key_exists(5, $case_studies)) {
                                 $case = $case_study{5};
+                                include 'case-studies/big.php';
+                            }
                         ?>
-                            <?php include 'case-studies/big.php'; ?>
-                        <?php endif; ?>
                     </div>
                 </div>
             </div>
             <div class="grid grid--full is-hidden js-section-reveal">
                 <div class="grid__item tablet--one-half">
                     <?php
-                        if(array_key_exists(6, $case_studies)) :
+                        if(array_key_exists(6, $case_studies)) {
                             $case = $case_study{6};
+                            include 'case-studies/small.php';
+                        }
                     ?>
-                        <?php include 'case-studies/small.php'; ?>
-                    <?php endif; ?>
                 </div><!--
                 --><div class="grid__item tablet--one-half">
                     <div class="grid__item one-half"></div><!--

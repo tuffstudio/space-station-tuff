@@ -23,8 +23,8 @@
         </div><!--
         --><div class="grid__item desktop--one-quarter">
             <div class="property__sidebar">
-                <a class="link--text" href="email:spacestation@gmail.com">email us</a></br>
-                <a class="link--text" href="tel: 02076136262">020 7613 6262</a>
+                <a class="link--text" href="mailto:spacestation@gmail.com">email us</a></br>
+                <a class="link--text" href="tel:02076136262">020 7613 6262</a>
 
                 <h3 class="property__sidebar-title">Fast facts</h3>
                 <ul class="property__properties">
