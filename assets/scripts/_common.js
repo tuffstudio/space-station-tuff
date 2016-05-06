@@ -130,7 +130,7 @@ window.SS.common = function($) {
 
         expireDate.setDate(expireDate.getDate() + daysLeft);
 
-        var cookieValue = escape(value) + ((daysLeft === null) ? '' : '; expires=' + expireDate.toUTCString());
+        var cookieValue = escape(value) + ((daysLeft === null) ? '' : '; expires=' + expireDate.toUTCString() + '; path=/');
 
         document.cookie = cookieName + '=' + cookieValue;
     }
