@@ -130,7 +130,7 @@ window.SS.common = function($) {
 
         expireDate.setDate(expireDate.getDate() + daysLeft);
 
-        var cookieValue = escape(value) + ((daysLeft === null) ? '' : '; expires=' + expireDate.toUTCString());
+        var cookieValue = escape(value) + ((daysLeft === null) ? '' : '; expires=' + expireDate.toUTCString() + '; path=/');
 
         document.cookie = cookieName + '=' + cookieValue;
     }
@@ -179,20 +179,6 @@ window.SS.common = function($) {
             autoplayHoverPause: true,
             nav: true,
             navText: ['<', '>']
-        });
-    }
-
-    function goToNewsletter() {
-        var $link = $('.js-newsletter-jump');
-        var $target = $('.js-newsletter');
-        var SCROLL_SPEED = 1000;
-
-        $link.on('click', function(event) {
-            var offsetTop = $target.offset().top;
-
-            $('html, body').animate({ scrollTop: offsetTop }, SCROLL_SPEED);
-
-            return false;
         });
     }
 
@@ -280,7 +266,6 @@ window.SS.common = function($) {
         goToTopButton();
         revealSections();
         caseStudiesCarousel();
-        goToNewsletter();
         stickyMenu();
         userBox();
         canvasAnimation();

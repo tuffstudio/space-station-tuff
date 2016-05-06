@@ -2,8 +2,9 @@
     use Roots\Sage\MagazinePost;
 
     $content = $post->post_content;
-    $commercial_fiels = CFS()->get(false, $post->ID);
+    $commercial_fields = CFS()->get(false, $post->ID);
     $case_studies = [];
+    $quotes = $commercial_fields['casestudy_index_chosen_quotes'];
 
     $args = array(
         'post_type' => 'case-study',
@@ -36,7 +37,7 @@
             <?php the_title(); ?>
         </h2>
         <h1 class="headline--main headline--small-space">
-            <strong><?= $commercial_fiels['sp_commercial_headline']; ?></strong>
+            <strong><?= $commercial_fields['sp_commercial_headline']; ?></strong>
         </h1>
         <article class="text-description text-description--single">
             <?= $content; ?>
@@ -107,14 +108,19 @@
                 </div><!--
                 --><div class="grid__item tablet--one-half">
                     <div class="grid__item one-half">
-                        <div class="masonry__item masonry__item--square">
-                            <div class="masonry__tile masonry__tile-link masonry__tile-link--quote">
-                                <span class="quote">
-                                    Russel is the master of mortar, the king of concrete and the master of the deal
-                                    <span class="author">King Arthur</span>
-                                </span>
+                        <?php
+                            if($quotes[0]) :
+                                $quote = CFS()->get(false, $quotes[0]);
+                        ?>
+                            <div class="masonry__item masonry__item--square">
+                                <div class="masonry__tile masonry__tile-link masonry__tile-link--quote">
+                                    <span class="quote">
+                                        "<?= $quote['quote_content']; ?>
+                                        <span class="author"><?= $quote['quote_author']; ?></span>
+                                    </span>
+                                </div>
                             </div>
-                        </div>
+                        <?php endif; ?>
                     </div>
                     <div class="grid__item">
                         <?php
@@ -138,14 +144,19 @@
                 --><div class="grid__item tablet--one-half">
                     <div class="grid__item one-half"></div><!--
                     --><div class="grid__item one-half">
-                        <div class="masonry__item masonry__item--square">
-                            <div class="masonry__tile masonry__tile-link masonry__tile-link--quote">
-                                <span class="quote">
-                                    Russel is the master of mortar, the king of concrete and the master of the deal
-                                    <span class="author">Marc Quinn, Artist</span>
-                                </span>
+                        <?php
+                            if($quotes[1]) :
+                                $quote = CFS()->get(false, $quotes[1]);
+                        ?>
+                            <div class="masonry__item masonry__item--square">
+                                <div class="masonry__tile masonry__tile-link masonry__tile-link--quote">
+                                    <span class="quote">
+                                        "<?= $quote['quote_content']; ?>
+                                        <span class="author"><?= $quote['quote_author']; ?></span>
+                                    </span>
+                                </div>
                             </div>
-                        </div>
+                        <?php endif; ?>
                     </div>
                 </div>
             </div>

@@ -241,4 +241,8 @@
 .canvas-post__sidebar-box {
     @include square($moving-box-size);
     margin: 0 auto 10px;
+
+    @include min-screen($desktop) {
+        margin: 0 auto 30px;
+    }
 }

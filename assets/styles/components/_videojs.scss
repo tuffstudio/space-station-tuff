@@ -1,0 +1,24 @@
+// Custom video js styles
+// -----------------------
+.vjs-default-skin {
+    .vjs-play-control,
+    .vjs-control,
+    .vjs-button,
+    .vjs-paused {
+        color: $color-primary;
+    }
+
+    .vjs-play-progress {
+        background-color: $color-primary;
+    }
+
+    .vjs-load-progress,
+    .vjs-volume-level {
+        background-color: rgba($color-primary, .4);
+    }
+
+    .vjs-big-play-button {
+        @include center-align();
+        font-size: 3.5em;
+    }
+}
