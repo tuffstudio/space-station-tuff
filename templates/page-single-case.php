@@ -64,7 +64,7 @@
                                 <div class="masonry__item masonry__item--square">
                                     <div class="masonry__tile masonry__tile-link masonry__tile-link--quote">
                                         <span class="quote">
-                                            <?= $quote_fields['quote_content']; ?>
+                                            "<?= $quote_fields['quote_content']; ?>
                                             <span class="author"><?= $quote_fields['quote_author']; ?></span>
                                         </span>
                                     </div>
