@@ -3,6 +3,7 @@
 <?php
     $case_id = $post->ID;
     $case_study = new MagazinePost\CaseStudyPost($case_id);
+    $subheadline = CFS() -> get('ss_post_subheadline', $case_id);
     $related_case_studies = CFS()->get('single_related_case_studies', $case_id);
     $quote_id = CFS()->get('related_quote', $case_id);
 ?>
@@ -37,6 +38,9 @@
                     <div class="canvas-post__header">
                         <p class="masonry__tile-category canvas-post__category"><span><?= $case_study->get_category(); ?></span></p>
                         <h1 class="canvas-post__title"><?php the_title(); ?></h1>
+                        <?php if ($subheadline) : ?>
+                            <h2 class="subheadline--default"><?= $subheadline; ?></h2>
+                        <?php endif; ?>
                         <?php include dirname(__FILE__) . '/components/author.php'; ?>
                     </div>
                 </div>

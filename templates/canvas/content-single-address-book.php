@@ -6,7 +6,6 @@
 
     $telephone = str_replace(' ', '', $page_fields['ss_address_book_tel']);
     $website = $page_fields['ss_address_book_website'];
-    $city = $page_fields['ss_address_book_city'];
     $post_code = $page_fields['ss_address_book_post_code'];
     $road = $page_fields['ss_address_book_road'];
     $house_number = $page_fields['ss_address_book_house_number'];
@@ -28,9 +27,12 @@
                 <?= $category_name ?>
             </a>
         </p>
-        <h3 class="headline--small">
+        <h1 class="headline--small">
             <?php the_title(); ?>
-        </h3>
+        </h1>
+        <?php if (array_key_exists('ss_post_subheadline', $page_fields)) : ?>
+            <h2 class="subheadline--default"><?= $page_fields['ss_post_subheadline']; ?></h2>
+        <?php endif; ?>
 
         <p class="paragraph__address">
             <a href="tel:<?= $telephone ?>">

@@ -50,7 +50,6 @@
 
         $telephone = str_replace(' ', '', $page_fields['ss_address_book_tel']);
         $website = $page_fields['ss_address_book_website'];
-        $city = $page_fields['ss_address_book_city'];
         $post_code = $page_fields['ss_address_book_post_code'];
         $road = $page_fields['ss_address_book_road'];
         $house_number = $page_fields['ss_address_book_house_number'];

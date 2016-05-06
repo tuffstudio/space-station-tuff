@@ -13,7 +13,7 @@ body {
     position: relative;
     right: 0;
     padding-top: $nav-height;
-    transition: right $standard-animation-time ease-in-out, padding-top $standard-animation-time ease;
+    transition: right $favourities-box-animation ease-in-out, padding-top $standard-animation-time ease;
     overflow-x: hidden;
     background-color: $body-bg-color;
     font-family: $base-font-family;

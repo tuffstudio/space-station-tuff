@@ -30,6 +30,9 @@
         <div class="canvas-post__header">
             <p class="masonry__tile-category canvas-post__category"><a href="<?= $category['link']; ?>"><span><?= $category['name']; ?></span></a></p>
             <h1 class="canvas-post__title"><?php the_title(); ?></h1>
+            <?php if (array_key_exists('ss_post_subheadline', $sidebar_fields)) : ?>
+                <h2 class="subheadline--default"><?= $sidebar_fields['ss_post_subheadline']; ?></h2>
+            <?php endif; ?>
             <?php include dirname(__FILE__) . '/../components/author.php'; ?>
         </div>
     </div>
