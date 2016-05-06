@@ -11,7 +11,7 @@
                 <h2 class="title--main">Find a Property</h2>
             </div><!--
             --><div class="grid__item tablet--one-half u--align-right">
-                <a href="#" class="link--italic js-newsletter-jump">
+                <a href="#newsletter" class="link--italic">
                     <span class="icon icon-notice"></span> Sign up now for new property alerts
                 </a>
             </div>

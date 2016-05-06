@@ -179,7 +179,7 @@
                 </a>
             </div><!--
             --><div class="grid__item one-half tablet--one-third">
-                <a href="#" class="masonry__link js-newsletter-jump">
+                <a href="#newsletter" class="masonry__link">
                     <div class="masonry__item masonry__item--square">
                         <div class="masonry__tile masonry__tile-link masonry__tile-link--purple">
                             <span>Sign up to our newsletter</span>
@@ -389,7 +389,7 @@
                 <div class="masonry__item masonry__item--square"></div>
             </div><!--
             --><div class="grid__item">
-                <a href="#" class="masonry__link js-newsletter-jump">
+                <a href="#newsletter" class="masonry__link">
                     <div class="masonry__item masonry__item--square">
                         <div class="masonry__tile masonry__tile-link masonry__tile-link--purple">
                             <span>Sign up to our newsletter</span>
