@@ -182,20 +182,6 @@ window.SS.common = function($) {
         });
     }
 
-    function goToNewsletter() {
-        var $link = $('.js-newsletter-jump');
-        var $target = $('.js-newsletter');
-        var SCROLL_SPEED = 1000;
-
-        $link.on('click', function(event) {
-            var offsetTop = $target.offset().top;
-
-            $('html, body').animate({ scrollTop: offsetTop }, SCROLL_SPEED);
-
-            return false;
-        });
-    }
-
     function equalHeight(owner, target) {
         var $owner = $(owner);
         var $target = $(target);
@@ -280,7 +266,6 @@ window.SS.common = function($) {
         goToTopButton();
         revealSections();
         caseStudiesCarousel();
-        goToNewsletter();
         stickyMenu();
         userBox();
         canvasAnimation();
