@@ -71,6 +71,5 @@
     @include min-screen($desktop) {
         @include background-cover('casestudies_background.jpg');
         padding: 70px 0;
-        background-attachment: fixed;
     }
 }
