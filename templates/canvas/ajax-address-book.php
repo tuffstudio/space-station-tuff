@@ -15,7 +15,7 @@
         'relation' => 'AND',
     );
 
-    if (isset($query_array['tax_category'])) {
+    if (isset($query_array['tax_category']) &&  $query_array['tax_category'] != "all") {
         $tmp = array(
             'taxonomy' => $taxonomy_categories,
             'field'    => 'slug',
@@ -23,7 +23,7 @@
         );
         array_push($tax_query , $tmp);
     }
-    if (isset($query_array['tax_localization'])) {
+    if (isset($query_array['tax_localization']) &&  $query_array['tax_localization'] != "all") {
         $tmp = array(
             'taxonomy' => $taxonomy_localizations,
             'field'    => 'slug',

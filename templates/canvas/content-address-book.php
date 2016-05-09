@@ -25,6 +25,7 @@
         <div class="grid__item tablet--one-half select__item">
             <select name="radius" placeholder="Where are you going?" class="js-address-book-localization">
                 <option></option>
+                <option value="all" <?php if ($current_localization_slug == "all") echo 'selected';?>>All</option>
                 <?php
                     $terms = get_terms($taxonomy_localizations);
 
@@ -41,6 +42,7 @@
         --><div class="grid__item tablet--one-half select__item">
             <select name="radius" placeholder="What are you looking for?" class="js-address-book-category">
                 <option></option>
+                <option value="all" <?php if ($current_localization_slug == "all") echo 'selected';?>>All</option>
                 <?php
                     $terms = get_terms($taxonomy_categories);
 
