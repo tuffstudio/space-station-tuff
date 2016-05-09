@@ -1,7 +1,8 @@
 <form action="" id="searchform" method="get">
     <div class="grid grid--full">
-        <div class="grid__item input-container input-icon">
-            <input type="search" id="s" class="input-search" name="s" placeholder="Location or postcode" />
+        <div class="grid__item input-container">
+            <input type="search" id="search" class="input-search" name="s" placeholder="Location or postcode" />
+            <i class="find-location icon icon-target js-find-location"></i>
         </div><!--
         --><div class="grid__item">
             <div class="grid__item desktop--one-half input-container">

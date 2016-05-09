@@ -78,7 +78,6 @@
                                 include 'case-studies/big.php';
                             }
                         ?>
-                        <?php endif; ?>
                     </div>
                 </div>
             </div>

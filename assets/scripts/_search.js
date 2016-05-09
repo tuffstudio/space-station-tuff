@@ -33,10 +33,38 @@ window.SS.search = function($) {
         });
     }
 
+    function geolocation() {
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(function(position) {
+                var lat = position.coords.latitude;
+                var lng = position.coords.longitude;
+
+                $.ajax({
+                    type: 'GET',
+                    dataType: 'json',
+                    url: 'http://maps.googleapis.com/maps/api/geocode/json?latlng=' + lat + "," + lng + "&sensor=false",
+                    success: function(response) {
+                        if (response.status === 'OK') {
+                            var city = response.results[0].address_components[2].long_name;
+                            var $input = $('#search');
+
+                            $input.val(city);
+                        } else {
+                            console.log('Sorry, something went wrong...!');
+                        }
+                    }
+                });
+            });
+        } else {
+            console.log('Geolocation is not supported by this browser.');
+        }
+    }
+
     $(document).ready(function() {
         SS.switchGrids('.js-grid-switcher', '.js-results-block');
         SS.switchGrids('.js-tab-switcher', '.js-tab-panel');
         turnMapOn();
         switchFormTypes();
+        $('.js-find-location').on('click', geolocation);
     });
 };
