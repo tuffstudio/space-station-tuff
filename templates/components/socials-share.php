@@ -15,25 +15,28 @@
         data-pin-hover="true"
         data-pin-tall="true">
     </script>
-    <span class="social__title">Share</span>
-    <ul class="socials__list">
-        <li class="socials__list-item">
-            <a href="<?= $facebook_share ?>" onclick="return !window.open(this.href, 'Facebook', 'width=640,height=580')">
-                <span class="icon icon-facebook"></span>
-            </a>
-        </li>
-        <li class="socials__list-item">
-            <a href="<?= $twitter_share ?>" onclick="return !window.open(this.href, 'Twitter', 'width=640,height=380')">
-                <span class="icon icon-twitter"></span>
-            </a>
-        </li>
-        <li class="socials__list-item">
-            <a data-pin-do="buttonBookmark" data-pin-custom="true" data-pin-log="button_pinit_bookmarklet" href="https://pl.pinterest.com/pin/create/button/">
-                <span class="icon icon-pinterest"></span>
-            </a>
-        </li>
-        <li class="socials__list-item">
-            <a href="mailto:?subject=<?php the_title(); ?>"><span class="icon icon-email"></span></a>
-        </li>
-    </ul>
+    <div class="socials__container js-share-container">
+        <span class="socials__button socials__share u--text-uppercase js-share-title">Share</span>
+        <ul class="socials__list">
+            <li class="socials__list-item">
+                <a href="<?= $facebook_share; ?>" class="js-share-btn" onclick="return !window.open(this.href, 'Facebook', 'width=640,height=580')">
+                    <span class="icon icon-facebook"></span>
+                </a>
+            </li>
+            <li class="socials__list-item">
+                <a href="<?= $twitter_share; ?>" class="js-share-btn" onclick="return !window.open(this.href, 'Twitter', 'width=640,height=380')">
+                    <span class="icon icon-twitter"></span>
+                </a>
+            </li>
+            <li class="socials__list-item">
+                <a class="js-share-btn" data-pin-do="buttonBookmark" data-pin-custom="true" data-pin-log="button_pinit_bookmarklet" href="https://pl.pinterest.com/pin/create/button/">
+                    <span class="icon icon-pinterest"></span>
+                </a>
+            </li>
+            <li class="socials__list-item">
+                <a href="mailto:?subject=<?php the_title(); ?>" class="js-share-btn"><span class="icon icon-email"></span></a>
+            </li>
+        </ul>
+        <span class="socials__button socials__thanks u--text-uppercase">Thanks!</span>
+    </div>
 </div>

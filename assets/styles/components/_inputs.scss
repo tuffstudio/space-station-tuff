@@ -58,7 +58,6 @@ input[type=search] {
     text-transform: uppercase;
 
     label {
-        margin-left: 15px;
         cursor: pointer;
     }
 }
@@ -67,6 +66,7 @@ input[type=search] {
     @include square(12px);
     display: inline-block;
     position: relative;
+    margin-left: 15px;
     transition: background $standard-animation-time ease;
     border: 2px solid $black;
     border-radius: 50%;
