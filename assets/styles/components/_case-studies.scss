@@ -26,8 +26,15 @@
 .case-study__thumbnail {
     display: block;
     position: relative;
-    padding: 20px;
+    margin-right: 20px;
     box-sizing: border-box;
+    overflow: hidden;
+
+    &:hover {
+        img {
+            transform: $masonry-animation-transform;
+        }
+    }
 
     &.is-video {
         .btn {
@@ -37,6 +44,10 @@
 
     .btn {
         display: none;
+    }
+
+    img {
+        transition: $masonry-animation-transition;
     }
 }
 

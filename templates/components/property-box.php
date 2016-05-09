@@ -5,6 +5,7 @@
 <a href="#" class="masonry__link">
     <div class="single-result__image">
         <img src="http://lorempicsum.com/up/350/200/<?php echo(rand(1,6)); ?>" alt="">
+        <!-- <div class="masonry__label u--text-uppercase">Sold</div> -->
     </div>
     <div class="single-result__info">
         <div class="masonry__tile-border"></div>
