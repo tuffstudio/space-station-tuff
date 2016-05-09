@@ -16,10 +16,9 @@
     </article>
 </section>
 
-<?php include('book-valuation/form.php'); ?>
-
-<?php include('components/case-studies.php'); ?>
-
-<?php include('book-valuation/past-sales.php'); ?>
-
-<?php include('homepage/stay-in-touch.php'); ?>
+<?php
+    include('book-valuation/form.php');
+    include('components/case-studies.php');
+    include('book-valuation/past-sales.php');
+    include('homepage/stay-in-touch.php');
+?>

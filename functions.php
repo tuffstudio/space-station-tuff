@@ -26,7 +26,8 @@ $sage_includes = [
   'lib/menus.php',               // Additional navigation
   'lib/shortcodes.php',          // Custom shortcodes
   'lib/theme-settings.php',      // Theme settings page
-  'lib/ajax.php'                 // Ajax
+  'lib/ajax.php',                // Ajax
+  'lib/platform.php'             // Check device platform
 ];
 
 foreach ($sage_includes as $file) {
