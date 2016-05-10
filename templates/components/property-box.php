@@ -2,27 +2,28 @@
     $post_title = $post->title;
 ?>
 
-<a href="#" class="masonry__link">
+<a href="<?php echo site_url(); ?>/listing?id=<?php echo  $item->data->id; ?>" class="masonry__link" rel="<?php echo  $item->data->id; ?>">
+    <?php if ($item->media->images->image != null && count($item->media->images->image) > 0){ ?>
     <div class="single-result__image">
-        <img src="http://lorempicsum.com/up/350/200/<?php echo(rand(1,6)); ?>" alt="">
+        <img src="<?php echo $item->media->images->image[0]->baseurl . "/" . $item->media->images->image[0]->filename; ?>" alt="">
     </div>
+    <?php }; ?>
     <div class="single-result__info">
         <div class="masonry__tile-border"></div>
         <p class="masonry__tile-category">
             Commercial:
             <span>
-                Rent
+                <?php echo $item->data->pba__listingtype__c; ?>
             </span>
         </p>
         <h3 class="masonry__tile-title">
-            CAMDEN ROAD, e17
+            <?php echo  $item->data->name; ?>
         </h3>
         <p class="masonry__tile-price">
-            114,905
+            &#163;<?php echo number_format((float) $item->data->pba__listingprice_pb__c); ?>
         </p>
         <p class="masonry__tile-desc masonry__tile-desc--big">
-            5 bedroom<br>
-            TOWNHOUSE
+            <?php echo  $item->data->pba__bedrooms_pb__c; ?> bedroom<br>
         </p>
     </div>
 </a>
