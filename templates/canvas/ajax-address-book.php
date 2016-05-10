@@ -42,19 +42,20 @@
     $query = new \WP_Query( $args );
     $posts = $query->posts;
 
-    foreach ($posts as $post) :
-        $page_id = $post->ID;
-        $page_fields = CFS() -> get(false, $page_id);
-        $category_name = get_the_terms($page_id, $taxonomy_categories)[0]->name;
-        $category_link = '?tax_category=' . get_the_terms($page_id, $taxonomy_categories)[0]->slug;
+    if (sizeof($posts)) :
+        foreach ($posts as $post) :
+            $page_id = $post->ID;
+            $page_fields = CFS() -> get(false, $page_id);
+            $category_name = get_the_terms($page_id, $taxonomy_categories)[0]->name;
+            $category_link = '?tax_category=' . get_the_terms($page_id, $taxonomy_categories)[0]->slug;
 
-        $telephone = str_replace(' ', '', $page_fields['ss_address_book_tel']);
-        $website = $page_fields['ss_address_book_website'];
-        $post_code = $page_fields['ss_address_book_post_code'];
-        $road = $page_fields['ss_address_book_road'];
-        $house_number = $page_fields['ss_address_book_house_number'];
+            $telephone = str_replace(' ', '', $page_fields['ss_address_book_tel']);
+            $website = $page_fields['ss_address_book_website'];
+            $post_code = $page_fields['ss_address_book_post_code'];
+            $road = $page_fields['ss_address_book_road'];
+            $house_number = $page_fields['ss_address_book_house_number'];
 
-        $text = getShortText($post->post_content, 100);
+            $text = getShortText($post->post_content, 100);
 ?><!--
 
 --><div class="grid__item tablet-small--one-half tablet--one-third">
@@ -94,5 +95,12 @@
 </div><!--
 
 --><?php
-    endforeach;
+        endforeach;
+    else :
 ?>
+
+    <div class="business-directory__no-result">
+        <?php echo get_option('no_results_text'); ?>
+    </div>
+
+<?php endif;?>
