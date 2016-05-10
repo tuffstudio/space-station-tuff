@@ -1,4 +1,4 @@
-<section class="section properties section--bottom-space ">
+<section class="section properties section--bottom-space is-hidden js-section-reveal">
     <div class="container container--space">
         <h3 class="title--default">
             Featured past sales
