@@ -5,15 +5,17 @@ window.SS.single_case_study = function($) {
         var videoID = 'case-study';
         var isHash = window.location.hash === '#play' ? true : false;
 
-        videojs(videoID).ready(function() {
-            var video = this;
+        if($('#' + videoID).length) {
+            videojs(videoID).ready(function() {
+                var video = this;
 
-            $('.case-study__video').addClass('visible');
+                $('.case-study__video').addClass('visible');
 
-            if (isHash) {
-                video.play();
-            }
-        });
+                if (isHash) {
+                    video.play();
+                }
+            });
+        }
     }
 
     $(document).ready(function() {
