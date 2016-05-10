@@ -5,6 +5,10 @@
     position: relative;
     height: calc(100vh - #{$nav-height});
     margin-bottom: 150px;
+
+    @include min-screen($desktop) {
+        background-image: none !important;
+    }
 }
 
 .main-banner__video {

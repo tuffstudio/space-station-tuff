@@ -10,8 +10,9 @@
 ?>
 <section class="main-banner" <?php if($bg_path != '') : ?> style="background-image: url('<?= $bg_path; ?>');" <?php endif; ?>>
     <?php if($is_desktop) : ?>
+        <?php include('components/spinner.php') ?>
         <div class="main-banner__video">
-            <video class="" src="<?= $video_path; ?>" loop autoplay preload="true" muted="true"></video>
+            <video id="homepage-video" class="" src="<?= $video_path; ?>" loop autoplay preload="true" muted="true"></video>
         </div>
     <?php endif; ?>
 
