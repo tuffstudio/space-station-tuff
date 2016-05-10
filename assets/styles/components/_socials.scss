@@ -89,7 +89,7 @@
         left: -1px;
         height: 0;
         transition: height $standard-animation-time ease;
-        background-color: $color-primary;
+        background-color: $black;
         z-index: -1;
     }
 }
@@ -100,6 +100,7 @@
     background-color: $purple;
     color: $white;
     line-height: 3;
+    cursor: default;
 }
 
 .socials__list {
