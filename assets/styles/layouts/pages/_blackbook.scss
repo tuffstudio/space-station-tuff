@@ -1,0 +1,13 @@
+// Blackbook page styles
+// ----------------------
+.blackbook__first {
+    margin-bottom: 80px;
+
+    @include min-screen($tablet) {
+        margin-bottom: 130px;
+    }
+
+    @include min-screen($desktop) {
+        margin-bottom: 170px;
+    }
+}
