@@ -12,7 +12,7 @@
         >
             <?php foreach ($item->media->images->image as $image): ?>
                 <?php if ( empty($image->tags) ):?>
-                    <img src="<?php echo $image[0]->baseurl . "/88x88/" . $image[0]->filename;?>" width="88" height="88" alt="<?php echo $image[0]->filename; ?>">
+                    <img src="<?php echo $image[0]->baseurl . "/88x88/" . $image[0]->filename;?>" alt="<?php echo $image[0]->filename; ?>">
                 <?php endif; ?>
             <?php endforeach; ?>    
 

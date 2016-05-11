@@ -1,6 +1,4 @@
-<?php
-
-if( empty($_GET['id']) ):?>
+<?php if( empty($_GET['id']) ):?>
 	<script type="text/javascript"> window.location.replace("http://localhost/ss/app/#no_listing");</script>
 <?php endif; 
 
