@@ -6,8 +6,23 @@
                     <p class="section__category">Residential <span><?php echo $listing_type ?></span></p>
                     <h1 class="property__title"><?php echo $main_title ?></h1>
                     <p class="property__price"><?php echo $property_price.' '.$tenure; ?></p>
-                    <p class="property__type"><?php echo $property_bedrooms_number; if( $property_bedrooms_number > 1){echo ' bedrooms ';}else{echo ' bedroom ';} echo  $property_type; ?></p>
-                    <!-- <?php echo '<script>alert("'.$property_description.'");</script>'; ?> -->
+                    <p class="property__type">
+                        <?php 
+                            echo  $item->data->pba__bedrooms_pb__c; 
+                                switch ($item->data->pba__bedrooms_pb__c) {
+                                    case 0:
+                                        break;
+                                    case 1:
+                                        echo ' bedroom ';
+                                        break;
+                                    
+                                    default:
+                                        echo ' bedrooms ';
+                                        break;
+                                }
+                            echo  $item->data->pba__propertytype__c;
+                        ?>
+                    </p>
                 </div>
 
                 <ul class="property__buttons">

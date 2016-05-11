@@ -11,8 +11,6 @@
         $property_bedrooms_number = $item->data->pba__bedrooms_pb__c;
         $property_description = $item->data->pba__description_pb__c;
         $property_brochure_url = $item->media->documents->document->url;
-        $floorplan = false;
-        $epc = false;
         
 ?>
 

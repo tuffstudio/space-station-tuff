@@ -1,5 +1,11 @@
-<?php $i = 0; $counter = 0; $number_or_listings = $xmlResult->numberOfListings;?>
-<?php while($i < $xmlResult->numberOfListings): ?> 
+
+
+<?php 
+
+$i = 0; 
+$number_or_listings = $xmlResult->numberOfListings;
+
+while($i < $xmlResult->numberOfListings): ?> 
 <div class="grid grid--full">
     <div class="grid__item tablet--one-half">
         <div class="grid__item">

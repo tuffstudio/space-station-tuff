@@ -10,16 +10,19 @@
             data-cycle-carousel-vertical=true
             data-cycle-log=false
         >
-            <img src="<?php echo get_template_directory_uri(); ?>/dist/images/archi_small.jpg" alt="">
-            <img src="<?php echo get_template_directory_uri(); ?>/dist/images/design_small.jpg" alt="">
-            <img src="<?php echo get_template_directory_uri(); ?>/dist/images/art_small.jpg" alt="">
-            <img src="<?php echo get_template_directory_uri(); ?>/dist/images/design_small.jpg" alt="">
-            <img src="<?php echo get_template_directory_uri(); ?>/dist/images/rent_small.jpg" alt="">
-            <img src="<?php echo get_template_directory_uri(); ?>/dist/images/archi_small.jpg" alt="">
-            <img src="<?php echo get_template_directory_uri(); ?>/dist/images/rent_small.jpg" alt="">
+            <?php foreach ($item->media->images->image as $image): ?>
+                <?php if ( empty($image->tags) ):?>
+                    <img src="<?php echo $image[0]->baseurl . "/88x88/" . $image[0]->filename;?>" width="88" height="88" alt="<?php echo $image[0]->filename; ?>">
+                <?php endif; ?>
+            <?php endforeach; ?>    
+
         </div>
         <a id="next" class="property__gallery-switcher down" href="#"></a>
     </div>
 
-    <img class="property__gallery-big-image" src="<?php echo get_template_directory_uri(); ?>/dist/images/banner-placeholder.jpg" alt="">
+    <?php foreach ($item->media->images->image as $image): ?>
+        <?php if ( empty($image->tags) ):?>
+            <img class="property__gallery-big-image" src="<?php echo $image[0]->baseurl . "/1920x768/" . $image[0]->filename;?>" alt="<?php echo $image[0]->filename; ?>">
+        <?php endif; ?>
+    <?php endforeach; ?> 
 </section>
