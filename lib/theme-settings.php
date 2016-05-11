@@ -60,7 +60,7 @@
 
     function no_results_text() {
         ?>
-            <input type="text" name="no_results_text" id="no_results_text" value="<?php echo get_option('no_results_text'); ?>"><br>
+            <textarea type="text" name="no_results_text" id="no_results_text"  cols="70" rows="5"><?php echo get_option('no_results_text'); ?></textarea><br>
         <?php
     }
 
