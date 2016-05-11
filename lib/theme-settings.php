@@ -58,6 +58,12 @@
         <?php
     }
 
+    function no_results_text() {
+        ?>
+            <textarea type="text" name="no_results_text" id="no_results_text"  cols="70" rows="5"><?php echo get_option('no_results_text'); ?></textarea><br>
+        <?php
+    }
+
 
     function display_theme_panel_fields() {
     	add_settings_section("section", "All Settings", null, "theme-options");
@@ -69,6 +75,7 @@
         add_settings_field("linkedin_url", "LinkedIn url", "linkedin_url", "theme-options", "section");
         add_settings_field("cookies_text", "Cookies text", "cookies_text", "theme-options", "section");
         add_settings_field("cookies_bg", "Cookies background color", "cookies_bg", "theme-options", "section");
+        add_settings_field("no_results_text", "No results text", "no_results_text", "theme-options", "section");
 
         register_setting("section", "art_of_valuation_url");
         register_setting("section", "facebook_url");
@@ -77,6 +84,7 @@
         register_setting("section", "linkedin_url");
         register_setting("section", "cookies_text");
         register_setting("section", "cookies_bg");
+        register_setting("section", "no_results_text");
     }
 
     function add_theme_menu_item() {

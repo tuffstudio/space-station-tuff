@@ -135,7 +135,7 @@ function custom_post_types_init() {
 
     $args_quotes = array(
         'labels'             => $labels_quotes,
-        'public'             => true,
+        'public'             => false,
         'publicly_queryable' => true,
         'show_ui'            => true,
         'show_in_menu'       => true,

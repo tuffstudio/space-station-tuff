@@ -259,6 +259,25 @@ window.SS.common = function($) {
         });
     }
 
+    function shareAnimations() {
+        var $shareTitle = $('.js-share-title');
+        var $shareBtns = $('.js-share-btn');
+        var $shareContainer = $('.js-share-container');
+        var RESET_DELAY = 7000;
+
+        $shareTitle.on('click', function() {
+            $shareContainer.addClass('active');
+        });
+
+        $shareBtns.on('click', function() {
+            $shareContainer.addClass('thanks');
+
+            setTimeout(function() {
+                $shareContainer.removeClass('active thanks');
+            }, RESET_DELAY);
+        });
+    }
+
     $(document).ready(function() {
         setIsMobile();
         toggleMobileNavigation();
@@ -273,6 +292,7 @@ window.SS.common = function($) {
         goBack();
         smoothScroll();
         cookiesInfo();
+        shareAnimations();
 
         setTimeout(function() {
             subMenuAlignment();

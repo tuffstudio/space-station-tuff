@@ -1,8 +1,32 @@
 // Main banner
 // ------------
 .main-banner {
-    @include background-cover('banner-placeholder.jpg'); // TODO: temporary solution. here will be video
+    @include background-cover('banner-placeholder.jpg');
     position: relative;
     height: calc(100vh - #{$nav-height});
     margin-bottom: 150px;
+
+    @include min-screen($desktop) {
+        background-image: none !important;
+    }
+}
+
+.main-banner__video {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transform: translate3d(0, 0, 0);
+    overflow: hidden;
+
+    video {
+        display: none;
+        min-width: 100%;
+        min-height: 100%;
+
+        @include min-screen($desktop) {
+            display: block;
+        }
+    }
 }

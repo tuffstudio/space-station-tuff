@@ -33,6 +33,10 @@ body {
             padding-top: $nav-height + $cookies-height-desktop;
         }
     }
+
+    &.blackbook {
+        background-color: $black;
+    }
 }
 
 main {

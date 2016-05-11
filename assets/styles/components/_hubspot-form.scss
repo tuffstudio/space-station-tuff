@@ -4,7 +4,11 @@
     margin-top: 10px;
 
     fieldset {
-        max-width: 600px !important;
+        max-width: 100% !important;
+
+        @include min-screen($tablet) {
+            max-width: 600px !important;
+        }
     }
 }
 
@@ -14,6 +18,7 @@
     input {
         display: block;
         width: 100% !important;
+        min-height: 30px;
         padding: 6px 13px;
         border: 0;
         border-radius: 0;
@@ -58,8 +63,12 @@
 
 .hs_submit,
 .form-columns-2 {
-    display: inline-block;
+    display: block;
     vertical-align: top;
+
+    @include min-screen($tablet) {
+        display: inline-block;
+    }
 }
 
 .hs_submit {
@@ -69,6 +78,26 @@
 .hs-button {
     @extend .btn;
     @extend .btn--submit;
+    width: 100%;
+    min-height: 30px;
+
+    @include min-screen($tablet) {
+        width: auto;
+    }
+
+    .the-next-step & {
+        border: 1px solid $white;
+
+        @include min-screen($tablet) {
+            background-color: $white;
+            color: $black;
+        }
+
+        &:hover {
+            background-color: $black;
+            color: $white;
+        }
+    }
 }
 
 .hs-error-msgs {
