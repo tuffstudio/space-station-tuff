@@ -238,7 +238,6 @@
         padding: 50px 15px;
     }
 
-    // TODO: temporary solution
     h3 {
         letter-spacing: .2em;
     }
@@ -248,6 +247,53 @@
         font-style: italic;
     }
 }
+
+.the-next-step {
+    @include background-cover('the-next-step.jpg');
+    margin: 0;
+    padding: 30px 15px;
+    color: $white;
+    text-align: center;
+
+    @include min-screen($tablet) {
+        padding: 50px 15px;
+    }
+
+    h3 {
+        margin: .8em 0 1.2em;
+        font-family: $font-light;
+        font-size: rem-calc(18);
+        letter-spacing: $moving-box-title-letterspacing;
+        text-transform: uppercase;
+
+        @include min-screen($tablet) {
+            font-size: rem-calc(20);
+        }
+
+        @include min-screen($desktop) {
+            font-size: rem-calc(22);
+        }
+    }
+
+    p {
+        max-width: 500px;
+        margin: 20px auto;
+        line-height: 1.6;
+    }
+
+    a {
+        color: $white;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    .hbspt-form {
+        margin: 60px auto 35px;
+    }
+}
+
 
 // Search page
 // ------------
