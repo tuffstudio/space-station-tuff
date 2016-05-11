@@ -74,6 +74,28 @@
     }
 }
 
+.headline--main--secondary {
+    font-size: rem-calc($case-study-title-size * .55);
+
+    @include min-screen($tablet) {
+        font-size: rem-calc($case-study-title-size * .7);
+    }
+
+    @include min-screen($desktop) {
+        font-size: rem-calc($case-study-title-size * .8);
+    }
+}
+
+.headline--white {
+    color: $white;
+}
+
+.text-description--space {
+    @include min-screen($desktop) {
+        margin: 0 35px;
+    }
+}
+
 .headline--default {
     @extend %headline-default;
 }
@@ -110,9 +132,9 @@
 
 .subheadline--default {
     margin: -5px 0 20px;
-    text-transform: uppercase;
-    color: rgba($black, 0.8);
+    color: rgba($black, .8);
     font-size: rem-calc(13);
+    text-transform: uppercase;
 
     @include min-screen($tablet) {
         font-size: rem-calc(14);
