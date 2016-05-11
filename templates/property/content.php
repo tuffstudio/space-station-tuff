@@ -3,21 +3,37 @@
         <div class="grid__item desktop--three-quarters">
             <div class="property__info">
                 <div class="property__info-head">
-                    <p class="section__category">Residential <span>Buy</span></p>
-                    <h1 class="property__title">Stratford high street, e15</h1>
-                    <p class="property__price">4,350,000 FREEHOLD</p>
-                    <p class="property__type">5 bedroom downhouse</p>
+                    <p class="section__category">Residential <span><?php echo $listing_type ?></span></p>
+                    <h1 class="property__title"><?php echo $main_title ?></h1>
+                    <p class="property__price"><?php echo $property_price.' '.$tenure; ?></p>
+                    <p class="property__type">
+                        <?php 
+                            echo  $item->data->pba__bedrooms_pb__c; 
+                                switch ($item->data->pba__bedrooms_pb__c) {
+                                    case 0:
+                                        break;
+                                    case 1:
+                                        echo ' bedroom ';
+                                        break;
+                                    
+                                    default:
+                                        echo ' bedrooms ';
+                                        break;
+                                }
+                            echo  $item->data->pba__propertytype__c;
+                        ?>
+                    </p>
                 </div>
 
                 <ul class="property__buttons">
-                    <li class="property__button"><a href="" class="btn btn--action">brochure</a></li>
+                    <?php if( !empty($item->media->documents->document->url) ): ?>
+                        <li class="property__button"><a href="<?php echo $property_brochure_url; ?>" class="btn btn--action" target="_blank">brochure</a></li>
+                    <?php endif; ?> 
                     <li class="property__button"><a href="" class="btn btn--action">save</a></li>
                     <li class="property__button"><a href="" class="btn btn--action">share</a></li>
                 </ul>
                 <article class="property__description">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<p>
+                    <?php echo $property_description; ?>
                 </article>
             </div>
         </div><!--

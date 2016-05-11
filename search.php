@@ -19,6 +19,7 @@
     </div>
 </div>
 
+<?php require_once ('templates/searchpage/PB_app-connection.php'); ?> 
 <?php include 'templates/searchpage/tabs.php'; ?>
 
 <section class="section search-results">
@@ -76,32 +77,28 @@
             </div>
         </div>
         <div class="search-results__body">
+
+            <?php // BEGIN EMPTY RESULT ?>
+                    <?php if ($doSearch  && ($xmlResult == null || count($xmlResult->listings->listing) == 0)){ ?>
+                        <div class="alert alert-warning">
+                            <?php _e('Sorry, no results were found.', 'sage'); ?>
+                        </div>
+                    <?php }else{ ?>
+            <?php //END EMPTY RESULT ?>
+
             <div id="dynamic-view" class="search-results__block js-results-block visible">
                 <div class="search-results--dynamic">
-                    <?php if (have_posts()) : the_post(); ?>
-                        <?php get_template_part('templates/searchpage/dynamic', 'view'); ?>
-                    <?php else : ?>
-                        <?php // FIXME: Code duplication!!! ?>
-                        <div class="alert alert-warning">
-                          <?php _e('Sorry, no results were found.', 'sage'); ?>
-                        </div>
-                    <?php endif; ?>
+                        <?php include(locate_template('templates/searchpage/dynamic-view.php')); ?>
                 </div>
             </div>
 
             <div id="grid-view" class="search-results__block js-results-block">
                 <div class="grid">
-                    <?php if(have_posts()): ?>
-                        <?php while (have_posts()) : the_post(); ?><!--
-                            --><div class="grid__item tablet-small--one-half desktop--one-third masonry__box">
-                                <?php get_template_part('templates/components/property', 'box'); ?>
-                            </div><!--
-                        --><?php endwhile; ?>
-                    <?php else : ?>
-                        <div class="alert alert-warning">
-                          <?php _e('Sorry, no results were found.', 'sage'); ?>
-                        </div>
-                    <?php endif; ?>
+                        <?php foreach ($xmlResult->listings->listing as $item): ?>
+                            <div class="grid__item tablet-small--one-half desktop--one-third masonry__box">
+                                <?php include(locate_template('templates/components/property-box.php')); ?>
+                            </div>
+                        <?php endforeach;?>  
                 </div>
             </div>
 
@@ -116,6 +113,9 @@
                     <?php endif; ?>
                 </div>
             </div>
+
+            <?php } ?>
+
         </div>
     </div>
 </section>
