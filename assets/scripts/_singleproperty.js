@@ -57,6 +57,7 @@ window.SS.singleproperty = function($) {
             navText: ['', ''],
             animateIn: 'fade-in',
             onInitialize: setKeyboard,
+            onInitialized: initCounter,
             onChanged: incrementCounter
         });
 
