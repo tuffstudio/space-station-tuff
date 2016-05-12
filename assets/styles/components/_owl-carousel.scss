@@ -28,12 +28,6 @@
     }
 }
 
-.owl-nav {
-    @include min-screen($tablet) {
-        display: none;
-    }
-}
-
 .owl-carousel {
     position: relative;
 }
@@ -42,6 +36,10 @@
     position: absolute;
     bottom: 38px;
     width: 100%;
+
+    @include min-screen($tablet) {
+        display: none;
+    }
 }
 
 %arrow-styles {

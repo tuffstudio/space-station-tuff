@@ -2,6 +2,23 @@
 // --------------------------------
 .property__gallery {
     position: relative;
+
+    .owl-nav {
+        display: none;
+        bottom: auto;
+
+        @include min-screen($desktop) {
+            display: block;
+            top: 50vh;
+        }
+
+        div {
+            padding: 10px 15px 15px;
+            font-size: rem-calc(70);
+            line-height: 1;
+            text-align: center;
+        }
+    }
 }
 
 .property__gallery-big-image {
@@ -18,6 +35,7 @@
     padding: 10px 6px;
     background-color: transparentize($black, .3);
     text-align: center;
+    z-index: 5;
 
     @include min-screen($desktop) {
         display: block;

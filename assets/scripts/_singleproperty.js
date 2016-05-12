@@ -24,6 +24,18 @@ window.SS.singleproperty = function($) {
         });
     }
 
+    function initGalleryCarousel() {
+        $('.js-property-gallery').owlCarousel({
+            autoplay: false,
+            items: 1,
+            lazyLoad: true,
+            dots: false,
+            nav: true,
+            loop: true,
+            navText: ['<', '>'],
+        });
+    }
+
     function openOverlay() {
         $overlay.addClass('is-opened');
         $body.addClass('static');
@@ -51,6 +63,7 @@ window.SS.singleproperty = function($) {
     }
 
     $(document).ready(function() {
+        initGalleryCarousel();
         initPoiCarousel();
         overlay();
         SS.switchGrids('.js-panel-switcher', '.js-property-panel');

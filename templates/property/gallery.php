@@ -12,17 +12,20 @@
         >
             <?php foreach ($item->media->images->image as $image): ?>
                 <?php if ( empty($image->tags) ):?>
-                    <img src="<?php echo $image[0]->baseurl . "/88x88/" . $image[0]->filename;?>" alt="<?php echo $image[0]->filename; ?>">
+                    <img src="<?= $image[0]->baseurl . "/88x88/" . $image[0]->filename;?>" alt="<?= $image[0]->filename; ?>">
                 <?php endif; ?>
-            <?php endforeach; ?>    
+            <?php endforeach; ?>
 
         </div>
         <a id="next" class="property__gallery-switcher down" href="#"></a>
     </div>
 
-    <?php foreach ($item->media->images->image as $image): ?>
-        <?php if ( empty($image->tags) ):?>
-            <img class="property__gallery-big-image" src="<?php echo $image[0]->baseurl . "/1920x768/" . $image[0]->filename;?>" alt="<?php echo $image[0]->filename; ?>">
-        <?php endif; ?>
-    <?php endforeach; ?> 
+    <?php include dirname(__FILE__) . '/../components/spinner.php'; ?>
+    <div class="owl-carousel js-property-gallery">
+        <?php foreach ($item->media->images->image as $image) : ?>
+            <?php if ( empty($image->tags) ) : ?>
+                <img class="owl-lazy property__gallery-big-image" data-src="<?= $image[0]->baseurl . "/1920x768/" . $image[0]->filename; ?>" alt="<?= $image[0]->filename; ?>">
+            <?php endif; ?>
+        <?php endforeach; ?>
+    </div>
 </section>

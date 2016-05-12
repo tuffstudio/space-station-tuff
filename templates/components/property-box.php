@@ -23,15 +23,15 @@
             &#163;<?php echo number_format((float) $item->data->pba__listingprice_pb__c); ?>
         </p>
         <p class="masonry__tile-desc masonry__tile-desc--big">
-            <?php 
-                echo  $item->data->pba__bedrooms_pb__c; 
+            <?php
+                echo  $item->data->pba__bedrooms_pb__c;
                     switch ($item->data->pba__bedrooms_pb__c) {
                         case 0:
                             break;
                         case 1:
                             echo ' bedroom ';
                             break;
-                        
+
                         default:
                             echo ' bedrooms ';
                             break;
