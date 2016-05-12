@@ -2,9 +2,18 @@
 // ------------------------------
 .property__panel {
     @include fluent-switch();
-    min-height: 250px;
-    max-height: calc(100vh - 50px);
+    height: 50vh;
     overflow: hidden;
+
+    @include min-screen($tablet) {
+        @include landscape() {
+            height: 75vh;
+        }
+    }
+
+    @include min-screen($desktop) {
+        height: calc(100vh - 50px);
+    }
 }
 
 .property__content {

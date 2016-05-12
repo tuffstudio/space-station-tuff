@@ -37,6 +37,17 @@ window.SS.singleproperty = function($) {
             $('.js-index').html(event.item.index + 1);
         }
 
+        function setKeyboard() {
+            document.body.addEventListener('keydown', function(event) {
+                if (event.keyCode === 37) {
+                    $owl.trigger('prev.owl.carousel');
+                }
+                if (event.keyCode === 39) {
+                    $owl.trigger('next.owl.carousel');
+                }
+            });
+        }
+
         $owl.owlCarousel({
             autoplay: false,
             items: 1,
@@ -44,9 +55,12 @@ window.SS.singleproperty = function($) {
             dots: false,
             nav: true,
             navText: ['', ''],
-            onInitialized: initCounter,
+            animateIn: 'fade-in',
+            onInitialize: setKeyboard,
             onChanged: incrementCounter
         });
+
+
     }
 
     function openOverlay() {
