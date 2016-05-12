@@ -9,14 +9,20 @@
 
         @include min-screen($desktop) {
             display: block;
-            top: 50vh;
+            top: 40vh;
         }
+    }
 
-        div {
-            padding: 10px 15px 15px;
-            font-size: rem-calc(70);
-            line-height: 1;
-            text-align: center;
+    .owl-prev,
+    .owl-next {
+        padding: 10px 15px 15px;
+        transition: background-color $standard-animation-time ease;
+        font-size: rem-calc(70);
+        line-height: 1;
+        text-align: center;
+
+        &:hover {
+            background-color: rgba($black, .75);
         }
     }
 }
