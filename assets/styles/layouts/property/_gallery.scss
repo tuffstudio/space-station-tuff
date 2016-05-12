@@ -33,71 +33,45 @@
 
 .property__gallery-big-image {
     width: 100%;
+    height: 50vh;
     margin-bottom: -4px;
-}
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 
-.property__gallery-slider {
-    display: none; // FIXME: find out what to do on mobile
-    position: absolute;
-    top: 12%;
-    right: 0;
-    width: 100px;
-    padding: 10px 6px;
-    background-color: transparentize($black, .3);
-    text-align: center;
-    z-index: 5;
-
-    @include min-screen($desktop) {
-        display: block;
-    }
-
-    img {
-        width: 100%;
-        transition: border-color $standard-animation-time ease;
-        border: 3px solid transparent;
-        cursor: pointer;
-
-        .is-desktop &:hover {
-            border-color: $color-primary;
+    @include min-screen($tablet) {
+        @include landscape() {
+            height: 75vh;
         }
     }
-}
 
-.property__gallery-switcher {
-    position: relative;
-    margin: 0 auto;
-    transition: opacity $standard-animation-time ease;
-    opacity: .6;
-
-    &.up {
-        @include css-triangle(9px, $white, up);
-        margin-bottom: 5px;
-    }
-
-    &.down {
-        @include css-triangle(9px, $white, down);
-        margin-top: 5px;
-    }
-
-    .is-desktop &:hover {
-        opacity: 1;
+    @include min-screen($desktop) {
+        height: 100vh;
     }
 }
 
 .property__gallery-counter {
     display: none;
+    position: absolute;
+    right: 0;
+    bottom: 15px;
+    width: 80px;
+    height: 50px;
+    padding-top: 7px;
+    background-color: transparentize($black, .3);
     font-family: $font-caslon;
+    text-align: center;
+    z-index: 10;
+
+    @include min-screen($tablet) {
+        width: 100px;
+        height: 60px;
+    }
 
     @include min-screen($desktop) {
-        position: absolute;
-        right: 30px;
         bottom: 50px;
         width: 120px;
         height: 80px;
-        padding-top: 10px;
-        background-color: transparentize($black, .3);
-        text-align: center;
-        z-index: 10;
     }
 
     p {
@@ -106,11 +80,27 @@
 
     .index {
         color: $color-primary;
-        font-size: rem-calc(50);
+        font-size: rem-calc(30);
+
+        @include min-screen($tablet) {
+            font-size: rem-calc(40);
+        }
+
+        @include min-screen($desktop) {
+            font-size: rem-calc(50);
+        }
     }
 
     .count {
         color: $white;
-        font-size: rem-calc(25);
+        font-size: rem-calc(15);
+
+        @include min-screen($tablet) {
+            font-size: rem-calc(20);
+        }
+
+        @include min-screen($desktop) {
+            font-size: rem-calc(25);
+        }
     }
 }
