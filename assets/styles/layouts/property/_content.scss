@@ -3,6 +3,12 @@
 .property__panel {
     @include fluent-switch();
     min-height: 250px;
+    max-height: calc(100vh - 50px);
+    overflow: hidden;
+}
+
+.property__panel--compare {
+    max-height: none;
 }
 
 .property__content {
