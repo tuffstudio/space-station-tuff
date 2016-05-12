@@ -60,6 +60,8 @@ window.SS.singleproperty = function($) {
             onInitialized: initCounter,
             onChanged: incrementCounter
         });
+
+
     }
 
     function openOverlay() {
