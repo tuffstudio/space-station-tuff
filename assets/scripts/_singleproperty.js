@@ -54,10 +54,9 @@ window.SS.singleproperty = function($) {
             lazyLoad: true,
             dots: false,
             nav: true,
-            navText: ['<', '>'],
+            navText: ['', ''],
             animateIn: 'fade-in',
             onInitialize: setKeyboard,
-            onInitialized: initCounter,
             onChanged: incrementCounter
         });
 
