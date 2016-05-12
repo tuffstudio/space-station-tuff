@@ -25,14 +25,27 @@ window.SS.singleproperty = function($) {
     }
 
     function initGalleryCarousel() {
-        $('.js-property-gallery').owlCarousel({
+        var $owl = $('.js-property-gallery');
+
+        function initCounter(event) {
+            $('.js-index').html(event.item.index + 1);
+            $('.js-count').html(event.item.count);
+            $('.js-counter').show();
+        }
+
+        function incrementCounter(event) {
+            $('.js-index').html(event.item.index + 1);
+        }
+
+        $owl.owlCarousel({
             autoplay: false,
             items: 1,
             lazyLoad: true,
             dots: false,
             nav: true,
-            loop: true,
             navText: ['<', '>'],
+            onInitialized: initCounter,
+            onChanged: incrementCounter
         });
     }
 

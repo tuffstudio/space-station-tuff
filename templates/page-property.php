@@ -18,7 +18,6 @@
         include 'property/floor-plan.php';
         include 'property/map.php';
         include 'property/video.php';
-        include 'property/not_cropped.php';        
     ?>
 </div>
 <div class="container container--full">
