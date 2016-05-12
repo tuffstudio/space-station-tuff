@@ -43,7 +43,7 @@ window.SS.singleproperty = function($) {
             lazyLoad: true,
             dots: false,
             nav: true,
-            navText: ['<', '>'],
+            navText: ['', ''],
             onInitialized: initCounter,
             onChanged: incrementCounter
         });
