@@ -24,6 +24,10 @@
         &:hover {
             background-color: rgba($black, .75);
         }
+
+        &.disabled {
+            display: none;
+        }
     }
 }
 
@@ -77,5 +81,36 @@
 
     .is-desktop &:hover {
         opacity: 1;
+    }
+}
+
+.property__gallery-counter {
+    display: none;
+    font-family: $font-caslon;
+
+    @include min-screen($desktop) {
+        position: absolute;
+        right: 30px;
+        bottom: 50px;
+        width: 120px;
+        height: 80px;
+        padding-top: 10px;
+        background-color: transparentize($black, .3);
+        text-align: center;
+        z-index: 10;
+    }
+
+    p {
+        margin: 0;
+    }
+
+    .index {
+        color: $color-primary;
+        font-size: rem-calc(50);
+    }
+
+    .count {
+        color: $white;
+        font-size: rem-calc(25);
     }
 }

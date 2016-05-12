@@ -1,5 +1,5 @@
 <section id="gallery" class="property__gallery property__panel js-property-panel visible">
-    <div class="property__gallery-slider">
+    <!-- <div class="property__gallery-slider">
         <a id="prev" class="property__gallery-switcher up" href="#"></a>
         <div class="cycle-slideshow"
             data-cycle-fx=carousel
@@ -18,9 +18,13 @@
 
         </div>
         <a id="next" class="property__gallery-switcher down" href="#"></a>
-    </div>
+    </div> -->
 
     <?php include dirname(__FILE__) . '/../components/spinner.php'; ?>
+    <div class="property__gallery-counter js-counter">
+        <p><span class="index js-index">1</span><sub class="count js-count">8</sub></p>
+        <!-- <span class="count js-count"></span> -->
+    </div>
     <div class="owl-carousel js-property-gallery">
         <?php foreach ($item->media->images->image as $image) : ?>
             <?php if ( empty($image->tags) ) : ?>

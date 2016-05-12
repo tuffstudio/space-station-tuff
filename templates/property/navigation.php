@@ -17,7 +17,6 @@
                 <?php if( !empty($item->media->videos->video->url) ): ?>
                     <li class="property__button"><a href="#video" class="btn btn--action js-panel-switcher">video</a></li>
                 <?php endif; ?>
-                <li class="property__button"><a href="#compare" class="btn btn--action js-panel-switcher">To comapare, not cropped</a></li>
             </ul>
         </div><!--
         --><div class="grid__item tablet--one-quarter u--align-center">
