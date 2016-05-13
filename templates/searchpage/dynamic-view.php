@@ -1,20 +1,21 @@
-
-
 <?php
+    $i = 0;
+    $number_or_listings = $xmlResult->numberOfListings;
 
-$i = 0;
-$number_or_listings = $xmlResult->numberOfListings;
-
-while($i < $xmlResult->numberOfListings) : ?>
+    while($i < $xmlResult->numberOfListings) :
+?>
 <div class="grid grid--full">
     <div class="grid__item tablet--one-half">
         <div class="grid__item">
-            <?php if($i == 0 || ($i % 7) == 0) {
-                 $item = $xmlResult->listings->listing[$i];
-                 include 'dynamic-small-left.php';
-                 $i++;
-                 if($i >= $number_or_listings) { break; }
-             }?>
+            <?php
+                if($i == 0 || ($i % 7) == 0) {
+                    $item = $xmlResult->listings->listing[$i];
+                    include 'dynamic-small-left.php';
+                    $i++;
+
+                    if($i >= $number_or_listings) { break; }
+                }
+            ?>
         </div><!--
         --><div class="grid__item">
             <div class="grid__item one-half"></div><!--
@@ -35,7 +36,7 @@ while($i < $xmlResult->numberOfListings) : ?>
                 $item = $xmlResult->listings->listing[$i];
                 include 'dynamic-big.php';
                 $i++;
-                if($i >= $number_or_listings){ break; }
+                if($i >= $number_or_listings) { break; }
             }?>
         </div>
     </div>

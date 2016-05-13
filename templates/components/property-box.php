@@ -2,12 +2,13 @@
     $post_title = $post->title;
 ?>
 
-<a href="<?php echo site_url(); ?>/singleproperty?id=<?php echo  $item->data->id; ?>" class="masonry__link" rel="<?php echo  $item->data->id; ?>">
-    <?php if ($item->media->images->image != null && count($item->media->images->image) > 0){ ?>
-    <div class="single-result__image">
-        <img src="<?php echo $item->media->images->image[0]->baseurl . "/315x210/" . $item->media->images->image[0]->filename; ?>" alt="">
-    </div>
-    <?php }; ?>
+<a href="<?php echo site_url(); ?>/singleproperty?id=<?= $item->data->id; ?>" class="masonry__link" rel="<?= $item->data->id; ?>">
+    <?php if ($item->media->images->image != null && count($item->media->images->image) > 0) : ?>
+        <div class="single-result__image">
+            <img src="<?php echo $item->media->images->image[0]->baseurl . "/315x210%5E/" . $item->media->images->image[0]->filename; ?>" alt="">
+        </div>
+    <?php endif; ?>
+
     <div class="single-result__info">
         <div class="masonry__tile-border"></div>
         <p class="masonry__tile-category">
