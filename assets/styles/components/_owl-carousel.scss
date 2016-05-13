@@ -36,10 +36,6 @@
     position: absolute;
     bottom: 38px;
     width: 100%;
-
-    @include min-screen($tablet) {
-        display: none;
-    }
 }
 
 %arrow-styles {

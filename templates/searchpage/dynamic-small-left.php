@@ -8,15 +8,15 @@
                     <h3 class="masonry__tile-title"><?php echo  $item->data->name; ?></h3>
                     <p class="masonry__tile-price"><?php echo number_format((float) $item->data->pba__listingprice_pb__c); ?></p>
                     <p class="masonry__tile-desc masonry__tile-desc--big">
-                        <?php 
-                            echo  $item->data->pba__bedrooms_pb__c; 
+                        <?php
+                            echo  $item->data->pba__bedrooms_pb__c;
                                 switch ($item->data->pba__bedrooms_pb__c) {
                                     case 0:
                                         break;
                                     case 1:
                                         echo ' bedroom ';
                                         break;
-                                    
+
                                     default:
                                         echo ' bedrooms ';
                                         break;
@@ -30,7 +30,7 @@
     </div><!--
     --><div class="grid__item one-half">
         <div class="masonry__item masonry__item--square masonry__image">
-            <img src="<?php echo $item->media->images->image[0]->baseurl . "/250x250/" . $item->media->images->image[0]->filename; ?>" alt="">
+            <img src="<?php echo $item->media->images->image[0]->baseurl . "/250x250%5E/" . $item->media->images->image[0]->filename; ?>" alt="">
             <div class="masonry__label u--text-uppercase">Sold out</div>
         </div>
     </div>
