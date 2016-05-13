@@ -7,14 +7,7 @@
 <footer class="footer">
     <div class="container">
         <a href="<?= get_home_url(); ?>" class="footer__logo">
-            <svg version="1.1" class="footer__svg" x="0px" y="0px"
-            	 width="45.218px" height="35.441px" viewBox="0 0 45.218 35.441" enable-background="new 0 0 45.218 35.441" xml:space="preserve">
-                <path fill="#FFFFFF" d="M42.228,17.731l-19.233,5.255v-10.51L42.228,17.731z M43.336,28.758l-19.232-5.256l19.232-5.256V28.758z
-                	 M22.995,34.526V24.016l19.233,5.256L22.995,34.526z M22.995,0.938l19.233,5.255l-19.233,5.257V0.938z M22.222,11.449L2.989,6.192
-                	l19.233-5.255V11.449z M22.222,22.987L2.989,17.731l19.233-5.255V22.987z M22.222,34.526L2.989,29.271l19.233-5.255V34.526z
-                	 M1.882,6.707l19.232,5.256L1.882,17.218V6.707z M45.218,6.192L22.66,0L1.105,5.905l0.004,12.086l20.006,5.511L0,29.271
-                	l22.595,6.171l10.236-2.79l0.001,0.004l11.275-3.08V17.428l-20.003-5.465L45.218,6.192z"/>
-            </svg>
+            <img src="<?= get_template_directory_uri(); ?>/dist/images/logo-animated.gif" alt="Spacestation">
             <span>
                 Space station
             </span>

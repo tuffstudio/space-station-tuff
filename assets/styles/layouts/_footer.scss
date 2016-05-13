@@ -13,11 +13,6 @@
     }
 }
 
-.footer__svg {
-    animation: ping 6s infinite;
-    animation-delay: 1s;
-}
-
 .footer__contact {
     padding: 30px 20px 0 30px;
 
@@ -89,9 +84,11 @@ a.footer--link:hover {
     text-decoration: none;
     text-transform: uppercase;
 
+    img {
+        vertical-align: middle;
+    }
+
     span {
-        position: relative;
-        top: -10px;
         padding-left: 10px;
     }
 }
