@@ -168,18 +168,23 @@ window.SS.common = function($) {
     }
 
     function caseStudiesCarousel() {
-        var $carousel = $('.js-case-studies-carousel');
-
-        $carousel.owlCarousel({
+        var $owl = $('.js-case-studies-carousel');
+        var owlOptions = {
             items: 1,
             mouseDrag: false,
             autoplay: true,
             loop: true,
             autoplaySpeed: 2000,
             autoplayHoverPause: true,
-            nav: true,
+            nav: false,
             navText: ['<', '>']
-        });
+        };
+
+        if (window.isMobile()) {
+            owlOptions.nav = true;
+        }
+
+        $owl.owlCarousel(owlOptions);
     }
 
     function equalHeight(owner, target) {

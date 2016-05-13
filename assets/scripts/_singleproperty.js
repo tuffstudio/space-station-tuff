@@ -48,7 +48,7 @@ window.SS.singleproperty = function($) {
             });
         }
 
-        $owl.owlCarousel({
+        var owlOptions = {
             autoplay: false,
             items: 1,
             lazyLoad: true,
@@ -59,9 +59,13 @@ window.SS.singleproperty = function($) {
             onInitialize: setKeyboard,
             onInitialized: initCounter,
             onChanged: incrementCounter
-        });
+        };
 
+        if (window.isMobile()) {
+            owlOptions.nav = false;
+        }
 
+        $owl.owlCarousel(owlOptions);
     }
 
     function openOverlay() {

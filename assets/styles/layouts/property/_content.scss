@@ -2,7 +2,7 @@
 // ------------------------------
 .property__panel {
     @include fluent-switch();
-    height: 50vh;
+    height: 40vh;
     overflow: hidden;
 
     @include min-screen($tablet) {
