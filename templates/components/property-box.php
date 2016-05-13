@@ -5,7 +5,7 @@
 <a href="<?php echo site_url(); ?>/singleproperty?id=<?php echo  $item->data->id; ?>" class="masonry__link" rel="<?php echo  $item->data->id; ?>">
     <?php if ($item->media->images->image != null && count($item->media->images->image) > 0){ ?>
     <div class="single-result__image">
-        <img src="<?php echo $item->media->images->image[0]->baseurl . "/315x210/" . $item->media->images->image[0]->filename; ?>" alt="">
+        <img src="<?php echo $item->media->images->image[0]->baseurl . "/315x210%5E/" . $item->media->images->image[0]->filename; ?>" alt="">
     </div>
     <?php }; ?>
     <div class="single-result__info">

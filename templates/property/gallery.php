@@ -12,7 +12,7 @@
         >
             <?php foreach ($item->media->images->image as $image): ?>
                 <?php if ( empty($image->tags) ):?>
-                    <img src="<?php echo $image[0]->baseurl . "/88x88/" . $image[0]->filename;?>" alt="<?php echo $image[0]->filename; ?>">
+                    <img src="<?php echo $image[0]->baseurl . "/88x88%5E/" . $image[0]->filename;?>" alt="<?php echo $image[0]->filename; ?>">
                 <?php endif; ?>
             <?php endforeach; ?>    
 
@@ -22,7 +22,7 @@
 
     <?php foreach ($item->media->images->image as $image): ?>
         <?php if ( empty($image->tags) ):?>
-            <img class="property__gallery-big-image" src="<?php echo $image[0]->baseurl . "/1920x768/" . $image[0]->filename;?>" alt="<?php echo $image[0]->filename; ?>">
+            <img class="property__gallery-big-image" src="<?php echo $image[0]->baseurl . "/1920x768%5E/" . $image[0]->filename;?>" alt="<?php echo $image[0]->filename; ?>">
         <?php endif; ?>
     <?php endforeach; ?> 
 </section>

@@ -1,6 +1,4 @@
-<?php if( empty($_GET['id']) ):?>
-	<script type="text/javascript"> window.location.replace("http://localhost/ss/app/#no_listing");</script>
-<?php endif; 
+<?php 
 
 // SECURE CONNECTION SETUP
 	define("PB_WEBSERVICEENDPOINT"	, "http://spacestation.force.com/pba__WebserviceListingsQuery"); // Please enter your Propertybase webservice endpoint here

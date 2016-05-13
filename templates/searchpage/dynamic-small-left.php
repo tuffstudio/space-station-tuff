@@ -30,7 +30,7 @@
     </div><!--
     --><div class="grid__item one-half">
         <div class="masonry__item masonry__item--square masonry__image">
-            <img src="<?php echo $item->media->images->image[0]->baseurl . "/250x250/" . $item->media->images->image[0]->filename; ?>" alt="">
+            <img src="<?php echo $item->media->images->image[0]->baseurl . "/250x250%5E/" . $item->media->images->image[0]->filename; ?>" alt="">
             <div class="masonry__label u--text-uppercase">Sold out</div>
         </div>
     </div>
