@@ -42,14 +42,74 @@
                 <a class="link--text" href="mailto:spacestation@gmail.com">email us</a></br>
                 <a class="link--text" href="tel:02076136262">020 7613 6262</a>
 
+                <?php 
+
+                    $fast_facts_icons = array(
+                        'ff_aircon__c',
+                        'ff_architect__c',
+                        'ff_award__c',
+                        'ff_balcony__c',
+                        'ff_basement__c',
+                        'ff_blue_plaque__c',
+                        'ff_bottle__c',
+                        'ff_brick__c',
+                        'ff_built__c',
+                        'ff_celings__c',
+                        'ff_champagne__c',
+                        'ff_church__c',
+                        'ff_cinema__c',
+                        'ff_concierge__c',
+                        'ff_desiner__c',
+                        'ff_eco__c',
+                        'ff_elephant__c',
+                        'ff_extension__c',
+                        'ff_factory__c',
+                        'ff_fireplace__c',
+                        'ff_garden__c',
+                        'ff_gym__c',
+                        'ff_high_specification__c',
+                        'ff_history__c',
+                        'ff_hot_tap__c',
+                        'ff_lateral_space__c',
+                        'ff_library__c',
+                        'ff_lift__c',
+                        'ff_light__c',
+                        'ff_listed_grade_i__c',
+                        'ff_listed_grade_ii__c',
+                        'ff_map__c',
+                        'ff_mews__c',
+                        'ff_mezzanine__c',
+                        'ff_parking__c',
+                        'ff_penthouse__c',
+                        'ff_planning__c',
+                        'ff_pool__c',
+                        'ff_refurbished__c',
+                        'ff_roof_terrace__c',
+                        'ff_school__c',
+                        'ff_security__c',
+                        'ff_solar__c',
+                        'ff_sound_system__c',
+                        'ff_south_facing__c',
+                        'ff_stairs__c',
+                        'ff_townhouse__c',
+                        'ff_tube__c',
+                        'ff_underfloor_heating__c',
+                        'ff_view__c',
+                        'ff_warehouse__c',
+                        'ff_windows__c',
+                        'ff_wine_cellar__c',
+                        'ff_wooden_floors__c'
+                        );
+
+                 ?>
+
                 <h3 class="property__sidebar-title">Fast facts</h3>
                 <ul class="property__properties">
-                    <li><span class="icon icon-notice"></span> Built in 2003</li>
-                    <li><span class="icon icon-target"></span> 300ft from eateries</li>
-                    <li><span class="icon icon-notice"></span> Wine cellar for 500 bottles</li>
-                    <li><span class="icon icon-notice"></span> 200ft of solar panel windows</li>
-                    <li><span class="icon icon-target"></span> 2 large fireplaces</li>
-                    <li><span class="icon icon-target"></span> Design award winning</li>
+                    <?php foreach ($fast_facts_icons as $icon): ?>
+                        <?php if(!empty($item->data->$icon)): ?>
+                            <li><span class="demo-icon icon-<?php echo $icon; ?>"></span><?php echo $item->data->$icon; ?></li>
+                        <?php endif; ?>
+                    <?php endforeach; ?>
                 </ul>
             </div>
         </div>

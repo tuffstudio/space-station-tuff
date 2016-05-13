@@ -5,7 +5,7 @@
 $i = 0; 
 $number_or_listings = $xmlResult->numberOfListings;
 
-while($i < $xmlResult->numberOfListings): ?> 
+while($i < $number_or_listings): ?> 
 <div class="grid grid--full">
     <div class="grid__item tablet--one-half">
         <div class="grid__item">
@@ -13,7 +13,6 @@ while($i < $xmlResult->numberOfListings): ?>
                  $item = $xmlResult->listings->listing[$i];   
                  include 'dynamic-small-left.php';  
                  $i++; 
-                 if($i >= $number_or_listings){ break; }
              }?>
         </div><!--
         --><div class="grid__item">
@@ -35,7 +34,6 @@ while($i < $xmlResult->numberOfListings): ?>
                 $item = $xmlResult->listings->listing[$i];
                 include 'dynamic-big.php'; 
                 $i++; 
-                if($i >= $number_or_listings){ break; }
             }?>
         </div>
     </div>
@@ -47,7 +45,6 @@ while($i < $xmlResult->numberOfListings): ?>
                 $item = $xmlResult->listings->listing[$i];
                 include 'dynamic-big.php';  
                 $i++;
-                if($i >= $number_or_listings){ break; }
             }?>
         </div>
     </div><!--
@@ -60,7 +57,6 @@ while($i < $xmlResult->numberOfListings): ?>
                 $item = $xmlResult->listings->listing[$i];
                 include 'dynamic-small-right.php'; 
                 $i++;
-                if($i >= $number_or_listings){ break; }
             }?>
         </div>
     </div>
@@ -72,7 +68,6 @@ while($i < $xmlResult->numberOfListings): ?>
                 $item = $xmlResult->listings->listing[$i];
                 include 'dynamic-small-left.php'; 
                 $i++;
-                if($i >= $number_or_listings){ break; }
             }?>
         </div><!--
         --><div class="grid__item phone--hide tablet--show">
@@ -83,7 +78,6 @@ while($i < $xmlResult->numberOfListings): ?>
                 $item = $xmlResult->listings->listing[$i];
                 include 'dynamic-small-left.php'; 
                 $i++;
-                if($i >= $number_or_listings){ break; }
             }?>
         </div>
     </div><!--
@@ -102,7 +96,6 @@ while($i < $xmlResult->numberOfListings): ?>
                 $item = $xmlResult->listings->listing[$i];
                 include 'dynamic-big.php'; 
                 $i++;
-                if($i >= $number_or_listings){ break; }
             }?>
         </div>
     </div>

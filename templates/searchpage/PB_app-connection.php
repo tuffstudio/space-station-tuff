@@ -55,7 +55,7 @@ function getFromToParam($from,$to){
 	}
 	// PER PAGE
 	if (empty($_POST["itemsperpage"])){
-		$default_perpage = "20"; //-
+		$default_perpage = "30"; //-
 	}else{ 
 		$default_perpage = $_POST["itemsperpage"];
 	}
