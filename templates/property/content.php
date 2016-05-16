@@ -3,19 +3,19 @@
         <div class="grid__item desktop--three-quarters">
             <div class="property__info">
                 <div class="property__info-head">
-                    <p class="section__category">Residential <span><?php echo $listing_type ?></span></p>
-                    <h1 class="property__title"><?php echo $main_title ?></h1>
-                    <p class="property__price"><?php echo $property_price.' '.$tenure; ?></p>
+                    <p class="section__category">Residential <span><?= $listing_type ?></span></p>
+                    <h1 class="property__title"><?= $main_title ?></h1>
+                    <p class="property__price"><?= $property_price.' '.$tenure; ?></p>
                     <p class="property__type">
-                        <?php 
-                            echo  $item->data->pba__bedrooms_pb__c; 
+                        <?php
+                            echo  $item->data->pba__bedrooms_pb__c;
                                 switch ($item->data->pba__bedrooms_pb__c) {
                                     case 0:
                                         break;
                                     case 1:
                                         echo ' bedroom ';
                                         break;
-                                    
+
                                     default:
                                         echo ' bedrooms ';
                                         break;
@@ -26,14 +26,14 @@
                 </div>
 
                 <ul class="property__buttons">
-                    <?php if( !empty($item->media->documents->document->url) ): ?>
-                        <li class="property__button"><a href="<?php echo $property_brochure_url; ?>" class="btn btn--action" target="_blank">brochure</a></li>
-                    <?php endif; ?> 
+                    <?php if( !empty($item->media->documents->document->url) ) : ?>
+                        <li class="property__button"><a href="<?= $property_brochure_url; ?>" class="btn btn--action" target="_blank">brochure</a></li>
+                    <?php endif; ?>
                     <li class="property__button"><a href="" class="btn btn--action">save</a></li>
                     <li class="property__button"><a href="" class="btn btn--action">share</a></li>
                 </ul>
                 <article class="property__description">
-                    <?php echo $property_description; ?>
+                    <?= $property_description; ?>
                 </article>
             </div>
         </div><!--

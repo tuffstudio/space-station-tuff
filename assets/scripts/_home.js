@@ -12,10 +12,15 @@ window.SS.home = function($) {
         $('.js-spinner').hide();
     }
 
+    function playVideo() {
+        if (!window.isMobile()) {
+            var video = document.getElementById('homepage-video');
+            video.addEventListener('play', hideSpinner);
+        }
+    }
+
     $(document).ready(function() {
         revealBox();
-
-        var video = document.getElementById('homepage-video');
-        video.addEventListener('play', hideSpinner);
+        playVideo();
     });
 };

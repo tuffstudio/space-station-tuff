@@ -32,6 +32,10 @@ body {
         @include min-screen($desktop) {
             padding-top: $nav-height + $cookies-height-desktop;
         }
+
+        .favourites-box__content {
+            top: $cookies-height-desktop;
+        }
     }
 
     &.blackbook {

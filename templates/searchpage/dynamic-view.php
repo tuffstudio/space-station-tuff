@@ -1,24 +1,24 @@
-
-
-<?php 
-
-$i = 0; 
+<?php
+$i = 0;
 $number_or_listings = $xmlResult->numberOfListings;
 
-while($i < $number_or_listings): ?> 
+while($i < $number_or_listings) :
+?>
 <div class="grid grid--full">
     <div class="grid__item tablet--one-half">
         <div class="grid__item">
-            <?php if($i == 0 || ($i % 7) == 0){ 
-                 $item = $xmlResult->listings->listing[$i];   
-                 include 'dynamic-small-left.php';  
-                 $i++; 
-             }?>
+            <?php
+                if($i == 0 || ($i % 7) == 0) {
+                    $item = $xmlResult->listings->listing[$i];
+                    include 'dynamic-small-left.php';
+                    $i++;
+                }
+            ?>
         </div><!--
         --><div class="grid__item">
             <div class="grid__item one-half"></div><!--
             --><div class="grid__item one-half">
-                <a href="#" class="masonry__link">
+                <a href="/book-a-valuation" class="masonry__link">
                     <div class="masonry__item masonry__item--square">
                         <div class="masonry__tile masonry__tile-link masonry__tile-link--brown">
                             <span>Book a valuation</span>
@@ -30,7 +30,7 @@ while($i < $number_or_listings): ?>
     </div><!--
     --><div class="grid__item tablet--one-half">
         <div class="grid__item masonry__image">
-            <?php if($i == 1 || (($i-1) % 7) == 0 ){ 
+            <?php if($i == 1 || (($i-1) % 7) == 0){
                 $item = $xmlResult->listings->listing[$i];
                 include 'dynamic-big.php'; 
                 $i++; 
@@ -41,9 +41,9 @@ while($i < $number_or_listings): ?>
 <div class="grid grid--full">
     <div class="grid__item tablet--one-half">
         <div class="grid__item masonry__image">
-            <?php if($i == 2 || (($i-2) % 7) == 0 ){
+            <?php if($i == 2 || (($i-2) % 7) == 0){
                 $item = $xmlResult->listings->listing[$i];
-                include 'dynamic-big.php';  
+                include 'dynamic-big.php';
                 $i++;
             }?>
         </div>
@@ -53,9 +53,9 @@ while($i < $number_or_listings): ?>
             <div class="masonry__item masonry__item--rectangular"></div>
         </div><!--
         --><div class="grid__item">
-            <?php if($i == 3 || (($i-3) % 7) == 0 ){ 
+            <?php if($i == 3 || (($i-3) % 7) == 0){
                 $item = $xmlResult->listings->listing[$i];
-                include 'dynamic-small-right.php'; 
+                include 'dynamic-small-right.php';
                 $i++;
             }?>
         </div>
@@ -64,9 +64,9 @@ while($i < $number_or_listings): ?>
 <div class="grid grid--full">
     <div class="grid__item tablet--one-half">
         <div class="grid__item">
-            <?php if($i == 4 || (($i-4) % 7) == 0 ){ 
+            <?php if($i == 4 || (($i-4) % 7) == 0){
                 $item = $xmlResult->listings->listing[$i];
-                include 'dynamic-small-left.php'; 
+                include 'dynamic-small-left.php';
                 $i++;
             }?>
         </div><!--
@@ -74,9 +74,9 @@ while($i < $number_or_listings): ?>
             <div class="masonry__item masonry__item--rectangular"></div>
         </div><!--
         --><div class="grid__item">
-            <?php if($i == 5 || (($i-5) % 7) == 0 ){ 
+            <?php if($i == 5 || (($i-5) % 7) == 0){
                 $item = $xmlResult->listings->listing[$i];
-                include 'dynamic-small-left.php'; 
+                include 'dynamic-small-left.php';
                 $i++;
             }?>
         </div>
@@ -92,9 +92,9 @@ while($i < $number_or_listings): ?>
             </a>
         </div><!--
         --><div class="grid__item masonry__image">
-            <?php if($i == 6 || (($i-6) % 7) == 0 ){ 
+            <?php if($i == 6 || (($i-6) % 7) == 0){
                 $item = $xmlResult->listings->listing[$i];
-                include 'dynamic-big.php'; 
+                include 'dynamic-big.php';
                 $i++;
             }?>
         </div>

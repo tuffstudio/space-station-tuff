@@ -24,6 +24,50 @@ window.SS.singleproperty = function($) {
         });
     }
 
+    function initGalleryCarousel() {
+        var $owl = $('.js-property-gallery');
+
+        function initCounter(event) {
+            $('.js-index').html(event.item.index + 1);
+            $('.js-count').html(event.item.count);
+            $('.js-counter').show();
+        }
+
+        function incrementCounter(event) {
+            $('.js-index').html(event.item.index + 1);
+        }
+
+        function setKeyboard() {
+            document.body.addEventListener('keydown', function(event) {
+                if (event.keyCode === 37) {
+                    $owl.trigger('prev.owl.carousel');
+                }
+                if (event.keyCode === 39) {
+                    $owl.trigger('next.owl.carousel');
+                }
+            });
+        }
+
+        var owlOptions = {
+            autoplay: false,
+            items: 1,
+            lazyLoad: true,
+            dots: false,
+            nav: true,
+            navText: ['', ''],
+            animateIn: 'fade-in',
+            onInitialize: setKeyboard,
+            onInitialized: initCounter,
+            onChanged: incrementCounter
+        };
+
+        if (window.isMobile()) {
+            owlOptions.nav = false;
+        }
+
+        $owl.owlCarousel(owlOptions);
+    }
+
     function openOverlay() {
         $overlay.addClass('is-opened');
         $body.addClass('static');
@@ -51,6 +95,7 @@ window.SS.singleproperty = function($) {
     }
 
     $(document).ready(function() {
+        initGalleryCarousel();
         initPoiCarousel();
         overlay();
         SS.switchGrids('.js-panel-switcher', '.js-property-panel');

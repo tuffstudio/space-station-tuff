@@ -1,4 +1,10 @@
+<<<<<<< HEAD
 <?php 
+=======
+<?php if( empty($_GET['id']) ):?>
+	<script type="text/javascript"> window.location.replace("http://localhost/ss/app/#no_listing");</script>
+<?php endif;
+>>>>>>> origin/develop
 
 // SECURE CONNECTION SETUP
 	define("PB_WEBSERVICEENDPOINT"	, "http://spacestation.force.com/pba__WebserviceListingsQuery"); // Please enter your Propertybase webservice endpoint here
@@ -7,24 +13,24 @@
 	if (empty($_POST["bedrooms_from"])){
 		$default_bedrooms_from = 1;
 	}
-		else{ 
+		else{
 		$default_bedrooms_from = $_POST["bedrooms_from"];
 		}
-// GET FROM TO PARAM FUNCTION		
+// GET FROM TO PARAM FUNCTION
 	function getFromToParam($from,$to){
-		
+
 		if (empty($from) && empty($to)) return null;
-	
+
 		$p = '[';
 		if (!empty($from)) $p .= $from;
 		$p .= ';';
 		if (!empty($to)) $p .= $to;
 		$p .= ']';
-				
-		return $p;	 	
+
+		return $p;
 	}
 
-// if there's variable in query and is not empty	
+// if there's variable in query and is not empty
 	if(isset($_POST["reference"])){		$reference 		= $_POST["reference"];}
 	if(isset($_POST["price_from"])){	$price_from 	= $_POST["price_from"];}
 	if(isset($_POST["price_to"])){		$price_to 		= $_POST["price_to"];}
@@ -33,10 +39,10 @@
 	if(isset($_POST["price_from"])){	$priceParam 	= getFromToParam($price_from	,$price_to);}
 	if(isset($_POST["size_from"])){		$sizeParam 		= getFromToParam($size_from		,null);}
 										$bedsParam 		= getFromToParam($default_bedrooms_from	,null);
-	
+
 	$doSearch = !(empty($reference) && empty($priceParam) && empty($sizeParam)&& empty($bedsParam)  );
-	
-	
+
+
 	$xmlResult		= null;
 	$errorMessage 	= null;
 
@@ -50,18 +56,18 @@
 		              "debugmode"		=> "true"
 					  );
 
-// add FILTERS to QUERY ARRAY	
+// add FILTERS to QUERY ARRAY
 	if (!empty($reference))		$reqArray["name"] 								= '%' . $reference . '%';
 	if (!empty($priceParam))	$reqArray["pba__ListingPrice_pb__c"] 			= $priceParam;
 	if (!empty($size_from)) 	$reqArray["pba__TotalArea_pb__c"] 				= $sizeParam;
 	if (!empty($default_bedrooms_from)) $reqArray["pba__Bedrooms_pb__c"] 		= $bedsParam;
-	$reqArray["show_on_website__c"] 			= "true"; 
+	$reqArray["show_on_website__c"] 			= "true";
 
-// BUILD HTTP QUERY STRING	
+// BUILD HTTP QUERY STRING
 	$query 		= http_build_query($reqArray,'','&');
 // RETURN XML RESULT
 	$xmlResult 	= simplexml_load_file(PB_WEBSERVICEENDPOINT . "?" . $query);
-	
+
 	if (!empty($xmlResult->errorMessages->message)) {
 		$errorMessage = 'Error: '.$xmlResult->errorMessages->message;
 	} else {
