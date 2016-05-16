@@ -5,7 +5,7 @@
                 <h3 class="section__title section__title--small">Explore the neighbourhood</h3>
             </div><!--
             --><div class="grid__item desktop--three-quarters">
-                <div class="property__carousel">
+                <div class="property__carousel" data="<?php echo $item->data->explore_the_neighbourhood__c; ?>">
                     <div class="property__poi owl-carousel">
                         <a href="#" class="property__poi-link">
                             <div class="property__poi-image">
