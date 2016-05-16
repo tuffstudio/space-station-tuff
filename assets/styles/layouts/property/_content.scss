@@ -2,17 +2,17 @@
 // ------------------------------
 .property__panel {
     @include fluent-switch();
-    height: 40vh;
+    min-height: 40vh;
     overflow: hidden;
 
     @include min-screen($tablet) {
         @include landscape() {
-            height: 75vh;
+            min-height: 75vh;
         }
     }
 
     @include min-screen($desktop) {
-        height: calc(100vh - 50px);
+        min-height: 30vh;
     }
 }
 

@@ -64,13 +64,13 @@
                     </ul>
                     <ul class="view-nav">
                         <li class="view-nav__item">
-                            <a href="#dynamic-view" class="active js-grid-switcher">dynamic view</a>
+                            <a href="#dynamic-view" class="active js-grid-switcher js-smooth-off">dynamic view</a>
                         </li><!--
                         --><li class="view-nav__item">
-                            <a href="#grid-view" class="js-grid-switcher">grid view</a>
+                            <a href="#grid-view" class="js-grid-switcher js-smooth-off">grid view</a>
                         </li><!--
                         --><li class="view-nav__item">
-                            <a href="#map-view" class="js-grid-switcher js-map-switch">map view</a>
+                            <a href="#map-view" class="js-grid-switcher js-map-switch js-smooth-off">map view</a>
                         </li>
                     </ul>
                 </div>
