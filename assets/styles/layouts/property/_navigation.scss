@@ -10,7 +10,7 @@
     @include min-screen($desktop) {
         height: $property-nav-height;
         margin-top: -$property-nav-height;
-        padding: 10px 50px 0;
+        padding: 10px 15px 0 50px;
     }
 
     .property__buttons {
@@ -47,10 +47,10 @@
 
 .footer__nav {
     padding: 35px 0 0 35px;
+    column-gap: 30px;
+    column-count: 2;
     list-style: none;
     text-transform: uppercase;
-    column-count: 2;
-    column-gap: 30px;
 
     a {
         display: inline-block;
@@ -59,19 +59,19 @@
         color: $footer-color;
         text-decoration: none;
 
-        &:after {
+        &::after {
             content: '';
             position: absolute;
+            right: 100%;
             bottom: 5px;
             left: 0;
-            right: 100%;
             height: 1px;
-            background: $color-primary;
             transition: all $standard-animation-time ease-in-out;
+            background: $color-primary;
         }
 
         &:hover {
-            &:after {
+            &::after {
                 right: 0;
             }
         }
@@ -95,13 +95,13 @@
             }
         }
 
-        &:before {
+        &::before {
             content: '|';
             padding: 6px;
         }
 
         &:first-of-type {
-            &:before {
+            &::before {
                 display: none;
             }
         }
