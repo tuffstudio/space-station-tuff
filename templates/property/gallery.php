@@ -1,3 +1,9 @@
+<?php
+    use Roots\Sage\Platform;
+
+    $img_size = Platform\is_desktop() ? '1920x768' : '960x540';
+?>
+
 <section id="gallery" class="property__gallery property__panel js-property-panel visible">
     <?php include dirname(__FILE__) . '/../components/spinner.php'; ?>
     <div class="property__gallery-counter js-counter">
@@ -6,7 +12,7 @@
     <div class="owl-carousel js-property-gallery">
         <?php foreach ($item->media->images->image as $image) : ?>
             <?php if (empty($image->tags) ) : ?>
-                <img class="owl-lazy property__gallery-big-image" data-src="<?= $image[0]->baseurl . '/1920x768%5E/' . $image[0]->filename; ?>" alt="<?= $image[0]->filename; ?>">
+                <img class="owl-lazy property__gallery-big-image" data-src="<?= $image[0]->baseurl . '/' . $img_size . '%5E/' . $image[0]->filename; ?>" alt="<?= $image[0]->filename; ?>">
             <?php endif; ?>
         <?php endforeach; ?>
     </div>
