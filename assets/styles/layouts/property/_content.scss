@@ -12,7 +12,7 @@
     }
 
     @include min-screen($desktop) {
-        min-height: auto;
+        min-height: 30vh;
     }
 }
 
