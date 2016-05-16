@@ -50,6 +50,36 @@
     }
 }
 
+@keyframes arrow-left-animation {
+    0% {
+        transform: translate(-30%, -50%) rotate(-135deg);
+    }
+    40% {
+        transform: translate(-35%, -50%) rotate(-135deg);
+    }
+    80% {
+        transform: translate(-25%, -50%) rotate(-135deg);
+    }
+    100% {
+        transform: translate(-30%, -50%) rotate(-135deg);
+    }
+}
+
+@keyframes arrow-right-animation {
+    0% {
+        transform: translate(-70%, -50%) rotate(45deg);
+    }
+    40% {
+        transform: translate(-65%, -50%) rotate(45deg);
+    }
+    80% {
+        transform: translate(-75%, -50%) rotate(45deg);
+    }
+    100% {
+        transform: translate(-70%, -50%) rotate(45deg);
+    }
+}
+
 .animation--zoom {
     display: block;
     overflow: hidden;

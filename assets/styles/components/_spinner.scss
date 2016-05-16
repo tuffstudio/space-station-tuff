@@ -2,16 +2,11 @@
 // --------
 .spinner {
     @include center-align();
-    display: none;
     width: 50px;
     height: 40px;
     margin: 0 auto;
     font-size: 10px;
     text-align: center;
-
-    @include min-screen($desktop) {
-        display: block;
-    }
 
     > div {
         display: inline-block;

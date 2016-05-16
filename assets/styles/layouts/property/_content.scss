@@ -2,7 +2,18 @@
 // ------------------------------
 .property__panel {
     @include fluent-switch();
-    min-height: 300px;
+    min-height: 40vh;
+    overflow: hidden;
+
+    @include min-screen($tablet) {
+        @include landscape() {
+            min-height: 75vh;
+        }
+    }
+
+    @include min-screen($desktop) {
+        min-height: 30vh;
+    }
 }
 
 .property__content {

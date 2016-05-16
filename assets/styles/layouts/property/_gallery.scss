@@ -1,57 +1,161 @@
 // Single property gallery section
 // --------------------------------
-.property__gallery {
-    position: relative;
-}
+$arrow-size: 30px;
+$arrow-width: 3px;
 
-.property__gallery-big-image {
-    width: 100%;
-    margin-bottom: -4px;
-}
-
-.property__gallery-slider {
-    display: none; // FIXME: find out what to do on mobile
+%owl-banner-arrow {
     position: absolute;
-    top: 12%;
-    right: 0;
-    width: 100px;
-    padding: 10px 6px;
-    background-color: transparentize($black, .3);
+    width: $arrow-size * 1.5;
+    height: $arrow-size * 1.5;
+    margin-top: -100px;
+    padding: 70px 40px 70px 0;
+    transition: background-color $standard-animation-time ease;
+    font-size: rem-calc(70);
+    line-height: 1;
     text-align: center;
 
-    @include min-screen($desktop) {
-        display: block;
+    @include min-screen($tablet) {
+        width: $arrow-size * 2;
+        height: $arrow-size * 2;
+        margin-top: -120px;
+        padding: 100px 60px 100px 0;
+
     }
 
-    img {
-        width: 100%;
-        transition: border-color $standard-animation-time ease;
-        border: 3px solid transparent;
-        cursor: pointer;
+    @include min-screen($desktop) {
+        margin-top: -20%;
+    }
 
-        .is-desktop &:hover {
+    @include min-screen($desktop-medium) {
+        margin-top: -20vh;
+    }
+
+    &:hover {
+        background-color: rgba($black, .75);
+
+        &::after {
             border-color: $color-primary;
+            animation: arrow-left-animation 1s infinite;
+        }
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: $arrow-size;
+        height: $arrow-size;
+        transform: translate(-30%, -50%) rotate(-135deg);
+        transition: border-color $standard-animation-time ease;
+        border-top: $arrow-width solid $white;
+        border-right: $arrow-width solid $white;
+    }
+}
+
+.property__gallery {
+    position: relative;
+
+    .owl-nav {
+        top: 20vh;
+        bottom: auto;
+
+        @include min-screen($desktop) {
+            top: 40vh;
+        }
+    }
+
+    .owl-prev {
+        @extend %owl-banner-arrow;
+    }
+
+    .owl-next {
+        @extend %owl-banner-arrow;
+
+        &:hover {
+            &::after {
+                animation: arrow-right-animation 1s infinite;
+            }
+        }
+
+        &::after {
+            transform: translate(-70%, -50%) rotate(45deg);
+        }
+    }
+
+    .owl-prev,
+    .owl-next {
+        &.disabled {
+            opacity: none;
+            visibility: hidden;
         }
     }
 }
 
-.property__gallery-switcher {
-    position: relative;
-    margin: 0 auto;
+.property__gallery-big-image {
+    width: 100%;
     transition: opacity $standard-animation-time ease;
-    opacity: .6;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    opacity: 0;
 
-    &.up {
-        @include css-triangle(9px, $white, up);
-        margin-bottom: 5px;
-    }
-
-    &.down {
-        @include css-triangle(9px, $white, down);
-        margin-top: 5px;
-    }
-
-    .is-desktop &:hover {
+    &.loaded {
         opacity: 1;
+    }
+}
+
+.property__gallery-counter {
+    display: none;
+    position: absolute;
+    right: 0;
+    bottom: 15px;
+    width: 80px;
+    height: 50px;
+    padding-top: 7px;
+    background-color: transparentize($black, .3);
+    font-family: $font-caslon;
+    text-align: center;
+    z-index: 10;
+
+    @include min-screen($tablet) {
+        width: 100px;
+        height: 60px;
+    }
+
+    @include min-screen($desktop) {
+        bottom: 50px;
+        width: 120px;
+        height: 80px;
+    }
+
+    p {
+        margin: 0;
+    }
+
+    .index {
+        color: $color-primary;
+        font-size: rem-calc(30);
+
+        @include min-screen($tablet) {
+            font-size: rem-calc(40);
+        }
+
+        @include min-screen($desktop) {
+            font-size: rem-calc(50);
+        }
+    }
+
+    .count {
+        color: $white;
+        font-size: rem-calc(15);
+
+        @include min-screen($tablet) {
+            font-size: rem-calc(20);
+        }
+
+        @include min-screen($desktop) {
+            font-size: rem-calc(25);
+        }
     }
 }
