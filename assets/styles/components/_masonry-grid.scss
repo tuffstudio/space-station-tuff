@@ -251,6 +251,14 @@
     }
 }
 
+.masonry__tile-link--black {
+    background-color: $black;
+
+    &:hover {
+        background-color: transparentize($black, .2);
+    }
+}
+
 .masonry__tile-link--quote {
     background-color: $black;
 

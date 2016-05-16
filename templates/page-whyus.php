@@ -2,6 +2,18 @@
     use Roots\Sage\MagazinePost;
 
     $sections = CFS() -> get('whyus_sections', $post->ID);
+
+    function choose_class($iterator, $index) {
+        if ($index == 1) {
+            return 'masonry__tile-link--black';
+        }
+
+        if ($iterator % 2 == 0) {
+            return 'masonry__tile-link--brown';
+        } else {
+            return 'masonry__tile-link--purple';
+        }
+    }
 ?>
 <?php include 'commercial/informations.php'; ?>
 
@@ -27,7 +39,7 @@
                 $section_buttons = $section['section_buttons'];
         ?>
             <div id="js-whyus-<?= $index; ?>" class="anchor"></div>
-            <div class="grid grid--middle whyus__section <?php echo $index % 2 == 0 ? '' : 'grid--rev'; ?> is-hidden js-section-reveal">
+            <div class="grid grid--middle whyus__section <?= $index % 2 == 0 ? '' : 'grid--rev'; ?> is-hidden js-section-reveal">
                 <div class="grid__item desktop--one-half whyus__section-half">
                     <div class="whyus__text">
                         <h3 class="section__title section__title--small whyus__section-title">
@@ -44,16 +56,23 @@
                             $case = $section_case_study;
                             include 'case-studies/small.php';
                         ?>
-                        <div class="whyus__buttons">
+                        <div class="grid grid--full">
                             <?php
                                 if ($section_buttons) :
+                                    $i = 0;
                                     foreach($section_buttons as $button) :
                                         $button = $button['section_button'];
-                            ?>
-                                <a href="<?= $button['url']; ?>" target="<?= $button['target']; ?>" class="btn btn--primary btn--primary-big">
-                                    <?= $button['text']; ?>
+                            ?><!--
+                            --><div class="grid__item one-half">
+                                <a href="<?= $button['url']; ?>" target="<?= $button['target']; ?>" class="masonry__link">
+                                    <div class="masonry__item masonry__item--square">
+                                        <div class="masonry__tile masonry__tile-link <?= choose_class($index, $i); ?>">
+                                            <span><?= $button['text']; ?><?= $i ?></span>
+                                        </div>
+                                    </div>
                                 </a>
-                            <?php endforeach; endif; ?>
+                            </div><!--
+                            --><?php $i++; endforeach; endif; ?>
                         </div>
                     </div>
                 </div>
