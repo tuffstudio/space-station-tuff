@@ -15,9 +15,9 @@
         }
     }
 ?>
-<?php include 'commercial/informations.php'; ?>
+<section class="section--main">
+    <?php include 'commercial/informations.php'; ?>
 
-<section>
     <div class="container">
         <ul class="whyus__nav">
             <?php foreach ($sections as $index => $section) : ?>
@@ -28,16 +28,17 @@
 </section>
 
 <section class="section--bottom-space">
-    <div class="container--mobile-full container">
-        <?php
-            foreach ($sections as $index => $section) :
-                $section_title = $section['section_title'];
-                $section_content = $section['section_content'];
-                $section_content = apply_filters('the_content', $section_content);
-                $section_case_study_id = $section['section_case_study'][0];
-                $section_case_study = new MagazinePost\CaseStudyPost($section_case_study_id);
-                $section_buttons = $section['section_buttons'];
-        ?>
+    <?php
+        foreach ($sections as $index => $section) :
+            $section_title = $section['section_title'];
+            $section_content = $section['section_content'];
+            $section_content = apply_filters('the_content', $section_content);
+            $section_case_study_id = $section['section_case_study'][0];
+            $section_case_study = new MagazinePost\CaseStudyPost($section_case_study_id);
+            $section_buttons = $section['section_buttons'];
+    ?>
+    <div class="section--skew">
+        <div class="container container--mobile-full">
             <div id="js-whyus-<?= $index; ?>" class="anchor"></div>
             <div class="grid grid--middle whyus__section <?= $index % 2 == 0 ? '' : 'grid--rev'; ?> is-hidden js-section-reveal">
                 <div class="grid__item desktop--one-half whyus__section-half">
@@ -77,8 +78,9 @@
                     </div>
                 </div>
             </div>
-        <?php endforeach; ?>
+        </div>
     </div>
+    <?php endforeach; ?>
 </section>
 
 <?php include 'homepage/stay-in-touch.php'; ?>
