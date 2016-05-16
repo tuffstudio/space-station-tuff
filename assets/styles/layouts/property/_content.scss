@@ -2,14 +2,8 @@
 // ------------------------------
 .property__panel {
     @include fluent-switch();
-    min-height: 40vh;
+    min-height: 31vh;
     overflow: hidden;
-
-    @include min-screen($tablet) {
-        @include landscape() {
-            min-height: 75vh;
-        }
-    }
 
     @include min-screen($desktop) {
         min-height: 30vh;
@@ -17,9 +11,9 @@
 }
 
 .property__panel--video {
+    min-height: auto;
     margin-bottom: 0;
     overflow: hidden;
-    min-height: auto;
 
     @include min-screen($desktop) {
         margin: 0 auto 50px;

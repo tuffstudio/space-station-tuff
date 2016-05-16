@@ -41,7 +41,7 @@
     bottom: 0;
     width: $favourites-box-width;
     padding: 20px;
-    transition: right $favourities-box-animation ease-in-out;
+    transition: right $favourities-box-animation ease-in-out, top $standard-animation-time ease;
     background: $overlay-content-bg;
     font-size: $brand-link-size;
     text-align: left;
