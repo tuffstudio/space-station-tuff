@@ -16,6 +16,16 @@
     }
 }
 
+.property__panel--video {
+    margin-bottom: 0;
+    overflow: hidden;
+    min-height: auto;
+
+    @include min-screen($desktop) {
+        margin: 0 auto 50px;
+    }
+}
+
 .property__content {
     padding: 5px 20px 50px;
     background-color: $white;
