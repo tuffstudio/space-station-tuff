@@ -1,7 +1,7 @@
 <a href="<?php echo site_url(); ?>/singleproperty?id=<?php echo  $item->data->id; ?>" class="masonry__link" rel="<?php echo  $item->data->id; ?>">
     <div class="grid__item one-half">
         <div class="masonry__item masonry__item--square masonry__image">
-            <img src="<?php echo $item->media->images->image[0]->baseurl . "/250x250%5E/" . $item->media->images->image[0]->filename; ?>" alt="">
+            <img src="<?php echo $item->media->images->image[0]->baseurl . "/300x300%5E/" . $item->media->images->image[0]->filename; ?>" alt="">
         </div>
     </div><!--
     --><div class="grid__item one-half">
