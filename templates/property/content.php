@@ -44,6 +44,8 @@
 
                 <?php 
 
+
+
                     $fast_facts_icons = array(
                         'ff_aircon__c',
                         'ff_architect__c',
@@ -105,10 +107,10 @@
 
                 <h3 class="property__sidebar-title">Fast facts</h3>
                 <ul class="property__properties">
-                    <?php foreach ($fast_facts_icons as $icon): ?>
-                        <?php if(!empty($item->data->$icon)): ?>
-                            <li><span class="demo-icon icon-<?php echo $icon; ?>"></span><?php echo $item->data->$icon; ?></li>
-                        <?php endif; ?>
+                    <?php $k = 0; foreach ($fast_facts_icons as $icon): ?>
+                        <?php if(!empty($item->data->$icon) && $k < 7): ?>
+                            <li><i class="demo-icon icon-<?php echo $icon; ?>"></i><?php echo $item->data->$icon; ?></li>
+                        <?php $k++; endif; ?>
                     <?php endforeach; ?>
                 </ul>
             </div>
