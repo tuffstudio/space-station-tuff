@@ -1,15 +1,7 @@
 <?php 
 
-// SECURE CONNECTION SETUP
-	define("PB_WEBSERVICEENDPOINT"	, "http://spacestation.force.com/pba__WebserviceListingsQuery"); // Please enter your Propertybase webservice endpoint here
-	define("PB_SECURITYTOKEN"		, "29bac54992830136725442d9c3c5ea086377d8065900263fb21986a539e72083"); // Please enter your security token here
+include 'pb_config.php';
 
-	if (empty($_POST["bedrooms_from"])){
-		$default_bedrooms_from = 1;
-	}
-		else{
-		$default_bedrooms_from = $_POST["bedrooms_from"];
-		}
 // GET FROM TO PARAM FUNCTION
 	function getFromToParam($from,$to){
 
@@ -23,6 +15,12 @@
 
 		return $p;
 	}
+
+if (empty($_POST["bedrooms_from"])){
+		$default_bedrooms_from = 1;
+}else{
+		$default_bedrooms_from = $_POST["bedrooms_from"];
+}
 
 // if there's variable in query and is not empty
 	if(isset($_POST["reference"])){		$reference 		= $_POST["reference"];}
@@ -66,9 +64,15 @@
 		$errorMessage = 'Error: '.$xmlResult->errorMessages->message;
 	} else {
 		$debugMessages = 'Debug: '.$xmlResult->debugMessages->message;
+
+		$item = $xmlResult->listings->listing;
+    	$main_title = $item->data->name;
+    	$listing_type = $item->data->pba__listingtype__c;
+    	$tenure = $item->data->tenure__c;
+    	$property_price = number_format((float) $item->data->pba__listingprice_pb__c);
+    	$property_type = $item->data->pba__propertytype__c;
+    	$property_bedrooms_number = $item->data->pba__bedrooms_pb__c;
+    	$property_description = $item->data->pba__description_pb__c;
+    	$property_brochure_url = $item->media->documents->document->url;
 	}
-
-	$DisplayQuery = $query;
-	$DisplayDebug = $debugMessages;
-
 ?>

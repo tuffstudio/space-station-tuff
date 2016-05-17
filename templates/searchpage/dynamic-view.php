@@ -8,11 +8,11 @@ while($i < $number_or_listings) :
     <div class="grid__item tablet--one-half">
         <div class="grid__item">
             <?php
-                if($i == 0 || ($i % 7) == 0) {
+                if($i == 0 || ($i % 7) == 0) :
                     $item = $xmlResult->listings->listing[$i];
                     include 'dynamic-small-left.php';
                     $i++;
-                }
+                endif;
             ?>
         </div>
         <?php if($i >= $number_or_listings){ echo '</div></div>'; break; } ?>
@@ -32,11 +32,12 @@ while($i < $number_or_listings) :
     </div><!--
     --><div class="grid__item tablet--one-half">
         <div class="grid__item masonry__image">
-            <?php if($i == 1 || (($i-1) % 7) == 0){
-                $item = $xmlResult->listings->listing[$i];
-                include 'dynamic-big.php'; 
-                $i++; 
-            }
+            <?php 
+                if($i == 1 || (($i-1) % 7) == 0) :
+                    $item = $xmlResult->listings->listing[$i];
+                    include 'dynamic-big.php'; 
+                    $i++; 
+                endif;
             ?>
         </div>
         <?php if($i >= $number_or_listings){ echo '</div></div>'; break; } ?>
@@ -45,11 +46,12 @@ while($i < $number_or_listings) :
 <div class="grid grid--full">
     <div class="grid__item tablet--one-half">
         <div class="grid__item masonry__image">
-            <?php if($i == 2 || (($i-2) % 7) == 0){
-                $item = $xmlResult->listings->listing[$i];
-                include 'dynamic-big.php';
-                $i++;
-            }
+            <?php 
+                if($i == 2 || (($i-2) % 7) == 0) :
+                    $item = $xmlResult->listings->listing[$i];
+                    include 'dynamic-big.php';
+                    $i++;
+                endif;
             ?>
         </div>
         <?php if($i >= $number_or_listings){ echo '</div></div>'; break; } ?>
@@ -59,11 +61,12 @@ while($i < $number_or_listings) :
             <div class="masonry__item masonry__item--rectangular"></div>
         </div><!--
         --><div class="grid__item">
-            <?php if($i == 3 || (($i-3) % 7) == 0){
-                $item = $xmlResult->listings->listing[$i];
-                include 'dynamic-small-right.php';
-                $i++;
-            }
+            <?php 
+                if($i == 3 || (($i-3) % 7) == 0) :
+                    $item = $xmlResult->listings->listing[$i];
+                    include 'dynamic-small-right.php';
+                    $i++;
+                endif;
             ?>
         </div>
         <?php if($i >= $number_or_listings){ echo '</div></div>'; break; } ?>
@@ -72,11 +75,12 @@ while($i < $number_or_listings) :
 <div class="grid grid--full">
     <div class="grid__item tablet--one-half">
         <div class="grid__item">
-            <?php if($i == 4 || (($i-4) % 7) == 0){
-                $item = $xmlResult->listings->listing[$i];
-                include 'dynamic-small-left.php';
-                $i++;
-            }
+            <?php 
+                if($i == 4 || (($i-4) % 7) == 0) :
+                    $item = $xmlResult->listings->listing[$i];
+                    include 'dynamic-small-left.php';
+                    $i++;
+                endif;
             ?>
         </div>
         <?php if($i >= $number_or_listings){ echo '</div></div>'; break; } ?>
@@ -85,11 +89,12 @@ while($i < $number_or_listings) :
             <div class="masonry__item masonry__item--rectangular"></div>
         </div><!--
         --><div class="grid__item">
-            <?php if($i == 5 || (($i-5) % 7) == 0){
-                $item = $xmlResult->listings->listing[$i];
-                include 'dynamic-small-left.php';
-                $i++;
-            }
+            <?php 
+                if($i == 5 || (($i-5) % 7) == 0) :
+                    $item = $xmlResult->listings->listing[$i];
+                    include 'dynamic-small-left.php';
+                    $i++;
+                endif;
             ?>
         </div>
         <?php if($i >= $number_or_listings){ echo '</div></div>'; break; } ?>
@@ -105,11 +110,12 @@ while($i < $number_or_listings) :
             </a>
         </div><!--
         --><div class="grid__item masonry__image">
-            <?php if($i == 6 || (($i-6) % 7) == 0){
-                $item = $xmlResult->listings->listing[$i];
-                include 'dynamic-big.php';
-                $i++;
-            }
+            <?php 
+                if($i == 6 || (($i-6) % 7) == 0) :
+                    $item = $xmlResult->listings->listing[$i];
+                    include 'dynamic-big.php';
+                    $i++;
+                endif;
             ?>
         </div>
         <?php if($i >= $number_or_listings){ echo '</div></div>'; break; } ?>
