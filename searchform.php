@@ -21,6 +21,7 @@
                 </select>
 
                 <select name="propertytype" placeholder="property type" id="property_type">
+                    <option value="any">property type</option>
                     <option value="Apartment">Apartment</option>
                     <option value="Chalet">Chalet</option>
                     <option value="Commercial">Commercial</option>

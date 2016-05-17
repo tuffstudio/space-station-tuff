@@ -71,6 +71,7 @@ function getFromToParam($from,$to){
 		$default_propertytype = ""; //=
 	}else{ 
 		$default_propertytype = $_POST["propertytype"];
+		if($default_propertytype == "any"){ $default_propertytype = ""; }
 	}
 	//TENURE
 	if (empty($_POST["tenure"])){
