@@ -37,7 +37,7 @@ function getFromToParam($from,$to){
 	
 	// BEDROOMS
 	if (empty($_POST["bedrooms_from"])){ 					// if variable is empty
-		$default_bedrooms_from = 1; 	 					// apply default value
+		$default_bedrooms_from = 0; 	 					// apply default value
 	}else{ 								 					// otherwise 
 		$default_bedrooms_from = $_POST["bedrooms_from"]; 	// retrieve POSTEed value
 	}
@@ -55,32 +55,33 @@ function getFromToParam($from,$to){
 	}
 	// PER PAGE
 	if (empty($_POST["itemsperpage"])){
-		$default_perpage = "30"; //-
+		$default_perpage = "30"; 
 	}else{ 
 		$default_perpage = $_POST["itemsperpage"];
 	}
 
 	//RECORDTYPES
 	if (empty($_POST["recordtypes"])){
-		$default_recordtypes = "sale;rent"; //=
+		$default_recordtypes = "sale;rent";
 	}else{ 
 		$default_recordtypes = $_POST["recordtypes"];
 	}
 	//PROPERTYTYPE
 	if (empty($_POST["propertytype"])){
-		$default_propertytype = ""; //=
+		$default_propertytype = ""; 
 	}else{ 
 		$default_propertytype = $_POST["propertytype"];
+		if($default_propertytype == "any"){ $default_propertytype = ""; }
 	}
 	//TENURE
 	if (empty($_POST["tenure"])){
-		$default_tenure = ""; //=
+		$default_tenure = ""; 
 	}else{ 
 		$default_tenure = $_POST["tenure"];
 	}
 	//PROPERTYSTATUS
 	if (empty($_POST["propertystatus"])){
-		$default_propertystatus = ""; //=
+		$default_propertystatus = ""; 
 	}else{ 
 		$default_propertystatus = $_POST["propertystatus"];
 	}
