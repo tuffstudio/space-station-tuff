@@ -37,7 +37,7 @@ function getFromToParam($from,$to){
 	
 	// BEDROOMS
 	if (empty($_POST["bedrooms_from"])){ 					// if variable is empty
-		$default_bedrooms_from = 1; 	 					// apply default value
+		$default_bedrooms_from = 0; 	 					// apply default value
 	}else{ 								 					// otherwise 
 		$default_bedrooms_from = $_POST["bedrooms_from"]; 	// retrieve POSTEed value
 	}
