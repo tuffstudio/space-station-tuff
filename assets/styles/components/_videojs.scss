@@ -21,4 +21,8 @@
         @include center-align();
         font-size: 3.5em;
     }
+
+    .vjs-control-bar {
+        background-color: $black;
+    }
 }

@@ -1,10 +1,12 @@
 // Why us page styles
 // -------------------
 .whyus__nav {
+    position: relative;
     margin: 40px auto;
     padding: 0;
     text-align: center;
     list-style-type: none;
+    z-index: 1;
 
     @include min-screen($desktop) {
         margin: 50px auto 20px;
@@ -57,4 +59,29 @@
 
 .whyus__buttons {
     margin-top: 20px;
+}
+
+.why-use-us {
+    background-color: darken($gray, 5%);
+
+    .section--main {
+        &:after {
+            content: '';
+            height: 800px;
+            position: absolute;
+            top: 0;
+            right: 0;
+            left: 0;
+            z-index: -1;
+            @include background-cover('why_use_us_bg_phone.jpg');
+
+            @include min-screen($tablet) {
+                @include background-cover('why_use_us_bg_tablet.jpg');
+            }
+
+            @include min-screen($desktop) {
+                @include background-cover('why_use_us_bg.jpg');
+            }
+        }
+    }
 }
