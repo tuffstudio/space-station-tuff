@@ -1,6 +1,6 @@
 <a href="<?php echo site_url(); ?>/singleproperty?id=<?php echo  $item->data->id; ?>" class="masonry__link" rel="<?php echo  $item->data->id; ?>">
     <img src="<?php echo $item->media->images->image[0]->baseurl . "/500x500%5E/" . $item->media->images->image[0]->filename; ?>" alt="" class="masonry__background-image">
-    <div class="masonry__label u--text-uppercase">under offer</div>
+    <div class="masonry__label u--text-uppercase"><?php echo $item->data->pba__status__c; ?></div>
     <div class="grid__item one-half">
         <div class="masonry__item masonry__item--square"></div>
     </div><!--
