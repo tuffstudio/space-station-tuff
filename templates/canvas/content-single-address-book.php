@@ -14,8 +14,8 @@
 ?>
 
 <nav class="nav__secondary">
-    <a href="<?= get_post_type_archive_link('address-book'); ?>" class="link--standard link--back">
-        back to address book
+    <a href="#" class="link--standard link--back js-go-back">
+        Go back
     </a>
 </nav>
 

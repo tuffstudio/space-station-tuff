@@ -18,8 +18,8 @@
 <div class="grid grid--full">
     <div class="grid__item">
         <nav class="nav__secondary">
-            <a href="/canvas-magazine" class="link--standard link--back">
-                back to Canvas Magazine
+            <a href="#" class="link--standard link--back js-go-back">
+                Go back
             </a>
         </nav>
         <div class="canvas-post__image">
