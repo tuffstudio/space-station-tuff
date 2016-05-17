@@ -1,7 +1,5 @@
 <?php 
 
-include 'pb_config.php';
-
 // GET FROM TO PARAM FUNCTION
 	function getFromToParam($from,$to){
 

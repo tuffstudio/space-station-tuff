@@ -1,7 +1,5 @@
 <?php
 
-include 'pb_config.php';
-
 // VARS
 $SuccessVis = "none";
 $reference="";
