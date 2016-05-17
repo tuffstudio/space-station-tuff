@@ -4,6 +4,34 @@ window.SS.singleproperty = function($) {
     var $window = $(window);
     var $body = $('body');
     var $overlay = $('.js-overlay');
+    var mapOn = false;
+    var pins = {};
+
+    function turnMapOn() {
+        $button = $('.js-map-switch');
+
+        $button.on('click', function(event) {
+            event.preventDefault();
+
+            var initCoords = {
+                latitude: 51.5145300,
+                longitude: -0.0888400
+            };
+
+            if(!mapOn) {
+                var map = new window.SS.PropertyMap('property-map', initCoords);
+                map.init();
+
+                var propertyPins = map.getJson();
+
+                for(var pin in propertyPins) {
+                    pins[pin] = map.setPin(propertyPins[pin].coordinates, propertyPins[pin].title, propertyPins[pin].link);
+                }
+
+                mapOn = true;
+            }
+        });
+    }
 
     function initPoiCarousel() {
         $('.property__poi').owlCarousel({
@@ -101,5 +129,6 @@ window.SS.singleproperty = function($) {
         SS.switchGrids('.js-panel-switcher', '.js-property-panel');
         SS.initSelect2();
         checkIfOpenForm();
+        //turnMapOn(); // TODO: Remember to turn that function on
     });
 };
