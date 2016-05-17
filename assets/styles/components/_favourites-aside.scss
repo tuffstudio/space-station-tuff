@@ -45,7 +45,7 @@
     background: $overlay-content-bg;
     font-size: $brand-link-size;
     text-align: left;
-    overflow-y: scroll;
+    overflow-y: auto;
 }
 
 .favourites-box__overlay {
@@ -64,6 +64,7 @@
 .favourites-box--is-opened {
     right: $favourites-box-width * 0.5;
     overflow: hidden;
+    padding-right: 15px;
 
     .favourites-box__overlay {
         opacity: 1;
@@ -72,6 +73,10 @@
 
     .favourites-box__content {
         right: 0;
+    }
+
+    .navigation {
+        padding-right: 15px;
     }
 }
 
