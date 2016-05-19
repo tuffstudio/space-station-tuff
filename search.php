@@ -2,6 +2,24 @@
     $is_buy = isset($_GET['type']) && $_GET['type'] == 'buy' ? true : false;
     $is_rent = isset($_GET['type']) && $_GET['type'] == 'rent' ? true : false;
     $is_let = isset($_GET['type']) && $_GET['type'] == 'short-let' ? true : false;
+
+    switch ($_GET['type']) {
+        case 'buy':
+            $recordtypes ="sale";
+            break;
+
+        case 'rent':
+            $recordtypes ="rent";
+            break;
+
+        case 'short-let':
+            $recordtypes ="let";
+            break;
+        
+        default:
+            $recordtypes ="sale;rent";
+            break;
+    }
 ?>
 
 <div class="search-page__header">
