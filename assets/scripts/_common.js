@@ -160,6 +160,26 @@ window.SS.common = function($) {
         return cookie;
     }
 
+    function setProperties() {
+        var $btnSave = $('.js-save-property');
+
+        $btnSave.on('click', function() {
+            var $this = $(this);
+            var currentId = $this.data('id');
+            var cookies = getCookie('ss-properties');
+
+            if(!cookies) {
+                cookies = currentId;
+            }
+            else if(cookies.indexOf(currentId) === -1) {
+                cookies += ',';
+                cookies += currentId;
+            }
+
+            setCookie('ss-properties', cookies, 500);
+        });
+    }
+
     function revealSections() {
         $('.js-section-reveal').viewportChecker({
             classToAdd: 'is-revealed',
@@ -298,6 +318,7 @@ window.SS.common = function($) {
         smoothScroll();
         cookiesInfo();
         shareAnimations();
+        setProperties();
 
         setTimeout(function() {
             subMenuAlignment();

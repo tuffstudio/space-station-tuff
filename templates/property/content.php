@@ -29,7 +29,7 @@
                     <?php if( !empty($item->media->documents->document->url) ) : ?>
                         <li class="property__button"><a href="<?= $property_brochure_url; ?>" class="btn btn--action" target="_blank">brochure</a></li>
                     <?php endif; ?>
-                    <li class="property__button"><a href="" class="btn btn--action">save</a></li>
+                    <li class="property__button"><button class="btn btn--action js-save-property" data-id="<?= $item->data->id; ?>">save</button></li>
                     <li class="property__button"><a href="" class="btn btn--action">share</a></li>
                 </ul>
                 <article class="property__description">
