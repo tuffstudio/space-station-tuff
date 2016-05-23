@@ -42,6 +42,61 @@
                 </select>
             </div><!--
             --><div class="grid__item desktop--one-half input-container">
+
+                <!-- ### DETECT CURRENT RECORD TYPE ### -->
+        
+                <!-- IF RENT -->
+                <?php if (isset($recordtypes) && ($recordtypes == 'rent') ) : ?>
+
+                <select name="rent_from" placeholder="min rent" id="rent_from">
+                        <option value="0">Min rent</option>
+                        <option value="300">&#163;300 <?php echo '(&#163;'. number_format((float)(300*52)/12) .'/month)'; ?></option>
+                        <option value="350">&#163;350 <?php echo '(&#163;'. number_format((float)(350*52)/12) .'/month)'; ?></option>
+                        <option value="400">&#163;400 <?php echo '(&#163;'. number_format((float)(400*52)/12) .'/month)'; ?></option>
+                        <option value="450">&#163;450 <?php echo '(&#163;'. number_format((float)(450*52)/12) .'/month)'; ?></option>
+                        <option value="500">&#163;500 <?php echo '(&#163;'. number_format((float)(500*52)/12) .'/month)'; ?></option>
+                        <option value="550">&#163;550 <?php echo '(&#163;'. number_format((float)(550*52)/12) .'/month)'; ?></option>
+                        <option value="600">&#163;600 <?php echo '(&#163;'. number_format((float)(600*52)/12) .'/month)'; ?></option>
+                        <option value="650">&#163;650 <?php echo '(&#163;'. number_format((float)(650*52)/12) .'/month)'; ?></option>
+                        <option value="700">&#163;700 <?php echo '(&#163;'. number_format((float)(700*52)/12) .'/month)'; ?></option>
+                        <option value="750">&#163;750 <?php echo '(&#163;'. number_format((float)(750*52)/12) .'/month)'; ?></option>
+                        <option value="800">&#163;800 <?php echo '(&#163;'. number_format((float)(800*52)/12) .'/month)'; ?></option>
+                        <option value="1000">&#163;1,000 <?php echo '(&#163;'. number_format((float)(1000*52)/12) .'/month)'; ?></option>
+                        <option value="1500">&#163;1,500 <?php echo '(&#163;'. number_format((float)(1500*52)/12) .'/month)'; ?></option>
+                        <option value="2000">&#163;2,000 <?php echo '(&#163;'. number_format((float)(2000*52)/12) .'/month)'; ?></option>
+                        <option value="2500">&#163;2,500 <?php echo '(&#163;'. number_format((float)(2500*52)/12) .'/month)'; ?></option>
+                        <option value="3000">&#163;3,000 <?php echo '(&#163;'. number_format((float)(3000*52)/12) .'/month)'; ?></option>
+                    </select>
+                </div><!--
+                --><div class="grid__item desktop--one-half input-container--left">
+                    <select name="rent_to" placeholder="max rent" id="rent_to">
+                        <option value="0">Max rent</option>
+                        <option value="300">&#163;300 <?php echo '(&#163;'. number_format((float)(300*52)/12) .'/month)'; ?></option>
+                        <option value="350">&#163;350 <?php echo '(&#163;'. number_format((float)(350*52)/12) .'/month)'; ?></option>
+                        <option value="400">&#163;400 <?php echo '(&#163;'. number_format((float)(400*52)/12) .'/month)'; ?></option>
+                        <option value="450">&#163;450 <?php echo '(&#163;'. number_format((float)(450*52)/12) .'/month)'; ?></option>
+                        <option value="500">&#163;500 <?php echo '(&#163;'. number_format((float)(500*52)/12) .'/month)'; ?></option>
+                        <option value="550">&#163;550 <?php echo '(&#163;'. number_format((float)(550*52)/12) .'/month)'; ?></option>
+                        <option value="600">&#163;600 <?php echo '(&#163;'. number_format((float)(600*52)/12) .'/month)'; ?></option>
+                        <option value="650">&#163;650 <?php echo '(&#163;'. number_format((float)(650*52)/12) .'/month)'; ?></option>
+                        <option value="700">&#163;700 <?php echo '(&#163;'. number_format((float)(700*52)/12) .'/month)'; ?></option>
+                        <option value="750">&#163;750 <?php echo '(&#163;'. number_format((float)(750*52)/12) .'/month)'; ?></option>
+                        <option value="800">&#163;800 <?php echo '(&#163;'. number_format((float)(800*52)/12) .'/month)'; ?></option>
+                        <option value="1000">&#163;1,000 <?php echo '(&#163;'. number_format((float)(1000*52)/12) .'/month)'; ?></option>
+                        <option value="1500">&#163;1,500 <?php echo '(&#163;'. number_format((float)(1500*52)/12) .'/month)'; ?></option>
+                        <option value="2000">&#163;2,000 <?php echo '(&#163;'. number_format((float)(2000*52)/12) .'/month)'; ?></option>
+                        <option value="2500">&#163;2,500 <?php echo '(&#163;'. number_format((float)(2500*52)/12) .'/month)'; ?></option>
+                        <option value="3000">&#163;3,000 <?php echo '(&#163;'. number_format((float)(3000*52)/12) .'/month)'; ?></option>
+                        <option value="3500">&#163;3,500 <?php echo '(&#163;'. number_format((float)(3500*52)/12) .'/month)'; ?></option>
+                        <option value="4000">&#163;4,000 <?php echo '(&#163;'. number_format((float)(4000*52)/12) .'/month)'; ?></option>
+                        <option value="4500">&#163;4,500 <?php echo '(&#163;'. number_format((float)(4500*52)/12) .'/month)'; ?></option>
+                        <option value="5000">&#163;5,000 <?php echo '(&#163;'. number_format((float)(5000*52)/12) .'/month)'; ?></option>
+                    </select>
+                </div>
+        
+                <!-- DEFAULT -->
+                <?php else : ?>
+
                 <div class="grid__item desktop--one-half input-container--right">
                     <select name="price_from" placeholder="min price" id="price_from">
                         <option value="0">No Min</option>
@@ -90,8 +145,11 @@
                         <option value="4500000">&#163;4,500,000</option>
                         <option value="5000000">&#163;5,000,000</option>
                     </select>
-                </div><!--
-                --><div class="grid__item">
+                </div>
+
+                <?php endif; ?>
+
+                <div class="grid__item">
                     <select name="bedrooms_from" placeholder="Bedrooms" id="bedrooms_from">
                         <option value="0">Bedrooms Any</option>
                         <option value="1">1+</option>

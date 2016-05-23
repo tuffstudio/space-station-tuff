@@ -2,6 +2,24 @@
     $is_buy = isset($_GET['type']) && $_GET['type'] == 'buy' ? true : false;
     $is_rent = isset($_GET['type']) && $_GET['type'] == 'rent' ? true : false;
     $is_let = isset($_GET['type']) && $_GET['type'] == 'short-let' ? true : false;
+
+    switch ($_GET['type']) {
+        case 'buy':
+            $recordtypes ="sale";
+            break;
+
+        case 'rent':
+            $recordtypes ="rent";
+            break;
+
+        case 'short-let':
+            $recordtypes ="let";
+            break;
+        
+        default:
+            $recordtypes ="sale;rent";
+            break;
+    }
 ?>
 
 <div class="search-page__header">
@@ -19,7 +37,7 @@
     </div>
 </div>
 
-<?php require_once ('templates/searchpage/PB_app-connection.php'); ?>
+<?php require_once ('property_base/pb_search_request.php'); ?>
 <?php include 'templates/searchpage/tabs.php'; ?>
 
 <section class="section search-results">
@@ -79,11 +97,11 @@
         <div class="search-results__body">
 
             <?php // BEGIN EMPTY RESULT ?>
-                <?php if ($doSearch  && ($xmlResult == null || count($xmlResult->listings->listing) == 0)){ ?>
+                <?php if ($doSearch  && ($xmlResult == null || count($xmlResult->listings->listing) == 0)) : ?>
                     <div class="alert alert-warning">
                         <?php _e('Sorry, no results were found.', 'sage'); ?>
                     </div>
-                <?php }else{ ?>
+                <?php else : ?>
             <?php //END EMPTY RESULT ?>
 
             <div id="dynamic-view" class="search-results__block js-results-block visible">
@@ -114,7 +132,7 @@
                 </div>
             </div>
 
-            <?php } ?>
+            <?php endif; ?>
 
         </div>
     </div>
