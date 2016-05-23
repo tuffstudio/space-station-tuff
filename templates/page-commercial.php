@@ -1,4 +1,4 @@
-<div class="background--skew background--skew-<?php echo strtolower(get_the_title()); ?>">
+<div class="background--skew background--skew-<?= strtolower(get_the_title()); ?>">
     <?php
         include('commercial/informations.php');
         $page_id = $post->ID;
