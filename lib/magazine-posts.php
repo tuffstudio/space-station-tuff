@@ -63,6 +63,6 @@ class CaseStudyPost extends MagazinePost {
     }
 }
 
-class TeamMember extends MagazinePost {
+class TeamMember extends MagazinePost {}
 
-}
+class AddressBook extends MagazinePost {}

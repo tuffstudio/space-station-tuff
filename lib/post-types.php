@@ -72,7 +72,8 @@ function custom_post_types_init() {
         'hierarchical'       => false,
         'menu_position'      => 2,
         'supports'           => array('title', 'editor', 'thumbnail'),
-        'menu_icon'          => 'dashicons-book-alt'
+        'menu_icon'          => 'dashicons-book-alt',
+        'taxonomies'         => array('post_tag')
     );
 
     register_post_type('address-book', $args_address_book);

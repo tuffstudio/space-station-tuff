@@ -3,9 +3,14 @@
         return '<div class="canvas-post__quote">' . $content . '</div>';
     }
 
+    function intro_shortcode($atts, $content = null) {
+        return '<p class="text-intro">' . $content . '</p>';
+    }
+
 
     function register_shortcodes(){
         add_shortcode('quote', 'quote_shortcode');
+        add_shortcode('intro', 'intro_shortcode');
     }
 
     add_action( 'init', 'register_shortcodes');
