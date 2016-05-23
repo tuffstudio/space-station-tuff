@@ -9,7 +9,7 @@
                     <p class="property__type">
                         <?php
                             echo  $item->data->pba__bedrooms_pb__c;
-                                switch ($item->data->pba__bedrooms_pb__c) {
+                                switch ($item->data->pba__bedrooms_pb__c) :
                                     case 0:
                                         break;
                                     case 1:
@@ -19,7 +19,7 @@
                                     default:
                                         echo ' bedrooms ';
                                         break;
-                                }
+                                endswitch;
                             echo  $item->data->pba__propertytype__c;
                         ?>
                     </p>
@@ -107,8 +107,8 @@
 
                 <h3 class="property__sidebar-title">Fast facts</h3>
                 <ul class="property__properties">
-                    <?php $k = 0; foreach ($fast_facts_icons as $icon): ?>
-                        <?php if(!empty($item->data->$icon) && $k < 7): ?>
+                    <?php $k = 0; foreach ($fast_facts_icons as $icon) : ?>
+                        <?php if(!empty($item->data->$icon) && $k < 7) : ?>
                             <li><i class="demo-icon icon-<?php echo $icon; ?>"></i><?php echo $item->data->$icon; ?></li>
                         <?php $k++; endif; ?>
                     <?php endforeach; ?>

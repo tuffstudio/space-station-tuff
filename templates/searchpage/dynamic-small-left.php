@@ -10,7 +10,7 @@
                     <p class="masonry__tile-desc masonry__tile-desc--big">
                         <?php
                             echo  $item->data->pba__bedrooms_pb__c;
-                                switch ($item->data->pba__bedrooms_pb__c) {
+                                switch ($item->data->pba__bedrooms_pb__c) :
                                     case 0:
                                         break;
                                     case 1:
@@ -20,7 +20,7 @@
                                     default:
                                         echo ' bedrooms ';
                                         break;
-                                }
+                                endswitch;
                             echo  $item->data->pba__propertytype__c;
                         ?>
                     </p>
