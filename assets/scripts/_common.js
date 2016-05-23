@@ -318,7 +318,7 @@ window.SS.common = function($) {
         smoothScroll();
         cookiesInfo();
         shareAnimations();
-        saveProperty();
+        setProperties();
 
         setTimeout(function() {
             subMenuAlignment();
