@@ -1,8 +1,8 @@
-<?php 
+<?php
 
 // VARS
     $opened_listing_id = $item->data->id;
-  
+
     /////////////// QUERY ARRAY ///////////////
     $reqArray = array("token"       => PB_SECURITYTOKEN,
               "fields"      => "Id;name;pba__ListingPrice_pb__c;pba__status__c;Tenure__c;",
@@ -14,20 +14,20 @@
     $query    = http_build_query($reqArray,'','&');
     // RETURN XML RESULT
     $xmlResult  = simplexml_load_file(PB_WEBSERVICEENDPOINT . "?" . $query);
-    
+
     if (!empty($xmlResult->errorMessages->message)) :
-      
+
       $errorMessage = 'Error: '.$xmlResult->errorMessages->message;
 
     else :
-        
+
         $numberOfListings = $xmlResult->numberOfListings ;
 
         if ($doSearch  && ($xmlResult == null || $numberOfListings == 0)) :
             # no similar listings -> no need to display anything
         elseif ($doSearch  && $numberOfListings == 1) :
              # if one result it means it's just current listing -> no need to display anything
-        else : 
+        else :
 
 ?>
 
@@ -47,7 +47,7 @@
             foreach ($arr as $key => $value):
                 if( (string)$opened_listing_id !== (string)$value->data->id ):
                     $array_no_current_id[] = $arr[$key];
-                endif;    
+                endif;
             endforeach;
 
             # shuffle (randomizes the order of the elements in) an array.
@@ -55,9 +55,9 @@
 
             # loop and array -> limit to two
             $i = 1;
-            foreach ($array_no_current_id as $item): 
-        ?>    
-        <div class="grid__item tablet--one-half">
+            foreach ($array_no_current_id as $item):
+        ?><!--
+        --><div class="grid__item tablet--one-half">
                 <a href="<?php echo site_url(); ?>/singleproperty?id=<?php echo  $item->data->id; ?>" class="masonry__link">
                     <div class="grid__item one-half">
                         <div class="masonry__item masonry__item--square">
@@ -79,9 +79,7 @@
                     </div>
                 </a>
             </div><!--
-            -->
-
-        <?php 
+            --><?php
                 if ($i++ == 2) break;
             endforeach;
         ?>
@@ -89,8 +87,7 @@
     </div>
 </section>
 
-<?php  
+<?php
         endif;
-    endif; 
+    endif;
 ?>
-
