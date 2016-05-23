@@ -1,8 +1,8 @@
 <?php
-    $i = 0;
-    $number_or_listings = $xmlResult->numberOfListings;
+$i = 0;
+$number_or_listings = $xmlResult->numberOfListings;
 
-    while($i < $number_or_listings) :
+while($i < $number_or_listings) :
 ?>
 <div class="grid grid--full">
     <div class="grid__item tablet--one-half">
@@ -14,7 +14,9 @@
                     $i++;
                 }
             ?>
-        </div><!--
+        </div>
+        <?php if($i >= $number_or_listings){ echo '</div></div>'; break; } ?>
+        <!--
         --><div class="grid__item">
             <div class="grid__item one-half"></div><!--
             --><div class="grid__item one-half">
@@ -32,10 +34,12 @@
         <div class="grid__item masonry__image">
             <?php if($i == 1 || (($i-1) % 7) == 0){
                 $item = $xmlResult->listings->listing[$i];
-                include 'dynamic-big.php';
-                $i++;
-            }?>
+                include 'dynamic-big.php'; 
+                $i++; 
+            }
+            ?>
         </div>
+        <?php if($i >= $number_or_listings){ echo '</div></div>'; break; } ?>
     </div>
 </div>
 <div class="grid grid--full">
@@ -45,8 +49,10 @@
                 $item = $xmlResult->listings->listing[$i];
                 include 'dynamic-big.php';
                 $i++;
-            }?>
+            }
+            ?>
         </div>
+        <?php if($i >= $number_or_listings){ echo '</div></div>'; break; } ?>
     </div><!--
     --><div class="grid__item tablet--one-half">
         <div class="grid__item phone--hide tablet--show">
@@ -57,8 +63,10 @@
                 $item = $xmlResult->listings->listing[$i];
                 include 'dynamic-small-right.php';
                 $i++;
-            }?>
+            }
+            ?>
         </div>
+        <?php if($i >= $number_or_listings){ echo '</div></div>'; break; } ?>
     </div>
 </div>
 <div class="grid grid--full">
@@ -68,8 +76,11 @@
                 $item = $xmlResult->listings->listing[$i];
                 include 'dynamic-small-left.php';
                 $i++;
-            }?>
-        </div><!--
+            }
+            ?>
+        </div>
+        <?php if($i >= $number_or_listings){ echo '</div></div>'; break; } ?>
+        <!--
         --><div class="grid__item phone--hide tablet--show">
             <div class="masonry__item masonry__item--rectangular"></div>
         </div><!--
@@ -78,8 +89,10 @@
                 $item = $xmlResult->listings->listing[$i];
                 include 'dynamic-small-left.php';
                 $i++;
-            }?>
+            }
+            ?>
         </div>
+        <?php if($i >= $number_or_listings){ echo '</div></div>'; break; } ?>
     </div><!--
     --><div class="grid__item tablet--one-half">
         <div class="grid__item one-half">
@@ -96,8 +109,10 @@
                 $item = $xmlResult->listings->listing[$i];
                 include 'dynamic-big.php';
                 $i++;
-            }?>
+            }
+            ?>
         </div>
+        <?php if($i >= $number_or_listings){ echo '</div></div>'; break; } ?>
     </div>
 </div>
 <div class="grid grid--full">

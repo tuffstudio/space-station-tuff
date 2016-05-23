@@ -17,6 +17,10 @@
     @include min-screen($desktop) {
         padding: 0 50px;
     }
+
+    img {
+        height: auto;
+    }
 }
 
 .property__poi-title {
