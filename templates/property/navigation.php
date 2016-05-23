@@ -4,17 +4,17 @@
             <ul class="property__buttons">
                 <li class="property__button"><a href="#gallery" class="btn btn--action js-panel-switcher js-smooth-off">gallery</a></li>
 
-                <?php $i = 0; foreach ($item->media->images->image as $image): ?>
+                <?php $i = 0; foreach ($item->media->images->image as $image) : ?>
                     <?php if ($image->tags == 'Floorplan Quick (JPG)'):?>
                         <li class="property__button"><a href="#floor-plan" class="btn btn--action js-panel-switcher js-smooth-off" data="<?php echo $image->url; ?>">floor plan</a></li>
                     <?php endif; ?>
                 <?php endforeach; ?>
 
-                <?php if ( !empty($item->data->pba__latitude_pb__c) && !empty($item->data->pba__longitude_pb__c) ): ?>
-                    <li class="property__button"><a href="#map" class="btn btn--action js-panel-switcher js-smooth-off">map</a></li>
+                <?php if ( !empty($item->data->pba__latitude_pb__c) && !empty($item->data->pba__longitude_pb__c) ) : ?>
+                    <li class="property__button"><a href="#map" class="btn btn--action js-panel-switcher js-smooth-off js-map-switch">map</a></li>
                 <?php endif; ?>
 
-                <?php if( !empty($item->media->videos->video->url) ): ?>
+                <?php if( !empty($item->media->videos->video->url) ) : ?>
                     <li class="property__button"><a href="#video" class="btn btn--action js-panel-switcher js-smooth-off">video</a></li>
                 <?php endif; ?>
             </ul>

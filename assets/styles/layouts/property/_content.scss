@@ -29,6 +29,10 @@
     }
 }
 
+.property__map {
+    height: 50vh;
+}
+
 .property__info {
     @include min-screen($desktop) {
         padding: 0 30px;
