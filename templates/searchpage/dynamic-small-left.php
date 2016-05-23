@@ -30,8 +30,8 @@
     </div><!--
     --><div class="grid__item one-half">
         <div class="masonry__item masonry__item--square masonry__image">
-            <img src="<?php echo $item->media->images->image[0]->baseurl . "/250x250%5E/" . $item->media->images->image[0]->filename; ?>" alt="">
-            <div class="masonry__label u--text-uppercase">Sold out</div>
+            <img src="<?php echo $item->media->images->image[0]->baseurl . "/300x300%5E/" . $item->media->images->image[0]->filename; ?>" alt="">
+            <div class="masonry__label u--text-uppercase"><?php echo $item->data->pba__status__c; ?></div>
         </div>
     </div>
 </a>
