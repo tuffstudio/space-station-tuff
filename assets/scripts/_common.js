@@ -160,6 +160,39 @@ window.SS.common = function($) {
         return cookie;
     }
 
+    function fetchPreperties(properties) {
+        $.ajax({
+            type: 'GET',
+            url: '/wp-admin/admin-ajax.php',
+            data: {
+                action: 'get_saved_properties',
+                data: properties
+            },
+            success: function(response) {
+                $('.js-saved-property').html(response);
+                console.log(properties);
+            },
+            error: function(message) {
+                console.log(message);
+            }
+        });
+    }
+
+    function showProperties() {
+        var cookies = getCookie('ss-properties');
+        var $favouritesTrigger = $('.js-favourites-box-trigger');
+        var $star = $('.js-primary-nav');
+
+        if(cookies) {
+            cookies = cookies.split(',');
+            $star.addClass('favourites-box--has-properties');
+        }
+        else {
+            cookies = null;
+        }
+        fetchPreperties(cookies);
+    }
+
     function setProperties() {
         var $btnSave = $('.js-save-property');
 
@@ -172,11 +205,27 @@ window.SS.common = function($) {
                 cookies = currentId;
             }
             else if(cookies.indexOf(currentId) === -1) {
-                cookies += ',';
+                cookies += ', ';
                 cookies += currentId;
             }
 
             setCookie('ss-properties', cookies, 500);
+            showProperties();
+        });
+
+        showProperties();
+    }
+
+    function removeProperty() {
+        $body.on('click', '.js-remove-property', function() {
+            var $this = $(this);
+            var id = $this.data('id');
+            var cookies = getCookie('ss-properties');
+            var $property = $('.property-' + id);
+
+            $property.fadeOut(function() {
+                $(this).remove();
+            });
         });
     }
 
@@ -319,6 +368,7 @@ window.SS.common = function($) {
         cookiesInfo();
         shareAnimations();
         setProperties();
+        removeProperty();
 
         setTimeout(function() {
             subMenuAlignment();

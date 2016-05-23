@@ -7,7 +7,7 @@
     left: 0;
     height: $nav-height;
     padding: 5px 0 3px;
-    transition: top $standard-animation-time ease;
+    transition: all $standard-animation-time ease;
     background-color: $nav-bg-color;
     z-index: 100;
 
