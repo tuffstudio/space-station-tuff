@@ -1,17 +1,6 @@
 <?php
     if($properties):
-        $id_request = implode(";", $properties);
-        $reqArray = array(
-                        "token"     => PB_SECURITYTOKEN,
-                        "fields"    => "Id;name;pba__ListingPrice_pb__c;",
-                        "id"        => 'IN('.$id_request.')',
-                        "debugmode" => "true"
-                  );
-
-        // BUILD HTTP QUERY STRING
-        $query    = http_build_query($reqArray,'','&');
-        // RETURN XML RESULT
-        $xmlResult  = simplexml_load_file(PB_WEBSERVICEENDPOINT . "?" . $query);
+        include dirname(__FILE__) . "/../../property_base/pb_saved_properties.php";
 
         if (!empty($xmlResult->errorMessages->message)) :
           	$errorMessage = 'Error: '.$xmlResult->errorMessages->message;
@@ -25,7 +14,7 @@
 
     <div class="grid grid--middle favourites-box--saved property-<?= $property_id; ?>">
         <div class="grid__item two-fifths">
-            <a href="<?php echo site_url(); ?>/singleproperty?id=<?=  $property_id; ?>" rel="<?=  $property_id; ?>">
+            <a href="<?= site_url(); ?>/singleproperty?id=<?=  $property_id; ?>" rel="<?=  $property_id; ?>">
                 <img src="<?= $property_image; ?>" alt="" data-pin-nopin="true" class="img--responsive favourites-box__img">
             </a>
         </div><!--

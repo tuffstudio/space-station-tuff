@@ -1,5 +1,6 @@
-<?php 
+<?php
     include dirname(__FILE__) . "/../property_base/pb_listing_request.php";
+    $current_property_id = $item->data->id;
 ?>
 
 <div class="property__header">

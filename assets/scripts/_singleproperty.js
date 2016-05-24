@@ -122,6 +122,24 @@ window.SS.singleproperty = function($) {
         }
     }
 
+    function setRecentlyViewed() {
+        var id = $('.js-save-property').data('id');
+        var cookies = SS.getCookiesArray('ss-recently-viewed');
+
+        if(!cookies) {
+            cookies = [];
+        }
+
+        if(cookies.length > 4) {
+            cookies.shift();
+        }
+        if(cookies.indexOf(id) === -1) {
+            cookies.push(id);
+        }
+
+        SS.setCookie('ss-recently-viewed', cookies.toString(), 500);
+    }
+
     $(document).ready(function() {
         initGalleryCarousel();
         initPoiCarousel();
@@ -129,6 +147,7 @@ window.SS.singleproperty = function($) {
         SS.switchGrids('.js-panel-switcher', '.js-property-panel');
         SS.initSelect2();
         checkIfOpenForm();
+        setRecentlyViewed();
         //turnMapOn(); // TODO: Remember to turn that function on
     });
 };
