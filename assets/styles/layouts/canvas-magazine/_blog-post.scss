@@ -165,6 +165,10 @@
     &::before {
         content: '"';
     }
+
+    &::after {
+        content: '"';
+    }
 }
 
 // Recommended posts

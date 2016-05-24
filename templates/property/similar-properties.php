@@ -5,7 +5,7 @@
 
     /////////////// QUERY ARRAY ///////////////
     $reqArray = array("token"       => PB_SECURITYTOKEN,
-              "fields"      => "Id;name;pba__ListingPrice_pb__c;pba__status__c;Tenure__c;",
+              "fields"      => "Id;name;pba__ListingPrice_pb__c;pba__status__c;Tenure__c;pba__Bedrooms_pb__c;pba__listingtype__c;",
               "recordtypes" => (string)$listing_type,
               "pba__PropertyType__c" => (string)$item->data->pba__propertytype__c,
               "debugmode"   => "true"
@@ -64,10 +64,26 @@
                             <div class="masonry__tile masonry__tile--white">
                                 <div class="masonry__tile-border"></div>
                                 <div class="masonry__tile-info">
-                                    <p class="masonry__tile-category">Commercial: <span>Rent</span></p>
+                                    <p class="masonry__tile-category">Commercial: <span><?= $item->data->pba__listingtype__c; ?></span></p>
                                     <h3 class="masonry__tile-title"><?php echo  $item->data->name; ?></h3>
-                                    <p class="masonry__tile-price">&#163;<?php echo number_format((float) $item->data->pba__listingprice_pb__c); ?></p>
-                                    <p class="masonry__tile-desc masonry__tile-desc--big">610sqm UNIT</p>
+                                    <p class="masonry__tile-price"><?php echo number_format((float) $item->data->pba__listingprice_pb__c); ?></p>
+                                    <p class="masonry__tile-desc masonry__tile-desc--big">
+                                        <?php
+                                            echo  $item->data->pba__bedrooms_pb__c;
+                                                switch ($item->data->pba__bedrooms_pb__c) :
+                                                    case 0:
+                                                        break;
+                                                    case 1:
+                                                        echo ' bedroom ';
+                                                        break;
+
+                                                    default:
+                                                        echo ' bedrooms ';
+                                                        break;
+                                                endswitch;
+                                            echo  $item->data->pba__propertytype__c;
+                                        ?>
+                                    </p>
                                 </div>
                             </div>
                         </div>

@@ -125,41 +125,6 @@ window.SS.common = function($) {
         });
     }
 
-    function setCookie(cookieName, value, daysLeft) {
-        var expireDate = new Date();
-
-        expireDate.setDate(expireDate.getDate() + daysLeft);
-
-        var cookieValue = escape(value) + ((daysLeft === null) ? '' : '; expires=' + expireDate.toUTCString() + '; path=/');
-
-        document.cookie = cookieName + '=' + cookieValue;
-    }
-
-    function getCookie(cookieName) {
-        var cookie = document.cookie;
-        var cookieStart = cookie.indexOf(' ' + cookieName + '=');
-
-        if (cookieStart === -1) {
-            cookieStart = cookie.indexOf(cookieName + '=');
-        }
-
-        if (cookieStart === -1) {
-            cookie = null;
-        } else {
-            cookieStart = cookie.indexOf('=', cookieStart) + 1;
-
-            var cookieEnd = cookie.indexOf(';', cookieStart);
-
-            if (cookieEnd === -1) {
-                cookieEnd = cookie.length;
-            }
-
-            cookie = unescape(cookie.substring(cookieStart, cookieEnd));
-        }
-
-        return cookie;
-    }
-
     function fetchPreperties(properties) {
         $.ajax({
             type: 'GET',
@@ -177,21 +142,8 @@ window.SS.common = function($) {
         });
     }
 
-    function getCookiesArray(key) {
-        var cookies = getCookie(key);
-
-        if(cookies) {
-            cookies = cookies.split(',');
-        }
-        else {
-            cookies = null;
-        }
-
-        return cookies;
-    }
-
     function showProperties() {
-        var cookies = getCookiesArray('ss-properties');
+        var cookies = SS.getCookiesArray('ss-properties');
         var $favouritesTrigger = $('.js-favourites-box-trigger');
         var $star = $('.js-primary-nav');
 
@@ -208,7 +160,7 @@ window.SS.common = function($) {
         $btnSave.on('click', function() {
             var $this = $(this);
             var currentId = $this.data('id');
-            var cookies = getCookie('ss-properties');
+            var cookies = SS.getCookie('ss-properties');
 
             if(!cookies) {
                 cookies = currentId;
@@ -218,7 +170,7 @@ window.SS.common = function($) {
                 cookies += currentId;
             }
 
-            setCookie('ss-properties', cookies, 500);
+            SS.setCookie('ss-properties', cookies, 500);
             showProperties();
         });
 
@@ -229,13 +181,13 @@ window.SS.common = function($) {
         $body.on('click', '.js-remove-property', function() {
             var $this = $(this);
             var id = $this.data('id');
-            var cookies = getCookiesArray('ss-properties');
+            var cookies = SS.getCookiesArray('ss-properties');
             var $property = $('.property-' + id);
             var index = cookies.indexOf(id);
 
             if (index > -1) {
                 cookies.splice(index, 1);
-                setCookie('ss-properties', cookies.toString(), 500);
+                SS.setCookie('ss-properties', cookies.toString(), 500);
             }
 
             $property.fadeOut(function() {
@@ -330,7 +282,7 @@ window.SS.common = function($) {
         var $closeBtn = $('.js-cookies-close');
         var $cookiesBar = $('.js-cookies-bar');
         var $navigation = $('.js-navigation');
-        var cookie = getCookie('ss-new-user');
+        var cookie = SS.getCookie('ss-new-user');
 
 
         if (cookie === null) {
@@ -341,7 +293,7 @@ window.SS.common = function($) {
 
         $closeBtn.on('click', function(event) {
             event.preventDefault();
-            setCookie('ss-new-user', 1, 500);
+            SS.setCookie('ss-new-user', 1, 500);
             $cookiesBar.removeClass('active');
             $navigation.removeClass('cookies-opened');
             $body.removeClass('cookies-opened');
@@ -399,6 +351,54 @@ window.SS.common = function($) {
 
 // Common function visible everywhere
 // ----------------------------------
+window.SS.setCookie = function(cookieName, value, daysLeft) {
+    var expireDate = new Date();
+
+    expireDate.setDate(expireDate.getDate() + daysLeft);
+
+    var cookieValue = escape(value) + ((daysLeft === null) ? '' : '; expires=' + expireDate.toUTCString() + '; path=/');
+
+    document.cookie = cookieName + '=' + cookieValue;
+};
+
+window.SS.getCookie = function(cookieName) {
+    var cookie = document.cookie;
+    var cookieStart = cookie.indexOf(' ' + cookieName + '=');
+
+    if (cookieStart === -1) {
+        cookieStart = cookie.indexOf(cookieName + '=');
+    }
+
+    if (cookieStart === -1) {
+        cookie = null;
+    } else {
+        cookieStart = cookie.indexOf('=', cookieStart) + 1;
+
+        var cookieEnd = cookie.indexOf(';', cookieStart);
+
+        if (cookieEnd === -1) {
+            cookieEnd = cookie.length;
+        }
+
+        cookie = unescape(cookie.substring(cookieStart, cookieEnd));
+    }
+
+    return cookie;
+};
+
+window.SS.getCookiesArray = function(key) {
+    var cookies = SS.getCookie(key);
+
+    if(cookies) {
+        cookies = cookies.split(',');
+    }
+    else {
+        cookies = null;
+    }
+
+    return cookies;
+};
+
 window.SS.switchGrids = function(switcher, panel) {
     var $switchButton = $(switcher);
     var $panel = $(panel);
