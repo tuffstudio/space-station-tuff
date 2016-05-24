@@ -190,3 +190,17 @@
         padding: 10px 15px;
     }
 }
+
+.btn--close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 10px 0 10px 10px;
+    cursor: pointer;
+    opacity: .25;
+    transition: all $standard-animation-time ease-in-out;
+
+    &:hover {
+        opacity: 1;
+    }
+}

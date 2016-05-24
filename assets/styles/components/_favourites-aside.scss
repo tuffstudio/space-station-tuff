@@ -118,3 +118,23 @@
         stroke: $color-primary;
     }
 }
+
+.favourites-box--saved {
+    position: relative;
+
+    a {
+        color: inherit;
+        text-decoration: none;
+        transition: all $standard-animation-time ease-in-out;
+
+        &:hover {
+            color: $color-primary;
+        }
+    }
+}
+
+.favourites-box__empty {
+    width: 80%;
+    margin: 40px 0;
+    line-height: 1.4;
+}

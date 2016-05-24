@@ -15,7 +15,7 @@
         case 'short-let':
             $recordtypes ="let";
             break;
-        
+
         default:
             $recordtypes ="sale;rent";
             break;
