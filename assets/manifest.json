@@ -17,6 +17,6 @@
     }
   },
   "config": {
-    "devUrl": "local.wordpress.dev"
+    "devUrl": "spacestation.dev:8888"
   }
 }

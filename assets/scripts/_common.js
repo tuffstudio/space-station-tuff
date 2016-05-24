@@ -170,7 +170,6 @@ window.SS.common = function($) {
             },
             success: function(response) {
                 $('.js-saved-property').html(response);
-                console.log(properties);
             },
             error: function(message) {
                 console.log(message);
@@ -178,18 +177,28 @@ window.SS.common = function($) {
         });
     }
 
-    function showProperties() {
-        var cookies = getCookie('ss-properties');
-        var $favouritesTrigger = $('.js-favourites-box-trigger');
-        var $star = $('.js-primary-nav');
+    function getCookiesArray(key) {
+        var cookies = getCookie(key);
 
         if(cookies) {
             cookies = cookies.split(',');
-            $star.addClass('favourites-box--has-properties');
         }
         else {
             cookies = null;
         }
+
+        return cookies;
+    }
+
+    function showProperties() {
+        var cookies = getCookiesArray('ss-properties');
+        var $favouritesTrigger = $('.js-favourites-box-trigger');
+        var $star = $('.js-primary-nav');
+
+        if(cookies) {
+            $star.addClass('favourites-box--has-properties');
+        }
+
         fetchPreperties(cookies);
     }
 
@@ -205,7 +214,7 @@ window.SS.common = function($) {
                 cookies = currentId;
             }
             else if(cookies.indexOf(currentId) === -1) {
-                cookies += ', ';
+                cookies += ',';
                 cookies += currentId;
             }
 
@@ -220,11 +229,17 @@ window.SS.common = function($) {
         $body.on('click', '.js-remove-property', function() {
             var $this = $(this);
             var id = $this.data('id');
-            var cookies = getCookie('ss-properties');
+            var cookies = getCookiesArray('ss-properties');
             var $property = $('.property-' + id);
+            var index = cookies.indexOf(id);
+
+            if (index > -1) {
+                cookies.splice(index, 1);
+                setCookie('ss-properties', cookies.toString(), 500);
+            }
 
             $property.fadeOut(function() {
-                $(this).remove();
+                $this.remove();
             });
         });
     }
