@@ -4,9 +4,8 @@
     }
 
     function intro_shortcode($atts, $content = null) {
-        return '<p class="text-intro">' . $content . '</p>';
+        return '<span class="text-intro">' . $content . '</span>';
     }
-
 
     function register_shortcodes(){
         add_shortcode('quote', 'quote_shortcode');
@@ -17,15 +16,17 @@
 
     // Register shortcode buttons on TinyMCE plugin
     function register_button( $buttons ) {
-       array_push( $buttons, "|", "quotes" );
+        array_push( $buttons, "|", "quotes" );
+        array_push( $buttons, "|", "intro" );
 
-       return $buttons;
+        return $buttons;
     }
 
     function add_plugin( $plugin_array ) {
-       $plugin_array['quotes'] = get_template_directory_uri() . '/assets/wp-scripts/quotes.js';
+        $plugin_array['quotes'] = get_template_directory_uri() . '/assets/wp-scripts/quotes.js';
+        $plugin_array['intro'] = get_template_directory_uri() . '/assets/wp-scripts/intro.js';
 
-       return $plugin_array;
+        return $plugin_array;
     }
 
     function init_shortcode_buttons() {

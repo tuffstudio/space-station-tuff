@@ -148,6 +148,6 @@ window.SS.singleproperty = function($) {
         SS.initSelect2();
         checkIfOpenForm();
         setRecentlyViewed();
-        //turnMapOn(); // TODO: Remember to turn that function on
+        turnMapOn(); // TODO: Remember to turn that function on
     });
 };
