@@ -6,7 +6,6 @@
         </div><!--
         --><div class="grid__item">
             <div class="grid__item desktop--one-half input-container">
-                <?php // TODO: Input names, values etc are just temporary. Waiting for integration with SalesForce. ?>
                 <select name="radius" placeholder="Search radius">
                     <option></option>
                     <option value="0.25">0.25 miles</option>
@@ -44,11 +43,12 @@
             --><div class="grid__item desktop--one-half input-container">
 
                 <!-- ### DETECT CURRENT RECORD TYPE ### -->
-        
+
                 <!-- IF RENT -->
                 <?php if (isset($recordtypes) && ($recordtypes == 'rent') ) : ?>
 
-                <select name="rent_from" placeholder="min rent" id="rent_from">
+                <div class="grid__item desktop--one-half input-container--right">
+                    <select name="rent_from" placeholder="min rent" id="rent_from">
                         <option value="0">Min rent</option>
                         <option value="300">&#163;300 <?php echo '(&#163;'. number_format((float)(300*52)/12) .'/month)'; ?></option>
                         <option value="350">&#163;350 <?php echo '(&#163;'. number_format((float)(350*52)/12) .'/month)'; ?></option>
@@ -93,7 +93,7 @@
                         <option value="5000">&#163;5,000 <?php echo '(&#163;'. number_format((float)(5000*52)/12) .'/month)'; ?></option>
                     </select>
                 </div>
-        
+
                 <!-- DEFAULT -->
                 <?php else : ?>
 
@@ -191,16 +191,11 @@
 </form>
 
 <script type="text/javascript">
-
-
     document.getElementById('price_from').value=<?php echo($price_from) ?>;
     document.getElementById('price_to').value=<?php echo($price_to) ?>;
 
-    <?php 
-
-    if (!empty($default_propertytype)) echo "document.getElementById('property_type').value='".$default_propertytype."'";
-    if (!empty($bedrooms_from)) echo "document.getElementById('bedrooms_from').value='".$bedrooms_from."'"; 
-
+    <?php
+        if (!empty($default_propertytype)) echo "document.getElementById('property_type').value='".$default_propertytype."'";
+        if (!empty($bedrooms_from)) echo "document.getElementById('bedrooms_from').value='".$bedrooms_from."'";
     ?>
- 
 </script>

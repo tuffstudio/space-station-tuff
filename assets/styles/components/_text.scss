@@ -39,6 +39,11 @@
     }
 }
 
+.text--intro {
+    @extend %normal-text;
+    margin-bottom: 35px;
+}
+
 .text-description--letter {
     &::first-letter {
         padding-right: 20px;
@@ -83,6 +88,15 @@
         .is-desktop &:hover {
             text-decoration: underline;
         }
+    }
+}
+
+.text--no-break {
+    margin: 30px 0;
+    break-inside: avoid;
+
+    @include min-screen($tablet) {
+        margin: 0;
     }
 }
 

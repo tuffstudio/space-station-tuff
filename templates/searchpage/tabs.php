@@ -14,14 +14,14 @@
                     <div class="grid__item desktop--one-third">
                         <div class="search-tab__side-menu">
                             <div class="search-tab__side-menu__item">
-                                <label for="buy" class="btn btn--switcher js-switch-type sold-input <?= $is_buy ? 'active' : ''; ?>" data-input="sold-input">buy</label>
+                                <a href="<?= get_home_url(); ?>/?s=&type=buy" class="btn btn--switcher sold-input <?= $is_buy ? 'active' : ''; ?>" data-input="sold-input">buy</a>
                             </div>
                             <div class="search-tab__side-menu__item">
-                                <label for="rent-input" class="btn btn--switcher js-switch-type rent-input <?= $is_rent ? 'active' : ''; ?>" data-input="rent-input">rent</label>
+                                <a href="<?= get_home_url(); ?>/?s=&type=rent" class="btn btn--switcher sold-input <?= $is_rent ? 'active' : ''; ?>" data-input="rent-input">rent</a>
                             </div>
-                            <div class="search-tab__side-menu__item">
+                            <!-- <div class="search-tab__side-menu__item">
                                 <label for="short-let" class="btn btn--switcher js-switch-type <?= $is_let ? 'active' : ''; ?>">short let</label>
-                            </div>
+                            </div> -->
                         </div>
                     </div><!--
                     --><div class="grid__item desktop--three-fifths">

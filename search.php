@@ -46,8 +46,8 @@
             <div class="grid grid--full grid--middle">
                 <div class="grid__item desktop--one-half">
                     <h3 class="title--default">Properties for sale</h3>
-                    <label for="rent-input" class="link--italic sold-input input-types js-switch-type <?= $is_buy ? 'active': ''; ?>" data-input="rent-input">Switch to Rent</label>
-                    <label for="buy" class="link--italic rent-input input-types js-switch-type <?= $is_rent ? 'active': ''; ?>" data-input="sold-input">Switch to Buy</label>
+                    <a href="<?= get_home_url(); ?>/?s=&type=buy" class="link--italic sold-input input-types <?= $is_rent ? 'active' : ''; ?>" data-input="sold-input">Switch to Buy</a>
+                    <a href="<?= get_home_url(); ?>/?s=&type=rent" class="link--italic sold-input input-types <?= $is_buy ? 'active' : ''; ?>" data-input="rent-input">Switch to Rent</a>
                 </div><!--
                 --><div class="grid__item view-nav__container desktop--one-half">
                     <ul class="view-nav sort-nav">

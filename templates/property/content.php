@@ -32,9 +32,7 @@
                     <li class="property__button"><button class="btn btn--action js-save-property" data-id="<?= $item->data->id; ?>">save</button></li>
                     <li class="property__button"><a href="" class="btn btn--action">share</a></li>
                 </ul>
-                <article class="property__description">
-                    <?= $property_description; ?>
-                </article>
+                <article class="property__description"><?= $property_description; ?></article>
             </div>
         </div><!--
         --><div class="grid__item desktop--one-quarter">
@@ -42,10 +40,7 @@
                 <a class="link--text" href="mailto:spacestation@gmail.com">email us</a></br>
                 <a class="link--text" href="tel:02076136262">020 7613 6262</a>
 
-                <?php 
-
-
-
+                <?php
                     $fast_facts_icons = array(
                         'ff_aircon__c',
                         'ff_architect__c',
@@ -102,7 +97,6 @@
                         'ff_wine_cellar__c',
                         'ff_wooden_floors__c'
                         );
-
                  ?>
 
                 <h3 class="property__sidebar-title">Fast facts</h3>
