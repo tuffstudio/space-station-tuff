@@ -14,7 +14,8 @@
     "imagesloaded": "~4.1.0",
     "sticky-kit": "~1.1.2",
     "simpleWeather": "~3.1.0",
-    "video.js": "~5.10.1"
+    "video.js": "~5.10.1",
+    "lightbox2": "~v2.8.2"
   },
   "overrides": {
     "jQuery-viewport-checker": {
@@ -34,6 +35,9 @@
     },
     "video.js": {
       "main": "./dist/video.js"
+    },
+    "lightbox2": {
+      "main": "./dist/js/lightbox.min.js"
     }
   }
 }

@@ -6,7 +6,7 @@
 
                 <?php $i = 0; foreach ($item->media->images->image as $image) : ?>
                     <?php if ($image->tags == 'Floorplan Quick (JPG)'):?>
-                        <li class="property__button"><a href="#floor-plan" class="btn btn--action js-panel-switcher js-smooth-off" data="<?php echo $image->url; ?>">floor plan</a></li>
+                        <li class="property__button"><a href="<?php echo $image->url; ?>" class="btn btn--action js-panel-switcher js-smooth-off" data-lightbox="floor plan">floor plan</a></li>
                     <?php endif; ?>
                 <?php endforeach; ?>
 
