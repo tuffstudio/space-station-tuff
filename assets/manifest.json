@@ -13,7 +13,7 @@
       "main": true
     },
     "vendor.js": {
-      "bower": ["jquery", "jQuery-viewport-checker", "owl.carousel", "imagesloaded", "sticky-kit", "simpleWeather", "video.js"]
+      "bower": ["jquery", "jQuery-viewport-checker", "owl.carousel", "imagesloaded", "sticky-kit", "simpleWeather", "video.js", "lightbox2"]
     }
   },
   "config": {
