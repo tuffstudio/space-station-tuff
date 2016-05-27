@@ -24,6 +24,8 @@ window.SS.singleproperty = function($) {
 
                 var propertyPins = map.getJson();
 
+                map.setCenter(propertyPins.first.coordinates.lat, propertyPins.first.coordinates.lng);
+
                 for(var pin in propertyPins) {
                     pins[pin] = map.setPin(propertyPins[pin].coordinates, propertyPins[pin].title, propertyPins[pin].link);
                 }
@@ -148,6 +150,6 @@ window.SS.singleproperty = function($) {
         SS.initSelect2();
         checkIfOpenForm();
         setRecentlyViewed();
-        turnMapOn(); // TODO: Remember to turn that function on
+        turnMapOn();
     });
 };

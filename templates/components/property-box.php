@@ -21,7 +21,7 @@
             <?php echo  $item->data->name; ?>
         </h3>
         <p class="masonry__tile-price">
-            &#163;<?php echo number_format((float) $item->data->pba__listingprice_pb__c); ?>
+            <?php echo number_format((float) $item->data->pba__listingprice_pb__c); ?>
         </p>
         <p class="masonry__tile-desc masonry__tile-desc--big">
             <?php

@@ -17,6 +17,6 @@
     }
   },
   "config": {
-    "devUrl": "spacestation.dev:8888"
+    "devUrl": "spacestation.dev"
   }
 }

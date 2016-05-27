@@ -1,5 +1,4 @@
 <?php
-    // Example video url
     $video_url = $item->media->videos->video->url;
 ?>
 

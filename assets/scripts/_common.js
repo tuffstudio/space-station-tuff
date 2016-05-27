@@ -572,6 +572,13 @@ window.SS.PropertyMap = function(id, initCoords, customOptions) {
         });
     };
 
+    var setCenter = function(lat, lng) {
+        map.setCenter({
+            lat : lat,
+            lng : lng
+        });
+    };
+
     var initMap = function() {
         map = new google.maps.Map(containerObject, mapOptions);
     };
@@ -581,7 +588,8 @@ window.SS.PropertyMap = function(id, initCoords, customOptions) {
         init: initMap,
         setupMarkers: setupMarkers,
         setPin: createPin,
-        getJson: getJson
+        getJson: getJson,
+        setCenter: setCenter
     };
 };
 

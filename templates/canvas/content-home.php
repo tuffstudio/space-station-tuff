@@ -14,6 +14,10 @@
     $categories = get_categories();
 ?>
 
+<div class="text--intro">
+    <?= $page_fields['ss_canvas_intro']; ?>
+</div>
+
 <div class="container--mobile-full">
     <div class="grid grid--full">
         <div class="grid__item one-half tablet--one-third">
