@@ -163,6 +163,14 @@
         </div>
     </div>
 
+    <div class="search-form--hide">
+        <select name="orderby" placeholder="orderby" id="orderby">
+            <option value="0">orderby</option>
+            <option value="1">min price</option>
+            <option value="2">max price</option>
+        </select>
+    </div>
+
     <div class="search-form__submit">
         <div class="grid">
             <div class="grid__item desktop--one-half">

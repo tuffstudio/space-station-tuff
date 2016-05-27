@@ -60,11 +60,23 @@ window.SS.search = function($) {
         }
     }
 
+    function orderBy() {
+        var $searchForm = $('#searchform');
+        var $orderBySelect = $('#orderby');
+
+        $('.js-orderby').on('click', function() {
+            var value = $(this).data('value');
+            $orderBySelect.val(value);
+            $searchForm.submit();
+        });
+    }
+
     $(document).ready(function() {
         SS.switchGrids('.js-grid-switcher', '.js-results-block');
         SS.switchGrids('.js-tab-switcher', '.js-tab-panel');
         turnMapOn();
         switchFormTypes();
+        orderBy();
         $('.js-find-location').on('click', geolocation);
     });
 };

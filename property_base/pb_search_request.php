@@ -1,5 +1,4 @@
 <?php
-
 // VARS
 $SuccessVis = "none";
 $reference="";
@@ -8,7 +7,7 @@ $price_from = 0;
 $rent_to = 0;
 $rent_from = 0;
 $reference = "";
-$orderby = ""; 
+$orderby = "";
 $itemsperpage ="";
 //$recordtypes ="sale";
 $propertytype ="";
@@ -17,7 +16,7 @@ $propertystatus ="";
 
 // GET FROM TO PARAM FUNCTION
 function getFromToParam($from,$to){
-	
+
 	if (empty($from) && empty($to)) return null;
 
 	$p = '[';
@@ -25,60 +24,71 @@ function getFromToParam($from,$to){
 	$p .= ';';
 	if (!empty($to)) $p .= $to;
 	$p .= ']';
-		 	
-	return $p;	 	
+
+	return $p;
 }
 
 // SET DEDAULTS FOR SELECTED FILTERS
-	
+
 	// BEDROOMS
 	if (empty($_POST["bedrooms_from"])){ 					// if variable is empty
 		$default_bedrooms_from = 0; 	 					// apply default value
-	}else{ 								 					// otherwise 
+	}else{ 								 					// otherwise
 		$default_bedrooms_from = $_POST["bedrooms_from"]; 	// retrieve POSTEed value
 	}
 	// BATHROOMS
-	if (empty($_POST["bathrooms_from"])){ 					
-		$default_bathrooms_from = 1; 	 					
-	}else{ 								 					
-		$default_bathrooms_from = $_POST["bathrooms_from"]; 	
+	if (empty($_POST["bathrooms_from"])){
+		$default_bathrooms_from = 1;
+	}else{
+		$default_bathrooms_from = $_POST["bathrooms_from"];
 	}
 	// ORDER BY
 	if (empty($_POST["orderby"])){
 		$default_orderby = ""; //* pba__ListingPrice_pb__c;ASC
-	}else{ 
-		$default_orderby = $_POST["orderby"];
+	}else{
+		$url_orderby = $_POST["orderby"];
+
+        switch ($url_orderby) {
+            case "1":
+                $default_orderby = "pba__ListingPrice_pb__c;ASC";
+                break;
+            case "2":
+                $default_orderby = "pba__ListingPrice_pb__c;DESC";
+                break;
+            default:
+                $default_orderby = "";
+        }
 	}
 	// PER PAGE
 	if (empty($_POST["itemsperpage"])){
-		$default_perpage = "30"; 
-	}else{ 
+		$default_perpage = "30";
+	}else{
 		$default_perpage = $_POST["itemsperpage"];
 	}
 
 	//RECORDTYPES
 	if (empty($_POST["recordtypes"])){
 		$default_recordtypes = "sale;rent";
-	}else{ 
+	}else{
 		$default_recordtypes = $_POST["recordtypes"];
 	}
 	//PROPERTYTYPE
 	if (empty($_POST["propertytype"])){
-		$default_propertytype = ""; 
-	}else{ 
+		$default_propertytype = "";
+	}else{
 		$default_propertytype = $_POST["propertytype"];
 		if($default_propertytype == "any"){ $default_propertytype = ""; }
 	}
 	//TENURE
 	if (empty($_POST["tenure"])){
-		$default_tenure = ""; 
-	}else{ 
+		$default_tenure = "";
+	}else{
 		$default_tenure = $_POST["tenure"];
 	}
 	//PROPERTYSTATUS
 	if (empty($_POST["propertystatus"])){
-		$default_propertystatus = ""; 
-	}else{ 
+		$default_propertystatus = "";
+	}else{
 		$default_propertystatus = $_POST["propertystatus"];
 	}
 
@@ -88,15 +98,15 @@ if(isset($_POST["price_from"])){		$price_from 			= $_POST["price_from"];		}
 if(isset($_POST["price_to"])){			$price_to 				= $_POST["price_to"];		}
 if(isset($_POST["rent_from"])){			$rent_from 				= $_POST["rent_from"];		}
 if(isset($_POST["rent_to"])){			$rent_to 				= $_POST["rent_to"];		}
-if(isset($_POST["bedrooms_from"])){		$bedrooms_from 			= $default_bedrooms_from;	}                      
-if(isset($_POST["bathrooms_from"])){	$bathrooms_from 		= $default_bathrooms_from;	}                     
-if(isset($_POST["orderby"])){			$orderby 				= $default_orderby;			}                 
-if(isset($_POST["itemsperpage"])){		$itemsperpage 			= $default_perpage;			}                         
-if(isset($_POST["recordtypes"])){		$recordtypes 			= $default_recordtypes;		}                 
-if(isset($_POST["propertytype"])){		$propertytype 			= $default_propertytype;	}                     
-if(isset($_POST["tenure"])){			$tenure 				= $default_tenure;			}                   
-if(isset($_POST["propertystatus"])){	$propertystatus 		= $default_propertystatus;	}                   
-if(isset($_POST["page"])){				$page 					= $_POST["page"];			}                       
+if(isset($_POST["bedrooms_from"])){		$bedrooms_from 			= $default_bedrooms_from;	}
+if(isset($_POST["bathrooms_from"])){	$bathrooms_from 		= $default_bathrooms_from;	}
+if(isset($_POST["orderby"])){			$orderby 				= $default_orderby;			}
+if(isset($_POST["itemsperpage"])){		$itemsperpage 			= $default_perpage;			}
+if(isset($_POST["recordtypes"])){		$recordtypes 			= $default_recordtypes;		}
+if(isset($_POST["propertytype"])){		$propertytype 			= $default_propertytype;	}
+if(isset($_POST["tenure"])){			$tenure 				= $default_tenure;			}
+if(isset($_POST["propertystatus"])){	$propertystatus 		= $default_propertystatus;	}
+if(isset($_POST["page"])){				$page 					= $_POST["page"];			}
 if(isset($_POST["price_from"])){		$priceParam 			= getFromToParam($price_from,$price_to);}
 if(isset($_POST["rent_from"])){			$rentParam 				= getFromToParam($rent_from,$rent_to);}
 										$bedsParam 				= getFromToParam($default_bedrooms_from	,null);
@@ -116,27 +126,27 @@ $errorMessage 	= null;
 		              "page" 			=> $page ,
 		              "getvideos"		=> "true",
 		              "debugmode"		=> "true"
-
 		              );
+
 // add FILTERS to QUERY ARRAY
 	if (!empty($reference))		$reqArray["name"] 								= '%' . $reference . '%';
 	if (!empty($priceParam))	$reqArray["pba__ListingPrice_pb__c"] 			= $priceParam;
 	if (!empty($rentParam))		$reqArray["Weekly_Rent__c"] 					= $rentParam;
 	if (!empty($default_bedrooms_from)) $reqArray["pba__Bedrooms_pb__c"] 		= $bedsParam;
 	if (!empty($default_bathrooms_from)) $reqArray["pba__FullBathrooms_pb__c"] 	= $bathsParam;
-	if (!empty($default_orderby)) $reqArray["orderby"] 							= $orderby; 
-	if (!empty($default_perpage)) $reqArray["itemsperpage"] 					= $default_perpage; 
-	if (!empty($default_recordtypes)) $reqArray["recordtypes"] 					= $recordtypes; 
-	if (!empty($default_propertytype)) $reqArray["pba__PropertyType__c"] 		= $default_propertytype; 
-	if (!empty($default_tenure)) $reqArray["Tenure__c"] 						= $default_tenure; 
+	if (!empty($default_orderby)) $reqArray["orderby"] 							= $orderby;
+	if (!empty($default_perpage)) $reqArray["itemsperpage"] 					= $default_perpage;
+	if (!empty($default_recordtypes)) $reqArray["recordtypes"] 					= $recordtypes;
+	if (!empty($default_propertytype)) $reqArray["pba__PropertyType__c"] 		= $default_propertytype;
+	if (!empty($default_tenure)) $reqArray["Tenure__c"] 						= $default_tenure;
 	if (!empty($default_propertystatus)) $reqArray["pba__status__c"] 			= $default_propertystatus;
-	$reqArray["show_on_website__c"] 			= "true"; 
+	$reqArray["show_on_website__c"] 			= "true";
 
 // BUILD HTTP QUERY STRING
 	$query 		= http_build_query($reqArray,'','&');
 // RETURN XML RESULT
 	$xmlResult 	= simplexml_load_file(PB_WEBSERVICEENDPOINT . "?" . $query);
-	
+
 	if (!empty($xmlResult->errorMessages->message)) {
 		$errorMessage = 'Error: '.$xmlResult->errorMessages->message;
 	} else {
@@ -145,5 +155,4 @@ $errorMessage 	= null;
 		$previousPage 	= $page > 0 ? $page - 1 : null;
 		$nextPage 		= ($xmlResult->listingsPerPage * ($page+1) < $xmlResult->numberOfListings) ? $page + 1 : null;
 	}
-
 ?>

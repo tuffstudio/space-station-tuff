@@ -52,30 +52,13 @@
                 --><div class="grid__item view-nav__container desktop--one-half">
                     <ul class="view-nav sort-nav">
                         <li class="view-nav__item sort-nav__item dropdown">
-                            <a href="#">per page</a>
-                            <ul class="dropdown__container">
-                                <li class="dropdown__item">
-                                    <a href="#">10</a>
-                                </li>
-                                <li class="dropdown__item">
-                                    <a href="#">20</a>
-                                </li>
-                                <li class="dropdown__item">
-                                    <a href="#">All</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="view-nav__item sort-nav__item dropdown">
                             <a href="#">sort by</a>
                             <ul class="dropdown__container">
-                                <li class="dropdown__item">
-                                    <a href="#">Name</a>
+                                <li class="dropdown__item js-orderby" data-value="1">
+                                    min price
                                 </li>
-                                <li class="dropdown__item">
-                                    <a href="#">City</a>
-                                </li>
-                                <li class="dropdown__item">
-                                    <a href="#">Price</a>
+                                <li class="dropdown__item js-orderby" data-value="2">
+                                    max price
                                 </li>
                             </ul>
                         </li>
