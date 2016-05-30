@@ -2,24 +2,32 @@
 // -----------------------
 
 .favourites-box {
-    display: none;
-    position: relative;
+    position: absolute;
+    top: 3px;
+    right: 55px;
     vertical-align: middle;
     z-index: 5;
 
     @include min-screen($desktop) {
+        position: relative;
+        top: auto;
+        right: auto;
         display: inline-block;
     }
 }
 
 .favourites-box__trigger {
-    padding: 8px 30px 6px 8px;
+    padding: 8px 8px 6px;
     transition: color $standard-animation-time ease;
     color: $menu-link-color;
     cursor: pointer;
 
+    @include min-screen($desktop) {
+        padding: 8px 15px 6px;
+    }
+
     @include min-screen($desktop-medium) {
-        padding: 8px 40px 6px 20px;
+        padding: 8px 20px 6px 10px;
     }
 
     &:hover {
@@ -35,6 +43,7 @@
 }
 
 .favourites-box__content {
+    max-width: 100%;
     position: fixed;
     top: 50px;
     right: -$favourites-box-width;
@@ -64,7 +73,10 @@
 .favourites-box--is-opened {
     right: $favourites-box-width * 0.5;
     overflow: hidden;
-    padding-right: 15px;
+
+    @include min-screen($desktop) {
+        overflow: auto;
+    }
 
     .favourites-box__overlay {
         opacity: 1;
@@ -73,10 +85,6 @@
 
     .favourites-box__content {
         right: 0;
-    }
-
-    .navigation {
-        padding-right: 15px;
     }
 }
 
