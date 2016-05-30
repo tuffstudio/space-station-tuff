@@ -6,7 +6,6 @@
 <div class="property__header">
     <?php
         include 'property/gallery.php';
-        include 'property/floor-plan.php';
         include 'property/map.php';
         include 'property/video.php';
     ?>

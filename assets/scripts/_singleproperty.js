@@ -54,6 +54,23 @@ window.SS.singleproperty = function($) {
         });
     }
 
+    function smoothResize($ownCarousel) {
+        $(window).on('resize', function() {
+            var $galleryItems = $ownCarousel.find('.owl-item');
+            var activeIndex = $ownCarousel.find('.owl-item.active').index();
+            var translateX = activeIndex * window.innerWidth;
+
+            $ownCarousel.find('.owl-stage').css({
+                'width': $galleryItems.length * window.innerWidth,
+                'transform': 'translate3d(-' + translateX + 'px , 0px, 0px)'
+            });
+
+            $galleryItems.css({
+                'width': window.innerWidth
+            });
+        });
+    }
+
     function initGalleryCarousel() {
         var $owl = $('.js-property-gallery');
 
@@ -96,6 +113,8 @@ window.SS.singleproperty = function($) {
         }
 
         $owl.owlCarousel(owlOptions);
+
+        smoothResize($owl);
     }
 
     function openOverlay() {

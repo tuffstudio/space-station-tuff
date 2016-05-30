@@ -149,9 +149,14 @@
 }
 
 .btn--action--awarded {
+    margin: 10px;
     border-color: transparent;
     background-color: $color-primary;
     color: $white;
+
+    @include min-screen($desktop) {
+        margin: auto;
+    }
 
     .is-desktop &:hover {
         background-color: darken($color-primary, 5%);
