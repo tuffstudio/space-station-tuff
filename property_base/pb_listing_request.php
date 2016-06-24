@@ -67,7 +67,17 @@ if (empty($_POST["bedrooms_from"])){
     	$main_title = $item->data->name;
     	$listing_type = $item->data->pba__listingtype__c;
     	$tenure = $item->data->tenure__c;
-    	$property_price = number_format((float) $item->data->pba__listingprice_pb__c);
+
+    	if( strtolower($listing_type) == 'rent'){
+
+                $property_price = number_format((float) $item->data->weekly_rent__c).' p/w'; 
+
+            }else{ 
+            
+                $property_price = number_format((float) $item->data->pba__listingprice_pb__c); 
+            
+        }
+
     	$property_type = $item->data->pba__propertytype__c;
     	$property_bedrooms_number = $item->data->pba__bedrooms_pb__c;
     	$property_description = $item->data->pba__description_pb__c;
