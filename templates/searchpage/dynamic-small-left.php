@@ -6,7 +6,17 @@
                 <div class="masonry__tile-info">
                     <p class="masonry__tile-category">Commercial: <span><?php echo $item->data->pba__listingtype__c; ?></span></p>
                     <h3 class="masonry__tile-title"><?php echo  $item->data->name; ?></h3>
-                    <p class="masonry__tile-price"><?php echo number_format((float) $item->data->pba__listingprice_pb__c); ?></p>
+                    <p class="masonry__tile-price">
+                    <?php if( strtolower($item->data->pba__listingtype__c) == 'rent'){
+
+                        echo number_format((float) $item->data->weekly_rent__c).' p/w'; 
+
+                    }else{ 
+            
+                        echo number_format((float) $item->data->pba__listingprice_pb__c); 
+            
+                    }?>
+                    </p>
                     <p class="masonry__tile-desc masonry__tile-desc--big">
                         <?php
                             echo  $item->data->pba__bedrooms_pb__c;
