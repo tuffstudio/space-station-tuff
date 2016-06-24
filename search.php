@@ -122,13 +122,9 @@
 
             <div id="map-view" class="search-results__block js-results-block">
                 <div class="search-results--map">
-                    <?php if (have_posts()) : the_post(); ?>
-                        <?php get_template_part('templates/searchpage/map', 'view'); ?>
-                    <?php else : ?>
-                        <div class="alert alert-warning">
-                          <?php _e('Sorry, no results were found.', 'sage'); ?>
-                        </div>
-                    <?php endif; ?>
+
+                    <?php include 'templates/searchpage/map-view.php'; ?>
+
                 </div>
             </div>
 
