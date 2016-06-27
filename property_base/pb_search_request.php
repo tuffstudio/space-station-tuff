@@ -58,7 +58,7 @@ function getFromToParam($from,$to){
 
 	//RECORDTYPES
 	if (empty($_POST["recordtypes"])){
-		$default_recordtypes = "sale;rent";
+		$default_recordtypes = "sale";
 	}else{ 
 		$default_recordtypes = $_POST["recordtypes"];
 	}

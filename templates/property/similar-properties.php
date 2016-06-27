@@ -2,14 +2,31 @@
 
 // VARS
     $opened_listing_id = $item->data->id;
+    $opened_listing_type = strtolower($item->data->pba__listingtype__c);
+
+    if( $opened_listing_type == 'rent'){
+                $lower_range = $item->data->weekly_rent__c - 250;
+                $upper_range = $item->data->weekly_rent__c + 250;
+            }else{ 
+            
+                $lower_range = $item->data->pba__listingprice_pb__c-500000;
+                $upper_range = $item->data->pba__listingprice_pb__c+500000;
+            
+            }
   
     /////////////// QUERY ARRAY ///////////////
     $reqArray = array("token"       => PB_SECURITYTOKEN,
-              "fields"      => "Id;name;pba__ListingPrice_pb__c;pba__status__c;Tenure__c;",
+              "fields"      => "Id;name;pba__ListingType__c;pba__ListingPrice_pb__c;Weekly_Rent__c;pba__PropertyType__c;pba__bedrooms_pb__c;",
               "recordtypes" => (string)$listing_type,
-              "pba__PropertyType__c" => (string)$item->data->pba__propertytype__c,
               "debugmode"   => "true"
               );
+
+    if( $opened_listing_type == 'rent'){
+               $reqArray["Weekly_Rent__c"] = "[".(string)$lower_range.";".(string)$upper_range."]";
+                }else{
+                $reqArray["pba__ListingPrice_pb__c"] = "[".(string)$lower_range.";".(string)$upper_range."]";
+    }
+
     // BUILD HTTP QUERY STRING
     $query    = http_build_query($reqArray,'','&');
     // RETURN XML RESULT
@@ -43,6 +60,10 @@
             # create Array of all returned listings
             $arr = $xmlResult->xpath('listings/listing');
 
+            // echo '<pre>';
+            // print_r($xmlResult);
+            // echo '</pre>';
+
             # remove element with current ID so it's not related to itself
             foreach ($arr as $key => $value):
                 if( (string)$opened_listing_id !== (string)$value->data->id ):
@@ -64,10 +85,38 @@
                             <div class="masonry__tile masonry__tile--white">
                                 <div class="masonry__tile-border"></div>
                                 <div class="masonry__tile-info">
-                                    <p class="masonry__tile-category">Commercial: <span>Rent</span></p>
+                                    <p class="masonry__tile-category">Unknown: <span><?php echo $item->data->pba__listingtype__c; ?></span></p>
                                     <h3 class="masonry__tile-title"><?php echo  $item->data->name; ?></h3>
-                                    <p class="masonry__tile-price">&#163;<?php echo number_format((float) $item->data->pba__listingprice_pb__c); ?></p>
-                                    <p class="masonry__tile-desc masonry__tile-desc--big">610sqm UNIT</p>
+                                    <p class="masonry__tile-price">
+                                        <?php 
+
+                                            if( $opened_listing_type == 'rent'){
+
+                                                echo number_format((float) $item->data->weekly_rent__c).' p/w'; 
+
+                                            }else{ 
+            
+                                                echo number_format((float) $item->data->pba__listingprice_pb__c); 
+            
+                                        }?>
+                                    </p>
+                                    <p class="masonry__tile-desc masonry__tile-desc--big">
+                                        <?php
+                                            echo  $item->data->pba__bedrooms_pb__c;
+                                                switch ($item->data->pba__bedrooms_pb__c) {
+                                                    case 0:
+                                                        break;
+                                                    case 1:
+                                                        echo ' bedroom ';
+                                                        break;
+                            
+                                                    default:
+                                                        echo ' bedrooms ';
+                                                        break;
+                                                }
+                                            echo  $item->data->pba__propertytype__c;
+                                        ?>
+                                    </p>
                                 </div>
                             </div>
                         </div>
