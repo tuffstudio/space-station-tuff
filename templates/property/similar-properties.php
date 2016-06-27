@@ -5,14 +5,18 @@
     $opened_listing_type = strtolower($item->data->pba__listingtype__c);
 
     if( $opened_listing_type == 'rent'){
-                $lower_range = $item->data->weekly_rent__c - 250;
-                $upper_range = $item->data->weekly_rent__c + 250;
-            }else{ 
+        $lower_range = $item->data->weekly_rent__c - 250;
+        $upper_range = $item->data->weekly_rent__c + 250;
+    }else{ 
             
-                $lower_range = $item->data->pba__listingprice_pb__c-500000;
-                $upper_range = $item->data->pba__listingprice_pb__c+500000;
-            
-            }
+        if($item->data->pba__listingprice_pb__c < 1000000){
+            $lower_range = $item->data->pba__listingprice_pb__c-300000;
+            $upper_range = $item->data->pba__listingprice_pb__c+300000;
+        }else{
+            $lower_range = $item->data->pba__listingprice_pb__c-500000;
+            $upper_range = $item->data->pba__listingprice_pb__c+500000;    
+        }      
+    }
   
     /////////////// QUERY ARRAY ///////////////
     $reqArray = array("token"       => PB_SECURITYTOKEN,
