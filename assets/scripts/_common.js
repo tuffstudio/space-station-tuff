@@ -442,8 +442,8 @@ window.SS.PropertyMap = function(id, initCoords, customOptions) {
 
     if (initCoords === undefined) {
         initCoords = {
-            latitude: 50.2945,
-            longitude: 18.6714
+            latitude: 51.513230,
+            longitude: -0.091667
         };
     }
 
@@ -513,7 +513,7 @@ window.SS.PropertyMap = function(id, initCoords, customOptions) {
                 '<p class="masonry__tile-category">Commercial: <span>Rent</span></p>' +
                 '<h3 class="masonry__tile-title">' + property.title + '</h3>' +
                 '<p class="masonry__tile-price">114,905 pa</p>' +
-                '<p class="masonry__tile-desc masonry__tile-desc--big">610sqm UNIT</p>' +
+                '<p class="masonry__tile-desc masonry__tile-desc--big">'+property.property_type+'</p>' +
             '</div>' +
             '</div>';
 

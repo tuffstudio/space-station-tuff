@@ -12,7 +12,7 @@
     <div class="single-result__info">
         <div class="masonry__tile-border"></div>
         <p class="masonry__tile-category">
-            Residential:
+            <?php echo $item->data->pba__listingtype__c; ?>
             <span>
                 <?php echo $item->data->pba__listingtype__c; ?>
             </span>
@@ -22,15 +22,27 @@
         </h3>
         <p class="masonry__tile-price">
 
-            <?php if( strtolower($item->data->pba__listingtype__c) == 'rent'){
+            <?php 
 
-                echo number_format((float) $item->data->weekly_rent__c).' p/w'; 
+                switch (strtolower($item->data->pba__listingtype__c)) {
+                    case 'rent':
+                        echo number_format((float) $item->data->weekly_rent__c).' p/w'; 
+                        break;
 
-            }else{ 
-            
-                echo number_format((float) $item->data->pba__listingprice_pb__c); 
-            
-            }?>
+                    case 'sale':
+                        echo number_format((float) $item->data->pba__listingprice_pb__c);  
+                        break;
+
+                    case 'commercial rent':
+                        echo number_format((float) $item->data->rent_per_year__c).' p/y'; 
+                        break;
+                    
+                    default:
+                        # code...
+                        break;
+                }
+
+             ?>
 
         </p>
         <p class="masonry__tile-desc masonry__tile-desc--big">

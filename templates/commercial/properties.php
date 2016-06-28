@@ -6,21 +6,17 @@
         <div class="container--wider">
             <div class="grid">
 
-                <?php
-                    $i = 0;
-                    while ($i < 9) :
-                ?><!--
+                <?php 
 
-                --><div class="grid__item tablet-small--one-half desktop--one-third masonry__box">
+                include dirname(__FILE__) . "/../../property_base/pb_commercial_request.php";
 
-                    <?php include dirname(__FILE__) . '/../components/property-box.php'; ?>
+                foreach ($xmlResult->listings->listing as $item) : ?><!--
+                    --><div class="grid__item tablet-small--one-half desktop--one-third masonry__box">
+                            <?php include dirname(__FILE__) . '/../components/property-box.php'; ?>
+                        </div><!--
+                --><?php endforeach;?>
 
-                </div><!--
 
-                --><?php
-                        $i++;
-                    endwhile;
-                ?>
             </div>
         </div>
     </div>

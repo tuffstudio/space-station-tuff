@@ -64,10 +64,6 @@
             # create Array of all returned listings
             $arr = $xmlResult->xpath('listings/listing');
 
-            // echo '<pre>';
-            // print_r($xmlResult);
-            // echo '</pre>';
-
             # remove element with current ID so it's not related to itself
             foreach ($arr as $key => $value):
                 if( (string)$opened_listing_id !== (string)$value->data->id ):

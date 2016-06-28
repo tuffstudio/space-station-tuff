@@ -12,7 +12,7 @@ while($i < $number_or_listings) :
 
 if( !empty($item->data->pba__latitude_pb__c) && !empty($item->data->pba__longitude_pb__c) ):
 
-	$map_json .= '{\"title\":\"'.$item->data->name.'\",\"coordinates\":{\"lat\":'.$item->data->pba__latitude_pb__c.',\"lng\":'.$item->data->pba__longitude_pb__c.'}},';		     
+	$map_json .= '{\"title\":\"'.$item->data->name.'\",\"property_type\":\"'.$item->data->pba__propertytype__c.'\",\"coordinates\":{\"lat\":'.$item->data->pba__latitude_pb__c.',\"lng\":'.$item->data->pba__longitude_pb__c.'}},';		     
 
 endif;
 
