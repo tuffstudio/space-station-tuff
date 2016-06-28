@@ -506,7 +506,7 @@ window.SS.PropertyMap = function(id, initCoords, customOptions) {
     var createPopup = function(property) {
         var template = '<div class="masonry__link">' +
             '<div class="single-result__image">' +
-                '<img src="http://lorempicsum.com/up/350/200/3">' +
+                '<img src="'+property.image+'">' +
             '</div>' +
             '<div class="single-result__info">' +
                 '<div class="masonry__tile-border"></div>' +
