@@ -4,6 +4,36 @@ window.SS.singleproperty = function($) {
     var $window = $(window);
     var $body = $('body');
     var $overlay = $('.js-overlay');
+    var mapOn = false;
+    var pins = {};
+
+    function turnMapOn() {
+        $button = $('.js-map-switch');
+
+        $button.on('click', function(event) {
+            event.preventDefault();
+
+            var initCoords = {
+                latitude: 51.5145300,
+                longitude: -0.0888400
+            };
+
+            if(!mapOn) {
+                var map = new window.SS.PropertyMap('property-map', initCoords);
+                map.init();
+
+                var propertyPins = map.getJson();
+
+                map.setCenter(propertyPins.first.coordinates.lat, propertyPins.first.coordinates.lng);
+
+                for(var pin in propertyPins) {
+                    pins[pin] = map.setPin(propertyPins[pin].coordinates, propertyPins[pin].title, propertyPins[pin].link);
+                }
+
+                mapOn = true;
+            }
+        });
+    }
 
     function initPoiCarousel() {
         $('.property__poi').owlCarousel({
@@ -21,6 +51,23 @@ window.SS.singleproperty = function($) {
                     items: 3
                 }
             }
+        });
+    }
+
+    function smoothResize($ownCarousel) {
+        $(window).on('resize', function() {
+            var $galleryItems = $ownCarousel.find('.owl-item');
+            var activeIndex = $ownCarousel.find('.owl-item.active').index();
+            var translateX = activeIndex * window.innerWidth;
+
+            $ownCarousel.find('.owl-stage').css({
+                'width': $galleryItems.length * window.innerWidth,
+                'transform': 'translate3d(-' + translateX + 'px , 0px, 0px)'
+            });
+
+            $galleryItems.css({
+                'width': window.innerWidth
+            });
         });
     }
 
@@ -66,6 +113,8 @@ window.SS.singleproperty = function($) {
         }
 
         $owl.owlCarousel(owlOptions);
+
+        smoothResize($owl);
     }
 
     function openOverlay() {
@@ -94,6 +143,24 @@ window.SS.singleproperty = function($) {
         }
     }
 
+    function setRecentlyViewed() {
+        var id = $('.js-save-property').data('id');
+        var cookies = SS.getCookiesArray('ss-recently-viewed');
+
+        if(!cookies) {
+            cookies = [];
+        }
+
+        if(cookies.length > 4) {
+            cookies.shift();
+        }
+        if(cookies.indexOf(id) === -1) {
+            cookies.push(id);
+        }
+
+        SS.setCookie('ss-recently-viewed', cookies.toString(), 500);
+    }
+
     $(document).ready(function() {
         initGalleryCarousel();
         initPoiCarousel();
@@ -101,5 +168,7 @@ window.SS.singleproperty = function($) {
         SS.switchGrids('.js-panel-switcher', '.js-property-panel');
         SS.initSelect2();
         checkIfOpenForm();
+        setRecentlyViewed();
+        turnMapOn();
     });
 };

@@ -13,9 +13,6 @@
                     endif;
                     ?>
 
-                    <?php
-                        // TODO: Add favourites-box--has-properties if properties saved
-                    ?>
                     <div class="favourites-box js-favourites-box">
                         <div class="favourites-box__trigger js-favourites-box-trigger">
                             <svg version="1.1" class="favourites-box__icon" x="0px" y="0px"
@@ -29,23 +26,7 @@
                         <aside class="favourites-box__content">
                             <h3 class="headline--middle">Saved properties</h3>
                             <div class="grid grid--middle">
-                                <?php
-                                    $i = 0;
-                                    while($i < 5):
-                                ?>
-                                <div class="grid__item two-fifths">
-                                    <img src="<?= get_template_directory_uri(); ?>/dist/images/masonry_small_placeholder.jpg" alt="" data-pin-nopin="true" class="img--responsive favourites-box__img">
-                                </div><!--
-                                --><div class="grid__item three-fifths">
-                                    <div class="favourites-box__information">
-                                        <h3 class="favourites-box__title">Camden road, e15</h3>
-                                        <p class="favourites-box__price">114,905 pa</p>
-                                    </div>
-                                </div>
-                                <?php
-                                        $i++;
-                                    endwhile;
-                                ?>
+                                <div class="js-saved-property"></div>
                             </div>
                         </aside>
                         <div class="favourites-box__overlay js-favourites-box-close"></div>

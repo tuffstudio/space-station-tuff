@@ -125,39 +125,75 @@ window.SS.common = function($) {
         });
     }
 
-    function setCookie(cookieName, value, daysLeft) {
-        var expireDate = new Date();
-
-        expireDate.setDate(expireDate.getDate() + daysLeft);
-
-        var cookieValue = escape(value) + ((daysLeft === null) ? '' : '; expires=' + expireDate.toUTCString() + '; path=/');
-
-        document.cookie = cookieName + '=' + cookieValue;
+    function fetchPreperties(properties) {
+        $.ajax({
+            type: 'GET',
+            url: '/wp-admin/admin-ajax.php',
+            data: {
+                action: 'get_saved_properties',
+                data: properties
+            },
+            success: function(response) {
+                $('.js-saved-property').html(response);
+            },
+            error: function(message) {
+                console.log(message);
+            }
+        });
     }
 
-    function getCookie(cookieName) {
-        var cookie = document.cookie;
-        var cookieStart = cookie.indexOf(' ' + cookieName + '=');
+    function showProperties() {
+        var cookies = SS.getCookiesArray('ss-properties');
+        var $favouritesTrigger = $('.js-favourites-box-trigger');
+        var $star = $('.js-primary-nav');
 
-        if (cookieStart === -1) {
-            cookieStart = cookie.indexOf(cookieName + '=');
+        if(cookies) {
+            $star.addClass('favourites-box--has-properties');
         }
 
-        if (cookieStart === -1) {
-            cookie = null;
-        } else {
-            cookieStart = cookie.indexOf('=', cookieStart) + 1;
+        fetchPreperties(cookies);
+    }
 
-            var cookieEnd = cookie.indexOf(';', cookieStart);
+    function setProperties() {
+        var $btnSave = $('.js-save-property');
 
-            if (cookieEnd === -1) {
-                cookieEnd = cookie.length;
+        $btnSave.on('click', function() {
+            var $this = $(this);
+            var currentId = $this.data('id');
+            var cookies = SS.getCookie('ss-properties');
+
+            if(!cookies) {
+                cookies = currentId;
+            }
+            else if(cookies.indexOf(currentId) === -1) {
+                cookies += ',';
+                cookies += currentId;
             }
 
-            cookie = unescape(cookie.substring(cookieStart, cookieEnd));
-        }
+            SS.setCookie('ss-properties', cookies, 500);
+            showProperties();
+        });
 
-        return cookie;
+        showProperties();
+    }
+
+    function removeProperty() {
+        $body.on('click', '.js-remove-property', function() {
+            var $this = $(this);
+            var id = $this.data('id');
+            var cookies = SS.getCookiesArray('ss-properties');
+            var $property = $('.property-' + id);
+            var index = cookies.indexOf(id);
+
+            if (index > -1) {
+                cookies.splice(index, 1);
+                SS.setCookie('ss-properties', cookies.toString(), 500);
+            }
+
+            $property.fadeOut(function() {
+                $this.remove();
+            });
+        });
     }
 
     function revealSections() {
@@ -246,7 +282,7 @@ window.SS.common = function($) {
         var $closeBtn = $('.js-cookies-close');
         var $cookiesBar = $('.js-cookies-bar');
         var $navigation = $('.js-navigation');
-        var cookie = getCookie('ss-new-user');
+        var cookie = SS.getCookie('ss-new-user');
 
 
         if (cookie === null) {
@@ -257,7 +293,7 @@ window.SS.common = function($) {
 
         $closeBtn.on('click', function(event) {
             event.preventDefault();
-            setCookie('ss-new-user', 1, 500);
+            SS.setCookie('ss-new-user', 1, 500);
             $cookiesBar.removeClass('active');
             $navigation.removeClass('cookies-opened');
             $body.removeClass('cookies-opened');
@@ -298,6 +334,8 @@ window.SS.common = function($) {
         smoothScroll();
         cookiesInfo();
         shareAnimations();
+        setProperties();
+        removeProperty();
 
         setTimeout(function() {
             subMenuAlignment();
@@ -313,6 +351,54 @@ window.SS.common = function($) {
 
 // Common function visible everywhere
 // ----------------------------------
+window.SS.setCookie = function(cookieName, value, daysLeft) {
+    var expireDate = new Date();
+
+    expireDate.setDate(expireDate.getDate() + daysLeft);
+
+    var cookieValue = escape(value) + ((daysLeft === null) ? '' : '; expires=' + expireDate.toUTCString() + '; path=/');
+
+    document.cookie = cookieName + '=' + cookieValue;
+};
+
+window.SS.getCookie = function(cookieName) {
+    var cookie = document.cookie;
+    var cookieStart = cookie.indexOf(' ' + cookieName + '=');
+
+    if (cookieStart === -1) {
+        cookieStart = cookie.indexOf(cookieName + '=');
+    }
+
+    if (cookieStart === -1) {
+        cookie = null;
+    } else {
+        cookieStart = cookie.indexOf('=', cookieStart) + 1;
+
+        var cookieEnd = cookie.indexOf(';', cookieStart);
+
+        if (cookieEnd === -1) {
+            cookieEnd = cookie.length;
+        }
+
+        cookie = unescape(cookie.substring(cookieStart, cookieEnd));
+    }
+
+    return cookie;
+};
+
+window.SS.getCookiesArray = function(key) {
+    var cookies = SS.getCookie(key);
+
+    if(cookies) {
+        cookies = cookies.split(',');
+    }
+    else {
+        cookies = null;
+    }
+
+    return cookies;
+};
+
 window.SS.switchGrids = function(switcher, panel) {
     var $switchButton = $(switcher);
     var $panel = $(panel);
@@ -486,6 +572,13 @@ window.SS.PropertyMap = function(id, initCoords, customOptions) {
         });
     };
 
+    var setCenter = function(lat, lng) {
+        map.setCenter({
+            lat : lat,
+            lng : lng
+        });
+    };
+
     var initMap = function() {
         map = new google.maps.Map(containerObject, mapOptions);
     };
@@ -495,7 +588,8 @@ window.SS.PropertyMap = function(id, initCoords, customOptions) {
         init: initMap,
         setupMarkers: setupMarkers,
         setPin: createPin,
-        getJson: getJson
+        getJson: getJson,
+        setCenter: setCenter
     };
 };
 

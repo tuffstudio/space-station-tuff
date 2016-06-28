@@ -9,13 +9,10 @@
     $args = array(
         'post_type' => 'case-study',
         'post_status' => 'publish',
-        'posts_per_page' => 7,
-        'orderby' => 'date',
-        'order' => 'DESC'
+        'posts_per_page' => 7
     );
 
     $query = new WP_Query( $args );
-
 
     if ($query->have_posts()) {
         while ($query->have_posts()) {

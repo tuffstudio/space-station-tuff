@@ -155,14 +155,17 @@
     }
 
     > .dropdown__item {
-        a {
-            display: block;
-            padding: 8px 22px 8px 10px;
+        display: block;
+        padding: 8px 22px 8px 10px;
+        color: rgba($black, .7);
+        font-family: $font-book;
+        font-size: 11px;
+        text-transform: uppercase;
+        cursor: pointer;
 
-            .is-desktop &:hover {
-                background: $white;
-                color: $black;
-            }
+        .is-desktop &:hover {
+            background: $white;
+            color: $black;
         }
     }
 }
@@ -264,4 +267,8 @@
     right: 15px;
     padding: 6px;
     cursor: pointer;
+}
+
+.search-form--hide {
+    display: none;
 }

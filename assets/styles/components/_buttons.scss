@@ -90,6 +90,7 @@
     transition: all $standard-animation-time ease;
     border: 1px solid transparent;
     background-color: transparent;
+    color: $black;
     font-family: $font-light;
     font-size: rem-calc(9);
     letter-spacing: .2em;
@@ -148,9 +149,14 @@
 }
 
 .btn--action--awarded {
+    margin: 10px;
     border-color: transparent;
     background-color: $color-primary;
     color: $white;
+
+    @include min-screen($desktop) {
+        margin: auto;
+    }
 
     .is-desktop &:hover {
         background-color: darken($color-primary, 5%);
@@ -188,5 +194,19 @@
     .btn {
         margin: 7px 10px;
         padding: 10px 15px;
+    }
+}
+
+.btn--close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 10px 0 10px 10px;
+    cursor: pointer;
+    opacity: .25;
+    transition: all $standard-animation-time ease-in-out;
+
+    &:hover {
+        opacity: 1;
     }
 }

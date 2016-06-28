@@ -29,6 +29,10 @@
     }
 }
 
+.property__map {
+    height: 50vh;
+}
+
 .property__info {
     @include min-screen($desktop) {
         padding: 0 30px;
@@ -101,6 +105,7 @@
     font-size: $property-desc-font-size;
     font-weight: bold;
     line-height: 1.4;
+    white-space: pre-line;
 
     @include min-screen($desktop) {
         margin-top: 40px;
