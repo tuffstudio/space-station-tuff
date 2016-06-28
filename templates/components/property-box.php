@@ -12,7 +12,7 @@
     <div class="single-result__info">
         <div class="masonry__tile-border"></div>
         <p class="masonry__tile-category">
-            Commercial:
+            Residential:
             <span>
                 <?php echo $item->data->pba__listingtype__c; ?>
             </span>

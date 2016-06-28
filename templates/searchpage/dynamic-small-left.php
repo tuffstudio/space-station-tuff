@@ -4,7 +4,7 @@
             <div class="masonry__tile masonry__tile--white masonry__tile-arrow">
                 <div class="masonry__tile-border"></div>
                 <div class="masonry__tile-info">
-                    <p class="masonry__tile-category">Commercial: <span><?php echo $item->data->pba__listingtype__c; ?></span></p>
+                    <p class="masonry__tile-category">Residential: <span><?php echo $item->data->pba__listingtype__c; ?></span></p>
                     <h3 class="masonry__tile-title"><?php echo  $item->data->name; ?></h3>
                     <p class="masonry__tile-price">
                     <?php if( strtolower($item->data->pba__listingtype__c) == 'rent'){
