@@ -125,7 +125,9 @@ $errorMessage 	= null;
 					  "fields"			=> "ID;name;pba__ListingType__c;pba__PropertyType__c;Tenure__c;pba__Status__c;weekly_rent__c;pba__ListingPrice_pb__c;Weekly_Rent__c;pba__description_pb__c;pba__Bedrooms_pb__c;pba__FullBathrooms_pb__c;pba__totalarea_pb__c;pba__Longitude_pb__c;pba__Latitude_pb__c;",
 		              "page" 			=> $page ,
 		              "getvideos"		=> "true",
-		              "debugmode"		=> "true"
+		              "debugmode"		=> "true",
+		              "pba__Latitude_pb__c" => "IN(51.5282246;51.43994)",
+		              "pba__Longitude_pb__c" => "IN(-0.0813334;0.46845)"
 		              );
 
 // add FILTERS to QUERY ARRAY
