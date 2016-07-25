@@ -13,6 +13,12 @@ $itemsperpage ="";
 $propertytype ="";
 $tenure ="";
 $propertystatus ="";
+$lat_center = 51.5284881;
+$long_center = -0.0852753;
+$lat_min;
+$lat_max;
+$long_min;
+$long_max;
 
 // GET FROM TO PARAM FUNCTION
 function getFromToParam($from,$to){
@@ -91,6 +97,20 @@ function getFromToParam($from,$to){
 	}else{
 		$default_propertystatus = $_POST["propertystatus"];
 	}
+	//RADIUS
+	if (empty($_POST["radius"])){
+		$default_radius = 56.25; // approx 1000 miles
+	}else{
+		$default_radius = $_POST["radius"];
+	}
+
+	$lat_min = $lat_center - $default_radius;
+	$lat_max = $lat_center + $default_radius;
+
+	$long_min = $long_center - ($default_radius / cos($lat_center * pi() / 180));
+	$long_max = $long_center + ($default_radius / cos($lat_center * pi() / 180));
+
+
 
 // if there's variable in query and is not empty
 if(isset($_POST["reference"])){			$reference 				= $_POST["reference"];		}
@@ -111,6 +131,8 @@ if(isset($_POST["price_from"])){		$priceParam 			= getFromToParam($price_from,$p
 if(isset($_POST["rent_from"])){			$rentParam 				= getFromToParam($rent_from,$rent_to);}
 										$bedsParam 				= getFromToParam($default_bedrooms_from	,null);
 										$bathsParam 			= getFromToParam($default_bathrooms_from ,null);
+										$latParam				= getFromToParam($lat_min,$lat_max);
+										$longParam				= getFromToParam($long_min,$long_max);
 
 $doSearch = !(empty($reference) && empty($priceParam) && empty($sizeParam)&& empty($bedsParam) );
 
@@ -125,9 +147,7 @@ $errorMessage 	= null;
 					  "fields"			=> "ID;name;pba__ListingType__c;pba__PropertyType__c;Tenure__c;pba__Status__c;weekly_rent__c;pba__ListingPrice_pb__c;Weekly_Rent__c;pba__description_pb__c;pba__Bedrooms_pb__c;pba__FullBathrooms_pb__c;pba__totalarea_pb__c;pba__Longitude_pb__c;pba__Latitude_pb__c;",
 		              "page" 			=> $page ,
 		              "getvideos"		=> "true",
-		              "debugmode"		=> "true",
-		              "pba__Latitude_pb__c" => "IN(51.5282246;51.43994)",
-		              "pba__Longitude_pb__c" => "IN(-0.0813334;0.46845)"
+		              "debugmode"		=> "true"
 		              );
 
 // add FILTERS to QUERY ARRAY
@@ -142,6 +162,8 @@ $errorMessage 	= null;
 	if (!empty($default_propertytype)) $reqArray["pba__PropertyType__c"] 		= $default_propertytype;
 	if (!empty($default_tenure)) $reqArray["Tenure__c"] 						= $default_tenure;
 	if (!empty($default_propertystatus)) $reqArray["pba__status__c"] 			= $default_propertystatus;
+	if (!empty($default_radius)) $reqArray["TestLatAlexPB__c"] 			= $latParam;
+	if (!empty($default_radius)) $reqArray["TestLongAlexPB__c"] 		= $longParam;
 	$reqArray["show_on_website__c"] 			= "true";
 
 // BUILD HTTP QUERY STRING

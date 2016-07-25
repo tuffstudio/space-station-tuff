@@ -8,15 +8,15 @@
             <div class="grid__item desktop--one-half input-container">
                 <select name="radius" placeholder="Search radius">
                     <option></option>
-                    <option value="0.25">0.25 miles</option>
-                    <option value="0.50">0.50 miles</option>
-                    <option value="0.75">0.75 miles</option>
-                    <option value="1.00">1.00 miles</option>
-                    <option value="1.50">1.50 miles</option>
-                    <option value="2.00">2.00 miles</option>
-                    <option value="2.50">2.50 miles</option>
-                    <option value="3.00">3.00 miles</option>
-                    <option value="3.00+">3.00+ miles</option>
+                    <option value="0.0140625">0.25 miles</option>
+                    <option value="0.028125">0.50 miles</option>
+                    <option value="0.0421875">0.75 miles</option>
+                    <option value="0.05625">1.00 miles</option>
+                    <option value="0.084375">1.50 miles</option>
+                    <option value="0.1125">2.00 miles</option>
+                    <option value="0.140625">2.50 miles</option>
+                    <option value="0.16875">3.00 miles</option>
+                    <option value="56.25">3.00+ miles</option>
                 </select>
 
                 <select name="propertytype" placeholder="property type" id="property_type">
